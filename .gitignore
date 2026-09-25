@@ -67,6 +67,9 @@ results/ml/**/occlusion/*.nii.gz
 results/*/ckpt/
 # Resume cache for scripts/eval_subject_level.py (tiny; regenerable)
 results/ml/evaluation/test_arrays_cache.npz
+# Multi-seed driver console log / completion marker (regenerable)
+results/multiseed_console.log
+results/multiseed.marker
 # Generated report (rebuilt by scripts/make_report.py)
 results/report.html
 

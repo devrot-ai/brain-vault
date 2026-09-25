@@ -1,23 +1,46 @@
 @echo off
 REM =====================================================================
-REM Multi-seed robustness driver - REAL MODEL EVALUATION, phase 15.
-REM PREPARED BUT NOT EXECUTED (STOP condition: only launch AFTER the
-REM primary test result is recorded in
-REM audit_artifacts/subject_level_evaluation.md).
+REM MULTI-SEED ROBUSTNESS driver: train seeds 1 to 4, then repeat seed 4.
+REM Canonical recipe of the frozen seed-42 production run, applied
+REM unchanged - ONLY the random seed differs:
+REM   --epochs 40 --patience 8 --warmup 2 --cos-epochs 12 --aug-strength light
+REM Checkpoint-embedded config of resnet_seed42 matches this recipe.
 REM
-REM Launch with:   scripts\multiseed.bat
+REM Per seed: results/ml/resnet_seed<seed>/ gets its own checkpoint,
+REM history, validation-only Youden threshold, test predictions and
+REM regional maps. The seed-42 directory is NEVER touched. Seed 4 is
+REM additionally re-run with the same seed into resnet_seed4_repeat as
+REM the reproducibility check.
 REM
-REM Trains seeds 1-4 through the tested scripts/train_oasis1.py path
-REM (seed 42 = canonical baseline; its frozen run in
-REM results/ml/resnet_seed42/ is NEVER re-trained or touched), then
-REM aggregates per-seed test metrics + attribution agreement into
-REM results/multi_seed/.
+REM Rules: model selection uses validation ROC-AUC only. The threshold is
+REM derived from validation data only, per seed. No best-seed selection
+REM by test AUC happens anywhere.
 REM
-REM Rules: each seed gets its own training run, its own validation
-REM threshold, its own checkpoint; NEVER pick the "best" seed using test
-REM metrics - this is a robustness report, not a model-selection contest.
+REM Resumable: a seed whose metrics/test_metrics.json already exists is
+REM skipped, so restarting this driver loses at most the in-flight seed.
 REM =====================================================================
 cd /d "%~dp0.."
+setlocal enabledelayedexpansion
 set PYTHONIOENCODING=utf-8
-.venv\Scripts\python.exe scripts\seed_robustness.py --seeds 1 2 3 4 --epochs 30 > results\multi_seed_console.log 2>&1
-echo Done. See results\multi_seed_console.log and results\multi_seed\summary.json
+set RECIPE=--model resnet --epochs 40 --patience 8 --warmup 2 --cos-epochs 12 --aug-strength light
+
+for %%S in (1 2 3 4) do (
+  if exist "results\ml\resnet_seed%%S\metrics\test_metrics.json" (
+    echo [seed %%S] already complete - skipping >> results\multiseed_console.log
+  ) else (
+    echo [seed %%S] TRAINING STARTED %date% %time% >> results\multiseed_console.log
+    .venv\Scripts\python.exe -u scripts\train_oasis1.py --seed %%S %RECIPE% --dir-name resnet_seed%%S >> results\multiseed_console.log 2>&1
+    echo [seed %%S] TRAINING ENDED %date% %time% >> results\multiseed_console.log
+  )
+)
+
+if exist "results\ml\resnet_seed4_repeat\metrics\test_metrics.json" (
+  echo [seed 4 repeat] already complete - skipping >> results\multiseed_console.log
+) else (
+  echo [seed 4 repeat] TRAINING STARTED %date% %time% >> results\multiseed_console.log
+  .venv\Scripts\python.exe -u scripts\train_oasis1.py --seed 4 %RECIPE% --dir-name resnet_seed4_repeat >> results\multiseed_console.log 2>&1
+  echo [seed 4 repeat] TRAINING ENDED %date% %time% >> results\multiseed_console.log
+)
+
+echo MULTISEED_DRIVER_DONE %date% %time% >> results\multiseed_console.log
+echo done > results\multiseed.marker

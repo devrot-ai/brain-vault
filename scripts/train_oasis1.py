@@ -85,6 +85,12 @@ def main(argv=None) -> int:
     ap.add_argument("--normalization", default="brain_z",
                     choices=["brain_z", "global_minmax"],
                     help="ablation axis: intensity normalization")
+    ap.add_argument("--dir-name", default=None,
+                    help="override the output directory name under "
+                         "results/ml/ (default: derived from model/seed and "
+                         "ablation flags). Use to make a re-run land in the "
+                         "canonical-looking dir while keeping every other "
+                         "default intact.")
     ap.add_argument("--threshold-method", default="youden",
                     choices=["youden", "f1"])
     ap.add_argument("--n-boot", type=int, default=2000)
@@ -107,15 +113,20 @@ def main(argv=None) -> int:
     dirs = ensure_output_tree()
     splits = load_split_tables(args.splits_dir)
     cohort = load_cohort(args.splits_dir)
-    out_root = Path(args.out_dir) / "ml" / f"{args.model}_seed{args.seed}"
-    if args.no_augment:
-        out_root = out_root.with_name(out_root.name + "_noaug")
-    if args.aug_strength != "full":
-        out_root = out_root.with_name(out_root.name + "_" + args.aug_strength + "aug")
-    if args.normalization != "brain_z":
-        out_root = out_root.with_name(out_root.name + "_" + args.normalization)
-    if args.tag:
-        out_root = out_root.with_name(out_root.name + "_" + args.tag)
+    out_root = Path(args.out_dir) / "ml" / (
+        args.dir_name if args.dir_name else f"{args.model}_seed{args.seed}")
+    if args.dir_name is None:
+        # ablation-suffix naming only applies to the default directory name;
+        # an explicit --dir-name is taken verbatim (multi-seed robustness
+        # runs must land in results/ml/resnet_seed<seed> exactly).
+        if args.no_augment:
+            out_root = out_root.with_name(out_root.name + "_noaug")
+        if args.aug_strength != "full":
+            out_root = out_root.with_name(out_root.name + "_" + args.aug_strength + "aug")
+        if args.normalization != "brain_z":
+            out_root = out_root.with_name(out_root.name + "_" + args.normalization)
+        if args.tag:
+            out_root = out_root.with_name(out_root.name + "_" + args.tag)
     out_root.mkdir(parents=True, exist_ok=True)
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
