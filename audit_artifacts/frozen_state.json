@@ -1,0 +1,64 @@
+{
+  "purpose": "REAL MODEL EVALUATION phase 0: frozen audited state committed to version control",
+  "created_utc": "2026-09-25T09:16:21+00:00",
+  "git": {
+    "initialized_by_phase": "REAL MODEL EVALUATION (phase 0)",
+    "commit_sha": "a7521d311ea7c277dee822d4c4bc8c9f0501a2f2",
+    "branch": "master",
+    "commit_date": "2026-09-25T14:16:21+05:30",
+    "commit_subject": "Frozen audited state (AUDIT-REVIEW-002): OASIS-1 ResNet-18 pipeline, genomics bridge, full phase-0-23 audit artifacts",
+    "files_tracked": 755,
+    "state_represents": "AUDIT-REVIEW-002 pass (overall audit PASS WITH WARNINGS; final gate READY FOR REAL MODEL EVALUATION)"
+  },
+  "canonical_checkpoint": {
+    "path": "results/ml/resnet_seed42/checkpoints/best.pt",
+    "sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+    "size_bytes": 133540267,
+    "tracked_in_git": false,
+    "note": "The production checkpoint is intentionally NOT in git (results/ml/**/checkpoints/ is git-ignored); its integrity is pinned by audit_artifacts/canonical_checkpoint.json and tests/test_checkpoint_integrity.py, not by version control."
+  },
+  "excluded_from_commit": [
+    {
+      "path": "data/raw/, data/derived/",
+      "reason": "raw OASIS-1 downloads and deterministic preprocessing cache (~1.5 GB, regenerable)"
+    },
+    {
+      "path": "results/ml/**/checkpoints/",
+      "reason": "model weights (133 MB canonical + probes); reproducible from config+seed; canonical SHA pinned separately"
+    },
+    {
+      "path": "audit_artifacts/quarantined_interrupted_lightaug_run/checkpoints/",
+      "reason": "~666 MB quarantined weights from the interrupted light-aug run (phase-21 mtime-hijack incident, documented in phase_22_risk_audit.md)"
+    },
+    {
+      "path": "audit_artifacts/phase_08_smoke_checkpoint.pt",
+      "reason": "133 MB smoke-run checkpoint, regenerable via the tested smoke path"
+    },
+    {
+      "path": "results/ahba/*.parquet",
+      "reason": "derived AHBA expression tables (regenerable from the cached download)"
+    },
+    {
+      "path": "results/*/ckpt/",
+      "reason": "bridge stage caches (hundreds of MB, deterministic from cached inputs)"
+    },
+    {
+      "path": "results/report.html",
+      "reason": "generated artifact (scripts/make_report.py)"
+    },
+    {
+      "path": "results/ml/**/gradcam/*.nii.gz, results/ml/**/occlusion/*.nii.gz",
+      "reason": "per-subject CAM volumes (deterministic from the frozen checkpoint; representative copies retained in audit_artifacts/explainability/)"
+    },
+    {
+      "path": ".freebuff/",
+      "reason": "workspace tooling metadata, not project content"
+    }
+  ],
+  "retained_audit_evidence": [
+    "audit_artifacts/explainability/*.nii.gz (representative CAM volumes, up to 21 MB each)",
+    "audit_artifacts/phase_10_gradcam.nii.gz, phase_11_cam_fixed.nii.gz",
+    "all phase_00..phase_23 text/CSV/JSON artifacts",
+    "results/ml/evaluation/ (created after this commit, in commit 2)"
+  ]
+}

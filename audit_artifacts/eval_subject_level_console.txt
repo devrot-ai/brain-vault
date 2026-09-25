@@ -1,0 +1,16 @@
+[0] canonical checkpoint OK: best.pt sha 5930f0fff9600346… (133.5 MB)
+[A] resume: threshold_selection.json exists -> reusing (no validation re-inference)
+[B] frozen-threshold evaluation on TEST subjects (threshold 0.07)
+    test ROC-AUC 0.817 [0.618, 0.972] PR-AUC 0.814
+[C] error analysis + age/sex confound checks
+    age-prob Spearman rho +0.368 (p 0.059); age+sex baseline test AUC 0.700
+[D] attribution table from frozen-run Grad-CAM regional maps
+    CAM files present 27/27; population top region: caudalanteriorcingulate_L
+
+=== REAL MODEL EVALUATION (phases 1-14) complete ===
+  threshold (validation, youden): 0.07
+  test n=27 (AD 15 / CN 12) ROC-AUC 0.817  PR-AUC 0.814
+  sensitivity 0.867  specificity 0.417  brier 0.192
+  confusion {'tn': 5, 'fp': 7, 'fn': 2, 'tp': 13}
+  Grad-CAM coverage 27/27 subjects
+  artifacts: C:\Users\kanishk thakur\Desktop\now pro\results\ml\evaluation + C:\Users\kanishk thakur\Desktop\now pro\audit_artifacts/threshold_selection.*

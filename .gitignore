@@ -65,6 +65,8 @@ results/ml/**/gradcam/*.nii.gz
 results/ml/**/occlusion/*.nii.gz
 # Bridge stage caches (hundreds of MB; deterministic from cached inputs)
 results/*/ckpt/
+# Resume cache for scripts/eval_subject_level.py (tiny; regenerable)
+results/ml/evaluation/test_arrays_cache.npz
 # Generated report (rebuilt by scripts/make_report.py)
 results/report.html
 

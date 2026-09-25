@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-09-25T09:38:07+00:00",
+  "brier": 0.1923280653632752,
+  "calibration_slope": 0.3402612202767896,
+  "calibration_intercept": 0.05838051068230008,
+  "slope_intercept_note": "logistic fit of the label on logit(p): slope 1 / intercept 0 = perfectly calibrated; slope < 1 = overconfident, slope > 1 = underconfident",
+  "reliability_bins": [
+    {
+      "mean_predicted_prob": 0.024493470788002014,
+      "observed_fraction": 0.2857142857142857,
+      "n_bins": 4,
+      "strategy": "quantile"
+    },
+    {
+      "mean_predicted_prob": 0.47524382174015045,
+      "observed_fraction": 0.2857142857142857,
+      "n_bins": 4,
+      "strategy": "quantile"
+    },
+    {
+      "mean_predicted_prob": 0.8612726430098215,
+      "observed_fraction": 0.8333333333333334,
+      "n_bins": 4,
+      "strategy": "quantile"
+    },
+    {
+      "mean_predicted_prob": 0.9840724553380694,
+      "observed_fraction": 0.8571428571428571,
+      "n_bins": 4,
+      "strategy": "quantile"
+    }
+  ],
+  "note": "discrimination (ROC-AUC) and calibration are separate properties; a high AUC does not imply well-calibrated probabilities"
+}

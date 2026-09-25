@@ -40,7 +40,7 @@ def main(argv=None) -> int:
                     help="override the frozen validation threshold")
     args = ap.parse_args(argv)
 
-    from brainvuln.mri.preprocess import preprocess_session
+    from brainvuln.mri.preprocess import PREPROCESS_VERSION, preprocess_session
     from brainvuln.mri.gradcam import gradcam_3d, save_cam_nifti, save_planes_png
     from brainvuln.mri.models import ResNet18Binary
 
@@ -49,7 +49,7 @@ def main(argv=None) -> int:
     model = ResNet18Binary()
     model.load_state_dict(ckpt["state_dict"])
     model.eval()
-    from brainvuln.config import checkpoint_identity
+    from brainvuln.config import checkpoint_identity, resolve_threshold
     identity = checkpoint_identity(str(ckpt_path))
 
     image_path = Path(args.image)
@@ -63,16 +63,7 @@ def main(argv=None) -> int:
     with torch.no_grad():
         prob = float(torch.sigmoid(model(x)).item())
 
-    metrics_path = ckpt_path.parents[1] / "metrics" / "test_metrics.json"
-    threshold = args.threshold
-    threshold_source = "--threshold override"
-    if threshold is None:
-        if metrics_path.exists():
-            threshold = float(json.loads(metrics_path.read_text())["threshold"])
-            threshold_source = "frozen validation threshold"
-        else:
-            threshold = 0.5
-            threshold_source = "default 0.5 (no metrics file)"
+    threshold, threshold_source = resolve_threshold(args.threshold, ckpt_path)
     label = "Alzheimer's disease" if prob >= threshold else "cognitively normal"
     model_name = f"BrainVuln-{type(model).__name__}"
 
@@ -81,11 +72,13 @@ def main(argv=None) -> int:
     print("Probability:")
     print(f"  {prob:.2f}")
     print("Threshold:")
-    print(f"  {threshold:.2f}")
+    print(f"  {threshold:.2f} ({threshold_source})")
     print("Model:")
     print(f"  {model_name}")
     print("Checkpoint sha256:")
     print("  " + identity["sha256"])
+    print("Preprocessing version:")
+    print(f"  {PREPROCESS_VERSION}")
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)

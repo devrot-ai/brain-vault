@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-09-25T09:38:08+00:00",
+  "checkpoint_sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+  "n_subjects_expected": 27,
+  "n_subjects_with_regional_csv": 27,
+  "n_subjects_with_cam_file": 27,
+  "missing_cam_subjects": [],
+  "region_names_source": "data/derived/atlas_dk68_tianS1_info.csv (atlas-derived; not hard-coded)",
+  "population_top_regions": [
+    {
+      "region": "caudalanteriorcingulate_L",
+      "M_CNN": 0.6307372801727931,
+      "structure": "cortex"
+    },
+    {
+      "region": "caudalanteriorcingulate_R",
+      "M_CNN": 0.6112768781689545,
+      "structure": "cortex"
+    },
+    {
+      "region": "TianS1_16",
+      "M_CNN": 0.5932444654718149,
+      "structure": "subcortex/brainstem"
+    },
+    {
+      "region": "caudalmiddlefrontal_L",
+      "M_CNN": 0.5613329317706622,
+      "structure": "cortex"
+    },
+    {
+      "region": "TianS1_15",
+      "M_CNN": 0.559754558625525,
+      "structure": "subcortex/brainstem"
+    },
+    {
+      "region": "rostralmiddlefrontal_L",
+      "M_CNN": 0.5564794678769632,
+      "structure": "cortex"
+    },
+    {
+      "region": "rostralanteriorcingulate_L",
+      "M_CNN": 0.5531741283348893,
+      "structure": "cortex"
+    },
+    {
+      "region": "rostralanteriorcingulate_R",
+      "M_CNN": 0.5459928537448736,
+      "structure": "cortex"
+    },
+    {
+      "region": "parsopercularis_L",
+      "M_CNN": 0.5418801198204924,
+      "structure": "cortex"
+    },
+    {
+      "region": "TianS1_08",
+      "M_CNN": 0.5358818245167527,
+      "structure": "subcortex/brainstem"
+    }
+  ],
+  "method_agreement_gradcam_vs_occlusion": {
+    "spearman": 0.29351778470474216,
+    "n_regions": 87
+  }
+}

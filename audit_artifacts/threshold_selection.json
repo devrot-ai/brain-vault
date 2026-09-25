@@ -1,0 +1,56 @@
+{
+  "purpose": "REAL MODEL EVALUATION phases 1-2: operating-point re-derivation on validation subjects only",
+  "created_utc": "2026-09-25T09:28:47+00:00",
+  "checkpoint_sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+  "checkpoint_identity": {
+    "path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed42\\checkpoints\\best.pt",
+    "filename": "best.pt",
+    "sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+    "size_bytes": 133540267
+  },
+  "preprocess_version": "t88_masked_gfc-2mm-128cube-brainz-v1",
+  "selection": {
+    "method": "youden",
+    "definition": "maximize sensitivity + specificity - 1 (Youden's J) over a 197-point grid on [0.01, 0.99]",
+    "data": "validation subjects only (n=27 sessions/subjects)",
+    "rationale": "Youden's J treats sensitivity and specificity symmetrically and is the method already fixed in configs/oasis1_resnet3d.yaml (threshold.method: youden) BEFORE this evaluation; re-using it keeps the operating point a documented, data-driven choice made without any test information."
+  },
+  "selected_threshold": 0.06999999999999999,
+  "validation_metrics_at_threshold": {
+    "n": 27,
+    "threshold": 0.06999999999999999,
+    "roc_auc": 0.8,
+    "pr_auc": 0.8532367051020302,
+    "accuracy": 0.7777777777777778,
+    "balanced_accuracy": 0.7583333333333333,
+    "sensitivity": 0.9333333333333333,
+    "specificity": 0.5833333333333334,
+    "precision": 0.7368421052631579,
+    "f1": 0.8235294117647058,
+    "brier": 0.24573397513286974,
+    "confusion": {
+      "tn": 7,
+      "fp": 5,
+      "fn": 1,
+      "tp": 14
+    }
+  },
+  "validation_roc_auc": 0.8,
+  "validation_pr_auc": 0.8532367051020302,
+  "bootstrap": {
+    "unit": "subject",
+    "n_boot_requested": 2000,
+    "n_boot_used": 2000,
+    "seed": 42,
+    "median": 0.06999999999999999,
+    "ci95_lo": 0.015,
+    "ci95_hi": 0.76,
+    "note": "percentile interval of thresholds re-selected on validation subject resamples; quantifies operating-point stability"
+  },
+  "agreement_with_run_freeze": {
+    "run_frozen_threshold": 0.06999999999999999,
+    "recomputed_threshold": 0.06999999999999999,
+    "match": true
+  },
+  "test_contact": false
+}

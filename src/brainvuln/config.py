@@ -144,10 +144,14 @@ class InferenceConfig:
     '''Canonical inference checkpoint - the single serving checkpoint source.
 
     Resolution never searches the filesystem and never uses mtime; see
-    resolve_checkpoint().
+    resolve_checkpoint(). ``threshold_value`` is the frozen operating point
+    selected on VALIDATION only (see audit_artifacts/threshold_selection.md);
+    it must agree with the run's frozen metrics file. Serving code goes
+    through resolve_threshold() and never re-tunes the threshold.
     '''
 
     checkpoint_path: str = DEFAULT_CHECKPOINT_RELPATH
+    threshold_value: Optional[float] = None
 
 
 @dataclass
@@ -331,8 +335,11 @@ def load_analysis_config(path: str | Path = DEFAULT_ANALYSIS_CONFIG) -> Analysis
 
     inf_raw = raw.get('inference', {}) or {}
     chk_raw = inf_raw.get('checkpoint', {}) or {}
+    thr_raw = inf_raw.get('threshold', {}) or {}
+    threshold_value = thr_raw.get('value')
     cfg.inference = InferenceConfig(
         checkpoint_path=str(chk_raw.get('path', DEFAULT_CHECKPOINT_RELPATH)),
+        threshold_value=None if threshold_value is None else float(threshold_value),
     )
 
     cfg.source_path = path.resolve()
@@ -407,6 +414,46 @@ def resolve_checkpoint(path: str | Path | None = None,
             'fix inference.checkpoint.path in the analysis config or pass an '
             'explicit checkpoint path.')
     return configured.resolve()
+
+
+def resolve_threshold(
+    override: Optional[float] = None,
+    ckpt_path: str | Path | None = None,
+    config_path: str | Path = DEFAULT_ANALYSIS_CONFIG,
+) -> tuple[float, str]:
+    '''Frozen operating threshold for inference — never silently re-tuned.
+
+    Source precedence (the active source is always reported to the user):
+
+    1. explicit ``override`` (CLI --threshold) — an explicitly requested
+       operating point, labeled as an override in all outputs;
+    2. the run's frozen metrics file (``metrics/test_metrics.json`` next to
+       the checkpoint), written once by the tested train/eval path after
+       threshold selection on VALIDATION only;
+    3. ``inference.threshold.value`` in the analysis config (this phase's
+       freeze of that same validation-selected value);
+    4. an explicit, labeled 0.5 fallback when no frozen value exists.
+
+    The regression test tests/test_threshold_frozen.py pins sources 2 and 3
+    to the same number for the canonical checkpoint.
+    '''
+    if override is not None:
+        return float(override), "--threshold override (explicitly requested)"
+    if ckpt_path is None:
+        ckpt_path = resolve_checkpoint(config_path=config_path)
+    metrics_path = Path(ckpt_path).parents[1] / "metrics" / "test_metrics.json"
+    if metrics_path.is_file():
+        try:
+            frozen = float(json.loads(metrics_path.read_text(encoding="utf-8"))["threshold"])
+        except (KeyError, ValueError, json.JSONDecodeError) as exc:
+            raise ConfigError(
+                f"Frozen metrics file {metrics_path} has no usable 'threshold': {exc}") from exc
+        return frozen, "frozen validation threshold (metrics/test_metrics.json)"
+    cfg = load_analysis_config(config_path)
+    if cfg.inference.threshold_value is not None:
+        return (cfg.inference.threshold_value,
+                "frozen threshold from config (inference.threshold.value)")
+    return 0.5, "default 0.5 (no frozen threshold available)"
 
 
 def sha256_file(path: str | Path, chunk_size: int = 1 << 20) -> str:

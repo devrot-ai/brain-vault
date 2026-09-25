@@ -1,0 +1,70 @@
+{
+  "purpose": "REAL MODEL EVALUATION phases 5-8 (subject-level test evaluation)",
+  "created_utc": "2026-09-25T09:38:05+00:00",
+  "checkpoint_identity": {
+    "path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed42\\checkpoints\\best.pt",
+    "filename": "best.pt",
+    "sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+    "size_bytes": 133540267
+  },
+  "checkpoint_sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+  "preprocess_version": "t88_masked_gfc-2mm-128cube-brainz-v1",
+  "threshold": 0.06999999999999999,
+  "threshold_method": "youden",
+  "threshold_selected_on": "validation (see audit_artifacts/threshold_selection.md)",
+  "subject_unit": "canonical scan per subject: the test partition contains exactly one session per subject (verified by assertion)",
+  "n_subjects": 27,
+  "n_ad": 15,
+  "n_cn": 12,
+  "test_metrics": {
+    "n": 27,
+    "threshold": 0.06999999999999999,
+    "roc_auc": 0.8166666666666667,
+    "pr_auc": 0.814407648881333,
+    "accuracy": 0.6666666666666666,
+    "balanced_accuracy": 0.6416666666666667,
+    "sensitivity": 0.8666666666666667,
+    "specificity": 0.4166666666666667,
+    "precision": 0.65,
+    "f1": 0.7428571428571429,
+    "brier": 0.1923280653632752,
+    "confusion": {
+      "tn": 5,
+      "fp": 7,
+      "fn": 2,
+      "tp": 13
+    },
+    "bootstrap_ci": {
+      "roc_auc": {
+        "point": 0.8166666666666667,
+        "lo": 0.6184017027863777,
+        "hi": 0.9715909090909091
+      },
+      "pr_auc": {
+        "point": 0.814407648881333,
+        "lo": 0.604153388034967,
+        "hi": 0.9841316526610644
+      },
+      "balanced_accuracy": {
+        "point": 0.6416666666666667,
+        "lo": 0.46590909090909094,
+        "hi": 0.8104395604395604
+      },
+      "sensitivity": {
+        "point": 0.8666666666666667,
+        "lo": 0.6666666666666666,
+        "hi": 1.0
+      },
+      "specificity": {
+        "point": 0.4166666666666667,
+        "lo": 0.125,
+        "hi": 0.7003571428571409
+      },
+      "brier": {
+        "point": 0.1923280653632752,
+        "lo": 0.08010594037551376,
+        "hi": 0.3143425792968006
+      }
+    }
+  }
+}

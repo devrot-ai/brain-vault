@@ -44,6 +44,10 @@ TARGET_SHAPE = (128, 128, 128)
 VOXEL_MM = 2.0
 INPUT_SUFFIX = "_t88_masked_gfc.img"  # OASIS T88 skull-stripped registered
 
+# Bump whenever preprocessing semantics change in a way that could alter
+# model inputs; predictions must always record which version produced them.
+PREPROCESS_VERSION = "t88_masked_gfc-2mm-128cube-brainz-v1"
+
 
 def find_scan_file(session_dir: Path) -> Path:
     """Locate the T88 skull-stripped registered volume of one OASIS session."""

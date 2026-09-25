@@ -20,6 +20,15 @@ run:
 inference:
   checkpoint:
     path: results/ml/resnet_seed42/checkpoints/best.pt
+  # ---------------------------------------------------------------------------
+  # FROZEN operating threshold, selected on VALIDATION subjects only by
+  # maximizing Youden's J (audit_artifacts/threshold_selection.md). Applied
+  # unchanged to test; serving code reads the frozen metrics file through
+  # brainvuln.config.resolve_threshold() and never re-tunes. The regression
+  # test tests/test_threshold_frozen.py pins this value to the metrics file.
+  # ---------------------------------------------------------------------------
+  threshold:
+    value: 0.07
 
 # ---------------------------------------------------------------------------
 # AHBA / abagen settings (abagen.get_expression_data).

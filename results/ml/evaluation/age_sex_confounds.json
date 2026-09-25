@@ -1,0 +1,63 @@
+{
+  "created_utc": "2026-09-25T09:38:08+00:00",
+  "age_probability_association": {
+    "spearman": {
+      "rho": 0.3675605397711423,
+      "p_value": 0.0592733198471942
+    },
+    "pearson": {
+      "r": 0.3960864397715762,
+      "p_value": 0.04083044773858242
+    },
+    "note": "correlation of predicted AD-probability with age in the test set; association, NOT causation. Purpose: detect age-detector behaviour, not to interpret age as a mechanism."
+  },
+  "age_bands": [
+    {
+      "band": "60-69",
+      "n": 2,
+      "mean_prob": 0.11808762419968843,
+      "mean_prob_sd": 0.10651142429560423
+    },
+    {
+      "band": "70-79",
+      "n": 11,
+      "mean_prob": 0.47994033890691673,
+      "mean_prob_sd": 0.38805347752425023
+    },
+    {
+      "band": "80+",
+      "n": 14,
+      "mean_prob": 0.7170560797676444,
+      "mean_prob_sd": 0.3354895603725494
+    }
+  ],
+  "age_sex_baseline_train_fitted": {
+    "model": "logistic regression on (Age, Sex M), TRAIN subjects only",
+    "val_youden_threshold": 0.515,
+    "test_roc_auc": 0.7000000000000001,
+    "test_sensitivity": 0.8666666666666667,
+    "test_specificity": 0.25,
+    "test_balanced_accuracy": 0.5583333333333333,
+    "comparison_note": "if the CNN's test ROC-AUC is not clearly above this baseline, much of its signal may be demographic"
+  },
+  "cnn_test_roc_auc": 0.8166666666666667,
+  "sex_stratified": {
+    "F": {
+      "n": 16,
+      "n_ad": 6,
+      "n_cn": 10,
+      "roc_auc": 0.9,
+      "sensitivity": 0.8333333333333334,
+      "specificity": 0.5
+    },
+    "M": {
+      "n": 11,
+      "n_ad": 9,
+      "n_cn": 2,
+      "roc_auc": 0.5,
+      "sensitivity": 0.8888888888888888,
+      "specificity": 0.0
+    }
+  },
+  "small_n_caveat": "test n=27; per-sex subgroups are smaller still. Any sex-stratified number is descriptive only; no strong claims are made from these tiny subgroups."
+}

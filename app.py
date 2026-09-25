@@ -9,7 +9,6 @@ part of the specification, not a formality.
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 import numpy as np
@@ -23,7 +22,8 @@ DISCLAIMER = ("**Research use only. Not a clinical diagnostic system.** "
 
 
 def _get_model():
-    from brainvuln.config import checkpoint_identity, resolve_checkpoint
+    from brainvuln.config import (
+        checkpoint_identity, resolve_checkpoint, resolve_threshold)
     from brainvuln.mri.models import ResNet18Binary
     ckpt_path = resolve_checkpoint()  # canonical configured checkpoint
     identity = checkpoint_identity()
@@ -31,11 +31,8 @@ def _get_model():
     model = ResNet18Binary()
     model.load_state_dict(ckpt["state_dict"])
     model.eval()
-    threshold = None
-    metrics = ckpt_path.parents[1] / "metrics" / "test_metrics.json"
-    if metrics.exists():
-        threshold = float(json.loads(metrics.read_text())["threshold"])
-    return model, ckpt_path, (threshold or 0.5), identity
+    threshold, _source = resolve_threshold(ckpt_path=ckpt_path)
+    return model, ckpt_path, threshold, identity
 
 
 def predict_upload(file):
