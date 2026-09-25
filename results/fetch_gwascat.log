@@ -1,0 +1,48 @@
+== Alzheimer's disease (alzheimer) ==
+  [gwascat] alzheimer: page 1/None, running unique genes=173
+  [gwascat] alzheimer: page 2/None, running unique genes=200
+  [gwascat] alzheimer: page 3/None, running unique genes=312
+  [gwascat] alzheimer: page 4/None, running unique genes=451
+  [gwascat] alzheimer: page 5/None, running unique genes=562
+  [gwascat] alzheimer: page 6/None, running unique genes=746
+  [gwascat] alzheimer: page 7/None, running unique genes=943
+  [gwascat] alzheimer: page 8/None, running unique genes=1128
+  [gwascat] alzheimer: page 9/None, running unique genes=1225
+  [gwascat] alzheimer: page 10/None, running unique genes=1225
+  [gwascat] alzheimer: page 11/None, running unique genes=1225
+  [gwascat] alzheimer: page 12/None, running unique genes=1225
+  [gwascat] alzheimer: page 13/None, running unique genes=1249
+  [gwascat] alzheimer: page 14/None, running unique genes=1473
+  [gwascat] alzheimer: page 15/None, running unique genes=1728
+  [gwascat] alzheimer: page 16/None, running unique genes=1924
+  [gwascat] alzheimer: page 17/None, running unique genes=1925
+  [gwascat] alzheimer: page 18/None, running unique genes=1925
+  [gwascat] alzheimer: page 19/None, running unique genes=1943
+  [gwascat] alzheimer: page 20/None, running unique genes=1987
+  [gwascat] alzheimer: page 21/None, running unique genes=2085
+  [gwascat] alzheimer: page 22/None, running unique genes=2173
+  [gwascat] alzheimer: page 23/None, running unique genes=2347
+  [gwascat] alzheimer: page 24/None, running unique genes=2508
+  [gwascat] alzheimer: page 25/None, running unique genes=2678
+  [gwascat] alzheimer: page 26/None, running unique genes=2813
+  [gwascat] alzheimer: page 27/None, running unique genes=2912
+  [gwascat] alzheimer: page 28/None, running unique genes=2993
+  [gwascat] alzheimer: page 29/None, running unique genes=3021
+  [gwascat] alzheimer: page 30/None, running unique genes=3092
+  [gwascat] alzheimer: page 31/None, running unique genes=3134
+  [gwascat] alzheimer: page 32/None, running unique genes=3349
+  [gwascat] alzheimer: page 33/34, running unique genes=3496
+  [gwascat] alzheimer: page 34/34, running unique genes=3560
+  [gwascat] 6716 associations -> 3560 unique genes (child_traits=False) -> alzheimer_gwascat.json
+== Parkinson's disease (parkinson) ==
+  [gwascat] parkinson: page 1/5, running unique genes=197
+  [gwascat] parkinson: page 2/5, running unique genes=356
+  [gwascat] parkinson: page 3/5, running unique genes=421
+  [gwascat] parkinson: page 4/5, running unique genes=514
+  [gwascat] parkinson: page 5/5, running unique genes=520
+  [gwascat] 814 associations -> 520 unique genes (child_traits=False) -> parkinson_gwascat.json
+== Huntington's disease (huntington) ==
+  [gwascat] huntington: page 1/1, running unique genes=31
+  [gwascat] 22 associations -> 31 unique genes (child_traits=False) -> huntington_gwascat.json
+
+All gene sets fetched.

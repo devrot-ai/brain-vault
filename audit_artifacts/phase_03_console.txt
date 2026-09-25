@@ -1,0 +1,63 @@
+MANIFEST: {
+ "labeling_rule": {
+  "subject_unit": "numeric OAS1_XXXX prefix (session = _MRn suffix)",
+  "class_1_AD": "CDR in {0.5,1,2} and Age >= 60 (probable AD)",
+  "class_0_CN": "CDR == 0 and Age >= 60",
+  "excluded": "sessions without CDR; subjects with conflicting CDR"
+ },
+ "matching": {
+  "method": "deterministic greedy 1:1 nearest-age, same sex",
+  "age_tolerance_ladder_years": [
+   2,
+   3,
+   5
+  ],
+  "fallback_cases": {
+   "OAS1_0134": 5,
+   "OAS1_0158": 5,
+   "OAS1_0223": 3,
+   "OAS1_0247": 3,
+   "OAS1_0263": 5,
+   "OAS1_0268": 5,
+   "OAS1_0288": 3,
+   "OAS1_0339": 5,
+   "OAS1_0352": 5,
+   "OAS1_0380": 5,
+   "OAS1_0388": 3,
+   "OAS1_0402": 3,
+   "OAS1_0454": 3
+  },
+  "tie_break": "subject ID ascending"
+ },
+ "split": {
+  "fractions": {
+   "train": 0.7,
+   "val": 0.15,
+   "test": 0.15
+  },
+  "unit": "subject",
+  "seed": 42,
+  "label_0": {
+   "n": 82,
+   "train": 58,
+   "val": 12,
+   "test": 12
+  },
+  "label_1": {
+   "n": 100,
+   "train": 70,
+   "val": 15,
+   "test": 15
+  }
+ },
+ "balance_report": {
+  "AD": {
+   "n": 100,
+   "mean_age": 76.76,
+   "sd_age": 7.119641348361091,
+   "pct_female": 59.0
+  },
+  "CN": {
+   "n": 82,
+   "mean_age": 76.45121951219512,
+   "sd_age": 7.844401068536

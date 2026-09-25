@@ -1,0 +1,8 @@
+configuration	n_parcels	spearman_rho_CNN_GENE
+all_donors	86	-0.1368
+drop_10021	84	-0.2163
+drop_12876	86	-0.1419
+drop_14380	86	-0.0854
+drop_15496	86	-0.1278
+drop_15697	86	-0.0777
+drop_9861	84	-0.0762

@@ -1,0 +1,110 @@
+{
+  "n_genes_measured": 1817,
+  "gene_definition": "gwascat",
+  "unsampled_parcels_dropped": [
+    "temporalpole_R"
+  ],
+  "cnn_gene": {
+    "rho_observed": 0.4112777892084365,
+    "matched_null": {
+      "p": 1.0,
+      "n": 200,
+      "null_mean": 0.4682908302456463,
+      "null_sd": 0.003702497989088795,
+      "ci95": [
+        0.46320257512817287,
+        0.47682731561096775
+      ],
+      "covariates": [
+        "mean_expression",
+        "expression_variance"
+      ],
+      "diagnostics": {
+        "ks_mean_expression": 0.0072234452394056015,
+        "ks_p_mean_expression": 0.9999768309098847,
+        "ks_expression_variance": 0.005244909190974201,
+        "ks_p_expression_variance": 0.9999999995785195,
+        "match_distance_mean": 0.021920935046303495,
+        "match_distance_p95": 0.06599151233280375
+      }
+    },
+    "spatial_nulls": {
+      "moran": {
+        "method": "moran",
+        "r_obs": 0.4112777892084365,
+        "p_spatial": 0.024875621890547265,
+        "n_perm": 200,
+        "n_valid_parcels": 86,
+        "null_r_mean": -0.004513892164724752,
+        "null_r_p2.5": -0.32450351431671304,
+        "null_r_p97.5": 0.356164441718949,
+        "moran_i_observed": -0.005436513614853124
+      },
+      "burt2020": {
+        "method": "burt2020",
+        "r_obs": 0.4112777892084365,
+        "p_spatial": 0.004975124378109453,
+        "n_perm": 200,
+        "n_valid_parcels": 86,
+        "null_r_mean": 0.008147176753620455,
+        "null_r_p2.5": -0.2576956460210387,
+        "null_r_p97.5": 0.28816595122411437,
+        "moran_i_observed": -0.005436513614853124
+      },
+      "spin": {
+        "method": "spin",
+        "r_obs": 0.47225109833104034,
+        "p_spatial": 0.35323383084577115,
+        "n_perm": 200,
+        "n_valid_parcels": 67,
+        "null_r_mean": 0.37508784960486957,
+        "note": "cortical parcels only; subcortical values excluded"
+      }
+    },
+    "concordance": {
+      "per_method": {
+        "moran": {
+          "p_spatial": 0.024875621890547265,
+          "r_obs": 0.4112777892084365
+        },
+        "burt2020": {
+          "p_spatial": 0.004975124378109453,
+          "r_obs": 0.4112777892084365
+        },
+        "spin": {
+          "p_spatial": 0.35323383084577115,
+          "r_obs": 0.47225109833104034
+        }
+      },
+      "methods_supporting": [
+        "moran",
+        "burt2020"
+      ],
+      "n_methods_supporting": 2,
+      "robust": true,
+      "concordance_required": 2
+    }
+  },
+  "three_way": {
+    "CNN_vs_lajoie2020_ad_atrophy": {
+      "rho": -0.1611761297002227,
+      "p_spatial_moran": 0.6766169154228856,
+      "n_parcels": 81
+    },
+    "GENE_vs_lajoie2020_ad_atrophy": {
+      "rho": -0.3225503984997656,
+      "p_spatial_moran": 0.30845771144278605,
+      "n_parcels": 80
+    },
+    "CNN_vs_lajoie2020_ad_tau_ftp": {
+      "rho": -0.14302236612728858,
+      "p_spatial_moran": 0.7213930348258707,
+      "n_parcels": 87
+    },
+    "GENE_vs_lajoie2020_ad_tau_ftp": {
+      "rho": -0.10999575451672247,
+      "p_spatial_moran": 0.8407960199004975,
+      "n_parcels": 86
+    }
+  }
+}

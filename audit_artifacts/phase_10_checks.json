@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "saved_cam_finite_3d_nonconstant": true,
+    "on_grid_cam_structured": true,
+    "nifti_saved": true,
+    "png_saved": true
+  },
+  "saved_cam": {
+    "shape": [
+      128,
+      128,
+      128
+    ],
+    "nonzero_frac": 0.1875,
+    "max": 1.0
+  },
+  "on_grid_cam": {
+    "shape": [
+      128,
+      128,
+      128
+    ],
+    "nonzero_frac": 0.890625,
+    "top10pct_mass": 0.3425945043563843
+  },
+  "note": "saved CAM is resampled onto the reference scan's grid by design (save_cam_nifti); on-grid CAM verified separately"
+}

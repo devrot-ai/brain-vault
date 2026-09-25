@@ -1,0 +1,92 @@
+# =====================================================================
+# OASIS-1 3D ResNet-18 — primary MRI classification config (Parts A-L)
+# ---------------------------------------------------------------------
+# Every value here is recorded verbatim in each run manifest.
+# CPU-note: `input_mm: 2.0` and the batch size below are calibrated for
+# a 6-thread CPU; on a GPU raise batch_size to 8-16 and keep the rest.
+# =====================================================================
+
+dataset:
+  name: oasis1
+  metadata_xlsx: data/raw/oasis1/oasis_cross-sectional.xlsx   # official 2024 revision
+  min_age: 60
+  labeling_rule:
+    subject_unit: "OAS1_XXXX prefix (session = _MRn)"
+    class_1: "CDR in {0.5, 1, 2} and Age >= 60 (probable AD)"
+    class_0: "CDR == 0 and Age >= 60"
+    excluded: "sessions without CDR; subjects with conflicting CDR across sessions"
+  matching:
+    method: deterministic_greedy_1to1_nearest_age_same_sex
+    age_tolerance_ladder_years: [2, 3, 5]
+    tie_break: subject_id_ascending
+  split:
+    unit: subject
+    fractions: {train: 0.70, val: 0.15, test: 0.15}
+    seed: 42
+
+preprocessing:
+  input_series: "PROCESSED/MPRAGE/T88_111/*_t88_masked_gfc"   # OASIS skull-stripped, T88-registered
+  target_voxel_mm: 2.0
+  output_shape: [128, 128, 128]
+  orientation: RAS
+  intensity: brain_z          # z-normalize inside brain mask (voxels > 0)
+  cache_dir: data/derived/oasis1_128
+  deterministic_on_eval: true
+
+augmentation:                  # training only; biological rationale in code
+  enabled: true
+  rotate_deg: 7.0
+  translate_vox: 3.0
+  scale: 0.05
+  intensity_scale: 0.10
+  intensity_shift: 0.10
+  gaussian_noise_sigma: 0.02
+  lr_flip: false               # brain asymmetry is real; never flip
+
+model:
+  name: resnet18_3d
+  framework: monai
+  in_channels: 1
+  blocks: [2, 2, 2, 2]
+  channels: [64, 128, 256, 512]
+  head: single_logit_sigmoid
+
+training:
+  optimizer: adamw
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  batch_size: 4                # 8-16 on GPU
+  max_epochs: 25
+  warmup_epochs: 1
+  lr_schedule: cosine
+  early_stopping:
+    metric: val_roc_auc        # model selection sees VALIDATION only
+    patience: 5
+  pos_weight: auto_from_train
+  mixed_precision: auto        # enabled on CUDA, off on CPU
+  grad_clip: 5.0
+
+threshold:
+  selected_on: validation
+  method: youden               # maximize sensitivity + specificity - 1
+  frozen_before_test: true
+
+testing:
+  subject_bootstrap:
+    n_boot: 2000
+    seed: 42
+    unit: subject              # never scans
+
+explainability:
+  gradcam:
+    layer: layer4
+    per_test_subject: true
+  occlusion:
+    patch_vox: 32              # 64 mm at 2 mm voxels
+    stride_vox: 32             # non-overlapping: ~O(10^2) forwards/subject on CPU
+    note: coarse by design; independent check on Grad-CAM regional patterns
+  regional_atlas: dk68_tianS1  # full predefined 87-parcel atlas, no selection
+
+seeds:
+  primary: 42
+  robustness: [42, 1, 2, 3, 4] # >=5 independent runs (Part V)

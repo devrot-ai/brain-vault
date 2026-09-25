@@ -1,0 +1,57 @@
+# =====================================================================
+# Disease definitions
+# ---------------------------------------------------------------------
+# VERIFIED against the live GWAS Catalog REST v2 and Open Targets APIs
+# (Sep 2026): the Catalog v2 `efo_id` association filter matches the MONDO
+# ontology ids carried in each association's `efo_traits` block, so the
+# `mondo_id` below is the Catalog trait id (with `efo_id` as fallback).
+# Trait labels in the Catalog are normalized WITHOUT apostrophes
+# ('Alzheimer disease'). Run `python scripts/verify_diseases.py` to
+# re-confirm ids and association counts before any retrieval.
+# show_child_traits: false = only associations annotated DIRECTLY with the
+#                 trait; true = also descendant concepts. This choice
+#                 changes the gene set and is recorded in every manifest.
+# gwas_catalog / open_targets: per-disease toggles so Tier A and Tier B
+#                 can be run independently.
+# =====================================================================
+
+diseases:
+  alzheimer:
+    display_name: Alzheimer's disease
+    efo_id: EFO_0000249
+    mondo_id: MONDO_0004975
+    show_child_traits: false
+    extended_geneset: false
+    gwas_catalog: true
+    open_targets: true
+    synthetic_map_profile: anterior_medial_temporal   # demo-map weighting profile
+    notes: >
+      Pilot disease for the end-to-end pipeline. Expected vulnerable
+      structures: entorhinal cortex, hippocampus, posterior cingulate /
+      precuneus, temporal neocortex.
+
+  parkinson:
+    display_name: Parkinson's disease
+    efo_id: EFO_0002508
+    mondo_id: MONDO_0005180
+    show_child_traits: false
+    extended_geneset: false
+    gwas_catalog: true
+    open_targets: true
+    synthetic_map_profile: subcortical_nigral
+    notes: >
+      Expected vulnerable structures: substantia nigra, basal ganglia
+      (putamen/caudate), brainstem; cortical involvement at later stages.
+
+  huntington:
+    display_name: Huntington's disease
+    efo_id: EFO_0000267
+    mondo_id: MONDO_0007739
+    show_child_traits: false
+    extended_geneset: false
+    gwas_catalog: true
+    open_targets: true
+    synthetic_map_profile: striatal
+    notes: >
+      Expected vulnerable structures: striatum (caudate, putamen,
+      nucleus accumbens), with cortical spread in later stages.

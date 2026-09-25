@@ -1,0 +1,73 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Environments
+.venv/
+venv/
+env/
+conda-meta/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Data: raw downloads and derived intermediates are reproducible; do not commit.
+data/raw/
+data/derived/
+# External disease maps: raw NIfTIs are re-downloadable (git-ignored), but the
+# parcellated CSVs + provenance JSONs are the scientific record -- keep them.
+data/external/*
+!data/external/disease_maps
+data/external/disease_maps/*
+!data/external/disease_maps/*.csv
+!data/external/disease_maps/*.json
+
+# Large results may be regenerated; keep manifests and small tables.
+results/figures/*.html
+results/figures/*.png
+results/fetch_gene_sets.log
+results/build_expression.log
+results/gene_sets/page_cache/
+
+# ML artifacts: model weights are huge and fully reproducible from config+seed.
+results/ml/**/checkpoints/
+results/oasis1_download.log
+results/oasis1_download.err.log
+results/train_smoke.log
+results/train_smoke.err.log
+
+# Inference / demo outputs
+outputs/
+
+# Freebuff workspace metadata (tooling, not project content)
+.freebuff/
+
+# Large audit binaries that are regenerable and documented as excluded:
+# - quarantined interrupted-run weights (~666 MB; the phase-21 mtime-hijack
+#   incident, recorded in audit_artifacts/phase_22_risk_audit.md)
+audit_artifacts/quarantined_interrupted_lightaug_run/checkpoints/
+# - smoke-run checkpoint (~133 MB; regenerable via the tested smoke path)
+audit_artifacts/phase_08_smoke_checkpoint.pt
+# Large derived AHBA expression tables (regenerable from the cached download)
+results/ahba/*.parquet
+# Per-subject CAM volumes in run dirs (~10 MB each x 27 subjects; deterministic
+# from the frozen checkpoint; representative copies live in audit_artifacts/)
+results/ml/**/gradcam/*.nii.gz
+results/ml/**/occlusion/*.nii.gz
+# Bridge stage caches (hundreds of MB; deterministic from cached inputs)
+results/*/ckpt/
+# Generated report (rebuilt by scripts/make_report.py)
+results/report.html
+
+# OS junk
+.DS_Store
+Thumbs.db

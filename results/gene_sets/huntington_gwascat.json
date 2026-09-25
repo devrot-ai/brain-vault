@@ -1,0 +1,240 @@
+{
+  "tier": "gwascat",
+  "genes": [
+    "ADD1",
+    "ADGB",
+    "AQP1",
+    "ATG3P1",
+    "ATRNL1",
+    "BRF1",
+    "CRPPA",
+    "EFR3A",
+    "FAN1",
+    "GFRA1",
+    "KIF9",
+    "LINC00333",
+    "LINC00375",
+    "LINC01098",
+    "LINC01099",
+    "LINC01337",
+    "LINC01734",
+    "MINDY4",
+    "MSH3",
+    "MTMR10",
+    "OR10A2",
+    "PRDM9",
+    "PRPF38AP2",
+    "PTDSS1",
+    "PTPN11P4",
+    "PTPRM",
+    "RNASET2",
+    "ST8SIA6",
+    "TENM2",
+    "TENM2-AS1",
+    "TRPM1"
+  ],
+  "associations": [
+    {
+      "association_id": 31079985,
+      "accession_id": "GCST007113",
+      "p_value": 2e-20,
+      "genes": [
+        "FAN1"
+      ]
+    },
+    {
+      "association_id": 31079978,
+      "accession_id": "GCST007113",
+      "p_value": 2e-08,
+      "genes": [
+        "CRPPA"
+      ]
+    },
+    {
+      "association_id": 24150856,
+      "accession_id": "GCST004691",
+      "p_value": 2e-06,
+      "genes": [
+        "OR10A2"
+      ]
+    },
+    {
+      "association_id": 21717957,
+      "accession_id": "GCST004691",
+      "p_value": 9e-06,
+      "genes": [
+        "PRPF38AP2",
+        "ST8SIA6"
+      ]
+    },
+    {
+      "association_id": 21717952,
+      "accession_id": "GCST004691",
+      "p_value": 9e-06,
+      "genes": [
+        "ATRNL1",
+        "GFRA1"
+      ]
+    },
+    {
+      "association_id": 21717947,
+      "accession_id": "GCST004691",
+      "p_value": 9e-06,
+      "genes": [
+        "LINC00333",
+        "LINC00375"
+      ]
+    },
+    {
+      "association_id": 21717942,
+      "accession_id": "GCST004691",
+      "p_value": 8e-06,
+      "genes": [
+        "MTMR10",
+        "TRPM1"
+      ]
+    },
+    {
+      "association_id": 21717937,
+      "accession_id": "GCST004691",
+      "p_value": 6e-06,
+      "genes": [
+        "PRDM9",
+        "PTPN11P4"
+      ]
+    },
+    {
+      "association_id": 21717932,
+      "accession_id": "GCST004691",
+      "p_value": 6e-06,
+      "genes": [
+        "RNASET2"
+      ]
+    },
+    {
+      "association_id": 21717925,
+      "accession_id": "GCST004691",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "AQP1",
+        "MINDY4"
+      ]
+    },
+    {
+      "association_id": 21717920,
+      "accession_id": "GCST004691",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "LINC01098",
+        "LINC01099"
+      ]
+    },
+    {
+      "association_id": 21717915,
+      "accession_id": "GCST004691",
+      "p_value": 4e-06,
+      "genes": [
+        "MSH3"
+      ]
+    },
+    {
+      "association_id": 21717910,
+      "accession_id": "GCST004691",
+      "p_value": 3e-06,
+      "genes": [
+        "EFR3A"
+      ]
+    },
+    {
+      "association_id": 21717905,
+      "accession_id": "GCST004691",
+      "p_value": 3e-06,
+      "genes": [
+        "BRF1"
+      ]
+    },
+    {
+      "association_id": 21717899,
+      "accession_id": "GCST004691",
+      "p_value": 3e-06,
+      "genes": [
+        "PTDSS1"
+      ]
+    },
+    {
+      "association_id": 21717893,
+      "accession_id": "GCST004691",
+      "p_value": 3e-06,
+      "genes": [
+        "TENM2",
+        "TENM2-AS1"
+      ]
+    },
+    {
+      "association_id": 21717888,
+      "accession_id": "GCST004691",
+      "p_value": 3e-06,
+      "genes": [
+        "ADD1"
+      ]
+    },
+    {
+      "association_id": 21717873,
+      "accession_id": "GCST004691",
+      "p_value": 2e-06,
+      "genes": [
+        "ATG3P1",
+        "LINC01734"
+      ]
+    },
+    {
+      "association_id": 21717868,
+      "accession_id": "GCST004691",
+      "p_value": 2e-06,
+      "genes": [
+        "PTPRM"
+      ]
+    },
+    {
+      "association_id": 21717863,
+      "accession_id": "GCST004691",
+      "p_value": 2e-06,
+      "genes": [
+        "KIF9"
+      ]
+    },
+    {
+      "association_id": 21717858,
+      "accession_id": "GCST004691",
+      "p_value": 9e-07,
+      "genes": [
+        "ADGB"
+      ]
+    },
+    {
+      "association_id": 21717853,
+      "accession_id": "GCST004691",
+      "p_value": 1e-10,
+      "genes": [
+        "LINC01337"
+      ]
+    }
+  ],
+  "metadata": {
+    "disease": "Huntington's disease",
+    "disease_key": "huntington",
+    "efo_id": "EFO_0000267",
+    "mondo_id": "MONDO_0007739",
+    "show_child_traits": false,
+    "extended_geneset": false,
+    "retrieval_date": "2026-09-19T14:00:15+00:00",
+    "number_associations": 22,
+    "number_unique_genes": 31,
+    "api_base": "https://www.ebi.ac.uk/gwas/rest/api/v2",
+    "catalog_trait_id": "MONDO_0007739",
+    "pages_fetched": 1,
+    "trait_label": "Huntington disease",
+    "trait_uri": "http://purl.obolibrary.org/obo/MONDO_0007739",
+    "label_source": "EBI OLS"
+  }
+}

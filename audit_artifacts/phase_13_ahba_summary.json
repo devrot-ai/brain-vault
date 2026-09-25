@@ -1,0 +1,30 @@
+expression matrix: (87, 15633) (parcels x genes)
+donor_long columns: ['donor', 'label', 'gene', 'value']
+donors: ['10021', '12876', '14380', '15496', '15697', '9861']
+manifest keys: ['run_name', 'timestamp_utc', 'git_commit', 'python_version', 'package_versions', 'config_hash', 'seed', 'spatial_null_seed', 'analysis_config_source', 'step', 'atlas', 'outputs', 'n_parcels', 'n_genes', 'all_missing_parcels']
+{
+ "run_name": "primary",
+ "timestamp_utc": "2026-09-19T15:07:04+00:00",
+ "python_version": "3.11.9",
+ "config_hash": "832bcd6c440308b1c5a51f4e587b1fd8182760f81cc08571b9ac90a1749f5aba",
+ "seed": 42,
+ "spatial_null_seed": 42,
+ "analysis_config_source": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\config\\analysis.yaml",
+ "step": "build_expression",
+ "atlas": "dk68_tianS1",
+ "n_parcels": 87,
+ "n_genes": 15633
+}
+{
+  "ahba_executed": true,
+  "parcels": 87,
+  "genes": 15633,
+  "parcels_with_data": 86,
+  "n_donors": 6,
+  "value_range": [
+    0.0,
+    1.0
+  ],
+  "n_nan_cells": 15633,
+  "note": "expression loaded from the abagen-built parquet (cached build); manifest_build_expression records the abagen parameters"
+}

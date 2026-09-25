@@ -1,0 +1,112 @@
+{
+  "n_genes_measured": 1817,
+  "gene_definition": "gwascat",
+  "unsampled_parcels_dropped": [
+    "temporalpole_R"
+  ],
+  "cnn_gene": {
+    "rho_observed": -0.13680834001603848,
+    "background": {
+      "background": "ahba_expressed_fallback",
+      "reason": "ConnectionError: HTTPSConnectionPool(host='zip.humanbrainproject.org', port=443): Max retries exceeded with url: /bing_scale.tsv.zip (Caused by NameResolutionError(\"HTTPSConnection(host='zip.humanbrainproject.org', port=443): Failed to resolve 'zip.humanbrainproject.org' ([Errno 11001] getaddrinfo failed)\"))",
+      "n": 15633
+    },
+    "matched_null": {
+      "p": 0.30293941211757647,
+      "n": 5000,
+      "null_mean": 0.12815089768385302,
+      "null_sd": 0.016463569445171116,
+      "ci95": [
+        0.10105099297136656,
+        0.16201943487900367
+      ],
+      "covariates": [
+        "mean_expression",
+        "expression_variance"
+      ],
+      "diagnostics": {
+        "ks_mean_expression": 0.007225206384149696,
+        "ks_p_mean_expression": 0.9999752708428566,
+        "ks_expression_variance": 0.005230930104567988,
+        "ks_p_expression_variance": 0.9999999995829024,
+        "match_distance_mean": 0.02192308268806503,
+        "match_distance_p95": 0.06599151233280375
+      }
+    },
+    "spatial_nulls": {
+      "moran": {
+        "method": "moran",
+        "r_obs": -0.13680834001603848,
+        "p_spatial": 0.45910817836432716,
+        "n_perm": 5000,
+        "n_valid_parcels": 86,
+        "null_r_mean": 0.0008395603566205953,
+        "null_r_p2.5": -0.34701684041700076,
+        "null_r_p97.5": 0.34493419500919825,
+        "moran_i_observed": -0.005436513614853124
+      },
+      "burt2020": {
+        "method": "burt2020",
+        "r_obs": -0.13680834001603848,
+        "p_spatial": 0.32313537292541494,
+        "n_perm": 5000,
+        "n_valid_parcels": 86,
+        "null_r_mean": -0.0009488258880135856,
+        "null_r_p2.5": -0.26016510212745886,
+        "null_r_p97.5": 0.26722203877541323,
+        "moran_i_observed": -0.005436513614853124
+      },
+      "spin": {
+        "method": "spin",
+        "r_obs": -0.03308324686726794,
+        "p_spatial": 0.8622275544891022,
+        "n_perm": 5000,
+        "n_valid_parcels": 67,
+        "null_r_mean": -0.15123337820702615,
+        "note": "cortical parcels only; subcortical values excluded"
+      }
+    },
+    "concordance": {
+      "per_method": {
+        "moran": {
+          "p_spatial": 0.45910817836432716,
+          "r_obs": -0.13680834001603848
+        },
+        "burt2020": {
+          "p_spatial": 0.32313537292541494,
+          "r_obs": -0.13680834001603848
+        },
+        "spin": {
+          "p_spatial": 0.8622275544891022,
+          "r_obs": -0.03308324686726794
+        }
+      },
+      "methods_supporting": [],
+      "n_methods_supporting": 0,
+      "robust": false,
+      "concordance_required": 2
+    }
+  },
+  "three_way": {
+    "CNN_vs_lajoie2020_ad_atrophy": {
+      "rho": -0.32956187895212286,
+      "p_spatial_moran": 0.3135372925414917,
+      "n_parcels": 81
+    },
+    "GENE_vs_lajoie2020_ad_atrophy": {
+      "rho": -0.3225503984997656,
+      "p_spatial_moran": 0.3151369726054789,
+      "n_parcels": 80
+    },
+    "CNN_vs_lajoie2020_ad_tau_ftp": {
+      "rho": -0.4507909892833709,
+      "p_spatial_moran": 0.16556688662267546,
+      "n_parcels": 87
+    },
+    "GENE_vs_lajoie2020_ad_tau_ftp": {
+      "rho": -0.10999575451672247,
+      "p_spatial_moran": 0.8168366326734653,
+      "n_parcels": 86
+    }
+  }
+}

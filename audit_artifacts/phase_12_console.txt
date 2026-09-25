@@ -1,0 +1,8 @@
+disease spec: Alzheimer's disease EFO_0000249 MONDO_0004975
+trait verification: {"trait_id": "MONDO_0004975", "n_associations": 6716, "catalog_trait_label": "Alzheimer disease"}
+retrieved 3560 unique mapped genes
+metadata: {
+ "tier": "gwascat"
+}
+overlap with stored set: 3560 (stored 3560, live 3560)
+PHASE12_VERDICT: PASS

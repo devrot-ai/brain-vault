@@ -1,0 +1,141 @@
+# =====================================================================
+# BrainVuln primary analysis configuration
+# ---------------------------------------------------------------------
+# Every inferential choice of the pipeline lives here and is recorded
+# verbatim in each run manifest, so results are reproducible.
+# =====================================================================
+
+run:
+  name: primary
+  seed: 42
+  output_dir: results
+
+# ---------------------------------------------------------------------------
+# Canonical inference checkpoint. Single source of truth for app.py,
+# predict.py and scripts/validate_external.py. Resolution NEVER searches
+# the filesystem and NEVER uses modification time (see
+# brainvuln.config.resolve_checkpoint). To promote a new model, edit this
+# path explicitly and record its SHA256 in the run metadata.
+# ---------------------------------------------------------------------------
+inference:
+  checkpoint:
+    path: results/ml/resnet_seed42/checkpoints/best.pt
+
+# ---------------------------------------------------------------------------
+# AHBA / abagen settings (abagen.get_expression_data).
+# These are the PRIMARY choices; atlas / gene-definition / score sensitivities
+# are re-runs with one knob changed at a time.
+# ---------------------------------------------------------------------------
+ahba:
+  probe_selection: diff_stability   # abagen recommended representative-probe strategy
+  donor_probes: aggregate
+  region_agg: donors
+  agg_metric: mean
+  corrected_mni: true
+  reannotated: true
+  sample_norm: srs
+  gene_norm: srs
+  missing: null            # NEVER silently fill missing parcels (primary analysis)
+  ibf_threshold: 0.5
+  lr_mirror: null
+  donors: all
+  data_dir: data/raw/ahba  # ~2-4 GB microarray download, cached, idempotent
+
+# ---------------------------------------------------------------------------
+# Atlas definitions.
+# Primary space = volumetric union of Desikan-Killiany 68 cortex and the
+# Tian 2020 S1 subcortical atlas (both resampled/renumbered into one
+# non-overlapping parcellation). Surface DK68 GIFTIs are kept for spin tests.
+# ---------------------------------------------------------------------------
+atlases:
+  primary: dk68_tianS1
+  dk68_tianS1:
+    kind: union
+    cortical: dk68
+    subcortical: tian_s1
+    description: >
+      Volumetric union: Desikan-Killiany 68 cortical parcels (fsaverage5 surface
+      copies retained for spin permutations) plus Tian 2020 Subcortex S1 MNI152
+      parcels. Tian parcels overlapping cortex are retained (they include
+      hippocampus/amygdala, which abagen samples well); DK labels intersected by
+      a Tian parcel are split and resolved by majority voxel overlap. For the
+      cortical surface representation, Tian-only parcels carry NaN coordinates
+      and are excluded from spin-permutation analyses.
+  dk68_only:
+    kind: cortical_only
+    description: Cortex-only sensitivity analysis on the Desikan-Killiany atlas.
+
+# ---------------------------------------------------------------------------
+# Gene-set definition and matched-gene nulls.
+# ---------------------------------------------------------------------------
+gene_sets:
+  gene_definition: gwascat          # primary: GWAS Catalog mapped genes (Tier A)
+  background: bing_scale            # full microarray gene list (auto-downloaded)
+  match_covariates: [mean_expression, expression_variance]
+  n_nulls_matched: 1000
+  matching:
+    algorithm: greedy_nearest_1to1  # 1:1, without replacement
+    tolerance_quantile: null        # null = accept best available match, record distance
+
+# ---------------------------------------------------------------------------
+# Molecular scoring.
+# ---------------------------------------------------------------------------
+scoring:
+  primary_method: mean_z            # S_r = mean over genes of parcel-wise gene z-scores
+  gene_z_dimension: genes           # z-score each gene across parcels (spatial z)
+  sensitivity_methods: [mean_rank, first_pc, p_weighted_mean_z]
+
+# ---------------------------------------------------------------------------
+# Spatial nulls (H3). Volumetric/parcellated primary; surface spin sensitivity.
+# ---------------------------------------------------------------------------
+spatial_nulls:
+  n_perm: 5000
+  seed: 42
+  volumetric_methods: [moran, burt2020]   # via neuromaps, on parcel centroids
+  surface_method: spin                    # brainspace spin permutations, DK68 surface
+  two_sided: true
+  fdr_method: bh
+  fdr_alpha: 0.05
+  concordance_required: 2                 # methods agreeing needed for "robust" flag
+
+# ---------------------------------------------------------------------------
+# Negative controls — PRE-REGISTERED before looking at results (do not edit
+# after seeing real results; change them only with a documented amendment).
+# ---------------------------------------------------------------------------
+negative_controls:
+  - name: matched_gene_sets
+    description: >
+      Matched random gene sets (same mean expression / variance) must NOT
+      systematically reproduce the disease map; the true gene-set rho should
+      lie in the far right tail of the matched-null distribution.
+    expectation: observed_rho_gt_95pct_of_nulls
+  - name: cross_disease_gene_sets
+    description: >
+      Each unrelated disease gene set (PD genes vs AD map, HD genes vs AD map,
+      etc.) should produce systematically weaker spatial correspondence than
+      the matched disease gene set.
+    expectation: disease_set_rho_gt_unrelated_sets
+  - name: unrelated_phenotype_map
+    description: >
+      An explicitly unrelated parcellated phenotype map supplied under
+      data/external/negative_controls/ should show no robust correspondence
+      with the disease molecular map.
+    expectation: rho_not_robust_under_spatial_nulls
+
+# ---------------------------------------------------------------------------
+# Open Targets Tier B (robustness gene definition).
+# ---------------------------------------------------------------------------
+opentargets:
+  genetic_score_thresholds: [0.10, 0.30]
+  primary_threshold: 0.10
+  enable_indirect: false
+  datasource_filter: genetic        # genetic-evidence associations only
+
+# GWAS Catalog REST v2 client behaviour.
+gwas_catalog:
+  api_base: https://www.ebi.ac.uk/gwas/rest/api/v2
+  page_size: 200
+  max_requests_per_second: 8       # documented service limit: 15 qps
+  timeout_seconds: 30
+  retries: 5
+  extended_geneset: false

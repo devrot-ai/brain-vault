@@ -1,0 +1,48 @@
+# =====================================================================
+# Spatial statistics configuration (Parts P, R, S, T, U)
+# =====================================================================
+
+core_statistic:
+  name: rho_CNN_GENE
+  type: spearman
+  maps:
+    cnn: results/ml/resnet_seed42/regional_relevance/M_CNN_regional.csv
+    gene: mean_z of AD GWAS genes (configs/genomics.yaml)
+    disease: data/external/disease_maps/   # independent, never used in training
+
+spatial_nulls:                          # Part R — >=5000 for final analysis
+  moran:
+    n_perm: 5000
+    family: moran_spectral_randomization
+  burt2020:
+    n_perm: 5000
+    family: variogram_surrogate
+  spin:
+    n_perm: 5000
+    surface: fsaverage5
+    note: cortical parcels only; subcortical excluded by design
+  concordance_required_families: 2
+  seed: 42
+
+matched_gene_null:                      # Part Q (same object, referenced)
+  n_sets: 5000
+  config_ref: configs/genomics.yaml
+
+donor_loo:                              # Part U
+  leave_one_out: all_6_donors
+  report: [per_donor, median, iqr, min, max]
+
+external_maps:                          # Part S
+  - name: lajoie2020_ad_atrophy
+    provenance: data/external/disease_maps/lajoie2020_ad_atrophy.provenance.json
+  - name: lajoie2020_ad_tau_ftp
+    provenance: data/external/disease_maps/lajoie2020_ad_tau_ftp.provenance.json
+
+fdr:
+  method: benjamini_hochberg
+  applied_to: [matched_null_p, spatial_null_p]
+
+language_policy:                        # Part AG — enforced in docs
+  forbidden: [causal, clinical diagnosis, proves mechanism]
+  required: [predicted, classified, associated, spatially aligned,
+             model-derived relevance, genetically implicated]

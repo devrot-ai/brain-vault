@@ -1,0 +1,44 @@
+{
+  "name": "lajoie2020_ad_atrophy",
+  "disease": "alzheimer",
+  "modality": "Structural MRI (longitudinal gray-matter jacobian)",
+  "space": "MNI152",
+  "sign_convention": "higher = faster gray-matter atrophy",
+  "citation": "La Joie et al. 2020, Science Translational Medicine 12(571):eaba5732",
+  "source_url": "https://neurovault.org/images/64175/",
+  "license_note": "No explicit license set by the source repository; use for research with full citation and contact the authors before redistribution.",
+  "download_date": "2026-09-20",
+  "raw_file": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\external\\disease_maps\\raw\\lajoie2020_ad_atrophy_mni152.nii.gz",
+  "n_subjects": 32,
+  "description": "Average longitudinal atrophy rate map in 32 patients with Alzheimer's disease (MCI or dementia), SPM12 pairwise longitudinal pipeline, smoothed 8mm FWHM, reversed so higher = more atrophy.",
+  "persistent_id": "https://identifiers.org/neurovault.image:64175",
+  "import": {
+    "format": "nifti",
+    "mask_zero": true,
+    "resampling": "trilinear (order=1) into atlas grid, cval=NaN",
+    "n_voxels_masked_zero": 729459,
+    "n_voxels_outside_map_fov": 207235,
+    "map_grid": [
+      121,
+      145,
+      121
+    ],
+    "atlas_grid": [
+      97,
+      115,
+      97
+    ],
+    "map_file": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\external\\disease_maps\\raw\\lajoie2020_ad_atrophy_mni152.nii.gz"
+  },
+  "coverage": {
+    "map": "lajoie2020_ad_atrophy",
+    "n_parcels_atlas": 87,
+    "n_parcels_with_value": 81,
+    "coverage_fraction": 0.9310344827586207,
+    "missing_by_structure": {
+      "subcortex/brainstem": 6
+    },
+    "n_subcortical_with_value": 13
+  },
+  "imported_at_utc": "2026-09-20T07:17:08Z"
+}

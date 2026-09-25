@@ -1,0 +1,2 @@
+n_common_parcels	alignment	pearson_r	spearman_rho	matched_null_mean	matched_null_sd	matched_null_p_100	n_matched_nulls
+86	explicit parcel ID intersection (sorted)	-0.0276	-0.1368	0.1321	0.0164	0.4158	100

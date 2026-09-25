@@ -1,0 +1,5 @@
+,0
+per_disease,"{'alzheimer': {'top_parcels': ['TianS1_06', 'accumbensarea_R', 'caudalanteriorcingulate_R', 'frontalpole_L', 'medialorbitofrontal_R', 'parsopercularis_R', 'rostralanteriorcingulate_R', 'superiorfrontal_R', 'transversetemporal_R'], 'n_top': 9}, 'parkinson': {'top_parcels': ['accumbensarea_R', 'bankssts_R', 'caudalanteriorcingulate_R', 'cuneus_R', 'lateralorbitofrontal_R', 'medialorbitofrontal_R', 'parsopercularis_R', 'rostralanteriorcingulate_R', 'superiorfrontal_R'], 'n_top': 9}, 'huntington': {'top_parcels': ['TianS1_03', 'TianS1_11', 'TianS1_12', 'TianS1_14', 'TianS1_16', 'accumbensarea_L', 'accumbensarea_R', 'brainstem', 'cuneus_R'], 'n_top': 9}}"
+shared_top_parcels,['accumbensarea_R']
+disease_specific_top_parcels,"{'alzheimer': ['TianS1_06', 'frontalpole_L', 'transversetemporal_R'], 'parkinson': ['bankssts_R', 'lateralorbitofrontal_R'], 'huntington': ['TianS1_03', 'TianS1_11', 'TianS1_12', 'TianS1_14', 'TianS1_16', 'accumbensarea_L', 'brainstem']}"
+top_fraction,0.1

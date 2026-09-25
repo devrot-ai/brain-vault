@@ -1,0 +1,40 @@
+PHASE 23 — PERFORMANCE & RESOURCES (CPU-only)
+==============================================================
+torch 2.4.1+cpu | device cpu | threads 6 | pid 13176
+memory at script start: working set 345.2 MB, peak 345.2 MB
+
+[checkpoint] results\ml\resnet_seed42\checkpoints\best.pt
+  size on disk: 133,540,267 bytes (127.4 MB)
+  torch.load time: 69 ms (map_location=cpu)
+  keys: config, epoch, state_dict, val_auc
+
+[parameters]
+  raw total parameters:        33,366,609
+  dead backbone.fc parameters: 205,200  (no gradient in train; excluded per phase 7)
+  effective (trainable) params: 33,161,409
+
+[preprocessing latency]
+  input: OAS1_0001_MR1_mpr_n4_anon_111_t88_masked_gfc.img  (session OAS1_0001_MR1)
+  preprocess_session: warmup + 3 runs -> median 0.22 s (runs: 0.23, 0.22, 0.22)
+  output shape (1, 128, 128, 128) dtype float32 (8.4 MB per volume)
+  cache hit path (np.load of OAS1_0001_MR1.npy): 4.6 ms, shape (1, 128, 128, 128)
+
+[inference latency (ResNet18Binary, batch 1, CPU)]
+  forward, 10 timed runs: median 345 ms (min 323, max 401)
+  example output: logit 1.1419 -> p(AD) 0.7580 (threshold 0.07 -> AD)
+  memory after inference: working set 813.1 MB (peak 813.1 MB)
+
+[full predict path (cold checkpoint load -> probability)]
+  load + build model + forward: 973 ms total (of which torch.load 69 ms)
+
+[notes]
+  - all numbers measured on this machine, CPU-only (torch 2.4.1+cpu);
+    GPU numbers are NOT verifiable in this environment (see phase 22 R11).
+  - preprocessing is cached to data/derived/oasis1_128/*.npy; a cache hit
+    is bit-identical to fresh compute (phase 5), so steady-state serving
+    cost is cache load + forward.
+  - phase-22 risk R1 applies: predict latency is irrelevant if the app
+    picks the wrong checkpoint by mtime; R1 fix recommended post-audit.
+
+memory at end: working set 1.0 GB, peak 1.0 GB
+PHASE23_VERDICT: MEASURED (descriptive artifact, no pass/fail)

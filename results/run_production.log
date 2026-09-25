@@ -1,0 +1,34 @@
+Surface spin assets loaded (fsaverage5 spheres + DK labels)
+Expression: 86 parcels x 15633 genes (dropped unsampled parcels: 1)
+  alzheimer: 1817/3560 gene-set genes measured in AHBA (1743 unmeasured genes excluded)
+  parkinson: 297/520 gene-set genes measured in AHBA (223 unmeasured genes excluded)
+  huntington: 15/31 gene-set genes measured in AHBA (16 unmeasured genes excluded)
+
+Results written to C:\Users\kanishk thakur\Desktop\now pro\results\analysis\run_primary_results.json
+
+== Alzheimer's disease ==
+  genes: 1817 (gwascat)
+  H1 matched-null p (peak / range): 1.0000 / 1.0000
+  H2 rho vs disease map: 0.114
+  H3 spatial p: {'moran': 0.7810437912417516, 'burt2020': 0.5052989402119576, 'spin': 0.6840631873625275} -> robust=False
+  NC matched-null specificity: rho 0.114 vs null p95 0.141 -> FAIL
+  donor LOOCV: median r = 0.093 (IQR 0.079-0.141)
+
+== Parkinson's disease ==
+  genes: 297 (gwascat)
+  H1 matched-null p (peak / range): 0.0010 / 0.0010
+  H2 rho vs disease map: -0.365
+  H3 spatial p: {'moran': 0.5306938612277544, 'burt2020': 0.13817236552689463, 'spin': 0.16396720655868827} -> robust=False
+  NC matched-null specificity: rho -0.365 vs null p95 -0.338 -> FAIL
+  donor LOOCV: median r = -0.369 (IQR -0.377--0.365)
+
+== Huntington's disease ==
+  genes: 15 (gwascat)
+  H1 matched-null p (peak / range): 0.0010 / 1.0000
+  H2 rho vs disease map: 0.096
+  H3 spatial p: {'moran': 0.9364127174565087, 'burt2020': 0.7674465106978604, 'spin': 0.14117176564687062} -> robust=False
+  NC matched-null specificity: rho 0.096 vs null p95 0.079 -> PASS
+  donor LOOCV: median r = 0.090 (IQR 0.073-0.093)
+  NC cross-disease [alzheimer]: own 0.114 vs parkinson 0.240, huntington -0.506 -> FAIL
+  NC cross-disease [parkinson]: own -0.365 vs alzheimer -0.162, huntington 0.197 -> FAIL
+  NC cross-disease [huntington]: own 0.096 vs alzheimer -0.101, parkinson -0.246 -> PASS

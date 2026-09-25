@@ -1,0 +1,13 @@
+Surface spin assets loaded (fsaverage5 spheres + DK labels)
+Expression: 86 parcels x 15633 genes (dropped unsampled parcels: 1)
+  parkinson: 297/520 gene-set genes measured in AHBA (223 unmeasured genes excluded)
+
+Results written to C:\Users\kanishk thakur\Desktop\now pro\results\analysis\run_primary_results.json
+
+== Parkinson's disease ==
+  genes: 297 (gwascat)
+  H1 matched-null p (peak / range): 0.0196 / 0.0196
+  H2 rho vs disease map: -0.382
+  H3 spatial p: {'moran': 0.31840796019900497, 'burt2020': 0.04477611940298507, 'spin': 0.5024875621890548} -> robust=False
+  NC matched-null specificity: rho -0.382 vs null p95 -0.370 -> FAIL
+  donor LOOCV: median r = -0.388 (IQR -0.390--0.382)

@@ -1,0 +1,25 @@
+[
+  {
+    "session": "OAS1_0001_MR1",
+    "source": "data\\raw\\oasis1\\extracted\\disc1\\disc1\\OAS1_0001_MR1\\PROCESSED\\MPRAGE\\T88_111\\OAS1_0001_MR1_mpr_n4_anon_111_t88_masked_gfc.img",
+    "shape": [
+      1,
+      128,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "min": -2.1621651649475098,
+    "max": 6.169270038604736,
+    "mean_brain": 3.8835043625340404e-08,
+    "std_brain": 1.0,
+    "n_nan": 0,
+    "n_inf": 0,
+    "n_zero_voxels": 1889694,
+    "n_brain_voxels": 207458,
+    "mean_brain_nonzero_mask": 3.8835043625340404e-08,
+    "std_brain_nonzero_mask": 1.0,
+    "cache_bit_identical": true
+  }
+]
+PHASE5_VERDICT: PASS

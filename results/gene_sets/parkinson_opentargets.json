@@ -1,0 +1,6729 @@
+{
+  "tier": "opentargets",
+  "genes_by_threshold": {
+    "0.10": [
+      "ACAN",
+      "ACMSD",
+      "ACTR3",
+      "ADCY1",
+      "ADCY5",
+      "ADH1C",
+      "ADH5",
+      "AGBL4",
+      "ALG10",
+      "ANKRD55",
+      "ANO2",
+      "ANTXR2",
+      "APOC1",
+      "APOE",
+      "ARAP3",
+      "ARHGEF2",
+      "ARID3B",
+      "ARID5B",
+      "ARL17B",
+      "ART3",
+      "ASCC3",
+      "ASXL3",
+      "ATP13A2",
+      "ATXN2",
+      "ATXN3",
+      "ATXN8",
+      "ATXN8OS",
+      "AUNIP",
+      "AZI2",
+      "B3GNT3",
+      "BAG3",
+      "BCL7C",
+      "BCL9",
+      "BSN",
+      "BST1",
+      "C2CD4A",
+      "C4orf33",
+      "C8orf58",
+      "CAMK2D",
+      "CARS2",
+      "CCAR2",
+      "CCDC62",
+      "CCDC85A",
+      "CCNA1",
+      "CCSER1",
+      "CD38",
+      "CDC42BPB",
+      "CDH7",
+      "CDH8",
+      "CENPO",
+      "CEP83",
+      "CHMP2B",
+      "CISD1",
+      "CLCN3",
+      "CNOT1",
+      "CNTLN",
+      "CNTN1",
+      "CNTNAP5",
+      "COMMD1",
+      "COX20",
+      "CPM",
+      "CRHR1",
+      "CSF1R",
+      "CTF1",
+      "CTNNA2",
+      "CTSB",
+      "CYSRT1",
+      "DCUN1D1",
+      "DGKQ",
+      "DHX15",
+      "DLG2",
+      "DNAJB6",
+      "DNAJC13",
+      "DNMBP",
+      "DSCAM",
+      "DYRK1A",
+      "EIF4G1",
+      "ELOVL7",
+      "EPPK1",
+      "ERCC8",
+      "ETAA1",
+      "ETV1",
+      "F2RL2",
+      "FAM171A1",
+      "FAM47E",
+      "FASN",
+      "FBRSL1",
+      "FBXO7",
+      "FCGR2A",
+      "FGF14",
+      "FGF20",
+      "FIGLA",
+      "FLG",
+      "FOXA1",
+      "FYN",
+      "GADL1",
+      "GAK",
+      "GALC",
+      "GALNT7",
+      "GAMT",
+      "GARS1",
+      "GBA1",
+      "GCH1",
+      "GFOD1",
+      "GIGYF2",
+      "GLUD2",
+      "GOLGA8J",
+      "GORAB",
+      "GOT2",
+      "GPNMB",
+      "GPR65",
+      "GRID2IP",
+      "GRIK2",
+      "GRN",
+      "HACE1",
+      "HAPSTR1",
+      "HEATR6",
+      "HIP1R",
+      "HRNR",
+      "HSD3B7",
+      "HSPH1",
+      "IDUA",
+      "IFT122",
+      "IGSF9B",
+      "INPP5F",
+      "IPMK",
+      "IQGAP2",
+      "IRS2",
+      "IRX2",
+      "IRX4",
+      "ITGA2B",
+      "ITGA8",
+      "ITPA",
+      "ITPKB",
+      "JADE1",
+      "KANSL1",
+      "KAT8",
+      "KCNK18",
+      "KCNMB3",
+      "KIAA0825",
+      "KIF20B",
+      "KLF12",
+      "KLF4",
+      "KLHL7",
+      "KPNA1",
+      "KTN1",
+      "LAMP3",
+      "LCORL",
+      "LDLRAD4",
+      "LMO4",
+      "LRATD1",
+      "LRP1B",
+      "LRRC37A2",
+      "LRRC4C",
+      "LRRK2",
+      "LRRTM4",
+      "LYST",
+      "LZTS1",
+      "LZTS3",
+      "MAP3K5",
+      "MAP4K4",
+      "MAP7",
+      "MAPT",
+      "MCCC1",
+      "MCMBP",
+      "MECOM",
+      "MED12L",
+      "MED13",
+      "MGAM2",
+      "MGME1",
+      "MICU3",
+      "MMRN1",
+      "MORN1",
+      "MPDZ",
+      "MRE11",
+      "MRPL36",
+      "MT-ND1",
+      "MT-ND6",
+      "MTX1",
+      "MUC12",
+      "MUC19",
+      "MYLK2",
+      "MYO10",
+      "NCKIPSD",
+      "NDUFAF2",
+      "NDUFS6",
+      "NEK1",
+      "NFIB",
+      "NOD2",
+      "NR4A2",
+      "NRIP1",
+      "NSF",
+      "NUCKS1",
+      "NUP42",
+      "NUP54",
+      "OBI1",
+      "ODC1",
+      "OGFRL1",
+      "P2RX5",
+      "P2RY12",
+      "P4HA1",
+      "PANK1",
+      "PARK7",
+      "PARP9",
+      "PCDH17",
+      "PCED1B",
+      "PDE5A",
+      "PDGFRB",
+      "PDS5A",
+      "PDZRN4",
+      "PEX13",
+      "PIK3CA",
+      "PINK1",
+      "PIRT",
+      "PKP2",
+      "PLA2G6",
+      "PLEKHH1",
+      "PLPP4",
+      "PLPPR1",
+      "PLPPR4",
+      "PLXNA1",
+      "PM20D1",
+      "PNOC",
+      "PODXL",
+      "PPARG",
+      "PPARGC1A",
+      "PPP2R3A",
+      "PRDM15",
+      "PRICKLE1",
+      "PRKN",
+      "PRR16",
+      "PRSS53",
+      "PSAP",
+      "PTPRK",
+      "PTRHD1",
+      "QKI",
+      "RAB25",
+      "RAB29",
+      "RAB7A",
+      "RBMS3",
+      "RCN1",
+      "RFC1",
+      "RGMA",
+      "RIMS1",
+      "RIT2",
+      "RNF141",
+      "ROBO2",
+      "RORA",
+      "RPN1",
+      "S1PR1",
+      "SATB1",
+      "SCARB2",
+      "SCLT1",
+      "SCRIB",
+      "SEC23IP",
+      "SERTM1",
+      "SGIP1",
+      "SH3GL2",
+      "SH3RF1",
+      "SH3RF3",
+      "SIPA1L2",
+      "SLAMF1",
+      "SLC18B1",
+      "SLC25A44",
+      "SLC2A13",
+      "SLC38A2",
+      "SLC41A1",
+      "SLC45A3",
+      "SLC50A1",
+      "SMIM15",
+      "SMYD3",
+      "SNCA",
+      "SNCAIP",
+      "SNX18",
+      "SPATA19",
+      "SPATA6",
+      "SPPL2B",
+      "SPPL2C",
+      "STH",
+      "STK39",
+      "SV2C",
+      "SYT10",
+      "SYT17",
+      "TARDBP",
+      "TBC1D24",
+      "TBP",
+      "TBXAS1",
+      "TECTA",
+      "TGFBR2",
+      "TGM6",
+      "TMED5",
+      "TMEM108",
+      "TMEM150B",
+      "TMEM163",
+      "TMEM175",
+      "TMEM229B",
+      "TMEM230",
+      "TNK2",
+      "TNR",
+      "TOMM40",
+      "TOX3",
+      "TPD52",
+      "TRPV3",
+      "TTC6",
+      "TYROBP",
+      "UBAP2",
+      "UBQLN4",
+      "USP25",
+      "USP34",
+      "USP6NL",
+      "VAMP4",
+      "VPS13C",
+      "VPS35",
+      "WNT3",
+      "WT1",
+      "WWTR1",
+      "ZBTB7B",
+      "ZCWPW2",
+      "ZIC1",
+      "ZIC4",
+      "ZNF285",
+      "ZNF608"
+    ],
+    "0.30": [
+      "ACMSD",
+      "ADCY1",
+      "APOE",
+      "ATP13A2",
+      "ATXN2",
+      "BAG3",
+      "BST1",
+      "CCDC62",
+      "CCDC85A",
+      "CCSER1",
+      "CD38",
+      "CENPO",
+      "CLCN3",
+      "CNTN1",
+      "COMMD1",
+      "CTSB",
+      "DGKQ",
+      "DHX15",
+      "DNAJC13",
+      "ELOVL7",
+      "ETAA1",
+      "FAM47E",
+      "FBXO7",
+      "FCGR2A",
+      "FGF20",
+      "FLG",
+      "FYN",
+      "GAK",
+      "GALC",
+      "GAMT",
+      "GBA1",
+      "GCH1",
+      "GIGYF2",
+      "GPNMB",
+      "GPR65",
+      "GRN",
+      "HIP1R",
+      "HRNR",
+      "IDUA",
+      "IGSF9B",
+      "ITPKB",
+      "KANSL1",
+      "KAT8",
+      "KLHL7",
+      "LRRC4C",
+      "LRRK2",
+      "LYST",
+      "MAP4K4",
+      "MAPT",
+      "MCCC1",
+      "MMRN1",
+      "MRPL36",
+      "MT-ND1",
+      "MT-ND6",
+      "NDUFAF2",
+      "NDUFS6",
+      "NEK1",
+      "NFIB",
+      "NR4A2",
+      "NRIP1",
+      "NUCKS1",
+      "PANK1",
+      "PARK7",
+      "PDE5A",
+      "PEX13",
+      "PINK1",
+      "PKP2",
+      "PLA2G6",
+      "PLEKHH1",
+      "PLPP4",
+      "PLPPR1",
+      "PRKN",
+      "PSAP",
+      "PTRHD1",
+      "QKI",
+      "RAB29",
+      "RAB7A",
+      "RFC1",
+      "RIT2",
+      "SEC23IP",
+      "SH3GL2",
+      "SIPA1L2",
+      "SLC2A13",
+      "SLC45A3",
+      "SLC50A1",
+      "SNCA",
+      "STK39",
+      "SV2C",
+      "TBC1D24",
+      "TGFBR2",
+      "TMEM163",
+      "TMEM175",
+      "TNK2",
+      "TOX3",
+      "TPD52",
+      "VPS13C",
+      "VPS35",
+      "WNT3",
+      "ZNF608"
+    ]
+  },
+  "genes": [
+    "ACAN",
+    "ACMSD",
+    "ACTR3",
+    "ADCY1",
+    "ADCY5",
+    "ADH1C",
+    "ADH5",
+    "AGBL4",
+    "ALG10",
+    "ANKRD55",
+    "ANO2",
+    "ANTXR2",
+    "APOC1",
+    "APOE",
+    "ARAP3",
+    "ARHGEF2",
+    "ARID3B",
+    "ARID5B",
+    "ARL17B",
+    "ART3",
+    "ASCC3",
+    "ASXL3",
+    "ATP13A2",
+    "ATXN2",
+    "ATXN3",
+    "ATXN8",
+    "ATXN8OS",
+    "AUNIP",
+    "AZI2",
+    "B3GNT3",
+    "BAG3",
+    "BCL7C",
+    "BCL9",
+    "BSN",
+    "BST1",
+    "C2CD4A",
+    "C4orf33",
+    "C8orf58",
+    "CAMK2D",
+    "CARS2",
+    "CCAR2",
+    "CCDC62",
+    "CCDC85A",
+    "CCNA1",
+    "CCSER1",
+    "CD38",
+    "CDC42BPB",
+    "CDH7",
+    "CDH8",
+    "CENPO",
+    "CEP83",
+    "CHMP2B",
+    "CISD1",
+    "CLCN3",
+    "CNOT1",
+    "CNTLN",
+    "CNTN1",
+    "CNTNAP5",
+    "COMMD1",
+    "COX20",
+    "CPM",
+    "CRHR1",
+    "CSF1R",
+    "CTF1",
+    "CTNNA2",
+    "CTSB",
+    "CYSRT1",
+    "DCUN1D1",
+    "DGKQ",
+    "DHX15",
+    "DLG2",
+    "DNAJB6",
+    "DNAJC13",
+    "DNMBP",
+    "DSCAM",
+    "DYRK1A",
+    "EIF4G1",
+    "ELOVL7",
+    "EPPK1",
+    "ERCC8",
+    "ETAA1",
+    "ETV1",
+    "F2RL2",
+    "FAM171A1",
+    "FAM47E",
+    "FASN",
+    "FBRSL1",
+    "FBXO7",
+    "FCGR2A",
+    "FGF14",
+    "FGF20",
+    "FIGLA",
+    "FLG",
+    "FOXA1",
+    "FYN",
+    "GADL1",
+    "GAK",
+    "GALC",
+    "GALNT7",
+    "GAMT",
+    "GARS1",
+    "GBA1",
+    "GCH1",
+    "GFOD1",
+    "GIGYF2",
+    "GLUD2",
+    "GOLGA8J",
+    "GORAB",
+    "GOT2",
+    "GPNMB",
+    "GPR65",
+    "GRID2IP",
+    "GRIK2",
+    "GRN",
+    "HACE1",
+    "HAPSTR1",
+    "HEATR6",
+    "HIP1R",
+    "HRNR",
+    "HSD3B7",
+    "HSPH1",
+    "IDUA",
+    "IFT122",
+    "IGSF9B",
+    "INPP5F",
+    "IPMK",
+    "IQGAP2",
+    "IRS2",
+    "IRX2",
+    "IRX4",
+    "ITGA2B",
+    "ITGA8",
+    "ITPA",
+    "ITPKB",
+    "JADE1",
+    "KANSL1",
+    "KAT8",
+    "KCNK18",
+    "KCNMB3",
+    "KIAA0825",
+    "KIF20B",
+    "KLF12",
+    "KLF4",
+    "KLHL7",
+    "KPNA1",
+    "KTN1",
+    "LAMP3",
+    "LCORL",
+    "LDLRAD4",
+    "LMO4",
+    "LRATD1",
+    "LRP1B",
+    "LRRC37A2",
+    "LRRC4C",
+    "LRRK2",
+    "LRRTM4",
+    "LYST",
+    "LZTS1",
+    "LZTS3",
+    "MAP3K5",
+    "MAP4K4",
+    "MAP7",
+    "MAPT",
+    "MCCC1",
+    "MCMBP",
+    "MECOM",
+    "MED12L",
+    "MED13",
+    "MGAM2",
+    "MGME1",
+    "MICU3",
+    "MMRN1",
+    "MORN1",
+    "MPDZ",
+    "MRE11",
+    "MRPL36",
+    "MT-ND1",
+    "MT-ND6",
+    "MTX1",
+    "MUC12",
+    "MUC19",
+    "MYLK2",
+    "MYO10",
+    "NCKIPSD",
+    "NDUFAF2",
+    "NDUFS6",
+    "NEK1",
+    "NFIB",
+    "NOD2",
+    "NR4A2",
+    "NRIP1",
+    "NSF",
+    "NUCKS1",
+    "NUP42",
+    "NUP54",
+    "OBI1",
+    "ODC1",
+    "OGFRL1",
+    "P2RX5",
+    "P2RY12",
+    "P4HA1",
+    "PANK1",
+    "PARK7",
+    "PARP9",
+    "PCDH17",
+    "PCED1B",
+    "PDE5A",
+    "PDGFRB",
+    "PDS5A",
+    "PDZRN4",
+    "PEX13",
+    "PIK3CA",
+    "PINK1",
+    "PIRT",
+    "PKP2",
+    "PLA2G6",
+    "PLEKHH1",
+    "PLPP4",
+    "PLPPR1",
+    "PLPPR4",
+    "PLXNA1",
+    "PM20D1",
+    "PNOC",
+    "PODXL",
+    "PPARG",
+    "PPARGC1A",
+    "PPP2R3A",
+    "PRDM15",
+    "PRICKLE1",
+    "PRKN",
+    "PRR16",
+    "PRSS53",
+    "PSAP",
+    "PTPRK",
+    "PTRHD1",
+    "QKI",
+    "RAB25",
+    "RAB29",
+    "RAB7A",
+    "RBMS3",
+    "RCN1",
+    "RFC1",
+    "RGMA",
+    "RIMS1",
+    "RIT2",
+    "RNF141",
+    "ROBO2",
+    "RORA",
+    "RPN1",
+    "S1PR1",
+    "SATB1",
+    "SCARB2",
+    "SCLT1",
+    "SCRIB",
+    "SEC23IP",
+    "SERTM1",
+    "SGIP1",
+    "SH3GL2",
+    "SH3RF1",
+    "SH3RF3",
+    "SIPA1L2",
+    "SLAMF1",
+    "SLC18B1",
+    "SLC25A44",
+    "SLC2A13",
+    "SLC38A2",
+    "SLC41A1",
+    "SLC45A3",
+    "SLC50A1",
+    "SMIM15",
+    "SMYD3",
+    "SNCA",
+    "SNCAIP",
+    "SNX18",
+    "SPATA19",
+    "SPATA6",
+    "SPPL2B",
+    "SPPL2C",
+    "STH",
+    "STK39",
+    "SV2C",
+    "SYT10",
+    "SYT17",
+    "TARDBP",
+    "TBC1D24",
+    "TBP",
+    "TBXAS1",
+    "TECTA",
+    "TGFBR2",
+    "TGM6",
+    "TMED5",
+    "TMEM108",
+    "TMEM150B",
+    "TMEM163",
+    "TMEM175",
+    "TMEM229B",
+    "TMEM230",
+    "TNK2",
+    "TNR",
+    "TOMM40",
+    "TOX3",
+    "TPD52",
+    "TRPV3",
+    "TTC6",
+    "TYROBP",
+    "UBAP2",
+    "UBQLN4",
+    "USP25",
+    "USP34",
+    "USP6NL",
+    "VAMP4",
+    "VPS13C",
+    "VPS35",
+    "WNT3",
+    "WT1",
+    "WWTR1",
+    "ZBTB7B",
+    "ZCWPW2",
+    "ZIC1",
+    "ZIC4",
+    "ZNF285",
+    "ZNF608"
+  ],
+  "metadata": {
+    "disease": "Parkinson's disease",
+    "disease_key": "parkinson",
+    "efo_id": "EFO_0002508",
+    "mondo_id": "MONDO_0005180",
+    "show_child_traits": false,
+    "extended_geneset": false,
+    "retrieval_date": "2026-09-19T14:08:06+00:00",
+    "number_associations": 8727,
+    "number_unique_genes": 501,
+    "api_url": "https://api.platform.opentargets.org/api/v4/graphql",
+    "enable_indirect": false,
+    "ot_score_thresholds": [
+      0.1,
+      0.3
+    ],
+    "primary_threshold": 0.1,
+    "trait_label": "Parkinson disease",
+    "genetic_rows": [
+      {
+        "symbol": "GBA1",
+        "score": 0.7444536729374831,
+        "datasource_ids": [
+          "clingen",
+          "europepmc",
+          "eva",
+          "gene_burden",
+          "gwas_credible_sets",
+          "uniprot_literature"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LRRK2",
+        "score": 0.7411857394304098,
+        "datasource_ids": [
+          "clingen",
+          "crispr_screen",
+          "europepmc",
+          "eva",
+          "gene_burden",
+          "genomics_england",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PLA2G6",
+        "score": 0.7197611746100638,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "genomics_england",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SNCA",
+        "score": 0.7107271017131244,
+        "datasource_ids": [
+          "clingen",
+          "clinical_precedence",
+          "europepmc",
+          "expression_atlas",
+          "genomics_england",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "clinical",
+          "genetic_association",
+          "genetic_literature",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "PARK7",
+        "score": 0.7098805444852826,
+        "datasource_ids": [
+          "clingen",
+          "europepmc",
+          "eva",
+          "uniprot_literature",
+          "uniprot_variants"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PSAP",
+        "score": 0.6246759867691599,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "eva",
+          "impc"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MAPT",
+        "score": 0.609552713867405,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ITPKB",
+        "score": 0.5761692412598662,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "FBXO7",
+        "score": 0.5654927080924378,
+        "datasource_ids": [
+          "europepmc",
+          "uniprot_literature",
+          "uniprot_variants"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TMEM175",
+        "score": 0.5507744222721512,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "uniprot_literature"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "BST1",
+        "score": 0.5456162919811153,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "VPS13C",
+        "score": 0.5433981047349634,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TGFBR2",
+        "score": 0.5209986465732783,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ATP13A2",
+        "score": 0.5198484653997115,
+        "datasource_ids": [
+          "europepmc",
+          "gene2phenotype",
+          "genomics_england"
+        ],
+        "datatype_ids": [
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RIT2",
+        "score": 0.5177384430871123,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SH3GL2",
+        "score": 0.5037055697289285,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "GPNMB",
+        "score": 0.5033813458053994,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "KAT8",
+        "score": 0.5009897884767905,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "STK39",
+        "score": 0.5000433324604643,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "APOE",
+        "score": 0.49319079819155304,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RAB7A",
+        "score": 0.4866181613063959,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PRKN",
+        "score": 0.48313773215284944,
+        "datasource_ids": [
+          "clingen",
+          "europepmc",
+          "eva",
+          "uniprot_literature",
+          "uniprot_variants"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "VPS35",
+        "score": 0.4819447085990966,
+        "datasource_ids": [
+          "clingen",
+          "europepmc",
+          "eva",
+          "genomics_england"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LYST",
+        "score": 0.47790749999731624,
+        "datasource_ids": [
+          "europepmc",
+          "genomics_england",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SLC2A13",
+        "score": 0.47440100158134596,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "IGSF9B",
+        "score": 0.47062701363621506,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "HIP1R",
+        "score": 0.4694494058005255,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NRIP1",
+        "score": 0.4673963203866322,
+        "datasource_ids": [
+          "crispr_screen",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CD38",
+        "score": 0.4621725415844517,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "DHX15",
+        "score": 0.4583203084101362,
+        "datasource_ids": [
+          "crispr_screen",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DNAJC13",
+        "score": 0.4518525243737426,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "gwas_credible_sets",
+          "uniprot_literature",
+          "uniprot_variants"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CTSB",
+        "score": 0.4496364813033517,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NR4A2",
+        "score": 0.4465416798458603,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "expression_atlas",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "PANK1",
+        "score": 0.4328819105459715,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SIPA1L2",
+        "score": 0.42953753381011306,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "FLG",
+        "score": 0.4269383588247605,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "FYN",
+        "score": 0.4263755058872902,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TMEM163",
+        "score": 0.42520996755722423,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GAK",
+        "score": 0.42371598923900977,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "HRNR",
+        "score": 0.4218265588820164,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TBC1D24",
+        "score": 0.4182245197941913,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PINK1",
+        "score": 0.41752459604272657,
+        "datasource_ids": [
+          "clingen",
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MCCC1",
+        "score": 0.41599084084634635,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RAB29",
+        "score": 0.4152173174567536,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "BAG3",
+        "score": 0.41478011273593623,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "MT-ND1",
+        "score": 0.4116191965484533,
+        "datasource_ids": [
+          "clinical_precedence",
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "clinical",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SLC45A3",
+        "score": 0.4069739420912194,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "FAM47E",
+        "score": 0.4043337807692885,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NDUFS6",
+        "score": 0.3988403677476875,
+        "datasource_ids": [
+          "clinical_precedence",
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "clinical",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GALC",
+        "score": 0.3961443489236146,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NDUFAF2",
+        "score": 0.39181694546273477,
+        "datasource_ids": [
+          "clinical_precedence",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "clinical",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GIGYF2",
+        "score": 0.38916965454783753,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "genomics_england",
+          "uniprot_literature",
+          "uniprot_variants"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GCH1",
+        "score": 0.3833396525141443,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "TNK2",
+        "score": 0.3812003398366801,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MT-ND6",
+        "score": 0.3811159897041364,
+        "datasource_ids": [
+          "clinical_precedence",
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "clinical",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SEC23IP",
+        "score": 0.38075117023221067,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NUCKS1",
+        "score": 0.3780926574221671,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TOX3",
+        "score": 0.3683966056580023,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "MMRN1",
+        "score": 0.3656562440378961,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ACMSD",
+        "score": 0.364520170919681,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CCDC62",
+        "score": 0.36414958366907285,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GRN",
+        "score": 0.35841877694845115,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CNTN1",
+        "score": 0.35799562907891397,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "RFC1",
+        "score": 0.3544623239489528,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GPR65",
+        "score": 0.35191855383087123,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MAP4K4",
+        "score": 0.3518746823168856,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PTRHD1",
+        "score": 0.3508721901985404,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PKP2",
+        "score": 0.3477675847712119,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "COMMD1",
+        "score": 0.34494198443295937,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NFIB",
+        "score": 0.34340710092936655,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SV2C",
+        "score": 0.3414914956807287,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "DGKQ",
+        "score": 0.341111005347846,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NEK1",
+        "score": 0.34025954035332984,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CENPO",
+        "score": 0.3400134663099256,
+        "datasource_ids": [
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "GAMT",
+        "score": 0.3400134663099256,
+        "datasource_ids": [
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "FGF20",
+        "score": 0.33999130489974577,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PLPPR1",
+        "score": 0.3340765103895678,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "FCGR2A",
+        "score": 0.3301817655650444,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LRRC4C",
+        "score": 0.3277324951496411,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ETAA1",
+        "score": 0.3269933354402717,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ADCY1",
+        "score": 0.3250912291498336,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "WNT3",
+        "score": 0.32165682271352386,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "IDUA",
+        "score": 0.3207651314566338,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PEX13",
+        "score": 0.31756312445348756,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SLC50A1",
+        "score": 0.3171924683823068,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ELOVL7",
+        "score": 0.3164018480363391,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "PLPP4",
+        "score": 0.31493927266371485,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MRPL36",
+        "score": 0.3149371186576429,
+        "datasource_ids": [
+          "crispr_screen",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "KANSL1",
+        "score": 0.3129235481515912,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PDE5A",
+        "score": 0.3117198608252576,
+        "datasource_ids": [
+          "clinical_precedence",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "clinical",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "KLHL7",
+        "score": 0.3103164731761665,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CLCN3",
+        "score": 0.30990357008085884,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CCSER1",
+        "score": 0.3095185072109107,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ZNF608",
+        "score": 0.3092111273494221,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ATXN2",
+        "score": 0.30857767136140846,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "eva",
+          "impc"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TPD52",
+        "score": 0.30847541362988956,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PLEKHH1",
+        "score": 0.30673529692303714,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CCDC85A",
+        "score": 0.3057752927321037,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "QKI",
+        "score": 0.3021861099548197,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "USP34",
+        "score": 0.2992665018764674,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "NOD2",
+        "score": 0.2992214257016974,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "INPP5F",
+        "score": 0.29860153807454254,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "ARID5B",
+        "score": 0.2969011727958399,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ANO2",
+        "score": 0.2967839599733794,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PM20D1",
+        "score": 0.2954095338176831,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SH3RF1",
+        "score": 0.2949994179916719,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "KLF12",
+        "score": 0.29493606069995587,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PCDH17",
+        "score": 0.29343790859991103,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CEP83",
+        "score": 0.2930771708795251,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PTPRK",
+        "score": 0.292883538817884,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "IRS2",
+        "score": 0.2907789879471484,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SMYD3",
+        "score": 0.2905997048239506,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DYRK1A",
+        "score": 0.28970099527808074,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ERCC8",
+        "score": 0.2892549521863646,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "DLG2",
+        "score": 0.28896378123139593,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PRDM15",
+        "score": 0.28864198334884933,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "MECOM",
+        "score": 0.2886387879004381,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "TMEM230",
+        "score": 0.28810697144526753,
+        "datasource_ids": [
+          "europepmc",
+          "uniprot_literature",
+          "uniprot_variants"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CTNNA2",
+        "score": 0.28789455795157354,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SH3RF3",
+        "score": 0.28724779320587535,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GADL1",
+        "score": 0.2839583343820814,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "SLAMF1",
+        "score": 0.28309679762369017,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "F2RL2",
+        "score": 0.28225280820364673,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CAMK2D",
+        "score": 0.28132371717555327,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "ITGA8",
+        "score": 0.2799487791880503,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RNF141",
+        "score": 0.27987663660871426,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PPARG",
+        "score": 0.2772082220122864,
+        "datasource_ids": [
+          "clinical_precedence",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "clinical",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TMEM229B",
+        "score": 0.2750117178333832,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MUC19",
+        "score": 0.27327543959142914,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LZTS1",
+        "score": 0.267447885811444,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "MCMBP",
+        "score": 0.26663442835288903,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MGAM2",
+        "score": 0.2665271580007627,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PPARGC1A",
+        "score": 0.2659578226713291,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ASXL3",
+        "score": 0.26592816520958995,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SPPL2B",
+        "score": 0.2659144146750866,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PDS5A",
+        "score": 0.2655118295391442,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "BCL9",
+        "score": 0.26528202639158555,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DNAJB6",
+        "score": 0.26495476653612093,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "expression_atlas"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "RIMS1",
+        "score": 0.263730454956712,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "NUP54",
+        "score": 0.26318560273512837,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PCED1B",
+        "score": 0.26316780218816477,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "MYO10",
+        "score": 0.2624742695060384,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "HSPH1",
+        "score": 0.26166799554916487,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SPATA6",
+        "score": 0.26106357900362737,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "FGF14",
+        "score": 0.2602118299852805,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SLC18B1",
+        "score": 0.2595773923516728,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ALG10",
+        "score": 0.2594311439720101,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "GALNT7",
+        "score": 0.25936435302651567,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CPM",
+        "score": 0.25936435302651567,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "KLF4",
+        "score": 0.25885598234285234,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ETV1",
+        "score": 0.25847425177212874,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TECTA",
+        "score": 0.25809076512619916,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "FIGLA",
+        "score": 0.2572216677737615,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CRHR1",
+        "score": 0.2569050282479804,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TBXAS1",
+        "score": 0.25646956765960854,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "FBRSL1",
+        "score": 0.25345509245626274,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MAP3K5",
+        "score": 0.2533211964942854,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "KIAA0825",
+        "score": 0.25230486730068985,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PNOC",
+        "score": 0.2514500154525372,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ANKRD55",
+        "score": 0.2511845108703137,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CNTLN",
+        "score": 0.24988180374949615,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "IRX2",
+        "score": 0.24953801782303878,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MTX1",
+        "score": 0.24927399361115551,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RBMS3",
+        "score": 0.2491406933503059,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "WWTR1",
+        "score": 0.2485778769083787,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "SGIP1",
+        "score": 0.24833003465663392,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "PRICKLE1",
+        "score": 0.24798548540065452,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RGMA",
+        "score": 0.2478856161536892,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "DSCAM",
+        "score": 0.24705126521527795,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ITGA2B",
+        "score": 0.24620331999722572,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SNCAIP",
+        "score": 0.2454108874497277,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "uniprot_literature"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LRP1B",
+        "score": 0.24449739486734381,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "DNMBP",
+        "score": 0.24391588489497465,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "LDLRAD4",
+        "score": 0.24380933218938214,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "LMO4",
+        "score": 0.24336906707175307,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "LCORL",
+        "score": 0.24251022014197265,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "IQGAP2",
+        "score": 0.24152805209076042,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CARS2",
+        "score": 0.2413346853441752,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CNOT1",
+        "score": 0.24120122595220575,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "P4HA1",
+        "score": 0.24055576213252505,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "MED13",
+        "score": 0.23911608004161855,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ASCC3",
+        "score": 0.2386655262105981,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "MAP7",
+        "score": 0.23765804248345443,
+        "datasource_ids": [
+          "crispr_screen",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "affected_pathway",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "JADE1",
+        "score": 0.23516594060506704,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "IFT122",
+        "score": 0.2348112137173168,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CDH8",
+        "score": 0.23410694183048059,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NUP42",
+        "score": 0.23369913130144185,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GFOD1",
+        "score": 0.2336180075744117,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "OBI1",
+        "score": 0.2315887920314998,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "STH",
+        "score": 0.23154060435502705,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "AGBL4",
+        "score": 0.2309034799225515,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "LRRTM4",
+        "score": 0.2309034799225515,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ITPA",
+        "score": 0.2283720573788106,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "TBP",
+        "score": 0.22687716647777878,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "VAMP4",
+        "score": 0.22651238365306917,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RAB25",
+        "score": 0.22631089827563125,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TMEM108",
+        "score": 0.22261219380806538,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "USP25",
+        "score": 0.22230403728821613,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SYT17",
+        "score": 0.21932972743732376,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GRID2IP",
+        "score": 0.218855820813561,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PIK3CA",
+        "score": 0.2177057661062611,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LRATD1",
+        "score": 0.21608664001665737,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "BCL7C",
+        "score": 0.21590061191801846,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CISD1",
+        "score": 0.21513233757135744,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "PLPPR4",
+        "score": 0.21472386884555567,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "SPPL2C",
+        "score": 0.21396941013407186,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NSF",
+        "score": 0.21344576915517377,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "GOLGA8J",
+        "score": 0.2122003630334189,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "UBAP2",
+        "score": 0.2118535224116604,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "FASN",
+        "score": 0.21047361910148635,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MPDZ",
+        "score": 0.21014506553817672,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "GOT2",
+        "score": 0.20899037290935,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GORAB",
+        "score": 0.20758837334953134,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PPP2R3A",
+        "score": 0.2074930112113238,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "SLC38A2",
+        "score": 0.20696269205965315,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MED12L",
+        "score": 0.20672242562232734,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "IRX4",
+        "score": 0.20435234358131543,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "USP6NL",
+        "score": 0.20418834625686252,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ATXN3",
+        "score": 0.20378042232857219,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MORN1",
+        "score": 0.20310096058636118,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "EPPK1",
+        "score": 0.20107901137844228,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ODC1",
+        "score": 0.2003938265522129,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PIRT",
+        "score": 0.2001595989000022,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "KTN1",
+        "score": 0.19942742907005045,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "C8orf58",
+        "score": 0.19670653785808734,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "AZI2",
+        "score": 0.19652030743156695,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ATXN8",
+        "score": 0.19302847826969735,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ATXN8OS",
+        "score": 0.19124558597663777,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SCLT1",
+        "score": 0.19053322170856402,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PRR16",
+        "score": 0.18977270369990665,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "COX20",
+        "score": 0.18877357865117333,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CDH7",
+        "score": 0.1885295814584354,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ACAN",
+        "score": 0.18608572690349023,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TNR",
+        "score": 0.17836913995013529,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "APOC1",
+        "score": 0.17670203743244428,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "KCNMB3",
+        "score": 0.17497564554501976,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "SLC41A1",
+        "score": 0.17381033788420808,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SATB1",
+        "score": 0.17341965218444755,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LRRC37A2",
+        "score": 0.1723501019658385,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ZBTB7B",
+        "score": 0.17015984743234708,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PODXL",
+        "score": 0.16892619087401745,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "HEATR6",
+        "score": 0.16791345355229556,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LZTS3",
+        "score": 0.1666929453107277,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RCN1",
+        "score": 0.1657954773366714,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NCKIPSD",
+        "score": 0.16426726502045755,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ARID3B",
+        "score": 0.16246087937674952,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CTF1",
+        "score": 0.16200586697720648,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ARL17B",
+        "score": 0.15799577824962716,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "UBQLN4",
+        "score": 0.1562408402348042,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TOMM40",
+        "score": 0.155885193972867,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "S1PR1",
+        "score": 0.15569130171229317,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MUC12",
+        "score": 0.1540962544304962,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ACTR3",
+        "score": 0.15346842394620278,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "ART3",
+        "score": 0.15332580333939205,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TGM6",
+        "score": 0.15281177303560664,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SNX18",
+        "score": 0.15182576505599726,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CCAR2",
+        "score": 0.15141741860867938,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PARP9",
+        "score": 0.1511424245135469,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ROBO2",
+        "score": 0.1492295534112846,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "CNTNAP5",
+        "score": 0.14889856012271682,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "P2RX5",
+        "score": 0.148288250877619,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MRE11",
+        "score": 0.1478319418738807,
+        "datasource_ids": [
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CSF1R",
+        "score": 0.14774928735503248,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "KPNA1",
+        "score": 0.14755013788712407,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SMIM15",
+        "score": 0.147521191558885,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TARDBP",
+        "score": 0.1471285412681896,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "HACE1",
+        "score": 0.146584617152619,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "HSD3B7",
+        "score": 0.14622309363728372,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RPN1",
+        "score": 0.1443866680570305,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PRSS53",
+        "score": 0.14426550960239026,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ZNF285",
+        "score": 0.1441226675048052,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CDC42BPB",
+        "score": 0.14291306189379893,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "FAM171A1",
+        "score": 0.14260088642626945,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MICU3",
+        "score": 0.14145478577456255,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "MGME1",
+        "score": 0.13911447957158585,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LAMP3",
+        "score": 0.13852256700533622,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GLUD2",
+        "score": 0.1366862243277345,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SCARB2",
+        "score": 0.13614232716306704,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "BSN",
+        "score": 0.13612695920309245,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "expression_atlas",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "PDGFRB",
+        "score": 0.13377893481901376,
+        "datasource_ids": [
+          "clinical_precedence",
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "clinical",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "HAPSTR1",
+        "score": 0.13301395867970456,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ZIC1",
+        "score": 0.13228913593756403,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ARAP3",
+        "score": 0.13158567440249672,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ARHGEF2",
+        "score": 0.13140689627705182,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TYROBP",
+        "score": 0.1310453754575681,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "expression_atlas"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "B3GNT3",
+        "score": 0.13068936810099593,
+        "datasource_ids": [
+          "europepmc",
+          "gene_burden"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "EIF4G1",
+        "score": 0.13030335819674713,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "OGFRL1",
+        "score": 0.12905587922719197,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "TMEM150B",
+        "score": 0.1276758377503248,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "TTC6",
+        "score": 0.1269938189284317,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PLXNA1",
+        "score": 0.12569308196755963,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ZIC4",
+        "score": 0.12559778013897158,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "C2CD4A",
+        "score": 0.12458674403064289,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CYSRT1",
+        "score": 0.12315514591393116,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "RORA",
+        "score": 0.1230711016676995,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CHMP2B",
+        "score": 0.12202824229453263,
+        "datasource_ids": [
+          "europepmc",
+          "eva",
+          "expression_atlas"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "FOXA1",
+        "score": 0.12201230598935944,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "DCUN1D1",
+        "score": 0.12162232148926308,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ADH1C",
+        "score": 0.12138795409525696,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "C4orf33",
+        "score": 0.12133800043443438,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "SYT10",
+        "score": 0.12070472234907319,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ADCY5",
+        "score": 0.1197679949024083,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CCNA1",
+        "score": 0.11932820914159527,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SPATA19",
+        "score": 0.11929689904405268,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "GARS1",
+        "score": 0.11900471320847399,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "KCNK18",
+        "score": 0.11826555349910459,
+        "datasource_ids": [
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "IPMK",
+        "score": 0.11755859557258974,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PDZRN4",
+        "score": 0.11754074133072852,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "KIF20B",
+        "score": 0.11734913590727522,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "P2RY12",
+        "score": 0.11656221184534644,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "AUNIP",
+        "score": 0.1141583059119253,
+        "datasource_ids": [
+          "gene_burden"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "TMED5",
+        "score": 0.11230468877343452,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MYLK2",
+        "score": 0.11216954446776348,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ANTXR2",
+        "score": 0.11181494874756134,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "SLC25A44",
+        "score": 0.1089245459091735,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SERTM1",
+        "score": 0.10828534907104213,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ZCWPW2",
+        "score": 0.10564185288479759,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "WT1",
+        "score": 0.10493313169494466,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SCRIB",
+        "score": 0.10322246732784351,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GRIK2",
+        "score": 0.10228576574606248,
+        "datasource_ids": [
+          "clinical_precedence",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "clinical",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ADH5",
+        "score": 0.10202749794764308,
+        "datasource_ids": [
+          "europepmc",
+          "gene_burden"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TRPV3",
+        "score": 0.10063482145706583,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "BCL2L1",
+        "score": 0.09992481896102738,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SYT4",
+        "score": 0.09937587741950861,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "DNM1L",
+        "score": 0.09721339836892395,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "TREML1",
+        "score": 0.09678757423570925,
+        "datasource_ids": [
+          "europepmc",
+          "gene_burden"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TUBA1B",
+        "score": 0.0935805675692646,
+        "datasource_ids": [
+          "europepmc",
+          "gene_burden"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SNX5",
+        "score": 0.09281453182926047,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CAPN10",
+        "score": 0.09239496367117545,
+        "datasource_ids": [
+          "gene_burden"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "OR1G1",
+        "score": 0.09239496367117545,
+        "datasource_ids": [
+          "gene_burden"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PDE4B",
+        "score": 0.0905569429108279,
+        "datasource_ids": [
+          "clinical_precedence",
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "clinical",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "AMIGO2",
+        "score": 0.09049887749754747,
+        "datasource_ids": [
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "ASNS",
+        "score": 0.08905331190892608,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "KHDC4",
+        "score": 0.08547768406297467,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DCTN1",
+        "score": 0.08499197226813286,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CPLX1",
+        "score": 0.0849127566303528,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "TEKT4",
+        "score": 0.08380648107294632,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MIPOL1",
+        "score": 0.08360606717501108,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "EPHB1",
+        "score": 0.08202682212361186,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "STBD1",
+        "score": 0.08133020015383799,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "DDRGK1",
+        "score": 0.07915413539531657,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ARB2A",
+        "score": 0.07715874183245722,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "MCM2",
+        "score": 0.07588158805735401,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TMEM238L",
+        "score": 0.07546066134649518,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PLEKHM1",
+        "score": 0.07332548518551724,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "INTS2",
+        "score": 0.07284593511770693,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PDLIM2",
+        "score": 0.07247347023341846,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "IL1R2",
+        "score": 0.0693331294926073,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "B3GNT2",
+        "score": 0.06905585798812973,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "GPRIN3",
+        "score": 0.06884551882089274,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CYLD",
+        "score": 0.06717685403629703,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "STX1B",
+        "score": 0.06563447648333602,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TFAM",
+        "score": 0.06383850250200121,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "UAP1",
+        "score": 0.06261634067877478,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "BRIP1",
+        "score": 0.061105233247303305,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PEX7",
+        "score": 0.05981220469427623,
+        "datasource_ids": [
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "HIPK2",
+        "score": 0.05980739632123679,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GJA5",
+        "score": 0.05957233487885528,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ABCD2",
+        "score": 0.059568819957203735,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CD9",
+        "score": 0.05753282553062784,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "ANK2",
+        "score": 0.057295510801137206,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CERS6",
+        "score": 0.05615003975586902,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "MYOC",
+        "score": 0.05594710600745484,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TNFRSF19",
+        "score": 0.0555968700428205,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "IP6K2",
+        "score": 0.0541213567867147,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "BANF2",
+        "score": 0.05394547933554427,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "AMPD3",
+        "score": 0.05385940228425159,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "BNC2",
+        "score": 0.053843835279814733,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CCT4",
+        "score": 0.05357790884856545,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CCDC18",
+        "score": 0.05325931361540274,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "LRRC37A",
+        "score": 0.05312538585366932,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TIAL1",
+        "score": 0.053052207576434744,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "YARS2",
+        "score": 0.052678061529683455,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "TPRA1",
+        "score": 0.051813257703868534,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "MTF2",
+        "score": 0.050878379141699036,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "POU4F1",
+        "score": 0.050859305891653626,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CNST",
+        "score": 0.050508873819002764,
+        "datasource_ids": [
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "CNOT7",
+        "score": 0.04997346439919914,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "VPS37A",
+        "score": 0.04837587728623314,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SLC5A9",
+        "score": 0.04824814780171046,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DTX3L",
+        "score": 0.04756095951043112,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TFB2M",
+        "score": 0.04728463227838004,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SNX20",
+        "score": 0.04722629259586543,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "OR9Q1",
+        "score": 0.046562744818760306,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "RER1",
+        "score": 0.04642831015131582,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "CCNT2",
+        "score": 0.04610687158873741,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "FCGR2B",
+        "score": 0.045731023600533945,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RNF224",
+        "score": 0.04564609030852106,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "RNF208",
+        "score": 0.044112340991596,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "SLC34A3",
+        "score": 0.04356299537780862,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "B3GALT1",
+        "score": 0.04325330466640282,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "BIN3",
+        "score": 0.04215975887383331,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TBC1D5",
+        "score": 0.04137442720967642,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "UBOX5",
+        "score": 0.041262364022814586,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MTMR7",
+        "score": 0.04102777132213705,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "SHISA6",
+        "score": 0.04059525360301901,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "WNT9B",
+        "score": 0.040406682629678455,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "FASTKD5",
+        "score": 0.04033841438610283,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "NBAS",
+        "score": 0.04029453464039347,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "P4HTM",
+        "score": 0.039996153388396086,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NTMT2",
+        "score": 0.039915911265254414,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "HSPB3",
+        "score": 0.039851330691791066,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "STX4",
+        "score": 0.039537446274439746,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NPHP3",
+        "score": 0.03897679399629084,
+        "datasource_ids": [
+          "gwas_credible_sets",
+          "impc"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PUS10",
+        "score": 0.03890476474950782,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "FBXL19",
+        "score": 0.03889567241350755,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DPM3",
+        "score": 0.038612537351936656,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ZNF668",
+        "score": 0.038368742739798074,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "VKORC1",
+        "score": 0.03824633064039918,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "APOC2",
+        "score": 0.03817017320866676,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "APOC4",
+        "score": 0.03764916827463207,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "GIMAP4",
+        "score": 0.0374285708556832,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "RHO",
+        "score": 0.03681532597431382,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LAMTOR2",
+        "score": 0.03651671694465137,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "BFSP2",
+        "score": 0.03568225583013401,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "SOWAHC",
+        "score": 0.03535068019966504,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "GIMAP7",
+        "score": 0.03486923247233879,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "COX4I2",
+        "score": 0.034781007823398616,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "UHMK1",
+        "score": 0.03466664291551715,
+        "datasource_ids": [
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "DR1",
+        "score": 0.034420326344082604,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "UBE2D1",
+        "score": 0.03412626305766377,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CCDC178",
+        "score": 0.03404773633505453,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ARIH2",
+        "score": 0.03388364235642039,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RETREG1",
+        "score": 0.033846381739227126,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CMC1",
+        "score": 0.03375441350038076,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ACBD7",
+        "score": 0.03367651941380909,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "RPP38",
+        "score": 0.03274736982553072,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ZDHHC2",
+        "score": 0.031601715107794665,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "FBXL5",
+        "score": 0.031102834015405974,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "C2CD4B",
+        "score": 0.03106414596050975,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DGKB",
+        "score": 0.031043689154621183,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "FAM171A2",
+        "score": 0.03081671639078773,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ARL17A",
+        "score": 0.03037304109186458,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PALLD",
+        "score": 0.028904832930798114,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "NTPCR",
+        "score": 0.028787931364337507,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "OR4D11",
+        "score": 0.02878029991964416,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DCAF16",
+        "score": 0.02851940142353814,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "FOXS1",
+        "score": 0.02838205075652361,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "OR4D9",
+        "score": 0.028071202347833862,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "GK2",
+        "score": 0.028066377076509386,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "WDR6",
+        "score": 0.027913578799869773,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "IL1R1",
+        "score": 0.027829897348356575,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "USP7",
+        "score": 0.027752365225123386,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "FGF5",
+        "score": 0.02761413665907656,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MIX23",
+        "score": 0.02742256825970846,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SLC2A1",
+        "score": 0.02737510150643645,
+        "datasource_ids": [
+          "europepmc",
+          "eva"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SLF1",
+        "score": 0.02707100683762121,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DNAI4",
+        "score": 0.02686875054934385,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ITGBL1",
+        "score": 0.026501824401136694,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "OLAH",
+        "score": 0.02643815602045885,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "FRRS1",
+        "score": 0.026395607632852498,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "METTL13",
+        "score": 0.026318223647808402,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "WDR5B",
+        "score": 0.026232570648527843,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PRDM8",
+        "score": 0.026218477803085876,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "FGD4",
+        "score": 0.02615511521347329,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ENSG00000284976",
+        "score": 0.02572128232603657,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "CCDC90B",
+        "score": 0.02561572504123876,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "HYCC1",
+        "score": 0.02536629269750303,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "DCST2",
+        "score": 0.025170780206761573,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PRSS3",
+        "score": 0.02509840405265887,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SIRT5",
+        "score": 0.02483994323811692,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "OR6Q1",
+        "score": 0.024725325463507728,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "TPX2",
+        "score": 0.024426255402349082,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RAD23B",
+        "score": 0.02416715730992883,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SPART",
+        "score": 0.024063550028002836,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "IL1RL2",
+        "score": 0.02399742478664814,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ZNF646",
+        "score": 0.023719881434005143,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ING1",
+        "score": 0.02346567257317,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "TRIM46",
+        "score": 0.023303186305744215,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "REDIC1",
+        "score": 0.02323438524356894,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "NOL4",
+        "score": 0.023142642196533968,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PARP12",
+        "score": 0.023031145925627102,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "AMN",
+        "score": 0.02300458022357287,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "OSBP",
+        "score": 0.02297871905364735,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "B3GLCT",
+        "score": 0.022750337141189635,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SEPHS2",
+        "score": 0.022683691078296975,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "FAM161A",
+        "score": 0.022566035215105706,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DPP10",
+        "score": 0.022212478897212274,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "MALSU1",
+        "score": 0.022019855507554836,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RNMT",
+        "score": 0.021953588459046314,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "NECTIN2",
+        "score": 0.021682715789669987,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "NAA11",
+        "score": 0.02167751495879205,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SLC38A7",
+        "score": 0.021416264246186187,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "HASPIN",
+        "score": 0.021166571341022112,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "LIN28B",
+        "score": 0.021064465167728398,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "BASP1",
+        "score": 0.020581913528944763,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "PRRX1",
+        "score": 0.020397516713772778,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "PROM2",
+        "score": 0.020381752442542752,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MIER1",
+        "score": 0.020233728496526382,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "TLK2",
+        "score": 0.019939977611635795,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "CREG2",
+        "score": 0.01992690784399119,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ENTREP3",
+        "score": 0.019756397378019156,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "KIF26B",
+        "score": 0.01960344952728172,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "SLC38A1",
+        "score": 0.019493898187748143,
+        "datasource_ids": [
+          "europepmc",
+          "expression_atlas",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature",
+          "rna_expression"
+        ]
+      },
+      {
+        "symbol": "ACKR4",
+        "score": 0.01940949254267026,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "PGRMC2",
+        "score": 0.019293364246998727,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "THBS3",
+        "score": 0.01920810701491037,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "RGPD5",
+        "score": 0.019208066460117936,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "DEPDC1B",
+        "score": 0.019137852809097074,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ECHDC3",
+        "score": 0.01883046741841077,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      },
+      {
+        "symbol": "ENSG00000288626",
+        "score": 0.01857982514339908,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      }
+    ]
+  }
+}

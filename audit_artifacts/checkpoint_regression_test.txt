@@ -1,0 +1,70 @@
+CHECKPOINT RESOLUTION REGRESSION TESTS
+=======================================
+Command:
+  PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe -m pytest tests/test_checkpoint_resolution.py -v --no-header
+
+Result:
+  test_configured_checkpoint_wins_over_newer_file PASSED
+  test_missing_checkpoint_fails_loudly PASSED
+  test_sha256_deterministic PASSED
+  test_app_and_cli_share_checkpoint_identity PASSED
+  test_no_mtime_checkpoint_discovery_anywhere PASSED
+  5 passed in 17.16s
+
+Full suite:
+  PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe -m pytest -q
+  -> 103 passed in 41.37s   (98 pre-existing + 5 new; zero failures)
+
+What each test proves:
+  A. test_configured_checkpoint_wins_over_newer_file - two fake checkpoints
+     with different mtimes; B is 9999 s newer; the resolver still returns A
+     because resolution reads the configured path only.
+  B. test_missing_checkpoint_fails_loudly - a nonexistent configured
+     checkpoint raises FileNotFoundError (Configured checkpoint does not
+     exist). No silent fallback, no newest-file discovery.
+  C. test_sha256_deterministic - sha256_file() returns an identical digest
+     on repeated calls and matches hashlib.sha256 of the exact bytes.
+  D. test_app_and_cli_share_checkpoint_identity - app._get_model() and
+     predict._resolve_model_path(None) resolve the same absolute path and
+     identical sha256/size identity.
+  E. test_no_mtime_checkpoint_discovery_anywhere - inspect.getsource of
+     resolve_checkpoint contains no "glob"/"st_mtime" tokens; app.py,
+     predict.py and scripts/validate_external.py contain no "st_mtime"
+     and no ".glob(" - a regression to newest-by-mtime selection fails CI.
+
+Real end-to-end inference (canonical checkpoint, real raw OASIS-1 test subject):
+  Command:
+    PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe predict.py --image data/raw/oasis1/extracted/disc1/disc1/OAS1_0013_MR1/RAW/OAS1_0013_MR1_mpr-1_anon.hdr
+  Output:
+    Prediction: cognitively normal
+    Probability: 0.01
+    Threshold: 0.07
+    Model: BrainVuln-ResNet18Binary
+    Checkpoint sha256: 5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9
+    saved outputs/OAS1_0013_MR1_mpr-1_anon_gradcam.nii.gz and .png
+  outputs/prediction.json stamps:
+    checkpoint: ...results/ml/resnet_seed42/checkpoints/best.pt
+    checkpoint_sha256: 5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9
+    checkpoint_identity.size_bytes: 133540267
+    probability 0.00839 (finite)
+
+App serving path (no server; _get_model() is the exact serving code):
+    app resolved:  ...results/ml/resnet_seed42/checkpoints/best.pt
+    app sha256:    5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9
+    threshold:     0.07
+  Identical to the CLI: same checkpoint file, same SHA256, same frozen threshold.
+
+Canonical checkpoint identity:
+  path:   results/ml/resnet_seed42/checkpoints/best.pt
+  sha256: 5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9
+  size:   133,540,267 bytes
+
+mtime/glob sweep after the fix:
+  - st_mtime hits in project code: scripts/bridge_cnn_gene.py:92 only -
+    result-cache keying (M_CNN csv mtime), NOT checkpoint selection; left
+    alone per audit exception.
+  - app.py / predict.py / scripts/validate_external.py: zero hits for
+    st_mtime, .glob(, sorted-by-mtime, max-by-mtime.
+  - resolve_checkpoint defined once (src/brainvuln/config.py); imported by
+    app.py, predict.py, scripts/validate_external.py, tests. No duplicate
+    resolver implementations exist.

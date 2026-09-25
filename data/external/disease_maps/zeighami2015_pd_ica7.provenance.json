@@ -1,0 +1,42 @@
+{
+  "name": "zeighami2015_pd_ica7",
+  "disease": "parkinson",
+  "modality": "Structural MRI (deformation-based morphometry, ICA)",
+  "space": "MNI152 (FSL)",
+  "sign_convention": "higher = PD-specific atrophy per Zeighami Fig.2 (verify sign against the paper figure before interpretation; MELODIC maps are sign-ambiguous)",
+  "citation": "Zeighami et al. 2015, eLife 4:e08440",
+  "source_url": "https://neurovault.org/images/12551/",
+  "license_note": "No explicit license set by the source repository; use for research with full citation and contact the authors before redistribution.",
+  "download_date": "2026-09-20",
+  "raw_file": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\external\\disease_maps\\raw\\zeighami2015_pd_ica7_mni152.nii.gz",
+  "n_subjects": null,
+  "description": "PD-specific atrophy independent component (melodic IC 0007, 'PD-ICA') from 232 de novo PD patients and 117 controls (PPMI), Z map, FSL 5.0 MELODIC.",
+  "persistent_id": "https://identifiers.org/neurovault.image:12551",
+  "import": {
+    "format": "nifti",
+    "mask_zero": true,
+    "resampling": "trilinear (order=1) into atlas grid, cval=NaN",
+    "n_voxels_masked_zero": 796144,
+    "n_voxels_outside_map_fov": 33465,
+    "map_grid": [
+      101,
+      119,
+      97
+    ],
+    "atlas_grid": [
+      97,
+      115,
+      97
+    ],
+    "map_file": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\external\\disease_maps\\raw\\zeighami2015_pd_ica7_mni152.nii.gz"
+  },
+  "coverage": {
+    "map": "zeighami2015_pd_ica7",
+    "n_parcels_atlas": 87,
+    "n_parcels_with_value": 87,
+    "coverage_fraction": 1.0,
+    "missing_by_structure": {},
+    "n_subcortical_with_value": 19
+  },
+  "imported_at_utc": "2026-09-20T07:19:07Z"
+}

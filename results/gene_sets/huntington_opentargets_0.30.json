@@ -1,0 +1,107 @@
+{
+  "tier": "opentargets",
+  "genes_by_threshold": {
+    "0.10": [
+      "HTT",
+      "MSH3",
+      "SLC2A3"
+    ],
+    "0.30": [
+      "HTT",
+      "SLC2A3"
+    ]
+  },
+  "genes": [
+    "HTT",
+    "SLC2A3"
+  ],
+  "metadata": {
+    "disease": "Huntington's disease",
+    "disease_key": "huntington",
+    "efo_id": "EFO_0000267",
+    "mondo_id": "MONDO_0007739",
+    "show_child_traits": false,
+    "extended_geneset": false,
+    "retrieval_date": "2026-09-19T14:08:58+00:00",
+    "number_associations": 5127,
+    "number_unique_genes": 5,
+    "api_url": "https://api.platform.opentargets.org/api/v4/graphql",
+    "enable_indirect": false,
+    "ot_score_thresholds": [
+      0.1,
+      0.3
+    ],
+    "primary_threshold": 0.1,
+    "trait_label": "Huntington disease",
+    "genetic_rows": [
+      {
+        "symbol": "HTT",
+        "score": 0.6902454432519949,
+        "datasource_ids": [
+          "clingen",
+          "clinical_precedence",
+          "europepmc",
+          "eva",
+          "impc",
+          "orphanet",
+          "uniprot_literature"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "clinical",
+          "genetic_association",
+          "genetic_literature",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "SLC2A3",
+        "score": 0.39555954042175295,
+        "datasource_ids": [
+          "europepmc",
+          "impc",
+          "orphanet"
+        ],
+        "datatype_ids": [
+          "animal_model",
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "MSH3",
+        "score": 0.20613780741651078,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "DHFR",
+        "score": 0.0855765498244972,
+        "datasource_ids": [
+          "europepmc",
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association",
+          "literature"
+        ]
+      },
+      {
+        "symbol": "ANKRD34B",
+        "score": 0.03624032479959942,
+        "datasource_ids": [
+          "gwas_credible_sets"
+        ],
+        "datatype_ids": [
+          "genetic_association"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+[1/5] preprocessing cache: data/derived/oasis1_128
+  sessions: 182 (train 128 / val 27 / test 27) in 11s
+[2/5] training resnet (seed 42, device cpu)
+  epoch 00 loss 0.7046 val_auc 0.6778 *
+  epoch 01 loss 0.6292 val_auc 0.7056 *
+  epoch 02 loss 0.5368 val_auc 0.6333
+  epoch 03 loss 0.2962 val_auc 0.5167
+  best val_auc 0.7056 (epoch 1)
+[3/5] threshold on validation, then frozen test
+  test ROC-AUC 0.656 [0.434, 0.846] PR-AUC 0.747 (threshold 0.01)
+[4/5] Grad-CAM + occlusion for test subjects
+  explained OAS1_0013 (OAS1_0013_MR1) (+occlusion)
+  explained OAS1_0028 (OAS1_0028_MR1) (+occlusion)
+  explained OAS1_0030 (OAS1_0030_MR1) (+occlusion)
+  explained OAS1_0031 (OAS1_0031_MR1) (+occlusion)
+  explained OAS1_0351 (OAS1_0351_MR1) (+occlusion)
+  explained OAS1_0418 (OAS1_0418_MR1) (+occlusion)
+  explained OAS1_0082 (OAS1_0082_MR1) (+occlusion)

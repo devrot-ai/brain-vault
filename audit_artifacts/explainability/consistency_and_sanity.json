@@ -1,0 +1,152 @@
+{
+  "subjects": {
+    "OAS1_0013": {
+      "class": "CN",
+      "input_path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\raw\\oasis1\\extracted\\disc1\\disc1\\OAS1_0013_MR1\\PROCESSED\\MPRAGE\\T88_111\\OAS1_0013_MR1_mpr_n4_anon_111_t88_masked_gfc.img",
+      "input_sha256": "a50174756f2c50efb598da57ef11af1cb5e77449aa769168cdbd1a06683a2fa4",
+      "checkpoint_sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+      "preprocessing": "preprocess_session: T88 reference, 2 mm isotropic resample, brain-bbox crop, centre-pad to 128^3, z-score within brain mask",
+      "gradcam_target_layer": "layer4",
+      "gradcam_target_class": "AD positive logit",
+      "cache_max_abs_diff": 0.0,
+      "probability": 0.43138858675956726,
+      "probability_rerun": 0.43138858675956726,
+      "cam_max": 1.0,
+      "cam_nonzero_frac": 0.671875,
+      "rerun_prob_identical": true,
+      "rerun_cam_max_abs_diff": 0.0,
+      "rerun_cam_identical": true,
+      "nifti_shape": [
+        176,
+        208,
+        176
+      ],
+      "affine_det": -1.0,
+      "affine_ok": true,
+      "nifti_nonzero_frac": 0.9730335582386364,
+      "outputs": {
+        "nifti": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\audit_artifacts\\explainability\\OAS1_0013_gradcam.nii.gz",
+        "png": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\audit_artifacts\\explainability\\OAS1_0013_gradcam_planes.png"
+      },
+      "perturbation": {
+        "peak": {
+          "prob": 0.4173687994480133,
+          "delta_prob": -0.014019787311553955,
+          "cam_spearman_vs_baseline": 0.9996720200535574,
+          "cam_pearson_vs_baseline": 0.9995517067735096
+        },
+        "far_control": {
+          "prob": 0.6027887463569641,
+          "delta_prob": 0.17140015959739685,
+          "cam_spearman_vs_baseline": 0.9659490149038948,
+          "cam_pearson_vs_baseline": 0.9823056178005958
+        }
+      },
+      "production_probability": 0.4313899874687195
+    },
+    "OAS1_0028": {
+      "class": "AD",
+      "input_path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\raw\\oasis1\\extracted\\disc1\\disc1\\OAS1_0028_MR1\\PROCESSED\\MPRAGE\\T88_111\\OAS1_0028_MR1_mpr_n4_anon_111_t88_masked_gfc.img",
+      "input_sha256": "e59b2b443183cfec5526bd8d79c43992d50873c3f908b655444b7359ab65236b",
+      "checkpoint_sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+      "preprocessing": "preprocess_session: T88 reference, 2 mm isotropic resample, brain-bbox crop, centre-pad to 128^3, z-score within brain mask",
+      "gradcam_target_layer": "layer4",
+      "gradcam_target_class": "AD positive logit",
+      "cache_max_abs_diff": 0.0,
+      "probability": 0.8952116966247559,
+      "probability_rerun": 0.8952116966247559,
+      "cam_max": 1.0,
+      "cam_nonzero_frac": 0.919921875,
+      "rerun_prob_identical": true,
+      "rerun_cam_max_abs_diff": 0.0,
+      "rerun_cam_identical": true,
+      "nifti_shape": [
+        176,
+        208,
+        176
+      ],
+      "affine_det": -1.0,
+      "affine_ok": true,
+      "nifti_nonzero_frac": 1.0,
+      "outputs": {
+        "nifti": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\audit_artifacts\\explainability\\OAS1_0028_gradcam.nii.gz",
+        "png": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\audit_artifacts\\explainability\\OAS1_0028_gradcam_planes.png"
+      },
+      "perturbation": {
+        "peak": {
+          "prob": 0.8599438071250916,
+          "delta_prob": -0.03526788949966431,
+          "cam_spearman_vs_baseline": 0.9959285286411512,
+          "cam_pearson_vs_baseline": 0.9975796030354568
+        },
+        "far_control": {
+          "prob": 0.9189470410346985,
+          "delta_prob": 0.023735344409942627,
+          "cam_spearman_vs_baseline": 0.9989133855606782,
+          "cam_pearson_vs_baseline": 0.9993259126911577
+        }
+      },
+      "production_probability": 0.8952117562294006
+    }
+  },
+  "checks": {
+    "randomization": {
+      "spearman": -0.23773474717701068,
+      "pearson": -0.40993722950179534,
+      "n_voxels": 2097152,
+      "random_model_prob": 0.4977991282939911,
+      "critical_flag": false
+    },
+    "cross_subject": {
+      "n_subjects": 27,
+      "n_parcels": 87,
+      "stability_tsv": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\audit_artifacts\\phase_10_cross_subject_stability.tsv",
+      "top_mean_regions": {
+        "caudalanteriorcingulate_L": {
+          "mean": 0.6307372801727931,
+          "cv": 0.6069739293461341
+        },
+        "caudalanteriorcingulate_R": {
+          "mean": 0.6112768781689545,
+          "cv": 0.611125773039403
+        },
+        "TianS1_16": {
+          "mean": 0.5932444654718149,
+          "cv": 0.6101833681594714
+        },
+        "caudalmiddlefrontal_L": {
+          "mean": 0.5613329317706622,
+          "cv": 0.6060327056232577
+        },
+        "TianS1_15": {
+          "mean": 0.559754558625525,
+          "cv": 0.6160441847885822
+        }
+      }
+    },
+    "method_agreement": {
+      "n_common_subjects": 8,
+      "spearman_min": 0.16250330420023898,
+      "spearman_median": 0.2995130513758409,
+      "spearman_max": 0.42019931532316146,
+      "top10_overlap_min": 0,
+      "top10_overlap_median": 1.0,
+      "top10_overlap_max": 2,
+      "per_subject_tsv": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\audit_artifacts\\phase_10_method_agreement_per_subject.tsv"
+    }
+  },
+  "checkpoint": {
+    "path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed42\\checkpoints\\best.pt",
+    "filename": "best.pt",
+    "sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+    "size_bytes": 133540267,
+    "resolved": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed42\\checkpoints\\best.pt"
+  },
+  "model": {
+    "architecture": "ResNet18Binary",
+    "epoch": 11,
+    "val_auc": 0.8,
+    "target_layer": "layer4",
+    "target_class": "AD (positive logit)"
+  }
+}

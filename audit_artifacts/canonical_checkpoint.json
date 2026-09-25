@@ -1,0 +1,30 @@
+{
+  "purpose": "production baseline",
+  "recorded_date": "2026-09-24T12:02:10+00:00",
+  "resolved_path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed42\\checkpoints\\best.pt",
+  "filename": "best.pt",
+  "sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+  "size_bytes": 133540267,
+  "model_architecture": "ResNet18Binary (MONAI ResNet backbone, 1 input channel, binary head)",
+  "seed": 42,
+  "training_config": {
+    "source": "checkpoint-embedded snapshot (ckpt['config'])",
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 4,
+    "warmup_epochs": 2,
+    "cosine_epochs": 12,
+    "device": "cpu",
+    "epoch_of_checkpoint": 11,
+    "val_auc_of_checkpoint": 0.8
+  },
+  "training_config_path": "config/analysis.yaml",
+  "preprocessing_config_path": "src/brainvuln/mri/preprocess.py (input: OASIS-1 *_t88_masked_gfc; 2 mm, crop/pad 128^3, brain z-score)",
+  "python_version": "3.11.9",
+  "pytorch_version": "2.4.1+cpu",
+  "monai_version": "1.4.0",
+  "numpy_version": "1.26.4",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "canonical_sha_expected": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+  "sha_match": true
+}

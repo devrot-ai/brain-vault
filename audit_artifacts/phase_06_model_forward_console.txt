@@ -1,0 +1,4 @@
+ResNet18Binary: in [2, 1, 128, 128, 128] -> out [2] finite=True probs_in_[0,1]=True params=33,366,609
+SimpleCNN3D: in [2, 1, 128, 128, 128] -> out [2] finite=True probs_in_[0,1]=True params=291,345
+cuda: NOT AVAILABLE - CPU only
+PHASE6_VERDICT: PASS

@@ -1,0 +1,57 @@
+[1/5] preprocessing cache: data/derived/oasis1_128
+  sessions: 182 (train 128 / val 27 / test 27) in 20s
+[2/5] training resnet (seed 42, device cpu)
+  epoch 00 loss 0.6302 val_auc 0.5833 *
+  epoch 01 loss 0.6503 val_auc 0.7222 *
+  epoch 02 loss 0.7005 val_auc 0.5944
+  epoch 03 loss 0.5918 val_auc 0.7278 *
+  epoch 04 loss 0.6142 val_auc 0.7333 *
+  epoch 05 loss 0.6008 val_auc 0.7056
+  epoch 06 loss 0.5622 val_auc 0.6889
+  epoch 07 loss 0.5290 val_auc 0.7722 *
+  epoch 08 loss 0.3837 val_auc 0.7944 *
+  epoch 09 loss 0.4430 val_auc 0.7722
+  epoch 10 loss 0.2998 val_auc 0.7889
+  epoch 11 loss 0.2808 val_auc 0.8000 *
+  epoch 12 loss 0.2083 val_auc 0.7944
+  epoch 13 loss 0.3214 val_auc 0.8000
+  epoch 14 loss 0.2818 val_auc 0.8000
+  epoch 15 loss 0.2507 val_auc 0.8000
+  epoch 16 loss 0.2999 val_auc 0.8000
+  epoch 17 loss 0.2402 val_auc 0.8000
+  epoch 18 loss 0.2122 val_auc 0.8000
+  epoch 19 loss 0.2653 val_auc 0.8000
+  early stop (no val-AUC improvement in 8)
+  best val_auc 0.8000 (epoch 11)
+[3/5] threshold on validation, then frozen test
+  test ROC-AUC 0.817 [0.618, 0.972] PR-AUC 0.814 (threshold 0.07)
+[4/5] Grad-CAM + occlusion for test subjects
+  explained OAS1_0013 (OAS1_0013_MR1) (+occlusion)
+  explained OAS1_0028 (OAS1_0028_MR1) (+occlusion)
+  explained OAS1_0030 (OAS1_0030_MR1) (+occlusion)
+  explained OAS1_0031 (OAS1_0031_MR1) (+occlusion)
+  explained OAS1_0351 (OAS1_0351_MR1) (+occlusion)
+  explained OAS1_0418 (OAS1_0418_MR1) (+occlusion)
+  explained OAS1_0082 (OAS1_0082_MR1) (+occlusion)
+  explained OAS1_0115 (OAS1_0115_MR1) (+occlusion)
+  explained OAS1_0120 (OAS1_0120_MR1)
+  explained OAS1_0134 (OAS1_0134_MR1)
+  explained OAS1_0142 (OAS1_0142_MR1)
+  explained OAS1_0146 (OAS1_0146_MR1)
+  explained OAS1_0155 (OAS1_0155_MR1)
+  explained OAS1_0158 (OAS1_0158_MR1)
+  explained OAS1_0165 (OAS1_0165_MR1)
+  explained OAS1_0166 (OAS1_0166_MR1)
+  explained OAS1_0169 (OAS1_0169_MR1)
+  explained OAS1_0176 (OAS1_0176_MR1)
+  explained OAS1_0185 (OAS1_0185_MR1)
+  explained OAS1_0199 (OAS1_0199_MR1)
+  explained OAS1_0221 (OAS1_0221_MR1)
+  explained OAS1_0269 (OAS1_0269_MR1)
+  explained OAS1_0273 (OAS1_0273_MR1)
+  explained OAS1_0279 (OAS1_0279_MR1)
+  explained OAS1_0330 (OAS1_0330_MR1)
+  explained OAS1_0337 (OAS1_0337_MR1)
+  explained OAS1_0341 (OAS1_0341_MR1)
+[5/5] regional M_CNN on the predefined atlas
+  M_CNN: 87 parcels; Grad-CAM vs occlusion regional Spearman = 0.997

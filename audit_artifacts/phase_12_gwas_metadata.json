@@ -1,0 +1,16 @@
+{
+  "audit_date": "2026-09-23",
+  "efo_id": "EFO_0000249",
+  "mondo_id": "MONDO_0004975",
+  "show_child_traits": false,
+  "trait_verification": {
+    "trait_id": "MONDO_0004975",
+    "n_associations": 6716,
+    "catalog_trait_label": "Alzheimer disease"
+  },
+  "live_gene_count": 3560,
+  "stored_gene_count": 3560,
+  "overlap": 3560,
+  "retrieval_ok": true,
+  "retrieved_at": "2026-09-23 22:14:01.243221"
+}

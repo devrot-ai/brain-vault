@@ -1,0 +1,74 @@
+{
+  "test": {
+    "n": 27,
+    "threshold": 0.01,
+    "roc_auc": 0.6555555555555556,
+    "pr_auc": 0.7468178992004539,
+    "accuracy": 0.5555555555555556,
+    "balanced_accuracy": 0.5,
+    "sensitivity": 1.0,
+    "specificity": 0.0,
+    "precision": 0.5555555555555556,
+    "f1": 0.7142857142857143,
+    "brier": 0.44382351705490747,
+    "confusion": {
+      "tn": 0,
+      "fp": 12,
+      "fn": 0,
+      "tp": 15
+    },
+    "bootstrap_ci": {
+      "roc_auc": {
+        "point": 0.6555555555555556,
+        "lo": 0.4340659340659341,
+        "hi": 0.8461647727272726
+      },
+      "pr_auc": {
+        "point": 0.7468178992004539,
+        "lo": 0.5172232151165218,
+        "hi": 0.9095202243885026
+      },
+      "balanced_accuracy": {
+        "point": 0.5,
+        "lo": 0.5,
+        "hi": 0.5
+      },
+      "sensitivity": {
+        "point": 1.0,
+        "lo": 1.0,
+        "hi": 1.0
+      },
+      "specificity": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "brier": {
+        "point": 0.44382351705490747,
+        "lo": 0.2588371853144024,
+        "hi": 0.6288049931396892
+      }
+    }
+  },
+  "threshold": 0.01,
+  "threshold_method": "youden",
+  "val": {
+    "n": 27,
+    "threshold": 0.01,
+    "roc_auc": 0.7055555555555556,
+    "pr_auc": 0.7912172840346214,
+    "accuracy": 0.5555555555555556,
+    "balanced_accuracy": 0.5,
+    "sensitivity": 1.0,
+    "specificity": 0.0,
+    "precision": 0.5555555555555556,
+    "f1": 0.7142857142857143,
+    "brier": 0.4437777697880102,
+    "confusion": {
+      "tn": 0,
+      "fp": 12,
+      "fn": 0,
+      "tp": 15
+    }
+  }
+}

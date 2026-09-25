@@ -1,0 +1,16 @@
+{
+  "loss": 0.6712237596511841,
+  "loss_finite": true,
+  "n_params_with_grad": 65,
+  "grad_abs_mean": 0.005332059961688353,
+  "grad_abs_max": 0.729841411113739,
+  "grad_issues": [],
+  "params_changed_after_step": 63,
+  "params_unchanged": [
+    "backbone.layer3.0.downsample.0.bias",
+    "backbone.layer4.0.downsample.0.bias",
+    "backbone.fc.weight",
+    "backbone.fc.bias"
+  ],
+  "grad_exploding": false
+}

@@ -1,0 +1,7259 @@
+{
+  "tier": "gwascat",
+  "genes": [
+    "AACS",
+    "AAK1",
+    "ADD1",
+    "AGAP1",
+    "ALK",
+    "AMZ1",
+    "ANKRD55",
+    "ANO2",
+    "ANO5",
+    "APOE",
+    "AQP10",
+    "AREL1",
+    "ARHGAP27",
+    "ARHGEF2",
+    "ARHGEF4-AS1",
+    "ARL17B",
+    "AS3MT",
+    "ASCL4",
+    "ASH1L",
+    "ASNS",
+    "ASS1P13",
+    "ASS1P14",
+    "ASXL3",
+    "ATF6",
+    "ATXN7L3-AS1",
+    "BAG3",
+    "BBS9",
+    "BCKDK",
+    "BCL9",
+    "BICD1-AS1",
+    "BIN3",
+    "BORCS7-ASMT",
+    "BRINP1",
+    "BRIP1",
+    "BST1",
+    "C5orf24",
+    "CA8",
+    "CAB39L",
+    "CACNA1B",
+    "CACNA2D3",
+    "CADM1",
+    "CAMK2D",
+    "CARS2",
+    "CASC16",
+    "CAVIN2",
+    "CC2D2A",
+    "CCDC30",
+    "CCDC62",
+    "CCDC82",
+    "CCDC85A",
+    "CCN6",
+    "CCNT2-AS1",
+    "CCSER1",
+    "CCT3",
+    "CD19",
+    "CD83P1",
+    "CDC42BPB",
+    "CDCA7P1",
+    "CFAP20DC-DT",
+    "CHL1",
+    "CHL1-AS1",
+    "CHRNB1",
+    "CICP26",
+    "CLCN3",
+    "CLRN3",
+    "CNKSR3",
+    "CNOT6L",
+    "CNTN1",
+    "COL13A1",
+    "COL3A1",
+    "COL5A2",
+    "COMMD1",
+    "CRISPLD1",
+    "CRLS1",
+    "CTC1",
+    "CTSB",
+    "CYCSP42",
+    "CYCSP8",
+    "CYP17A1",
+    "CYP4Z1",
+    "CYRIB",
+    "DCST1",
+    "DCST1-AS1",
+    "DCUN1D1",
+    "DDHD1-DT",
+    "DDRGK1",
+    "DDX46",
+    "DENND2B",
+    "DGKQ",
+    "DIRC1",
+    "DLG2",
+    "DNAH17",
+    "DNASE1L1",
+    "DNM1L",
+    "DSG3",
+    "DYRK1A",
+    "EFNA3",
+    "EFNA4-EFNA3",
+    "EFNB1",
+    "EHMT2-AS1",
+    "ELMO1",
+    "ELOVL7",
+    "ERCC6L2-AS1",
+    "FAM136FP",
+    "FAM171A2",
+    "FAM184A",
+    "FAM47E",
+    "FAM47E-STBD1",
+    "FAM89A",
+    "FANCF",
+    "FASN",
+    "FBRSL1",
+    "FCGR2A",
+    "FCGR2B",
+    "FCGR3B",
+    "FDFT1",
+    "FGD4",
+    "FHOD3",
+    "FMNL1-DT",
+    "FRG1CP",
+    "FYN",
+    "GABRG2",
+    "GABRG3",
+    "GAK",
+    "GALNT17",
+    "GALNT9",
+    "GBA1",
+    "GBA1LP",
+    "GBA2",
+    "GBF1",
+    "GCH1",
+    "GFPT2",
+    "GJA5",
+    "GNA12",
+    "GOLGA8B",
+    "GPM6B",
+    "GPNMB",
+    "GPR19",
+    "GPR32",
+    "GPR32P1",
+    "GPR65",
+    "GPR89P",
+    "GPRIN3",
+    "GUCY1A1",
+    "GUCY1A2",
+    "GUSBP2",
+    "GXYLT1",
+    "H2ACP1",
+    "HASPIN",
+    "HCAR2",
+    "HEATR6",
+    "HIP1R",
+    "HLA-DQA1",
+    "HLA-DQB1",
+    "HLA-DRA",
+    "HLA-DRB1",
+    "HMGB1P13",
+    "HMGN2P18",
+    "HSD17B1P1",
+    "HTR2A",
+    "HTR2A-AS1",
+    "HYCC1",
+    "IFTAP",
+    "IGSF11",
+    "IGSF9B",
+    "ING1",
+    "INPP5F",
+    "INSR",
+    "IP6K2",
+    "IRS2",
+    "ISM1",
+    "ITGA2B",
+    "ITGA8",
+    "ITGAE",
+    "ITIH1",
+    "ITPKB",
+    "ITPKB-IT1",
+    "KANSL1",
+    "KAT8",
+    "KCNIP3",
+    "KCNIP4",
+    "KCNN3",
+    "KCNS3",
+    "KLHDC1",
+    "KLHL29",
+    "KLHL7",
+    "KLHL7-DT",
+    "KNTC1",
+    "KPNA1",
+    "KPNA3",
+    "KRTAP13-4",
+    "KRTAP13-5P",
+    "KRTCAP2",
+    "KTN1",
+    "LACTB",
+    "LAMP3",
+    "LAMTOR2",
+    "LARP7P4",
+    "LCORL",
+    "LDLRAD4",
+    "LHFPL2",
+    "LINC00326",
+    "LINC00365",
+    "LINC00456",
+    "LINC00511",
+    "LINC00544",
+    "LINC01012",
+    "LINC01127",
+    "LINC01147",
+    "LINC01307",
+    "LINC01365",
+    "LINC01418",
+    "LINC01495",
+    "LINC01500",
+    "LINC01709",
+    "LINC02034",
+    "LINC02063",
+    "LINC02114",
+    "LINC02210",
+    "LINC02210-CRHR1",
+    "LINC02240",
+    "LINC02252",
+    "LINC02331",
+    "LINC02349",
+    "LINC02400",
+    "LINC02450",
+    "LINC02527",
+    "LINC02555",
+    "LINC02582",
+    "LINC02629",
+    "LINC02866",
+    "LINC02885",
+    "LINC02889",
+    "LINC02920",
+    "LINC02950",
+    "LMNA",
+    "LMNB1",
+    "LNCOB1",
+    "LRP1B",
+    "LRRC25",
+    "LRRC30",
+    "LRRC37A4P",
+    "LRRK2",
+    "LRRK2-DT",
+    "LSAMP",
+    "LTK",
+    "LZTS3",
+    "MAD1L1",
+    "MAIP1",
+    "MAP4K4",
+    "MAP9-AS1",
+    "MAPT",
+    "MAPT-AS1",
+    "MARCHF3",
+    "MBNL2",
+    "MCCC1",
+    "MCCC1-AS1",
+    "MCTP2",
+    "MDGA2",
+    "MED12L",
+    "MED13",
+    "METTL13",
+    "MIPOL1",
+    "MIR4485",
+    "MIR4682",
+    "MIR663AHG",
+    "MLX",
+    "MMRN1",
+    "MORN1",
+    "MPHOSPH6-DT",
+    "MROH3P",
+    "MRPL1",
+    "MRPS30-DT",
+    "MSR1",
+    "MSRB3",
+    "MTCO1P48",
+    "MTCO3P1",
+    "MTF2",
+    "MTND1P22",
+    "MTND1P24",
+    "MTND5P40",
+    "MUC1",
+    "MUC12",
+    "MUC19",
+    "MX2",
+    "MYLK2",
+    "Metazoa_SRP",
+    "NABP1",
+    "NAGLU",
+    "NDUFAF2",
+    "NECTIN2",
+    "NEDD9",
+    "NGEF",
+    "NKAIN2",
+    "NOD2",
+    "NOL4",
+    "NPM1P18",
+    "NR1D2",
+    "NRBP1",
+    "NSF",
+    "NTRK1",
+    "NTRK2",
+    "NUCKS1",
+    "NUP50P4",
+    "NXPE2",
+    "OCA2",
+    "ODAPH",
+    "OR5AZ1P",
+    "OR5BD1P",
+    "P2RX5",
+    "P2RY14",
+    "PABPN1L",
+    "PAM",
+    "PARD3",
+    "PARP9",
+    "PAX7",
+    "PBXIP1",
+    "PCGF3",
+    "PDE5A",
+    "PDK2",
+    "PDLIM2",
+    "PGS1",
+    "PHB1P21",
+    "PI15",
+    "PIGL",
+    "PIK3CA",
+    "PIK3CA-DT",
+    "PITPNM2",
+    "PJA1",
+    "PKP2",
+    "PLEKHM1",
+    "PLPP4",
+    "PLPPR1",
+    "PMF1-BGLAP",
+    "PMVK",
+    "POLR3B",
+    "POM121L2",
+    "PPP6R2",
+    "PRDM15",
+    "PRKN",
+    "PRRG4",
+    "PRSS53",
+    "PSMA6P4",
+    "PTCHD1-AS",
+    "PTPRD",
+    "PTPRM",
+    "PWRN4",
+    "QSER1",
+    "RAB25",
+    "RAB29",
+    "RABEP2",
+    "RABGEF1P1",
+    "RAD1P1",
+    "RBMS3",
+    "RBX1",
+    "RERE",
+    "RERE-AS1",
+    "RETREG3",
+    "RFX4",
+    "RILPL2",
+    "RIMS1",
+    "RIT1",
+    "RIT2",
+    "RN7SKP10",
+    "RN7SL261P",
+    "RN7SL35P",
+    "RN7SL401P",
+    "RN7SL474P",
+    "RN7SL813P",
+    "RN7SL869P",
+    "RNA5SP102",
+    "RNA5SP144",
+    "RNA5SP185",
+    "RNA5SP443",
+    "RNA5SP455",
+    "RNF141",
+    "RNF217-AS1",
+    "RNU4-66P",
+    "RNU6-121P",
+    "RNU6-1326P",
+    "RNU6-161P",
+    "RNU6-164P",
+    "RNU6-259P",
+    "RNU6-400P",
+    "RNU6-471P",
+    "RNU6-472P",
+    "RNU6-481P",
+    "RNU6-525P",
+    "RNU6-667P",
+    "RNU6-835P",
+    "RNU7-137P",
+    "ROPN1L",
+    "RORA",
+    "RORB-AS1",
+    "RPA2P1",
+    "RPL10",
+    "RPL13AP21",
+    "RPL13AP3",
+    "RPL7AP56",
+    "RPL7AP61",
+    "RPL7AP67",
+    "RPL7L1P15",
+    "RPL9P21",
+    "RPS6KL1",
+    "RSL24D1P1",
+    "RTL9",
+    "SCARB2",
+    "SCN2A",
+    "SEC23IP",
+    "SEMA4A",
+    "SEMA5A",
+    "SERTM1",
+    "SETD1A",
+    "SH2B1",
+    "SH3GL2",
+    "SHROOM3",
+    "SIPA1L2",
+    "SIRLNT",
+    "SLC18B1",
+    "SLC25A44",
+    "SLC28A3",
+    "SLC2A13",
+    "SLC38A1",
+    "SLC39A8",
+    "SLC41A1",
+    "SLC44A4",
+    "SLC50A1",
+    "SLCO1B3",
+    "SLIT1",
+    "SMAD4",
+    "SMARCAD1-DT",
+    "SNCA",
+    "SNCA-AS1",
+    "SNCAIP",
+    "SNX13",
+    "SORBS2",
+    "SP1",
+    "SPATA19",
+    "SPATA6",
+    "SPATS2L",
+    "SPPL2B",
+    "SPPL2C",
+    "SPTSSB",
+    "SQOR",
+    "SREBF1",
+    "SRSF10P1",
+    "SSBP4",
+    "STAP1",
+    "STK39",
+    "STX1B",
+    "SULT1C2",
+    "SV2C",
+    "SV2C-AS2",
+    "SYBU",
+    "SYT10",
+    "SYT17",
+    "SYT4",
+    "TAC1",
+    "TAS1R2",
+    "TASP1",
+    "TBC1D5",
+    "TBXAS1",
+    "TCEANC2",
+    "TECPR1",
+    "TEKT4",
+    "THSD4",
+    "TIAL1",
+    "TIGIT",
+    "TMC3",
+    "TMC3-AS1",
+    "TMC5",
+    "TMEM163",
+    "TMEM175",
+    "TMEM229B",
+    "TMEM72-AS1",
+    "TMPRSS9",
+    "TPI1P1",
+    "TPM1",
+    "TPRA1",
+    "TRAPPC2L",
+    "TRIM40",
+    "TRIM46",
+    "TRIM67",
+    "TRPM2",
+    "TRPS1",
+    "TSBP1-AS1",
+    "TXNDC15",
+    "TXNP1",
+    "UBAP2",
+    "UBQLN4",
+    "UBTF",
+    "UNC13B",
+    "USP50",
+    "USP8",
+    "VAMP4",
+    "VN1R10P",
+    "VN1R5",
+    "WBP1L",
+    "WDHD1",
+    "WDR1",
+    "WDR41",
+    "WFDC10B",
+    "WFDC11",
+    "WNT3",
+    "WNT9A",
+    "WSCD2",
+    "XPO1",
+    "Y_RNA",
+    "ZDHHC2",
+    "ZNF165",
+    "ZNF204P",
+    "ZNF24TR",
+    "ZNF322",
+    "ZNF475",
+    "ZNF608",
+    "ZNF629",
+    "ZNF646",
+    "ZNF80",
+    "ZP3",
+    "ZSCAN16-AS1"
+  ],
+  "associations": [
+    {
+      "association_id": 226238591,
+      "accession_id": "GCST90475830",
+      "p_value": 3e-12,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 226238587,
+      "accession_id": "GCST90475830",
+      "p_value": 2e-11,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 226238583,
+      "accession_id": "GCST90475830",
+      "p_value": 7e-13,
+      "genes": []
+    },
+    {
+      "association_id": 226237546,
+      "accession_id": "GCST90479727",
+      "p_value": 2e-11,
+      "genes": [
+        "LDLRAD4"
+      ]
+    },
+    {
+      "association_id": 226237542,
+      "accession_id": "GCST90479727",
+      "p_value": 4e-11,
+      "genes": [
+        "CDC42BPB"
+      ]
+    },
+    {
+      "association_id": 226237358,
+      "accession_id": "GCST90479727",
+      "p_value": 3e-12,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 226237354,
+      "accession_id": "GCST90479727",
+      "p_value": 3e-11,
+      "genes": [
+        "LINC02034",
+        "TPRA1"
+      ]
+    },
+    {
+      "association_id": 226237350,
+      "accession_id": "GCST90479727",
+      "p_value": 1e-11,
+      "genes": [
+        "COMMD1"
+      ]
+    },
+    {
+      "association_id": 226237177,
+      "accession_id": "GCST90479726",
+      "p_value": 9e-12,
+      "genes": [
+        "H2ACP1",
+        "SERTM1"
+      ]
+    },
+    {
+      "association_id": 226237173,
+      "accession_id": "GCST90479726",
+      "p_value": 1e-12,
+      "genes": [
+        "IFTAP",
+        "RPL7AP56"
+      ]
+    },
+    {
+      "association_id": 226237169,
+      "accession_id": "GCST90479726",
+      "p_value": 1e-11,
+      "genes": [
+        "RNA5SP102",
+        "RNU6-259P"
+      ]
+    },
+    {
+      "association_id": 226220141,
+      "accession_id": "GCST90480008",
+      "p_value": 2e-13,
+      "genes": [
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 226219937,
+      "accession_id": "GCST90480008",
+      "p_value": 7e-17,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 226219933,
+      "accession_id": "GCST90480008",
+      "p_value": 6.000000000000001e-13,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 226219929,
+      "accession_id": "GCST90480008",
+      "p_value": 4e-11,
+      "genes": [
+        "SPATA6"
+      ]
+    },
+    {
+      "association_id": 222615321,
+      "accession_id": "GCST90892629",
+      "p_value": 6e-07,
+      "genes": [
+        "PDK2"
+      ]
+    },
+    {
+      "association_id": 222615317,
+      "accession_id": "GCST90892629",
+      "p_value": 9e-19,
+      "genes": [
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 222615313,
+      "accession_id": "GCST90892629",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "SMARCAD1-DT"
+      ]
+    },
+    {
+      "association_id": 222615309,
+      "accession_id": "GCST90892629",
+      "p_value": 5e-08,
+      "genes": [
+        "SH2B1"
+      ]
+    },
+    {
+      "association_id": 222615305,
+      "accession_id": "GCST90892629",
+      "p_value": 2e-11,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 222615301,
+      "accession_id": "GCST90892629",
+      "p_value": 7e-07,
+      "genes": [
+        "INSR"
+      ]
+    },
+    {
+      "association_id": 222615297,
+      "accession_id": "GCST90892629",
+      "p_value": 1e-17,
+      "genes": [
+        "LRRC37A4P",
+        "PLEKHM1"
+      ]
+    },
+    {
+      "association_id": 222615293,
+      "accession_id": "GCST90892629",
+      "p_value": 3e-07,
+      "genes": [
+        "MSR1",
+        "RN7SL474P"
+      ]
+    },
+    {
+      "association_id": 222615289,
+      "accession_id": "GCST90892629",
+      "p_value": 8e-07,
+      "genes": [
+        "Metazoa_SRP",
+        "ZNF629"
+      ]
+    },
+    {
+      "association_id": 222615285,
+      "accession_id": "GCST90892629",
+      "p_value": 3e-10,
+      "genes": [
+        "GAK"
+      ]
+    },
+    {
+      "association_id": 222615281,
+      "accession_id": "GCST90892629",
+      "p_value": 7.000000000000001e-10,
+      "genes": [
+        "UBQLN4"
+      ]
+    },
+    {
+      "association_id": 222615277,
+      "accession_id": "GCST90892629",
+      "p_value": 4e-07,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 222615273,
+      "accession_id": "GCST90892629",
+      "p_value": 4e-19,
+      "genes": [
+        "ARL17B"
+      ]
+    },
+    {
+      "association_id": 222615269,
+      "accession_id": "GCST90892629",
+      "p_value": 1e-08,
+      "genes": [
+        "NRBP1"
+      ]
+    },
+    {
+      "association_id": 222615265,
+      "accession_id": "GCST90892629",
+      "p_value": 1e-07,
+      "genes": [
+        "MAIP1",
+        "SPATS2L"
+      ]
+    },
+    {
+      "association_id": 222615261,
+      "accession_id": "GCST90892629",
+      "p_value": 6.999999999999999e-19,
+      "genes": [
+        "NSF"
+      ]
+    },
+    {
+      "association_id": 222615257,
+      "accession_id": "GCST90892629",
+      "p_value": 1e-07,
+      "genes": [
+        "MED12L",
+        "P2RY14"
+      ]
+    },
+    {
+      "association_id": 222615253,
+      "accession_id": "GCST90892629",
+      "p_value": 1e-13,
+      "genes": [
+        "MAPT"
+      ]
+    },
+    {
+      "association_id": 222615249,
+      "accession_id": "GCST90892629",
+      "p_value": 6e-07,
+      "genes": [
+        "GAK"
+      ]
+    },
+    {
+      "association_id": 222615245,
+      "accession_id": "GCST90892629",
+      "p_value": 1e-07,
+      "genes": [
+        "KAT8"
+      ]
+    },
+    {
+      "association_id": 222615241,
+      "accession_id": "GCST90892629",
+      "p_value": 2e-07,
+      "genes": [
+        "MSRB3"
+      ]
+    },
+    {
+      "association_id": 222615237,
+      "accession_id": "GCST90892629",
+      "p_value": 8e-09,
+      "genes": [
+        "HIP1R"
+      ]
+    },
+    {
+      "association_id": 217413990,
+      "accession_id": "GCST90828117",
+      "p_value": 5e-10,
+      "genes": [
+        "PRDM15"
+      ]
+    },
+    {
+      "association_id": 217413985,
+      "accession_id": "GCST90828117",
+      "p_value": 4e-08,
+      "genes": [
+        "MAP9-AS1"
+      ]
+    },
+    {
+      "association_id": 217413980,
+      "accession_id": "GCST90828117",
+      "p_value": 4e-08,
+      "genes": [
+        "CNOT6L",
+        "MRPL1"
+      ]
+    },
+    {
+      "association_id": 217413970,
+      "accession_id": "GCST90828116",
+      "p_value": 2e-06,
+      "genes": [
+        "WFDC10B",
+        "WFDC11"
+      ]
+    },
+    {
+      "association_id": 217413965,
+      "accession_id": "GCST90828116",
+      "p_value": 4e-08,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 217413961,
+      "accession_id": "GCST90828116",
+      "p_value": 9e-07,
+      "genes": [
+        "LINC02349",
+        "RORA"
+      ]
+    },
+    {
+      "association_id": 217413956,
+      "accession_id": "GCST90828116",
+      "p_value": 2e-07,
+      "genes": [
+        "HIP1R"
+      ]
+    },
+    {
+      "association_id": 217413952,
+      "accession_id": "GCST90828116",
+      "p_value": 1e-34,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 217413948,
+      "accession_id": "GCST90828116",
+      "p_value": 8e-06,
+      "genes": [
+        "DLG2"
+      ]
+    },
+    {
+      "association_id": 217413943,
+      "accession_id": "GCST90828116",
+      "p_value": 1e-06,
+      "genes": [
+        "AS3MT",
+        "BORCS7-ASMT"
+      ]
+    },
+    {
+      "association_id": 217413939,
+      "accession_id": "GCST90828116",
+      "p_value": 1e-06,
+      "genes": [
+        "TECPR1"
+      ]
+    },
+    {
+      "association_id": 217413935,
+      "accession_id": "GCST90828116",
+      "p_value": 2e-07,
+      "genes": [
+        "GALNT17"
+      ]
+    },
+    {
+      "association_id": 217413930,
+      "accession_id": "GCST90828116",
+      "p_value": 1e-07,
+      "genes": [
+        "ELMO1",
+        "NPM1P18"
+      ]
+    },
+    {
+      "association_id": 217413925,
+      "accession_id": "GCST90828116",
+      "p_value": 6e-06,
+      "genes": [
+        "FYN"
+      ]
+    },
+    {
+      "association_id": 217413920,
+      "accession_id": "GCST90828116",
+      "p_value": 1e-06,
+      "genes": [
+        "HLA-DQA1",
+        "HLA-DRB1"
+      ]
+    },
+    {
+      "association_id": 217413916,
+      "accession_id": "GCST90828116",
+      "p_value": 5e-07,
+      "genes": [
+        "CDCA7P1",
+        "POM121L2"
+      ]
+    },
+    {
+      "association_id": 217413911,
+      "accession_id": "GCST90828116",
+      "p_value": 4.9999999999999995e-11,
+      "genes": [
+        "SV2C"
+      ]
+    },
+    {
+      "association_id": 217413907,
+      "accession_id": "GCST90828116",
+      "p_value": 4e-37,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 217413902,
+      "accession_id": "GCST90828116",
+      "p_value": 2e-09,
+      "genes": [
+        "SCARB2"
+      ]
+    },
+    {
+      "association_id": 217413897,
+      "accession_id": "GCST90828116",
+      "p_value": 3e-06,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 217413893,
+      "accession_id": "GCST90828116",
+      "p_value": 2e-07,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 217413889,
+      "accession_id": "GCST90828116",
+      "p_value": 2e-12,
+      "genes": [
+        "DCUN1D1",
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 217413885,
+      "accession_id": "GCST90828116",
+      "p_value": 9e-10,
+      "genes": [
+        "ITPKB",
+        "ITPKB-IT1"
+      ]
+    },
+    {
+      "association_id": 217413881,
+      "accession_id": "GCST90828116",
+      "p_value": 3e-16,
+      "genes": [
+        "RAB29",
+        "SLC41A1"
+      ]
+    },
+    {
+      "association_id": 217413876,
+      "accession_id": "GCST90828116",
+      "p_value": 2e-08,
+      "genes": [
+        "ASH1L"
+      ]
+    },
+    {
+      "association_id": 217413865,
+      "accession_id": "GCST90707270",
+      "p_value": 5e-12,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 217413861,
+      "accession_id": "GCST90707270",
+      "p_value": 1e-06,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 217413856,
+      "accession_id": "GCST90707270",
+      "p_value": 9.000000000000001e-09,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 214574715,
+      "accession_id": "GCST90709788",
+      "p_value": 3e-06,
+      "genes": [
+        "MORN1"
+      ]
+    },
+    {
+      "association_id": 214574710,
+      "accession_id": "GCST90709788",
+      "p_value": 2e-08,
+      "genes": [
+        "SORBS2"
+      ]
+    },
+    {
+      "association_id": 214574698,
+      "accession_id": "GCST90709787",
+      "p_value": 8e-07,
+      "genes": [
+        "SLIT1"
+      ]
+    },
+    {
+      "association_id": 214574693,
+      "accession_id": "GCST90709787",
+      "p_value": 7e-07,
+      "genes": [
+        "KRTAP13-4",
+        "KRTAP13-5P"
+      ]
+    },
+    {
+      "association_id": 214574688,
+      "accession_id": "GCST90709787",
+      "p_value": 6e-07,
+      "genes": [
+        "ANKRD55",
+        "RNA5SP185"
+      ]
+    },
+    {
+      "association_id": 214574683,
+      "accession_id": "GCST90709787",
+      "p_value": 6e-07,
+      "genes": [
+        "GOLGA8B",
+        "LINC02252"
+      ]
+    },
+    {
+      "association_id": 214574678,
+      "accession_id": "GCST90709787",
+      "p_value": 5e-07,
+      "genes": [
+        "FHOD3"
+      ]
+    },
+    {
+      "association_id": 214574673,
+      "accession_id": "GCST90709787",
+      "p_value": 4e-07,
+      "genes": [
+        "TIGIT",
+        "ZNF80"
+      ]
+    },
+    {
+      "association_id": 214574668,
+      "accession_id": "GCST90709787",
+      "p_value": 3e-07,
+      "genes": [
+        "SH3GL2"
+      ]
+    },
+    {
+      "association_id": 214574663,
+      "accession_id": "GCST90709787",
+      "p_value": 5e-08,
+      "genes": [
+        "RNU6-400P",
+        "SYT10"
+      ]
+    },
+    {
+      "association_id": 214574658,
+      "accession_id": "GCST90709787",
+      "p_value": 8e-10,
+      "genes": [
+        "TBXAS1"
+      ]
+    },
+    {
+      "association_id": 214574653,
+      "accession_id": "GCST90709787",
+      "p_value": 1e-10,
+      "genes": [
+        "APOE"
+      ]
+    },
+    {
+      "association_id": 214574640,
+      "accession_id": "GCST90709786",
+      "p_value": 4e-07,
+      "genes": [
+        "LINC01418"
+      ]
+    },
+    {
+      "association_id": 214574635,
+      "accession_id": "GCST90709786",
+      "p_value": 4e-07,
+      "genes": [
+        "NEDD9"
+      ]
+    },
+    {
+      "association_id": 214574630,
+      "accession_id": "GCST90709786",
+      "p_value": 3e-07,
+      "genes": [
+        "ARHGEF4-AS1",
+        "CYCSP8"
+      ]
+    },
+    {
+      "association_id": 214574625,
+      "accession_id": "GCST90709786",
+      "p_value": 3e-07,
+      "genes": [
+        "CCDC30"
+      ]
+    },
+    {
+      "association_id": 214574620,
+      "accession_id": "GCST90709786",
+      "p_value": 2e-07,
+      "genes": [
+        "SORBS2"
+      ]
+    },
+    {
+      "association_id": 214574615,
+      "accession_id": "GCST90709786",
+      "p_value": 1e-07,
+      "genes": [
+        "VN1R5",
+        "Y_RNA"
+      ]
+    },
+    {
+      "association_id": 214574610,
+      "accession_id": "GCST90709786",
+      "p_value": 1e-07,
+      "genes": [
+        "FAM89A",
+        "TRIM67"
+      ]
+    },
+    {
+      "association_id": 214574605,
+      "accession_id": "GCST90709786",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "XPO1"
+      ]
+    },
+    {
+      "association_id": 214574600,
+      "accession_id": "GCST90709786",
+      "p_value": 7.000000000000001e-09,
+      "genes": [
+        "LINC01365",
+        "PDE5A"
+      ]
+    },
+    {
+      "association_id": 214574595,
+      "accession_id": "GCST90709786",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "ASNS",
+        "TAC1"
+      ]
+    },
+    {
+      "association_id": 214574590,
+      "accession_id": "GCST90709786",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "MORN1"
+      ]
+    },
+    {
+      "association_id": 191274025,
+      "accession_id": "GCST90651411",
+      "p_value": 6.000000000000001e-09,
+      "genes": [
+        "BCL9"
+      ]
+    },
+    {
+      "association_id": 143582672,
+      "accession_id": "GCST90455618",
+      "p_value": 2e-09,
+      "genes": [
+        "LNCOB1",
+        "NECTIN2"
+      ]
+    },
+    {
+      "association_id": 143582665,
+      "accession_id": "GCST90455618",
+      "p_value": 1e-18,
+      "genes": [
+        "KANSL1"
+      ]
+    },
+    {
+      "association_id": 143582659,
+      "accession_id": "GCST90455618",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "GCH1"
+      ]
+    },
+    {
+      "association_id": 143582653,
+      "accession_id": "GCST90455618",
+      "p_value": 5e-08,
+      "genes": [
+        "HIP1R"
+      ]
+    },
+    {
+      "association_id": 143582647,
+      "accession_id": "GCST90455618",
+      "p_value": 7e-12,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 143582641,
+      "accession_id": "GCST90455618",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "HLA-DQA1",
+        "HLA-DRB1"
+      ]
+    },
+    {
+      "association_id": 143582634,
+      "accession_id": "GCST90455618",
+      "p_value": 3e-12,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 143582626,
+      "accession_id": "GCST90455618",
+      "p_value": 1e-12,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 143582619,
+      "accession_id": "GCST90455618",
+      "p_value": 8e-11,
+      "genes": [
+        "RN7SL813P",
+        "STK39"
+      ]
+    },
+    {
+      "association_id": 143582608,
+      "accession_id": "GCST90455618",
+      "p_value": 1e-18,
+      "genes": [
+        "GBA1"
+      ]
+    },
+    {
+      "association_id": 131764775,
+      "accession_id": "GCST90428733",
+      "p_value": 7e-06,
+      "genes": [
+        "ALK"
+      ]
+    },
+    {
+      "association_id": 131764769,
+      "accession_id": "GCST90428733",
+      "p_value": 7e-06,
+      "genes": [
+        "HMGN2P18",
+        "KRTCAP2"
+      ]
+    },
+    {
+      "association_id": 131764763,
+      "accession_id": "GCST90428733",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "KCNN3"
+      ]
+    },
+    {
+      "association_id": 131764758,
+      "accession_id": "GCST90428733",
+      "p_value": 4e-06,
+      "genes": [
+        "AMZ1",
+        "GNA12"
+      ]
+    },
+    {
+      "association_id": 131764753,
+      "accession_id": "GCST90428733",
+      "p_value": 4e-06,
+      "genes": [
+        "GBA2"
+      ]
+    },
+    {
+      "association_id": 131764747,
+      "accession_id": "GCST90428733",
+      "p_value": 4e-06,
+      "genes": [
+        "LRRC30",
+        "PTPRM"
+      ]
+    },
+    {
+      "association_id": 131764741,
+      "accession_id": "GCST90428733",
+      "p_value": 3e-06,
+      "genes": [
+        "LRRC25",
+        "SSBP4"
+      ]
+    },
+    {
+      "association_id": 131764735,
+      "accession_id": "GCST90428733",
+      "p_value": 3e-06,
+      "genes": [
+        "KCNN3"
+      ]
+    },
+    {
+      "association_id": 131764729,
+      "accession_id": "GCST90428733",
+      "p_value": 3e-06,
+      "genes": [
+        "HMGN2P18",
+        "KRTCAP2"
+      ]
+    },
+    {
+      "association_id": 131764724,
+      "accession_id": "GCST90428733",
+      "p_value": 3e-06,
+      "genes": [
+        "NTRK1"
+      ]
+    },
+    {
+      "association_id": 131764718,
+      "accession_id": "GCST90428733",
+      "p_value": 2e-06,
+      "genes": [
+        "GUCY1A1",
+        "MTND1P22"
+      ]
+    },
+    {
+      "association_id": 131764712,
+      "accession_id": "GCST90428733",
+      "p_value": 2e-06,
+      "genes": [
+        "CACNA2D3"
+      ]
+    },
+    {
+      "association_id": 131764707,
+      "accession_id": "GCST90428733",
+      "p_value": 2e-06,
+      "genes": [
+        "DCST1"
+      ]
+    },
+    {
+      "association_id": 131764701,
+      "accession_id": "GCST90428733",
+      "p_value": 2e-06,
+      "genes": [
+        "KCNN3"
+      ]
+    },
+    {
+      "association_id": 131764696,
+      "accession_id": "GCST90428733",
+      "p_value": 1e-06,
+      "genes": [
+        "EFNA3",
+        "Y_RNA"
+      ]
+    },
+    {
+      "association_id": 131764690,
+      "accession_id": "GCST90428733",
+      "p_value": 1e-06,
+      "genes": [
+        "MUC1"
+      ]
+    },
+    {
+      "association_id": 131764685,
+      "accession_id": "GCST90428733",
+      "p_value": 1e-06,
+      "genes": [
+        "RIT1"
+      ]
+    },
+    {
+      "association_id": 131764680,
+      "accession_id": "GCST90428733",
+      "p_value": 1e-06,
+      "genes": [
+        "KCNN3"
+      ]
+    },
+    {
+      "association_id": 131764674,
+      "accession_id": "GCST90428733",
+      "p_value": 1e-06,
+      "genes": [
+        "GBA1LP"
+      ]
+    },
+    {
+      "association_id": 131764668,
+      "accession_id": "GCST90428733",
+      "p_value": 9e-07,
+      "genes": [
+        "EFNA3",
+        "Y_RNA"
+      ]
+    },
+    {
+      "association_id": 131764662,
+      "accession_id": "GCST90428733",
+      "p_value": 8e-07,
+      "genes": [
+        "DCST1",
+        "DCST1-AS1"
+      ]
+    },
+    {
+      "association_id": 131764656,
+      "accession_id": "GCST90428733",
+      "p_value": 6e-07,
+      "genes": [
+        "GBA1LP"
+      ]
+    },
+    {
+      "association_id": 131764651,
+      "accession_id": "GCST90428733",
+      "p_value": 3e-07,
+      "genes": []
+    },
+    {
+      "association_id": 131764645,
+      "accession_id": "GCST90428733",
+      "p_value": 5e-08,
+      "genes": [
+        "EFNA4-EFNA3"
+      ]
+    },
+    {
+      "association_id": 131764639,
+      "accession_id": "GCST90428733",
+      "p_value": 4e-09,
+      "genes": [
+        "CCT3"
+      ]
+    },
+    {
+      "association_id": 131764633,
+      "accession_id": "GCST90428733",
+      "p_value": 8e-10,
+      "genes": [
+        "PMF1-BGLAP"
+      ]
+    },
+    {
+      "association_id": 131764627,
+      "accession_id": "GCST90428733",
+      "p_value": 4e-21,
+      "genes": [
+        "LMNA"
+      ]
+    },
+    {
+      "association_id": 131764621,
+      "accession_id": "GCST90428733",
+      "p_value": 2.9999999999999995e-21,
+      "genes": [
+        "LMNA"
+      ]
+    },
+    {
+      "association_id": 131764615,
+      "accession_id": "GCST90428733",
+      "p_value": 2e-21,
+      "genes": [
+        "LMNA"
+      ]
+    },
+    {
+      "association_id": 131764609,
+      "accession_id": "GCST90428733",
+      "p_value": 1e-26,
+      "genes": [
+        "SEMA4A"
+      ]
+    },
+    {
+      "association_id": 131764604,
+      "accession_id": "GCST90428733",
+      "p_value": 3e-34,
+      "genes": [
+        "RIT1"
+      ]
+    },
+    {
+      "association_id": 131764598,
+      "accession_id": "GCST90428733",
+      "p_value": 4e-36,
+      "genes": [
+        "ARHGEF2"
+      ]
+    },
+    {
+      "association_id": 131764592,
+      "accession_id": "GCST90428733",
+      "p_value": 1e-37,
+      "genes": [
+        "KCNN3",
+        "PMVK"
+      ]
+    },
+    {
+      "association_id": 131764587,
+      "accession_id": "GCST90428733",
+      "p_value": 2e-39,
+      "genes": [
+        "PBXIP1"
+      ]
+    },
+    {
+      "association_id": 131764582,
+      "accession_id": "GCST90428733",
+      "p_value": 2e-53,
+      "genes": [
+        "ASH1L"
+      ]
+    },
+    {
+      "association_id": 131764576,
+      "accession_id": "GCST90428733",
+      "p_value": 9e-60,
+      "genes": [
+        "TRIM46"
+      ]
+    },
+    {
+      "association_id": 131764570,
+      "accession_id": "GCST90428733",
+      "p_value": 2.9999999999999998e-90,
+      "genes": [
+        "GBA1"
+      ]
+    },
+    {
+      "association_id": 130963620,
+      "accession_id": "GCST90321084",
+      "p_value": 8e-07,
+      "genes": [
+        "WDR1"
+      ]
+    },
+    {
+      "association_id": 130963614,
+      "accession_id": "GCST90321084",
+      "p_value": 2e-07,
+      "genes": [
+        "MAD1L1"
+      ]
+    },
+    {
+      "association_id": 130963608,
+      "accession_id": "GCST90321084",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "LINC00511"
+      ]
+    },
+    {
+      "association_id": 130963580,
+      "accession_id": "GCST90321081",
+      "p_value": 5e-07,
+      "genes": [
+        "LINC00365",
+        "LINC00544"
+      ]
+    },
+    {
+      "association_id": 130963574,
+      "accession_id": "GCST90321081",
+      "p_value": 2e-07,
+      "genes": [
+        "CAVIN2",
+        "NABP1"
+      ]
+    },
+    {
+      "association_id": 130963568,
+      "accession_id": "GCST90321081",
+      "p_value": 1e-10,
+      "genes": [
+        "GJA5",
+        "RN7SL261P"
+      ]
+    },
+    {
+      "association_id": 130471453,
+      "accession_id": "GCST90320242",
+      "p_value": 2e-14,
+      "genes": [
+        "GBA1"
+      ]
+    },
+    {
+      "association_id": 130471003,
+      "accession_id": "GCST90320240",
+      "p_value": 1e-08,
+      "genes": [
+        "CCDC85A"
+      ]
+    },
+    {
+      "association_id": 130470998,
+      "accession_id": "GCST90320240",
+      "p_value": 4e-11,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 119263814,
+      "accession_id": "GCST90308590",
+      "p_value": 6e-10,
+      "genes": [
+        "DYRK1A"
+      ]
+    },
+    {
+      "association_id": 119263809,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-09,
+      "genes": [
+        "CYCSP42",
+        "LINC02920"
+      ]
+    },
+    {
+      "association_id": 119263804,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-09,
+      "genes": [
+        "MYLK2"
+      ]
+    },
+    {
+      "association_id": 119263799,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-09,
+      "genes": [
+        "SPPL2B"
+      ]
+    },
+    {
+      "association_id": 119263794,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-09,
+      "genes": [
+        "ASXL3",
+        "NOL4"
+      ]
+    },
+    {
+      "association_id": 119263788,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-10,
+      "genes": [
+        "BRIP1"
+      ]
+    },
+    {
+      "association_id": 119263783,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-61,
+      "genes": [
+        "NSF"
+      ]
+    },
+    {
+      "association_id": 119263778,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-38,
+      "genes": [
+        "MAPT"
+      ]
+    },
+    {
+      "association_id": 119263773,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-11,
+      "genes": [
+        "ARHGAP27"
+      ]
+    },
+    {
+      "association_id": 119263767,
+      "accession_id": "GCST90308590",
+      "p_value": 7.000000000000001e-10,
+      "genes": [
+        "ITGA2B"
+      ]
+    },
+    {
+      "association_id": 119263761,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-24,
+      "genes": [
+        "SETD1A"
+      ]
+    },
+    {
+      "association_id": 119263756,
+      "accession_id": "GCST90308590",
+      "p_value": 9e-10,
+      "genes": [
+        "LINC01147"
+      ]
+    },
+    {
+      "association_id": 119263750,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-16,
+      "genes": [
+        "GCH1"
+      ]
+    },
+    {
+      "association_id": 119263745,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-09,
+      "genes": [
+        "MIPOL1"
+      ]
+    },
+    {
+      "association_id": 119263740,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-09,
+      "genes": [
+        "IRS2",
+        "RN7SKP10"
+      ]
+    },
+    {
+      "association_id": 119263735,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-41,
+      "genes": [
+        "HIP1R"
+      ]
+    },
+    {
+      "association_id": 119263730,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-09,
+      "genes": [
+        "HCAR2",
+        "KNTC1"
+      ]
+    },
+    {
+      "association_id": 119263724,
+      "accession_id": "GCST90308590",
+      "p_value": 9.000000000000001e-17,
+      "genes": [
+        "CNTN1"
+      ]
+    },
+    {
+      "association_id": 119263718,
+      "accession_id": "GCST90308590",
+      "p_value": 8.999999999999999e-20,
+      "genes": [
+        "IGSF9B"
+      ]
+    },
+    {
+      "association_id": 119263713,
+      "accession_id": "GCST90308590",
+      "p_value": 5e-12,
+      "genes": [
+        "DLG2"
+      ]
+    },
+    {
+      "association_id": 119263707,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-11,
+      "genes": [
+        "MIR4485",
+        "RNF141"
+      ]
+    },
+    {
+      "association_id": 119263701,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-13,
+      "genes": [
+        "INPP5F",
+        "TXNP1"
+      ]
+    },
+    {
+      "association_id": 119263695,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-12,
+      "genes": [
+        "ITGA8"
+      ]
+    },
+    {
+      "association_id": 119263689,
+      "accession_id": "GCST90308590",
+      "p_value": 8e-21,
+      "genes": [
+        "SH3GL2"
+      ]
+    },
+    {
+      "association_id": 119263684,
+      "accession_id": "GCST90308590",
+      "p_value": 6e-11,
+      "genes": [
+        "PDLIM2"
+      ]
+    },
+    {
+      "association_id": 119263678,
+      "accession_id": "GCST90308590",
+      "p_value": 6e-17,
+      "genes": [
+        "MSR1",
+        "RN7SL474P"
+      ]
+    },
+    {
+      "association_id": 119263672,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-11,
+      "genes": [
+        "SLC18B1"
+      ]
+    },
+    {
+      "association_id": 119263666,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-15,
+      "genes": [
+        "FYN"
+      ]
+    },
+    {
+      "association_id": 119263660,
+      "accession_id": "GCST90308590",
+      "p_value": 7e-12,
+      "genes": [
+        "RIMS1",
+        "RNU4-66P"
+      ]
+    },
+    {
+      "association_id": 119263655,
+      "accession_id": "GCST90308590",
+      "p_value": 9e-13,
+      "genes": [
+        "LINC01012"
+      ]
+    },
+    {
+      "association_id": 119263650,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-09,
+      "genes": [
+        "VN1R10P",
+        "ZNF204P"
+      ]
+    },
+    {
+      "association_id": 119263644,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-12,
+      "genes": [
+        "SV2C",
+        "SV2C-AS2"
+      ]
+    },
+    {
+      "association_id": 119263638,
+      "accession_id": "GCST90308590",
+      "p_value": 7e-22,
+      "genes": [
+        "ELOVL7"
+      ]
+    },
+    {
+      "association_id": 119263633,
+      "accession_id": "GCST90308590",
+      "p_value": 2.9999999999999996e-24,
+      "genes": [
+        "CCSER1"
+      ]
+    },
+    {
+      "association_id": 119263627,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-16,
+      "genes": [
+        "MMRN1"
+      ]
+    },
+    {
+      "association_id": 119263621,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-79,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 119263616,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-170,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 119263611,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-19,
+      "genes": [
+        "FAM47E",
+        "FAM47E-STBD1"
+      ]
+    },
+    {
+      "association_id": 119263606,
+      "accession_id": "GCST90308590",
+      "p_value": 8e-11,
+      "genes": [
+        "LCORL"
+      ]
+    },
+    {
+      "association_id": 119263601,
+      "accession_id": "GCST90308590",
+      "p_value": 5e-10,
+      "genes": [
+        "CC2D2A"
+      ]
+    },
+    {
+      "association_id": 119263596,
+      "accession_id": "GCST90308590",
+      "p_value": 5e-75,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 119263591,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-19,
+      "genes": [
+        "GAK"
+      ]
+    },
+    {
+      "association_id": 119263585,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-11,
+      "genes": [
+        "PCGF3"
+      ]
+    },
+    {
+      "association_id": 119263579,
+      "accession_id": "GCST90308590",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "PIK3CA"
+      ]
+    },
+    {
+      "association_id": 119263573,
+      "accession_id": "GCST90308590",
+      "p_value": 4.9999999999999995e-11,
+      "genes": [
+        "MED12L"
+      ]
+    },
+    {
+      "association_id": 119263567,
+      "accession_id": "GCST90308590",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "IP6K2"
+      ]
+    },
+    {
+      "association_id": 119263562,
+      "accession_id": "GCST90308590",
+      "p_value": 6e-12,
+      "genes": [
+        "RBMS3"
+      ]
+    },
+    {
+      "association_id": 119263557,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-42,
+      "genes": [
+        "RN7SL813P",
+        "STK39"
+      ]
+    },
+    {
+      "association_id": 119263551,
+      "accession_id": "GCST90308590",
+      "p_value": 5e-12,
+      "genes": [
+        "TMEM163"
+      ]
+    },
+    {
+      "association_id": 119263546,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-12,
+      "genes": [
+        "MAP4K4"
+      ]
+    },
+    {
+      "association_id": 119263541,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-17,
+      "genes": [
+        "SIPA1L2"
+      ]
+    },
+    {
+      "association_id": 119263535,
+      "accession_id": "GCST90308590",
+      "p_value": 2.9999999999999996e-24,
+      "genes": [
+        "ITPKB"
+      ]
+    },
+    {
+      "association_id": 119263530,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-32,
+      "genes": [
+        "Metazoa_SRP",
+        "NUCKS1"
+      ]
+    },
+    {
+      "association_id": 119263524,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-09,
+      "genes": [
+        "VAMP4"
+      ]
+    },
+    {
+      "association_id": 119263518,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-68,
+      "genes": [
+        "ASH1L"
+      ]
+    },
+    {
+      "association_id": 119263513,
+      "accession_id": "GCST90308590",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "PPP6R2"
+      ]
+    },
+    {
+      "association_id": 119263507,
+      "accession_id": "GCST90308590",
+      "p_value": 5e-07,
+      "genes": [
+        "RBX1",
+        "Y_RNA"
+      ]
+    },
+    {
+      "association_id": 119263502,
+      "accession_id": "GCST90308590",
+      "p_value": 6e-11,
+      "genes": [
+        "DDRGK1",
+        "LZTS3"
+      ]
+    },
+    {
+      "association_id": 119263496,
+      "accession_id": "GCST90308590",
+      "p_value": 9e-10,
+      "genes": [
+        "RNA5SP455",
+        "SYT4"
+      ]
+    },
+    {
+      "association_id": 119263491,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-28,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 119263485,
+      "accession_id": "GCST90308590",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "FASN"
+      ]
+    },
+    {
+      "association_id": 119263479,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-07,
+      "genes": [
+        "PGS1"
+      ]
+    },
+    {
+      "association_id": 119263473,
+      "accession_id": "GCST90308590",
+      "p_value": 5e-10,
+      "genes": [
+        "MED13"
+      ]
+    },
+    {
+      "association_id": 119263467,
+      "accession_id": "GCST90308590",
+      "p_value": 7e-08,
+      "genes": [
+        "WNT3"
+      ]
+    },
+    {
+      "association_id": 119263461,
+      "accession_id": "GCST90308590",
+      "p_value": 6e-16,
+      "genes": [
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 119263455,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-69,
+      "genes": [
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 119263450,
+      "accession_id": "GCST90308590",
+      "p_value": 9e-11,
+      "genes": [
+        "FMNL1-DT"
+      ]
+    },
+    {
+      "association_id": 119263445,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-07,
+      "genes": [
+        "MLX"
+      ]
+    },
+    {
+      "association_id": 119263440,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-07,
+      "genes": [
+        "PIGL"
+      ]
+    },
+    {
+      "association_id": 119263435,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-08,
+      "genes": [
+        "CASC16",
+        "PHB1P21"
+      ]
+    },
+    {
+      "association_id": 119263429,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-12,
+      "genes": [
+        "CASC16"
+      ]
+    },
+    {
+      "association_id": 119263423,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-09,
+      "genes": [
+        "NOD2"
+      ]
+    },
+    {
+      "association_id": 119263417,
+      "accession_id": "GCST90308590",
+      "p_value": 5.0000000000000005e-22,
+      "genes": [
+        "LINC02349",
+        "RORA"
+      ]
+    },
+    {
+      "association_id": 119263412,
+      "accession_id": "GCST90308590",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "USP50",
+        "USP8"
+      ]
+    },
+    {
+      "association_id": 119263406,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-07,
+      "genes": [
+        "AREL1"
+      ]
+    },
+    {
+      "association_id": 119263400,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-10,
+      "genes": [
+        "KTN1",
+        "RPL13AP3"
+      ]
+    },
+    {
+      "association_id": 119263395,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-16,
+      "genes": [
+        "WDHD1"
+      ]
+    },
+    {
+      "association_id": 119263389,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-08,
+      "genes": [
+        "KPNA3"
+      ]
+    },
+    {
+      "association_id": 119263383,
+      "accession_id": "GCST90308590",
+      "p_value": 4.9999999999999995e-11,
+      "genes": [
+        "FBRSL1",
+        "GALNT9"
+      ]
+    },
+    {
+      "association_id": 119263378,
+      "accession_id": "GCST90308590",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "RILPL2"
+      ]
+    },
+    {
+      "association_id": 119263373,
+      "accession_id": "GCST90308590",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "PITPNM2"
+      ]
+    },
+    {
+      "association_id": 119263367,
+      "accession_id": "GCST90308590",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "RPL13AP21",
+        "SLC38A1"
+      ]
+    },
+    {
+      "association_id": 119263362,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-15,
+      "genes": [
+        "CNTN1"
+      ]
+    },
+    {
+      "association_id": 119263357,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-11,
+      "genes": [
+        "CNTN1",
+        "MUC19"
+      ]
+    },
+    {
+      "association_id": 119263351,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-13,
+      "genes": [
+        "LRRK2",
+        "MUC19"
+      ]
+    },
+    {
+      "association_id": 119263346,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-10,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 119263340,
+      "accession_id": "GCST90308590",
+      "p_value": 9e-27,
+      "genes": [
+        "LINC02555"
+      ]
+    },
+    {
+      "association_id": 119263334,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-33,
+      "genes": [
+        "SLC2A13"
+      ]
+    },
+    {
+      "association_id": 119263328,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-14,
+      "genes": [
+        "RNU6-472P",
+        "Y_RNA"
+      ]
+    },
+    {
+      "association_id": 119263322,
+      "accession_id": "GCST90308590",
+      "p_value": 6.999999999999999e-11,
+      "genes": [
+        "PKP2"
+      ]
+    },
+    {
+      "association_id": 119263316,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-23,
+      "genes": [
+        "MIR4682",
+        "SEC23IP"
+      ]
+    },
+    {
+      "association_id": 119263311,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-09,
+      "genes": [
+        "UBAP2"
+      ]
+    },
+    {
+      "association_id": 119263306,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-20,
+      "genes": [
+        "SH3GL2"
+      ]
+    },
+    {
+      "association_id": 119263300,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-07,
+      "genes": [
+        "SYBU"
+      ]
+    },
+    {
+      "association_id": 119263294,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-14,
+      "genes": [
+        "CTSB"
+      ]
+    },
+    {
+      "association_id": 119263289,
+      "accession_id": "GCST90308590",
+      "p_value": 4e-28,
+      "genes": [
+        "GPNMB"
+      ]
+    },
+    {
+      "association_id": 119263284,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-08,
+      "genes": [
+        "CD83P1",
+        "RNU6-471P"
+      ]
+    },
+    {
+      "association_id": 119263278,
+      "accession_id": "GCST90308590",
+      "p_value": 8e-08,
+      "genes": [
+        "DDX46"
+      ]
+    },
+    {
+      "association_id": 119263272,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-11,
+      "genes": [
+        "CLCN3"
+      ]
+    },
+    {
+      "association_id": 119263266,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-11,
+      "genes": [
+        "CAMK2D"
+      ]
+    },
+    {
+      "association_id": 119263261,
+      "accession_id": "GCST90308590",
+      "p_value": 5e-09,
+      "genes": [
+        "CCSER1"
+      ]
+    },
+    {
+      "association_id": 119263255,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-12,
+      "genes": [
+        "CCSER1",
+        "MMRN1"
+      ]
+    },
+    {
+      "association_id": 119263249,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-17,
+      "genes": [
+        "GPRIN3",
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 119263243,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-10,
+      "genes": [
+        "GPRIN3",
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 119263237,
+      "accession_id": "GCST90308590",
+      "p_value": 8e-08,
+      "genes": [
+        "SHROOM3"
+      ]
+    },
+    {
+      "association_id": 119263231,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-08,
+      "genes": [
+        "SCARB2"
+      ]
+    },
+    {
+      "association_id": 119263225,
+      "accession_id": "GCST90308590",
+      "p_value": 6e-33,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 119263220,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-07,
+      "genes": [
+        "ADD1"
+      ]
+    },
+    {
+      "association_id": 119263214,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-08,
+      "genes": [
+        "LAMP3"
+      ]
+    },
+    {
+      "association_id": 119263208,
+      "accession_id": "GCST90308590",
+      "p_value": 6e-50,
+      "genes": [
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 119263203,
+      "accession_id": "GCST90308590",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "PIK3CA-DT"
+      ]
+    },
+    {
+      "association_id": 119263197,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-12,
+      "genes": [
+        "PARP9"
+      ]
+    },
+    {
+      "association_id": 119263191,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-08,
+      "genes": [
+        "TBC1D5"
+      ]
+    },
+    {
+      "association_id": 119263185,
+      "accession_id": "GCST90308590",
+      "p_value": 5e-09,
+      "genes": [
+        "FCGR2B",
+        "FCGR3B"
+      ]
+    },
+    {
+      "association_id": 119263180,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-11,
+      "genes": [
+        "FCGR2A",
+        "RNU6-481P"
+      ]
+    },
+    {
+      "association_id": 119263175,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-15,
+      "genes": [
+        "CCT3"
+      ]
+    },
+    {
+      "association_id": 119263169,
+      "accession_id": "GCST90308590",
+      "p_value": 3e-10,
+      "genes": [
+        "LMNA"
+      ]
+    },
+    {
+      "association_id": 119263163,
+      "accession_id": "GCST90308590",
+      "p_value": 1e-75,
+      "genes": [
+        "HMGN2P18"
+      ]
+    },
+    {
+      "association_id": 119263157,
+      "accession_id": "GCST90308590",
+      "p_value": 2e-10,
+      "genes": [
+        "DCST1"
+      ]
+    },
+    {
+      "association_id": 119263151,
+      "accession_id": "GCST90308590",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "PMVK"
+      ]
+    },
+    {
+      "association_id": 119263146,
+      "accession_id": "GCST90308590",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "MTF2"
+      ]
+    },
+    {
+      "association_id": 118723479,
+      "accession_id": "GCST90296433",
+      "p_value": 7e-06,
+      "genes": [
+        "RN7SL35P",
+        "RN7SL869P"
+      ]
+    },
+    {
+      "association_id": 118723474,
+      "accession_id": "GCST90296433",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "Metazoa_SRP",
+        "NUCKS1"
+      ]
+    },
+    {
+      "association_id": 118723468,
+      "accession_id": "GCST90296433",
+      "p_value": 4e-06,
+      "genes": [
+        "ASCL4",
+        "WSCD2"
+      ]
+    },
+    {
+      "association_id": 118723463,
+      "accession_id": "GCST90296433",
+      "p_value": 3e-06,
+      "genes": [
+        "RAB29",
+        "SLC41A1"
+      ]
+    },
+    {
+      "association_id": 118723457,
+      "accession_id": "GCST90296433",
+      "p_value": 2e-06,
+      "genes": [
+        "ROPN1L"
+      ]
+    },
+    {
+      "association_id": 118723452,
+      "accession_id": "GCST90296433",
+      "p_value": 8e-06,
+      "genes": [
+        "SLC41A1"
+      ]
+    },
+    {
+      "association_id": 118723441,
+      "accession_id": "GCST90296432",
+      "p_value": 5e-09,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 118723435,
+      "accession_id": "GCST90296432",
+      "p_value": 2e-09,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 118723423,
+      "accession_id": "GCST90278092",
+      "p_value": 7e-08,
+      "genes": [
+        "RAB29"
+      ]
+    },
+    {
+      "association_id": 118723417,
+      "accession_id": "GCST90278092",
+      "p_value": 5e-08,
+      "genes": [
+        "GUSBP2",
+        "ZNF322"
+      ]
+    },
+    {
+      "association_id": 118723412,
+      "accession_id": "GCST90278092",
+      "p_value": 2e-08,
+      "genes": [
+        "SLC41A1"
+      ]
+    },
+    {
+      "association_id": 118723405,
+      "accession_id": "GCST90278092",
+      "p_value": 5e-13,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 118723401,
+      "accession_id": "GCST90278092",
+      "p_value": 4e-13,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 105679978,
+      "accession_id": "GCST90270939",
+      "p_value": 1e-08,
+      "genes": [
+        "CCN6",
+        "LINC02527"
+      ]
+    },
+    {
+      "association_id": 105679973,
+      "accession_id": "GCST90270939",
+      "p_value": 3e-06,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 105679967,
+      "accession_id": "GCST90270939",
+      "p_value": 3e-53,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 105679962,
+      "accession_id": "GCST90270939",
+      "p_value": 3e-06,
+      "genes": [
+        "SCARB2"
+      ]
+    },
+    {
+      "association_id": 105679956,
+      "accession_id": "GCST90270939",
+      "p_value": 1e-13,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 105679950,
+      "accession_id": "GCST90270939",
+      "p_value": 4e-17,
+      "genes": [
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 105679945,
+      "accession_id": "GCST90270939",
+      "p_value": 4e-07,
+      "genes": [
+        "DYRK1A"
+      ]
+    },
+    {
+      "association_id": 105679940,
+      "accession_id": "GCST90270939",
+      "p_value": 2e-07,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 105679934,
+      "accession_id": "GCST90270939",
+      "p_value": 1e-09,
+      "genes": [
+        "HEATR6"
+      ]
+    },
+    {
+      "association_id": 105679928,
+      "accession_id": "GCST90270939",
+      "p_value": 1e-09,
+      "genes": [
+        "LINC02349",
+        "RORA"
+      ]
+    },
+    {
+      "association_id": 105679922,
+      "accession_id": "GCST90270939",
+      "p_value": 2e-09,
+      "genes": [
+        "GCH1"
+      ]
+    },
+    {
+      "association_id": 105679917,
+      "accession_id": "GCST90270939",
+      "p_value": 3.0000000000000003e-30,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 105679912,
+      "accession_id": "GCST90270939",
+      "p_value": 4e-20,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 105679905,
+      "accession_id": "GCST90270939",
+      "p_value": 4e-07,
+      "genes": [
+        "HIP1R"
+      ]
+    },
+    {
+      "association_id": 105679900,
+      "accession_id": "GCST90270939",
+      "p_value": 1e-05,
+      "genes": [
+        "RNF141"
+      ]
+    },
+    {
+      "association_id": 105679895,
+      "accession_id": "GCST90270939",
+      "p_value": 3e-06,
+      "genes": [
+        "GBF1"
+      ]
+    },
+    {
+      "association_id": 105679889,
+      "accession_id": "GCST90270939",
+      "p_value": 1e-24,
+      "genes": [
+        "RAB29"
+      ]
+    },
+    {
+      "association_id": 105679884,
+      "accession_id": "GCST90270939",
+      "p_value": 1e-23,
+      "genes": [
+        "NUCKS1",
+        "RAB29"
+      ]
+    },
+    {
+      "association_id": 105679878,
+      "accession_id": "GCST90270939",
+      "p_value": 1e-14,
+      "genes": [
+        "GBA1"
+      ]
+    },
+    {
+      "association_id": 105559486,
+      "accession_id": "GCST90270129",
+      "p_value": 4e-08,
+      "genes": [
+        "BBS9"
+      ]
+    },
+    {
+      "association_id": 105559479,
+      "accession_id": "GCST90270129",
+      "p_value": 7.000000000000001e-09,
+      "genes": [
+        "LRP1B"
+      ]
+    },
+    {
+      "association_id": 105559472,
+      "accession_id": "GCST90270129",
+      "p_value": 2e-15,
+      "genes": [
+        "APOE"
+      ]
+    },
+    {
+      "association_id": 104305200,
+      "accession_id": "GCST90256604",
+      "p_value": 3e-28,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 104305195,
+      "accession_id": "GCST90256604",
+      "p_value": 6e-41,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 97301583,
+      "accession_id": "GCST90104087",
+      "p_value": 1e-09,
+      "genes": [
+        "DNASE1L1",
+        "RPL10"
+      ]
+    },
+    {
+      "association_id": 97301577,
+      "accession_id": "GCST90104087",
+      "p_value": 1e-07,
+      "genes": [
+        "RTL9"
+      ]
+    },
+    {
+      "association_id": 97301571,
+      "accession_id": "GCST90104087",
+      "p_value": 1e-06,
+      "genes": [
+        "EFNB1",
+        "PJA1"
+      ]
+    },
+    {
+      "association_id": 97301565,
+      "accession_id": "GCST90104087",
+      "p_value": 1e-08,
+      "genes": [
+        "GPM6B"
+      ]
+    },
+    {
+      "association_id": 97301550,
+      "accession_id": "GCST90104086",
+      "p_value": 4e-07,
+      "genes": [
+        "DNASE1L1",
+        "RPL10"
+      ]
+    },
+    {
+      "association_id": 97301544,
+      "accession_id": "GCST90104086",
+      "p_value": 4e-06,
+      "genes": [
+        "PTCHD1-AS"
+      ]
+    },
+    {
+      "association_id": 95020904,
+      "accession_id": "GCST90095083",
+      "p_value": 4e-07,
+      "genes": [
+        "FAM136FP",
+        "NUP50P4"
+      ]
+    },
+    {
+      "association_id": 95020899,
+      "accession_id": "GCST90095083",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 95020895,
+      "accession_id": "GCST90095083",
+      "p_value": 1e-08,
+      "genes": [
+        "PLPP4"
+      ]
+    },
+    {
+      "association_id": 93484092,
+      "accession_id": "GCST90018894",
+      "p_value": 6.000000000000001e-13,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 93484087,
+      "accession_id": "GCST90018894",
+      "p_value": 5e-09,
+      "genes": [
+        "SEMA4A",
+        "SLC25A44"
+      ]
+    },
+    {
+      "association_id": 91722388,
+      "accession_id": "GCST012431",
+      "p_value": 1e-14,
+      "genes": [
+        "HASPIN",
+        "ITGAE"
+      ]
+    },
+    {
+      "association_id": 91722376,
+      "accession_id": "GCST012431",
+      "p_value": 1e-07,
+      "genes": [
+        "ING1"
+      ]
+    },
+    {
+      "association_id": 91722368,
+      "accession_id": "GCST012431",
+      "p_value": 9e-10,
+      "genes": [
+        "SNCA-AS1"
+      ]
+    },
+    {
+      "association_id": 90805417,
+      "accession_id": "GCST90026456",
+      "p_value": 5e-08,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 88200209,
+      "accession_id": "GCST012431",
+      "p_value": 8e-12,
+      "genes": [
+        "WNT3"
+      ]
+    },
+    {
+      "association_id": 88200203,
+      "accession_id": "GCST012431",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "MAPT-AS1"
+      ]
+    },
+    {
+      "association_id": 88200198,
+      "accession_id": "GCST012431",
+      "p_value": 2e-15,
+      "genes": [
+        "ITGAE",
+        "P2RX5"
+      ]
+    },
+    {
+      "association_id": 88200192,
+      "accession_id": "GCST012431",
+      "p_value": 2e-10,
+      "genes": [
+        "CARS2"
+      ]
+    },
+    {
+      "association_id": 88200186,
+      "accession_id": "GCST012431",
+      "p_value": 3.0000000000000002e-18,
+      "genes": [
+        "MUC12"
+      ]
+    },
+    {
+      "association_id": 88200180,
+      "accession_id": "GCST012431",
+      "p_value": 2e-08,
+      "genes": [
+        "WDR41"
+      ]
+    },
+    {
+      "association_id": 88200173,
+      "accession_id": "GCST012431",
+      "p_value": 6.000000000000001e-09,
+      "genes": [
+        "SNCA-AS1"
+      ]
+    },
+    {
+      "association_id": 88200167,
+      "accession_id": "GCST012431",
+      "p_value": 6e-11,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 88200162,
+      "accession_id": "GCST012431",
+      "p_value": 8e-10,
+      "genes": [
+        "MTCO1P48",
+        "TEKT4"
+      ]
+    },
+    {
+      "association_id": 88200155,
+      "accession_id": "GCST012431",
+      "p_value": 1e-09,
+      "genes": [
+        "ASH1L"
+      ]
+    },
+    {
+      "association_id": 88200148,
+      "accession_id": "GCST012431",
+      "p_value": 4.9999999999999995e-11,
+      "genes": [
+        "HMGN2P18",
+        "KRTCAP2"
+      ]
+    },
+    {
+      "association_id": 80705497,
+      "accession_id": "GCST90000014",
+      "p_value": 7e-06,
+      "genes": [
+        "MPHOSPH6-DT"
+      ]
+    },
+    {
+      "association_id": 80705492,
+      "accession_id": "GCST90000014",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "RNU6-161P",
+        "TPI1P1"
+      ]
+    },
+    {
+      "association_id": 80705487,
+      "accession_id": "GCST90000014",
+      "p_value": 4e-06,
+      "genes": [
+        "FANCF",
+        "LINC01495"
+      ]
+    },
+    {
+      "association_id": 80705482,
+      "accession_id": "GCST90000014",
+      "p_value": 3e-06,
+      "genes": [
+        "NKAIN2",
+        "RNF217-AS1"
+      ]
+    },
+    {
+      "association_id": 80705477,
+      "accession_id": "GCST90000014",
+      "p_value": 2e-06,
+      "genes": [
+        "TMC5"
+      ]
+    },
+    {
+      "association_id": 80705472,
+      "accession_id": "GCST90000014",
+      "p_value": 2e-06,
+      "genes": [
+        "GABRG2",
+        "RNU6-164P"
+      ]
+    },
+    {
+      "association_id": 80705467,
+      "accession_id": "GCST90000014",
+      "p_value": 1e-06,
+      "genes": [
+        "CYP4Z1"
+      ]
+    },
+    {
+      "association_id": 80637880,
+      "accession_id": "GCST011677",
+      "p_value": 1e-06,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 80637872,
+      "accession_id": "GCST011677",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "PWRN4"
+      ]
+    },
+    {
+      "association_id": 64611923,
+      "accession_id": "GCST011038",
+      "p_value": 8e-06,
+      "genes": [
+        "THSD4"
+      ]
+    },
+    {
+      "association_id": 64611885,
+      "accession_id": "GCST011038",
+      "p_value": 8e-06,
+      "genes": [
+        "GPR19"
+      ]
+    },
+    {
+      "association_id": 64611412,
+      "accession_id": "GCST011037",
+      "p_value": 4e-06,
+      "genes": [
+        "ASS1P13",
+        "GUCY1A2"
+      ]
+    },
+    {
+      "association_id": 64611378,
+      "accession_id": "GCST011037",
+      "p_value": 2e-06,
+      "genes": [
+        "AACS"
+      ]
+    },
+    {
+      "association_id": 64595199,
+      "accession_id": "GCST011039",
+      "p_value": 3e-06,
+      "genes": [
+        "SNCAIP",
+        "ZNF475"
+      ]
+    },
+    {
+      "association_id": 64595163,
+      "accession_id": "GCST011039",
+      "p_value": 3e-06,
+      "genes": [
+        "MTND5P40",
+        "SQOR"
+      ]
+    },
+    {
+      "association_id": 64595112,
+      "accession_id": "GCST011039",
+      "p_value": 1e-06,
+      "genes": [
+        "GPR32",
+        "GPR32P1"
+      ]
+    },
+    {
+      "association_id": 64576034,
+      "accession_id": "GCST010991",
+      "p_value": 2e-09,
+      "genes": [
+        "LINC01012"
+      ]
+    },
+    {
+      "association_id": 64575981,
+      "accession_id": "GCST010991",
+      "p_value": 3e-06,
+      "genes": [
+        "LINC02950"
+      ]
+    },
+    {
+      "association_id": 64182777,
+      "accession_id": "GCST011038",
+      "p_value": 7e-06,
+      "genes": [
+        "CADM1",
+        "NXPE2"
+      ]
+    },
+    {
+      "association_id": 64182772,
+      "accession_id": "GCST011038",
+      "p_value": 6e-06,
+      "genes": [
+        "ANO2"
+      ]
+    },
+    {
+      "association_id": 64182766,
+      "accession_id": "GCST011038",
+      "p_value": 4.9999999999999996e-06,
+      "genes": []
+    },
+    {
+      "association_id": 64182761,
+      "accession_id": "GCST011038",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "AQP10",
+        "RNU6-121P"
+      ]
+    },
+    {
+      "association_id": 64182756,
+      "accession_id": "GCST011038",
+      "p_value": 3e-06,
+      "genes": [
+        "KLHL29"
+      ]
+    },
+    {
+      "association_id": 64182751,
+      "accession_id": "GCST011038",
+      "p_value": 2e-06,
+      "genes": [
+        "MCTP2"
+      ]
+    },
+    {
+      "association_id": 64182746,
+      "accession_id": "GCST011038",
+      "p_value": 2e-06,
+      "genes": [
+        "PTPRD"
+      ]
+    },
+    {
+      "association_id": 64182740,
+      "accession_id": "GCST011038",
+      "p_value": 1e-06,
+      "genes": [
+        "SNCAIP",
+        "ZNF475"
+      ]
+    },
+    {
+      "association_id": 64182719,
+      "accession_id": "GCST011037",
+      "p_value": 8e-06,
+      "genes": [
+        "RNU7-137P",
+        "Y_RNA"
+      ]
+    },
+    {
+      "association_id": 64182714,
+      "accession_id": "GCST011037",
+      "p_value": 6e-06,
+      "genes": [
+        "NTRK2",
+        "SLC28A3"
+      ]
+    },
+    {
+      "association_id": 64182708,
+      "accession_id": "GCST011037",
+      "p_value": 4e-06,
+      "genes": [
+        "LINC02885"
+      ]
+    },
+    {
+      "association_id": 64182703,
+      "accession_id": "GCST011037",
+      "p_value": 4e-06,
+      "genes": [
+        "CRISPLD1",
+        "PI15"
+      ]
+    },
+    {
+      "association_id": 64182698,
+      "accession_id": "GCST011037",
+      "p_value": 4e-06,
+      "genes": [
+        "DENND2B"
+      ]
+    },
+    {
+      "association_id": 64182693,
+      "accession_id": "GCST011037",
+      "p_value": 2e-06,
+      "genes": [
+        "NR1D2"
+      ]
+    },
+    {
+      "association_id": 64182688,
+      "accession_id": "GCST011037",
+      "p_value": 7e-07,
+      "genes": [
+        "SLCO1B3"
+      ]
+    },
+    {
+      "association_id": 64182683,
+      "accession_id": "GCST011037",
+      "p_value": 3.0000000000000003e-13,
+      "genes": [
+        "APOE"
+      ]
+    },
+    {
+      "association_id": 64182633,
+      "accession_id": "GCST011039",
+      "p_value": 4e-06,
+      "genes": [
+        "SULT1C2"
+      ]
+    },
+    {
+      "association_id": 64182628,
+      "accession_id": "GCST011039",
+      "p_value": 4e-06,
+      "genes": [
+        "LINC02889",
+        "SNX13"
+      ]
+    },
+    {
+      "association_id": 64182623,
+      "accession_id": "GCST011039",
+      "p_value": 3e-06,
+      "genes": [
+        "LINC02063",
+        "LINC02114"
+      ]
+    },
+    {
+      "association_id": 64182618,
+      "accession_id": "GCST011039",
+      "p_value": 3e-06,
+      "genes": [
+        "FAM184A"
+      ]
+    },
+    {
+      "association_id": 64182613,
+      "accession_id": "GCST011039",
+      "p_value": 1e-06,
+      "genes": [
+        "MCTP2"
+      ]
+    },
+    {
+      "association_id": 64182608,
+      "accession_id": "GCST011039",
+      "p_value": 1e-06,
+      "genes": [
+        "LINC02629",
+        "PARD3"
+      ]
+    },
+    {
+      "association_id": 64182603,
+      "accession_id": "GCST011039",
+      "p_value": 1e-08,
+      "genes": [
+        "APOE"
+      ]
+    },
+    {
+      "association_id": 63807772,
+      "accession_id": "GCST010991",
+      "p_value": 9e-08,
+      "genes": [
+        "TRPM2"
+      ]
+    },
+    {
+      "association_id": 63807766,
+      "accession_id": "GCST010991",
+      "p_value": 5e-08,
+      "genes": [
+        "DYRK1A"
+      ]
+    },
+    {
+      "association_id": 63807760,
+      "accession_id": "GCST010991",
+      "p_value": 6e-07,
+      "genes": [
+        "MYLK2"
+      ]
+    },
+    {
+      "association_id": 63807755,
+      "accession_id": "GCST010991",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "SMAD4",
+        "SRSF10P1"
+      ]
+    },
+    {
+      "association_id": 63807750,
+      "accession_id": "GCST010991",
+      "p_value": 2e-09,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 63807745,
+      "accession_id": "GCST010991",
+      "p_value": 1e-08,
+      "genes": [
+        "MED13",
+        "Y_RNA"
+      ]
+    },
+    {
+      "association_id": 63807739,
+      "accession_id": "GCST010991",
+      "p_value": 2e-11,
+      "genes": [
+        "KANSL1"
+      ]
+    },
+    {
+      "association_id": 63807733,
+      "accession_id": "GCST010991",
+      "p_value": 1e-08,
+      "genes": [
+        "STX1B"
+      ]
+    },
+    {
+      "association_id": 63807727,
+      "accession_id": "GCST010991",
+      "p_value": 2e-06,
+      "genes": [
+        "LACTB",
+        "TPM1"
+      ]
+    },
+    {
+      "association_id": 63807720,
+      "accession_id": "GCST010991",
+      "p_value": 7.000000000000001e-09,
+      "genes": [
+        "LINC02349",
+        "RORA"
+      ]
+    },
+    {
+      "association_id": 63807713,
+      "accession_id": "GCST010991",
+      "p_value": 6e-10,
+      "genes": [
+        "GPR65"
+      ]
+    },
+    {
+      "association_id": 63807708,
+      "accession_id": "GCST010991",
+      "p_value": 1e-10,
+      "genes": [
+        "GCH1"
+      ]
+    },
+    {
+      "association_id": 63807703,
+      "accession_id": "GCST010991",
+      "p_value": 2e-10,
+      "genes": [
+        "CCDC62"
+      ]
+    },
+    {
+      "association_id": 63807695,
+      "accession_id": "GCST010991",
+      "p_value": 4e-07,
+      "genes": [
+        "LINC02400",
+        "MTND1P24"
+      ]
+    },
+    {
+      "association_id": 63807688,
+      "accession_id": "GCST010991",
+      "p_value": 7.000000000000001e-26,
+      "genes": [
+        "SLC2A13"
+      ]
+    },
+    {
+      "association_id": 63807682,
+      "accession_id": "GCST010991",
+      "p_value": 6e-12,
+      "genes": [
+        "ASS1P14",
+        "SYT10"
+      ]
+    },
+    {
+      "association_id": 63807676,
+      "accession_id": "GCST010991",
+      "p_value": 4e-08,
+      "genes": [
+        "BICD1-AS1"
+      ]
+    },
+    {
+      "association_id": 63807670,
+      "accession_id": "GCST010991",
+      "p_value": 7.000000000000001e-09,
+      "genes": [
+        "IGSF9B"
+      ]
+    },
+    {
+      "association_id": 63807665,
+      "accession_id": "GCST010991",
+      "p_value": 5e-07,
+      "genes": [
+        "DLG2"
+      ]
+    },
+    {
+      "association_id": 63807660,
+      "accession_id": "GCST010991",
+      "p_value": 2e-12,
+      "genes": [
+        "BAG3"
+      ]
+    },
+    {
+      "association_id": 63807654,
+      "accession_id": "GCST010991",
+      "p_value": 3e-07,
+      "genes": [
+        "ITGA8"
+      ]
+    },
+    {
+      "association_id": 63807649,
+      "accession_id": "GCST010991",
+      "p_value": 3e-07,
+      "genes": [
+        "CACNA1B"
+      ]
+    },
+    {
+      "association_id": 63807643,
+      "accession_id": "GCST010991",
+      "p_value": 3e-10,
+      "genes": [
+        "SH3GL2"
+      ]
+    },
+    {
+      "association_id": 63807638,
+      "accession_id": "GCST010991",
+      "p_value": 6e-06,
+      "genes": [
+        "ZDHHC2"
+      ]
+    },
+    {
+      "association_id": 63807632,
+      "accession_id": "GCST010991",
+      "p_value": 2e-08,
+      "genes": [
+        "MSR1",
+        "RN7SL474P"
+      ]
+    },
+    {
+      "association_id": 63807626,
+      "accession_id": "GCST010991",
+      "p_value": 6e-11,
+      "genes": [
+        "CTSB"
+      ]
+    },
+    {
+      "association_id": 63807621,
+      "accession_id": "GCST010991",
+      "p_value": 8e-12,
+      "genes": [
+        "KLHL7"
+      ]
+    },
+    {
+      "association_id": 63807615,
+      "accession_id": "GCST010991",
+      "p_value": 2e-07,
+      "genes": [
+        "CCN6",
+        "LINC02527"
+      ]
+    },
+    {
+      "association_id": 63807610,
+      "accession_id": "GCST010991",
+      "p_value": 6e-12,
+      "genes": [
+        "HLA-DQA1",
+        "HLA-DRB1"
+      ]
+    },
+    {
+      "association_id": 63807605,
+      "accession_id": "GCST010991",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "LINC02240",
+        "ZNF608"
+      ]
+    },
+    {
+      "association_id": 63807600,
+      "accession_id": "GCST010991",
+      "p_value": 7.000000000000001e-10,
+      "genes": [
+        "ELOVL7"
+      ]
+    },
+    {
+      "association_id": 63807595,
+      "accession_id": "GCST010991",
+      "p_value": 5e-07,
+      "genes": [
+        "CAMK2D"
+      ]
+    },
+    {
+      "association_id": 63807589,
+      "accession_id": "GCST010991",
+      "p_value": 7e-08,
+      "genes": [
+        "SLC39A8"
+      ]
+    },
+    {
+      "association_id": 63807584,
+      "accession_id": "GCST010991",
+      "p_value": 4e-17,
+      "genes": [
+        "GPRIN3",
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 63807577,
+      "accession_id": "GCST010991",
+      "p_value": 4e-11,
+      "genes": [
+        "FAM47E",
+        "FAM47E-STBD1"
+      ]
+    },
+    {
+      "association_id": 63807570,
+      "accession_id": "GCST010991",
+      "p_value": 2e-11,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 63807565,
+      "accession_id": "GCST010991",
+      "p_value": 1e-11,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 63807560,
+      "accession_id": "GCST010991",
+      "p_value": 2e-11,
+      "genes": [
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 63807554,
+      "accession_id": "GCST010991",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "SPTSSB"
+      ]
+    },
+    {
+      "association_id": 63807549,
+      "accession_id": "GCST010991",
+      "p_value": 2e-07,
+      "genes": [
+        "MED12L"
+      ]
+    },
+    {
+      "association_id": 63807543,
+      "accession_id": "GCST010991",
+      "p_value": 2e-07,
+      "genes": [
+        "LARP7P4",
+        "RNA5SP144"
+      ]
+    },
+    {
+      "association_id": 63807537,
+      "accession_id": "GCST010991",
+      "p_value": 3e-07,
+      "genes": [
+        "PARP9"
+      ]
+    },
+    {
+      "association_id": 63807531,
+      "accession_id": "GCST010991",
+      "p_value": 9.000000000000001e-09,
+      "genes": [
+        "TBC1D5"
+      ]
+    },
+    {
+      "association_id": 63807525,
+      "accession_id": "GCST010991",
+      "p_value": 3e-07,
+      "genes": [
+        "NGEF"
+      ]
+    },
+    {
+      "association_id": 63807519,
+      "accession_id": "GCST010991",
+      "p_value": 4e-13,
+      "genes": [
+        "RN7SL813P",
+        "STK39"
+      ]
+    },
+    {
+      "association_id": 63807513,
+      "accession_id": "GCST010991",
+      "p_value": 1e-13,
+      "genes": [
+        "CCNT2-AS1"
+      ]
+    },
+    {
+      "association_id": 63807508,
+      "accession_id": "GCST010991",
+      "p_value": 5e-07,
+      "genes": [
+        "LINC01127"
+      ]
+    },
+    {
+      "association_id": 63807503,
+      "accession_id": "GCST010991",
+      "p_value": 2e-07,
+      "genes": [
+        "SIPA1L2"
+      ]
+    },
+    {
+      "association_id": 63807498,
+      "accession_id": "GCST010991",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "ITPKB"
+      ]
+    },
+    {
+      "association_id": 63807493,
+      "accession_id": "GCST010991",
+      "p_value": 4e-11,
+      "genes": [
+        "NUCKS1"
+      ]
+    },
+    {
+      "association_id": 63807487,
+      "accession_id": "GCST010991",
+      "p_value": 1e-06,
+      "genes": [
+        "MROH3P"
+      ]
+    },
+    {
+      "association_id": 63807481,
+      "accession_id": "GCST010991",
+      "p_value": 4e-12,
+      "genes": [
+        "LAMTOR2",
+        "RAB25"
+      ]
+    },
+    {
+      "association_id": 63807476,
+      "accession_id": "GCST010991",
+      "p_value": 4e-06,
+      "genes": [
+        "RERE",
+        "RERE-AS1"
+      ]
+    },
+    {
+      "association_id": 61744079,
+      "accession_id": "GCST010049",
+      "p_value": 6e-10,
+      "genes": [
+        "SV2C",
+        "SV2C-AS2"
+      ]
+    },
+    {
+      "association_id": 61744074,
+      "accession_id": "GCST010049",
+      "p_value": 7e-06,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 61744070,
+      "accession_id": "GCST010049",
+      "p_value": 4e-07,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 61744065,
+      "accession_id": "GCST010049",
+      "p_value": 5e-08,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 61744061,
+      "accession_id": "GCST010049",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "FYN"
+      ]
+    },
+    {
+      "association_id": 61744056,
+      "accession_id": "GCST010049",
+      "p_value": 2e-08,
+      "genes": [
+        "DLG2"
+      ]
+    },
+    {
+      "association_id": 61744051,
+      "accession_id": "GCST010049",
+      "p_value": 8e-10,
+      "genes": [
+        "ITPKB",
+        "ITPKB-IT1"
+      ]
+    },
+    {
+      "association_id": 61744046,
+      "accession_id": "GCST010049",
+      "p_value": 8e-17,
+      "genes": [
+        "MCCC1",
+        "MCCC1-AS1"
+      ]
+    },
+    {
+      "association_id": 61744040,
+      "accession_id": "GCST010049",
+      "p_value": 4e-21,
+      "genes": [
+        "RAB29",
+        "SLC41A1"
+      ]
+    },
+    {
+      "association_id": 61744036,
+      "accession_id": "GCST010049",
+      "p_value": 2e-37,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 55526671,
+      "accession_id": "GCST009512",
+      "p_value": 6e-06,
+      "genes": [
+        "SETD1A"
+      ]
+    },
+    {
+      "association_id": 55397210,
+      "accession_id": "GCST009373",
+      "p_value": 6e-06,
+      "genes": [
+        "CTSB"
+      ]
+    },
+    {
+      "association_id": 55394771,
+      "accession_id": "GCST009373",
+      "p_value": 2e-11,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 55249919,
+      "accession_id": "GCST009325",
+      "p_value": 8e-11,
+      "genes": [
+        "DDRGK1",
+        "LZTS3"
+      ]
+    },
+    {
+      "association_id": 55249915,
+      "accession_id": "GCST009325",
+      "p_value": 8.999999999999999e-67,
+      "genes": [
+        "NSF"
+      ]
+    },
+    {
+      "association_id": 55249911,
+      "accession_id": "GCST009325",
+      "p_value": 2e-40,
+      "genes": [
+        "KANSL1"
+      ]
+    },
+    {
+      "association_id": 55249907,
+      "accession_id": "GCST009325",
+      "p_value": 1e-37,
+      "genes": [
+        "MAPT-AS1"
+      ]
+    },
+    {
+      "association_id": 55249903,
+      "accession_id": "GCST009325",
+      "p_value": 2e-13,
+      "genes": [
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 55249898,
+      "accession_id": "GCST009325",
+      "p_value": 8e-27,
+      "genes": [
+        "ARHGAP27",
+        "RNA5SP443"
+      ]
+    },
+    {
+      "association_id": 55249894,
+      "accession_id": "GCST009325",
+      "p_value": 2e-10,
+      "genes": [
+        "GXYLT1"
+      ]
+    },
+    {
+      "association_id": 55249890,
+      "accession_id": "GCST009325",
+      "p_value": 7e-12,
+      "genes": [
+        "GXYLT1",
+        "LINC02400"
+      ]
+    },
+    {
+      "association_id": 55249886,
+      "accession_id": "GCST009325",
+      "p_value": 6e-14,
+      "genes": [
+        "MUC19"
+      ]
+    },
+    {
+      "association_id": 55249881,
+      "accession_id": "GCST009325",
+      "p_value": 2e-20,
+      "genes": [
+        "MUC19"
+      ]
+    },
+    {
+      "association_id": 55249877,
+      "accession_id": "GCST009325",
+      "p_value": 8e-11,
+      "genes": [
+        "DNM1L",
+        "FGD4"
+      ]
+    },
+    {
+      "association_id": 55249873,
+      "accession_id": "GCST009325",
+      "p_value": 4e-11,
+      "genes": [
+        "EHMT2-AS1",
+        "SLC44A4"
+      ]
+    },
+    {
+      "association_id": 55249869,
+      "accession_id": "GCST009325",
+      "p_value": 1e-08,
+      "genes": [
+        "LINC02240",
+        "ZNF608"
+      ]
+    },
+    {
+      "association_id": 55249865,
+      "accession_id": "GCST009325",
+      "p_value": 5e-149,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 55249861,
+      "accession_id": "GCST009325",
+      "p_value": 1e-48,
+      "genes": [
+        "GPRIN3",
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 55249856,
+      "accession_id": "GCST009325",
+      "p_value": 2e-08,
+      "genes": [
+        "TMEM163"
+      ]
+    },
+    {
+      "association_id": 55249851,
+      "accession_id": "GCST009325",
+      "p_value": 8e-22,
+      "genes": [
+        "SEMA4A",
+        "SLC25A44"
+      ]
+    },
+    {
+      "association_id": 55249847,
+      "accession_id": "GCST009325",
+      "p_value": 3e-11,
+      "genes": [
+        "DYRK1A"
+      ]
+    },
+    {
+      "association_id": 55249843,
+      "accession_id": "GCST009325",
+      "p_value": 9.000000000000001e-09,
+      "genes": [
+        "CRLS1"
+      ]
+    },
+    {
+      "association_id": 55249839,
+      "accession_id": "GCST009325",
+      "p_value": 4e-10,
+      "genes": [
+        "SPPL2B"
+      ]
+    },
+    {
+      "association_id": 55249835,
+      "accession_id": "GCST009325",
+      "p_value": 1e-08,
+      "genes": [
+        "SMAD4",
+        "SRSF10P1"
+      ]
+    },
+    {
+      "association_id": 55249831,
+      "accession_id": "GCST009325",
+      "p_value": 4e-23,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 55249827,
+      "accession_id": "GCST009325",
+      "p_value": 2e-08,
+      "genes": [
+        "ASXL3"
+      ]
+    },
+    {
+      "association_id": 55249823,
+      "accession_id": "GCST009325",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "DNAH17"
+      ]
+    },
+    {
+      "association_id": 55249819,
+      "accession_id": "GCST009325",
+      "p_value": 9e-10,
+      "genes": [
+        "BRIP1"
+      ]
+    },
+    {
+      "association_id": 55249815,
+      "accession_id": "GCST009325",
+      "p_value": 4e-08,
+      "genes": [
+        "WNT3"
+      ]
+    },
+    {
+      "association_id": 55249810,
+      "accession_id": "GCST009325",
+      "p_value": 6.999999999999999e-16,
+      "genes": [
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 55249805,
+      "accession_id": "GCST009325",
+      "p_value": 4e-68,
+      "genes": [
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 55249801,
+      "accession_id": "GCST009325",
+      "p_value": 1e-11,
+      "genes": [
+        "FAM171A2"
+      ]
+    },
+    {
+      "association_id": 55249797,
+      "accession_id": "GCST009325",
+      "p_value": 6e-10,
+      "genes": [
+        "ATXN7L3-AS1",
+        "UBTF"
+      ]
+    },
+    {
+      "association_id": 55249793,
+      "accession_id": "GCST009325",
+      "p_value": 1e-09,
+      "genes": [
+        "RETREG3"
+      ]
+    },
+    {
+      "association_id": 55249789,
+      "accession_id": "GCST009325",
+      "p_value": 1e-08,
+      "genes": [
+        "CHRNB1"
+      ]
+    },
+    {
+      "association_id": 55249785,
+      "accession_id": "GCST009325",
+      "p_value": 1e-10,
+      "genes": [
+        "PHB1P21"
+      ]
+    },
+    {
+      "association_id": 55249781,
+      "accession_id": "GCST009325",
+      "p_value": 1e-12,
+      "genes": [
+        "CASC16"
+      ]
+    },
+    {
+      "association_id": 55249777,
+      "accession_id": "GCST009325",
+      "p_value": 2e-09,
+      "genes": [
+        "NOD2"
+      ]
+    },
+    {
+      "association_id": 55249773,
+      "accession_id": "GCST009325",
+      "p_value": 5e-20,
+      "genes": [
+        "SETD1A"
+      ]
+    },
+    {
+      "association_id": 55249769,
+      "accession_id": "GCST009325",
+      "p_value": 8e-10,
+      "genes": [
+        "CD19",
+        "RABEP2"
+      ]
+    },
+    {
+      "association_id": 55249765,
+      "accession_id": "GCST009325",
+      "p_value": 3e-11,
+      "genes": [
+        "SYT17"
+      ]
+    },
+    {
+      "association_id": 55249761,
+      "accession_id": "GCST009325",
+      "p_value": 6.0000000000000004e-18,
+      "genes": [
+        "LINC02349",
+        "RORA"
+      ]
+    },
+    {
+      "association_id": 55249757,
+      "accession_id": "GCST009325",
+      "p_value": 6e-11,
+      "genes": [
+        "GPR65",
+        "RNU6-835P"
+      ]
+    },
+    {
+      "association_id": 55249753,
+      "accession_id": "GCST009325",
+      "p_value": 2e-09,
+      "genes": [
+        "RPS6KL1"
+      ]
+    },
+    {
+      "association_id": 55249749,
+      "accession_id": "GCST009325",
+      "p_value": 2e-16,
+      "genes": [
+        "GCH1"
+      ]
+    },
+    {
+      "association_id": 55249745,
+      "accession_id": "GCST009325",
+      "p_value": 4e-08,
+      "genes": [
+        "MIPOL1"
+      ]
+    },
+    {
+      "association_id": 55249741,
+      "accession_id": "GCST009325",
+      "p_value": 1e-09,
+      "genes": [
+        "LINC00456",
+        "MBNL2"
+      ]
+    },
+    {
+      "association_id": 55249737,
+      "accession_id": "GCST009325",
+      "p_value": 1e-08,
+      "genes": [
+        "CAB39L"
+      ]
+    },
+    {
+      "association_id": 55249733,
+      "accession_id": "GCST009325",
+      "p_value": 2e-10,
+      "genes": [
+        "FBRSL1",
+        "GALNT9"
+      ]
+    },
+    {
+      "association_id": 55249729,
+      "accession_id": "GCST009325",
+      "p_value": 1e-37,
+      "genes": [
+        "HIP1R"
+      ]
+    },
+    {
+      "association_id": 55249725,
+      "accession_id": "GCST009325",
+      "p_value": 4e-08,
+      "genes": [
+        "RPL13AP21",
+        "SLC38A1"
+      ]
+    },
+    {
+      "association_id": 55249721,
+      "accession_id": "GCST009325",
+      "p_value": 4e-148,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 55249717,
+      "accession_id": "GCST009325",
+      "p_value": 2e-28,
+      "genes": [
+        "LRRK2",
+        "LRRK2-DT"
+      ]
+    },
+    {
+      "association_id": 55249713,
+      "accession_id": "GCST009325",
+      "p_value": 5.999999999999999e-20,
+      "genes": [
+        "IGSF9B"
+      ]
+    },
+    {
+      "association_id": 55249709,
+      "accession_id": "GCST009325",
+      "p_value": 3e-10,
+      "genes": [
+        "DLG2"
+      ]
+    },
+    {
+      "association_id": 55249705,
+      "accession_id": "GCST009325",
+      "p_value": 2e-09,
+      "genes": [
+        "RNF141"
+      ]
+    },
+    {
+      "association_id": 55249701,
+      "accession_id": "GCST009325",
+      "p_value": 2e-28,
+      "genes": [
+        "INPP5F"
+      ]
+    },
+    {
+      "association_id": 55249697,
+      "accession_id": "GCST009325",
+      "p_value": 2e-11,
+      "genes": [
+        "BAG3"
+      ]
+    },
+    {
+      "association_id": 55249693,
+      "accession_id": "GCST009325",
+      "p_value": 1e-09,
+      "genes": [
+        "GBF1"
+      ]
+    },
+    {
+      "association_id": 55249689,
+      "accession_id": "GCST009325",
+      "p_value": 3.0000000000000003e-13,
+      "genes": [
+        "ITGA8"
+      ]
+    },
+    {
+      "association_id": 55249685,
+      "accession_id": "GCST009325",
+      "p_value": 7.000000000000001e-09,
+      "genes": [
+        "UBAP2"
+      ]
+    },
+    {
+      "association_id": 55249681,
+      "accession_id": "GCST009325",
+      "p_value": 5.0000000000000005e-17,
+      "genes": [
+        "SH3GL2"
+      ]
+    },
+    {
+      "association_id": 55249677,
+      "accession_id": "GCST009325",
+      "p_value": 9.000000000000001e-18,
+      "genes": [
+        "SH3GL2"
+      ]
+    },
+    {
+      "association_id": 55249673,
+      "accession_id": "GCST009325",
+      "p_value": 2e-08,
+      "genes": [
+        "CYRIB"
+      ]
+    },
+    {
+      "association_id": 55249669,
+      "accession_id": "GCST009325",
+      "p_value": 1e-08,
+      "genes": [
+        "BIN3"
+      ]
+    },
+    {
+      "association_id": 55249665,
+      "accession_id": "GCST009325",
+      "p_value": 3.0000000000000002e-15,
+      "genes": [
+        "MSR1",
+        "RN7SL474P"
+      ]
+    },
+    {
+      "association_id": 55249661,
+      "accession_id": "GCST009325",
+      "p_value": 4e-16,
+      "genes": [
+        "CTSB"
+      ]
+    },
+    {
+      "association_id": 55249656,
+      "accession_id": "GCST009325",
+      "p_value": 1e-08,
+      "genes": [
+        "RABGEF1P1"
+      ]
+    },
+    {
+      "association_id": 55249652,
+      "accession_id": "GCST009325",
+      "p_value": 5e-26,
+      "genes": [
+        "GPNMB"
+      ]
+    },
+    {
+      "association_id": 55249648,
+      "accession_id": "GCST009325",
+      "p_value": 1e-10,
+      "genes": [
+        "HMGB1P13",
+        "LINC00326"
+      ]
+    },
+    {
+      "association_id": 55249644,
+      "accession_id": "GCST009325",
+      "p_value": 2e-09,
+      "genes": [
+        "CCN6",
+        "LINC02527"
+      ]
+    },
+    {
+      "association_id": 55249640,
+      "accession_id": "GCST009325",
+      "p_value": 2e-10,
+      "genes": [
+        "RIMS1",
+        "RNU4-66P"
+      ]
+    },
+    {
+      "association_id": 55249636,
+      "accession_id": "GCST009325",
+      "p_value": 7e-28,
+      "genes": [
+        "HLA-DQA1",
+        "HLA-DRB1"
+      ]
+    },
+    {
+      "association_id": 55249632,
+      "accession_id": "GCST009325",
+      "p_value": 2e-08,
+      "genes": [
+        "TRIM40"
+      ]
+    },
+    {
+      "association_id": 55249627,
+      "accession_id": "GCST009325",
+      "p_value": 6e-12,
+      "genes": [
+        "GPR89P",
+        "RSL24D1P1"
+      ]
+    },
+    {
+      "association_id": 55249623,
+      "accession_id": "GCST009325",
+      "p_value": 7.000000000000001e-09,
+      "genes": [
+        "C5orf24",
+        "TXNDC15"
+      ]
+    },
+    {
+      "association_id": 55249619,
+      "accession_id": "GCST009325",
+      "p_value": 2e-09,
+      "genes": [
+        "PAM"
+      ]
+    },
+    {
+      "association_id": 55249615,
+      "accession_id": "GCST009325",
+      "p_value": 3e-23,
+      "genes": [
+        "ELOVL7"
+      ]
+    },
+    {
+      "association_id": 55249611,
+      "accession_id": "GCST009325",
+      "p_value": 2e-10,
+      "genes": [
+        "CLCN3"
+      ]
+    },
+    {
+      "association_id": 55249607,
+      "accession_id": "GCST009325",
+      "p_value": 1e-12,
+      "genes": [
+        "CAMK2D"
+      ]
+    },
+    {
+      "association_id": 55249603,
+      "accession_id": "GCST009325",
+      "p_value": 1e-36,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 55249598,
+      "accession_id": "GCST009325",
+      "p_value": 4e-154,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 55249594,
+      "accession_id": "GCST009325",
+      "p_value": 5.999999999999999e-21,
+      "genes": [
+        "FAM47E",
+        "FAM47E-STBD1"
+      ]
+    },
+    {
+      "association_id": 55249590,
+      "accession_id": "GCST009325",
+      "p_value": 5e-19,
+      "genes": [
+        "FAM47E",
+        "SCARB2"
+      ]
+    },
+    {
+      "association_id": 55249585,
+      "accession_id": "GCST009325",
+      "p_value": 1e-09,
+      "genes": [
+        "SCARB2"
+      ]
+    },
+    {
+      "association_id": 55249580,
+      "accession_id": "GCST009325",
+      "p_value": 3e-10,
+      "genes": [
+        "LCORL"
+      ]
+    },
+    {
+      "association_id": 55249576,
+      "accession_id": "GCST009325",
+      "p_value": 2e-28,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 55249572,
+      "accession_id": "GCST009325",
+      "p_value": 1e-69,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 55249568,
+      "accession_id": "GCST009325",
+      "p_value": 2e-21,
+      "genes": [
+        "GAK"
+      ]
+    },
+    {
+      "association_id": 55249563,
+      "accession_id": "GCST009325",
+      "p_value": 1e-34,
+      "genes": [
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 55249559,
+      "accession_id": "GCST009325",
+      "p_value": 5e-10,
+      "genes": [
+        "SPTSSB"
+      ]
+    },
+    {
+      "association_id": 55249555,
+      "accession_id": "GCST009325",
+      "p_value": 1e-10,
+      "genes": [
+        "MED12L"
+      ]
+    },
+    {
+      "association_id": 55249551,
+      "accession_id": "GCST009325",
+      "p_value": 1e-11,
+      "genes": [
+        "KPNA1"
+      ]
+    },
+    {
+      "association_id": 55249547,
+      "accession_id": "GCST009325",
+      "p_value": 1e-10,
+      "genes": [
+        "IP6K2"
+      ]
+    },
+    {
+      "association_id": 55249542,
+      "accession_id": "GCST009325",
+      "p_value": 8e-12,
+      "genes": [
+        "RBMS3"
+      ]
+    },
+    {
+      "association_id": 55249538,
+      "accession_id": "GCST009325",
+      "p_value": 6.000000000000001e-13,
+      "genes": [
+        "TBC1D5"
+      ]
+    },
+    {
+      "association_id": 55249534,
+      "accession_id": "GCST009325",
+      "p_value": 2.9999999999999996e-39,
+      "genes": [
+        "RN7SL813P",
+        "STK39"
+      ]
+    },
+    {
+      "association_id": 55249530,
+      "accession_id": "GCST009325",
+      "p_value": 5e-14,
+      "genes": [
+        "TMEM163"
+      ]
+    },
+    {
+      "association_id": 55249526,
+      "accession_id": "GCST009325",
+      "p_value": 8e-13,
+      "genes": [
+        "MAP4K4"
+      ]
+    },
+    {
+      "association_id": 55249522,
+      "accession_id": "GCST009325",
+      "p_value": 1e-08,
+      "genes": [
+        "KCNIP3"
+      ]
+    },
+    {
+      "association_id": 55249518,
+      "accession_id": "GCST009325",
+      "p_value": 1e-08,
+      "genes": [
+        "KCNS3"
+      ]
+    },
+    {
+      "association_id": 55249514,
+      "accession_id": "GCST009325",
+      "p_value": 7e-17,
+      "genes": [
+        "SIPA1L2"
+      ]
+    },
+    {
+      "association_id": 55249510,
+      "accession_id": "GCST009325",
+      "p_value": 1e-15,
+      "genes": [
+        "ITPKB"
+      ]
+    },
+    {
+      "association_id": 55249506,
+      "accession_id": "GCST009325",
+      "p_value": 3e-22,
+      "genes": [
+        "RAB29"
+      ]
+    },
+    {
+      "association_id": 55249501,
+      "accession_id": "GCST009325",
+      "p_value": 1e-29,
+      "genes": [
+        "NUCKS1",
+        "RAB29"
+      ]
+    },
+    {
+      "association_id": 55249497,
+      "accession_id": "GCST009325",
+      "p_value": 4e-09,
+      "genes": [
+        "METTL13",
+        "VAMP4"
+      ]
+    },
+    {
+      "association_id": 55249493,
+      "accession_id": "GCST009325",
+      "p_value": 6e-12,
+      "genes": [
+        "FCGR2A",
+        "RNU6-481P"
+      ]
+    },
+    {
+      "association_id": 55249489,
+      "accession_id": "GCST009325",
+      "p_value": 2e-22,
+      "genes": [
+        "GBA1"
+      ]
+    },
+    {
+      "association_id": 55249484,
+      "accession_id": "GCST009325",
+      "p_value": 2e-70,
+      "genes": [
+        "HMGN2P18",
+        "KRTCAP2"
+      ]
+    },
+    {
+      "association_id": 55249480,
+      "accession_id": "GCST009325",
+      "p_value": 4e-09,
+      "genes": [
+        "PMVK"
+      ]
+    },
+    {
+      "association_id": 52487704,
+      "accession_id": "GCST009513",
+      "p_value": 4e-13,
+      "genes": [
+        "PRKN"
+      ]
+    },
+    {
+      "association_id": 52487699,
+      "accession_id": "GCST009513",
+      "p_value": 2e-07,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 52487540,
+      "accession_id": "GCST009512",
+      "p_value": 3e-07,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 52487536,
+      "accession_id": "GCST009512",
+      "p_value": 8e-09,
+      "genes": [
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 52487532,
+      "accession_id": "GCST009512",
+      "p_value": 2e-08,
+      "genes": [
+        "HLA-DQB1",
+        "MTCO3P1"
+      ]
+    },
+    {
+      "association_id": 52487527,
+      "accession_id": "GCST009512",
+      "p_value": 9e-13,
+      "genes": [
+        "KANSL1"
+      ]
+    },
+    {
+      "association_id": 52487523,
+      "accession_id": "GCST009512",
+      "p_value": 6.999999999999999e-11,
+      "genes": [
+        "LRRK2",
+        "MUC19"
+      ]
+    },
+    {
+      "association_id": 52487518,
+      "accession_id": "GCST009512",
+      "p_value": 2e-09,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 41949824,
+      "accession_id": "GCST007780",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "APOE"
+      ]
+    },
+    {
+      "association_id": 41948013,
+      "accession_id": "GCST007780",
+      "p_value": 1e-08,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 41947421,
+      "accession_id": "GCST007780",
+      "p_value": 7e-06,
+      "genes": [
+        "SNCA-AS1"
+      ]
+    },
+    {
+      "association_id": 41946880,
+      "accession_id": "GCST007780",
+      "p_value": 2e-12,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 35326664,
+      "accession_id": "GCST007198",
+      "p_value": 9.000000000000001e-09,
+      "genes": [
+        "PLPPR1"
+      ]
+    },
+    {
+      "association_id": 30584375,
+      "accession_id": "GCST006153",
+      "p_value": 9e-06,
+      "genes": [
+        "LINC01500"
+      ]
+    },
+    {
+      "association_id": 30584369,
+      "accession_id": "GCST006153",
+      "p_value": 8e-06,
+      "genes": [
+        "SP1"
+      ]
+    },
+    {
+      "association_id": 30584364,
+      "accession_id": "GCST006153",
+      "p_value": 4e-06,
+      "genes": [
+        "CHL1",
+        "CHL1-AS1"
+      ]
+    },
+    {
+      "association_id": 24651852,
+      "accession_id": "GCST004902",
+      "p_value": 1e-10,
+      "genes": [
+        "CASC16"
+      ]
+    },
+    {
+      "association_id": 24651847,
+      "accession_id": "GCST004902",
+      "p_value": 9e-11,
+      "genes": [
+        "SYT17"
+      ]
+    },
+    {
+      "association_id": 24651842,
+      "accession_id": "GCST004902",
+      "p_value": 9e-11,
+      "genes": [
+        "GPR65"
+      ]
+    },
+    {
+      "association_id": 24651838,
+      "accession_id": "GCST004902",
+      "p_value": 1e-08,
+      "genes": [
+        "ITGA8"
+      ]
+    },
+    {
+      "association_id": 24651834,
+      "accession_id": "GCST004902",
+      "p_value": 5e-13,
+      "genes": [
+        "SH3GL2"
+      ]
+    },
+    {
+      "association_id": 24651829,
+      "accession_id": "GCST004902",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "BIN3"
+      ]
+    },
+    {
+      "association_id": 24651824,
+      "accession_id": "GCST004902",
+      "p_value": 6e-12,
+      "genes": [
+        "CTSB"
+      ]
+    },
+    {
+      "association_id": 24651819,
+      "accession_id": "GCST004902",
+      "p_value": 1e-12,
+      "genes": [
+        "LINC01012"
+      ]
+    },
+    {
+      "association_id": 24651814,
+      "accession_id": "GCST004902",
+      "p_value": 5.000000000000001e-15,
+      "genes": [
+        "NDUFAF2"
+      ]
+    },
+    {
+      "association_id": 24651809,
+      "accession_id": "GCST004902",
+      "p_value": 4.9999999999999995e-11,
+      "genes": [
+        "CAMK2D"
+      ]
+    },
+    {
+      "association_id": 24651805,
+      "accession_id": "GCST004902",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "ITIH1"
+      ]
+    },
+    {
+      "association_id": 24651800,
+      "accession_id": "GCST004902",
+      "p_value": 9.000000000000001e-09,
+      "genes": [
+        "IP6K2"
+      ]
+    },
+    {
+      "association_id": 24651795,
+      "accession_id": "GCST004902",
+      "p_value": 2e-08,
+      "genes": [
+        "TBC1D5"
+      ]
+    },
+    {
+      "association_id": 24651791,
+      "accession_id": "GCST004902",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "SCN2A"
+      ]
+    },
+    {
+      "association_id": 24651786,
+      "accession_id": "GCST004902",
+      "p_value": 4.9999999999999995e-11,
+      "genes": [
+        "MAP4K4"
+      ]
+    },
+    {
+      "association_id": 24651782,
+      "accession_id": "GCST004902",
+      "p_value": 2e-11,
+      "genes": [
+        "ITPKB"
+      ]
+    },
+    {
+      "association_id": 24651777,
+      "accession_id": "GCST004902",
+      "p_value": 2e-06,
+      "genes": [
+        "DDRGK1",
+        "LZTS3"
+      ]
+    },
+    {
+      "association_id": 24651772,
+      "accession_id": "GCST004902",
+      "p_value": 7e-07,
+      "genes": [
+        "TMPRSS9"
+      ]
+    },
+    {
+      "association_id": 24651767,
+      "accession_id": "GCST004902",
+      "p_value": 6e-16,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 24651763,
+      "accession_id": "GCST004902",
+      "p_value": 1e-68,
+      "genes": [
+        "MAPT"
+      ]
+    },
+    {
+      "association_id": 24651758,
+      "accession_id": "GCST004902",
+      "p_value": 5e-12,
+      "genes": [
+        "BCKDK"
+      ]
+    },
+    {
+      "association_id": 24651754,
+      "accession_id": "GCST004902",
+      "p_value": 4e-14,
+      "genes": [
+        "LINC02349",
+        "RORA"
+      ]
+    },
+    {
+      "association_id": 24651749,
+      "accession_id": "GCST004902",
+      "p_value": 1e-10,
+      "genes": [
+        "TMEM229B"
+      ]
+    },
+    {
+      "association_id": 24651745,
+      "accession_id": "GCST004902",
+      "p_value": 4e-16,
+      "genes": [
+        "GCH1"
+      ]
+    },
+    {
+      "association_id": 24651741,
+      "accession_id": "GCST004902",
+      "p_value": 2e-20,
+      "genes": [
+        "CCDC62"
+      ]
+    },
+    {
+      "association_id": 24651736,
+      "accession_id": "GCST004902",
+      "p_value": 1e-19,
+      "genes": [
+        "LRRK2",
+        "LRRK2-DT"
+      ]
+    },
+    {
+      "association_id": 24651731,
+      "accession_id": "GCST004902",
+      "p_value": 1e-13,
+      "genes": [
+        "IGSF9B",
+        "SPATA19"
+      ]
+    },
+    {
+      "association_id": 24651727,
+      "accession_id": "GCST004902",
+      "p_value": 4e-09,
+      "genes": [
+        "DLG2"
+      ]
+    },
+    {
+      "association_id": 24651722,
+      "accession_id": "GCST004902",
+      "p_value": 2e-19,
+      "genes": [
+        "INPP5F"
+      ]
+    },
+    {
+      "association_id": 24651718,
+      "accession_id": "GCST004902",
+      "p_value": 2e-11,
+      "genes": [
+        "MSR1",
+        "RN7SL474P"
+      ]
+    },
+    {
+      "association_id": 24651714,
+      "accession_id": "GCST004902",
+      "p_value": 4e-18,
+      "genes": [
+        "GPNMB"
+      ]
+    },
+    {
+      "association_id": 24651710,
+      "accession_id": "GCST004902",
+      "p_value": 1e-13,
+      "genes": [
+        "HLA-DQB1",
+        "MTCO3P1"
+      ]
+    },
+    {
+      "association_id": 24651705,
+      "accession_id": "GCST004902",
+      "p_value": 5e-123,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 24651701,
+      "accession_id": "GCST004902",
+      "p_value": 1e-14,
+      "genes": [
+        "FAM47E",
+        "FAM47E-STBD1"
+      ]
+    },
+    {
+      "association_id": 24651697,
+      "accession_id": "GCST004902",
+      "p_value": 1e-19,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 24651692,
+      "accession_id": "GCST004902",
+      "p_value": 1e-50,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 24651688,
+      "accession_id": "GCST004902",
+      "p_value": 2e-30,
+      "genes": [
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 24651684,
+      "accession_id": "GCST004902",
+      "p_value": 6e-26,
+      "genes": [
+        "RN7SL813P",
+        "STK39"
+      ]
+    },
+    {
+      "association_id": 24651680,
+      "accession_id": "GCST004902",
+      "p_value": 8e-24,
+      "genes": [
+        "CCNT2-AS1"
+      ]
+    },
+    {
+      "association_id": 24651675,
+      "accession_id": "GCST004902",
+      "p_value": 8e-13,
+      "genes": [
+        "SIPA1L2"
+      ]
+    },
+    {
+      "association_id": 24651671,
+      "accession_id": "GCST004902",
+      "p_value": 1e-23,
+      "genes": [
+        "NUCKS1",
+        "RAB29"
+      ]
+    },
+    {
+      "association_id": 24651667,
+      "accession_id": "GCST004902",
+      "p_value": 3e-35,
+      "genes": [
+        "HMGN2P18",
+        "KRTCAP2"
+      ]
+    },
+    {
+      "association_id": 24651661,
+      "accession_id": "GCST004902",
+      "p_value": 4e-07,
+      "genes": [
+        "MED13",
+        "Y_RNA"
+      ]
+    },
+    {
+      "association_id": 24651656,
+      "accession_id": "GCST004902",
+      "p_value": 4e-06,
+      "genes": [
+        "ITGA2B"
+      ]
+    },
+    {
+      "association_id": 24651650,
+      "accession_id": "GCST004902",
+      "p_value": 7e-06,
+      "genes": [
+        "LTK"
+      ]
+    },
+    {
+      "association_id": 24651644,
+      "accession_id": "GCST004902",
+      "p_value": 2e-07,
+      "genes": [
+        "KTN1",
+        "RPL13AP3"
+      ]
+    },
+    {
+      "association_id": 24651639,
+      "accession_id": "GCST004902",
+      "p_value": 5e-07,
+      "genes": [
+        "PSMA6P4",
+        "RPL7AP61"
+      ]
+    },
+    {
+      "association_id": 24651633,
+      "accession_id": "GCST004902",
+      "p_value": 4e-07,
+      "genes": [
+        "CAB39L"
+      ]
+    },
+    {
+      "association_id": 24651628,
+      "accession_id": "GCST004902",
+      "p_value": 2e-07,
+      "genes": [
+        "GBF1"
+      ]
+    },
+    {
+      "association_id": 24651622,
+      "accession_id": "GCST004902",
+      "p_value": 1e-07,
+      "genes": [
+        "LINC02950"
+      ]
+    },
+    {
+      "association_id": 24651616,
+      "accession_id": "GCST004902",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "CCN6",
+        "LINC02527"
+      ]
+    },
+    {
+      "association_id": 24651611,
+      "accession_id": "GCST004902",
+      "p_value": 2e-07,
+      "genes": [
+        "ZNF165",
+        "ZSCAN16-AS1"
+      ]
+    },
+    {
+      "association_id": 24651605,
+      "accession_id": "GCST004902",
+      "p_value": 2e-07,
+      "genes": [
+        "PAM"
+      ]
+    },
+    {
+      "association_id": 24651600,
+      "accession_id": "GCST004902",
+      "p_value": 1e-06,
+      "genes": [
+        "SPTSSB"
+      ]
+    },
+    {
+      "association_id": 24651594,
+      "accession_id": "GCST004902",
+      "p_value": 7e-08,
+      "genes": [
+        "AGAP1"
+      ]
+    },
+    {
+      "association_id": 19568108,
+      "accession_id": "GCST003984",
+      "p_value": 7e-08,
+      "genes": [
+        "HSD17B1P1",
+        "NAGLU"
+      ]
+    },
+    {
+      "association_id": 19568104,
+      "accession_id": "GCST003984",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "CA8"
+      ]
+    },
+    {
+      "association_id": 19568099,
+      "accession_id": "GCST003984",
+      "p_value": 1e-08,
+      "genes": [
+        "NDUFAF2"
+      ]
+    },
+    {
+      "association_id": 19568094,
+      "accession_id": "GCST003984",
+      "p_value": 1e-08,
+      "genes": [
+        "SYT17"
+      ]
+    },
+    {
+      "association_id": 19568089,
+      "accession_id": "GCST003984",
+      "p_value": 8e-09,
+      "genes": [
+        "SH3GL2"
+      ]
+    },
+    {
+      "association_id": 19568084,
+      "accession_id": "GCST003984",
+      "p_value": 5e-09,
+      "genes": [
+        "LINC02450"
+      ]
+    },
+    {
+      "association_id": 19568079,
+      "accession_id": "GCST003984",
+      "p_value": 2e-09,
+      "genes": [
+        "OR5AZ1P",
+        "OR5BD1P"
+      ]
+    },
+    {
+      "association_id": 19568074,
+      "accession_id": "GCST003984",
+      "p_value": 3e-10,
+      "genes": [
+        "CCDC62"
+      ]
+    },
+    {
+      "association_id": 19568069,
+      "accession_id": "GCST003984",
+      "p_value": 2e-10,
+      "genes": [
+        "LINC01012"
+      ]
+    },
+    {
+      "association_id": 19568064,
+      "accession_id": "GCST003984",
+      "p_value": 2e-10,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 19568059,
+      "accession_id": "GCST003984",
+      "p_value": 8e-11,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 19568054,
+      "accession_id": "GCST003984",
+      "p_value": 6.999999999999999e-11,
+      "genes": [
+        "FAM47E",
+        "FAM47E-STBD1"
+      ]
+    },
+    {
+      "association_id": 19568049,
+      "accession_id": "GCST003984",
+      "p_value": 3e-11,
+      "genes": [
+        "RAD1P1",
+        "TIAL1"
+      ]
+    },
+    {
+      "association_id": 19568043,
+      "accession_id": "GCST003984",
+      "p_value": 6e-12,
+      "genes": [
+        "NUCKS1",
+        "RAB29"
+      ]
+    },
+    {
+      "association_id": 19568038,
+      "accession_id": "GCST003984",
+      "p_value": 2e-12,
+      "genes": [
+        "HYCC1",
+        "KLHL7-DT"
+      ]
+    },
+    {
+      "association_id": 19568033,
+      "accession_id": "GCST003984",
+      "p_value": 3e-14,
+      "genes": [
+        "DCUN1D1",
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 19568028,
+      "accession_id": "GCST003984",
+      "p_value": 9.000000000000001e-15,
+      "genes": [
+        "GCH1"
+      ]
+    },
+    {
+      "association_id": 19568023,
+      "accession_id": "GCST003984",
+      "p_value": 3.0000000000000002e-15,
+      "genes": [
+        "GAK"
+      ]
+    },
+    {
+      "association_id": 19568018,
+      "accession_id": "GCST003984",
+      "p_value": 3e-16,
+      "genes": [
+        "RN7SL813P",
+        "STK39"
+      ]
+    },
+    {
+      "association_id": 19568013,
+      "accession_id": "GCST003984",
+      "p_value": 5.0000000000000005e-17,
+      "genes": [
+        "GBA1"
+      ]
+    },
+    {
+      "association_id": 19568008,
+      "accession_id": "GCST003984",
+      "p_value": 4e-17,
+      "genes": [
+        "HLA-DQA1",
+        "HLA-DRB1"
+      ]
+    },
+    {
+      "association_id": 19568003,
+      "accession_id": "GCST003984",
+      "p_value": 4e-21,
+      "genes": [
+        "ASS1P14",
+        "SYT10"
+      ]
+    },
+    {
+      "association_id": 19567998,
+      "accession_id": "GCST003984",
+      "p_value": 4e-32,
+      "genes": [
+        "LINC02210",
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 19567993,
+      "accession_id": "GCST003984",
+      "p_value": 1e-39,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 19567988,
+      "accession_id": "GCST003984",
+      "p_value": 1e-56,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 17633308,
+      "accession_id": "GCST003922",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "DLG2"
+      ]
+    },
+    {
+      "association_id": 17633226,
+      "accession_id": "GCST003922",
+      "p_value": 8e-12,
+      "genes": [
+        "SLC2A13"
+      ]
+    },
+    {
+      "association_id": 17633168,
+      "accession_id": "GCST003922",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 17633120,
+      "accession_id": "GCST003922",
+      "p_value": 1e-32,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 17387054,
+      "accession_id": "GCST003600",
+      "p_value": 2e-06,
+      "genes": [
+        "ERCC6L2-AS1"
+      ]
+    },
+    {
+      "association_id": 15684167,
+      "accession_id": "GCST003652",
+      "p_value": 9e-11,
+      "genes": [
+        "TPM1"
+      ]
+    },
+    {
+      "association_id": 15684141,
+      "accession_id": "GCST003652",
+      "p_value": 5e-08,
+      "genes": [
+        "KLHDC1"
+      ]
+    },
+    {
+      "association_id": 15684129,
+      "accession_id": "GCST003652",
+      "p_value": 3e-06,
+      "genes": [
+        "TRPS1"
+      ]
+    },
+    {
+      "association_id": 15684107,
+      "accession_id": "GCST003652",
+      "p_value": 1e-11,
+      "genes": [
+        "LHFPL2"
+      ]
+    },
+    {
+      "association_id": 14973285,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973284,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": [
+        "RPL7AP67",
+        "ZNF24TR"
+      ]
+    },
+    {
+      "association_id": 14973283,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973282,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973281,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": [
+        "MDGA2",
+        "RPA2P1"
+      ]
+    },
+    {
+      "association_id": 14973280,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973279,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973278,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973277,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": [
+        "RORB-AS1"
+      ]
+    },
+    {
+      "association_id": 14973276,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973275,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973274,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973273,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": [
+        "MRPS30-DT"
+      ]
+    },
+    {
+      "association_id": 14973272,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973271,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": [
+        "IGSF11",
+        "LSAMP"
+      ]
+    },
+    {
+      "association_id": 14973270,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": [
+        "CFAP20DC-DT"
+      ]
+    },
+    {
+      "association_id": 14973269,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973268,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": [
+        "COL5A2"
+      ]
+    },
+    {
+      "association_id": 14973267,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973266,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 14973265,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": [
+        "CICP26",
+        "WNT9A"
+      ]
+    },
+    {
+      "association_id": 14973264,
+      "accession_id": "GCST003059",
+      "p_value": 1e-06,
+      "genes": []
+    },
+    {
+      "association_id": 13080245,
+      "accession_id": "GCST000490",
+      "p_value": 9e-06,
+      "genes": [
+        "AAK1"
+      ]
+    },
+    {
+      "association_id": 13080244,
+      "accession_id": "GCST000490",
+      "p_value": 5e-07,
+      "genes": [
+        "PRRG4",
+        "QSER1"
+      ]
+    },
+    {
+      "association_id": 13080243,
+      "accession_id": "GCST000490",
+      "p_value": 8e-06,
+      "genes": [
+        "ATF6"
+      ]
+    },
+    {
+      "association_id": 13080242,
+      "accession_id": "GCST000490",
+      "p_value": 3e-06,
+      "genes": [
+        "GABRG3",
+        "OCA2"
+      ]
+    },
+    {
+      "association_id": 13080241,
+      "accession_id": "GCST000490",
+      "p_value": 4e-06,
+      "genes": [
+        "DSG3"
+      ]
+    },
+    {
+      "association_id": 10085772,
+      "accession_id": "GCST002778",
+      "p_value": 2e-06,
+      "genes": [
+        "LINC02582",
+        "RN7SL401P"
+      ]
+    },
+    {
+      "association_id": 10085771,
+      "accession_id": "GCST002778",
+      "p_value": 2e-06,
+      "genes": [
+        "RNU6-667P",
+        "RPL7L1P15"
+      ]
+    },
+    {
+      "association_id": 10085770,
+      "accession_id": "GCST002778",
+      "p_value": 2e-06,
+      "genes": [
+        "HTR2A",
+        "HTR2A-AS1"
+      ]
+    },
+    {
+      "association_id": 10085768,
+      "accession_id": "GCST002778",
+      "p_value": 1e-06,
+      "genes": [
+        "FRG1CP",
+        "MIR663AHG"
+      ]
+    },
+    {
+      "association_id": 10085767,
+      "accession_id": "GCST002778",
+      "p_value": 1e-06,
+      "genes": [
+        "KCNIP4"
+      ]
+    },
+    {
+      "association_id": 10085766,
+      "accession_id": "GCST002778",
+      "p_value": 9e-07,
+      "genes": [
+        "PABPN1L",
+        "TRAPPC2L"
+      ]
+    },
+    {
+      "association_id": 10085765,
+      "accession_id": "GCST002778",
+      "p_value": 7e-07,
+      "genes": [
+        "ZP3"
+      ]
+    },
+    {
+      "association_id": 10085764,
+      "accession_id": "GCST002778",
+      "p_value": 3e-07,
+      "genes": [
+        "MX2"
+      ]
+    },
+    {
+      "association_id": 10085763,
+      "accession_id": "GCST002778",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "TCEANC2"
+      ]
+    },
+    {
+      "association_id": 10085762,
+      "accession_id": "GCST002778",
+      "p_value": 5e-08,
+      "genes": [
+        "COL3A1",
+        "DIRC1"
+      ]
+    },
+    {
+      "association_id": 43877,
+      "accession_id": "GCST002544",
+      "p_value": 7e-08,
+      "genes": [
+        "MSR1",
+        "RN7SL474P"
+      ]
+    },
+    {
+      "association_id": 43876,
+      "accession_id": "GCST002544",
+      "p_value": 3e-11,
+      "genes": [
+        "DDRGK1",
+        "LZTS3"
+      ]
+    },
+    {
+      "association_id": 43875,
+      "accession_id": "GCST002544",
+      "p_value": 6e-07,
+      "genes": [
+        "TMPRSS9"
+      ]
+    },
+    {
+      "association_id": 43874,
+      "accession_id": "GCST002544",
+      "p_value": 8e-12,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 43873,
+      "accession_id": "GCST002544",
+      "p_value": 2e-48,
+      "genes": [
+        "MAPT"
+      ]
+    },
+    {
+      "association_id": 43872,
+      "accession_id": "GCST002544",
+      "p_value": 2e-12,
+      "genes": [
+        "BCKDK"
+      ]
+    },
+    {
+      "association_id": 43871,
+      "accession_id": "GCST002544",
+      "p_value": 1e-11,
+      "genes": [
+        "LINC02349",
+        "RORA"
+      ]
+    },
+    {
+      "association_id": 43870,
+      "accession_id": "GCST002544",
+      "p_value": 7e-14,
+      "genes": [
+        "TMEM229B"
+      ]
+    },
+    {
+      "association_id": 43869,
+      "accession_id": "GCST002544",
+      "p_value": 6e-11,
+      "genes": [
+        "GCH1"
+      ]
+    },
+    {
+      "association_id": 43868,
+      "accession_id": "GCST002544",
+      "p_value": 6e-12,
+      "genes": [
+        "CCDC62"
+      ]
+    },
+    {
+      "association_id": 43867,
+      "accession_id": "GCST002544",
+      "p_value": 5e-14,
+      "genes": [
+        "LRRK2",
+        "LRRK2-DT"
+      ]
+    },
+    {
+      "association_id": 43866,
+      "accession_id": "GCST002544",
+      "p_value": 1e-11,
+      "genes": [
+        "IGSF9B",
+        "SPATA19"
+      ]
+    },
+    {
+      "association_id": 43865,
+      "accession_id": "GCST002544",
+      "p_value": 4e-07,
+      "genes": [
+        "DLG2"
+      ]
+    },
+    {
+      "association_id": 43864,
+      "accession_id": "GCST002544",
+      "p_value": 4e-13,
+      "genes": [
+        "INPP5F"
+      ]
+    },
+    {
+      "association_id": 43863,
+      "accession_id": "GCST002544",
+      "p_value": 1e-12,
+      "genes": [
+        "GPNMB"
+      ]
+    },
+    {
+      "association_id": 43862,
+      "accession_id": "GCST002544",
+      "p_value": 1e-12,
+      "genes": [
+        "HLA-DQB1",
+        "MTCO3P1"
+      ]
+    },
+    {
+      "association_id": 43861,
+      "accession_id": "GCST002544",
+      "p_value": 4e-73,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 43860,
+      "accession_id": "GCST002544",
+      "p_value": 3e-11,
+      "genes": [
+        "FAM47E",
+        "FAM47E-STBD1"
+      ]
+    },
+    {
+      "association_id": 43859,
+      "accession_id": "GCST002544",
+      "p_value": 9.000000000000001e-18,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 43858,
+      "accession_id": "GCST002544",
+      "p_value": 1e-43,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 43857,
+      "accession_id": "GCST002544",
+      "p_value": 2e-21,
+      "genes": [
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 43856,
+      "accession_id": "GCST002544",
+      "p_value": 1e-20,
+      "genes": [
+        "RN7SL813P",
+        "STK39"
+      ]
+    },
+    {
+      "association_id": 43855,
+      "accession_id": "GCST002544",
+      "p_value": 8.999999999999999e-20,
+      "genes": [
+        "CCNT2-AS1"
+      ]
+    },
+    {
+      "association_id": 43854,
+      "accession_id": "GCST002544",
+      "p_value": 5e-10,
+      "genes": [
+        "SIPA1L2"
+      ]
+    },
+    {
+      "association_id": 43853,
+      "accession_id": "GCST002544",
+      "p_value": 2e-16,
+      "genes": [
+        "NUCKS1",
+        "RAB29"
+      ]
+    },
+    {
+      "association_id": 43852,
+      "accession_id": "GCST002544",
+      "p_value": 1e-29,
+      "genes": [
+        "HMGN2P18",
+        "KRTCAP2"
+      ]
+    },
+    {
+      "association_id": 42718,
+      "accession_id": "GCST002455",
+      "p_value": 3e-06,
+      "genes": [
+        "NUCKS1",
+        "RAB29"
+      ]
+    },
+    {
+      "association_id": 42717,
+      "accession_id": "GCST002455",
+      "p_value": 2e-08,
+      "genes": [
+        "KCNN3",
+        "PMVK"
+      ]
+    },
+    {
+      "association_id": 42716,
+      "accession_id": "GCST002455",
+      "p_value": 8e-09,
+      "genes": [
+        "KANSL1"
+      ]
+    },
+    {
+      "association_id": 42715,
+      "accession_id": "GCST002455",
+      "p_value": 2e-27,
+      "genes": [
+        "CNTN1"
+      ]
+    },
+    {
+      "association_id": 41996,
+      "accession_id": "GCST002353",
+      "p_value": 4e-10,
+      "genes": [
+        "LINC01307",
+        "LINC01709"
+      ]
+    },
+    {
+      "association_id": 41930,
+      "accession_id": "GCST002353",
+      "p_value": 8e-07,
+      "genes": [
+        "WNT3"
+      ]
+    },
+    {
+      "association_id": 41929,
+      "accession_id": "GCST002353",
+      "p_value": 2e-06,
+      "genes": [
+        "WNT3"
+      ]
+    },
+    {
+      "association_id": 41928,
+      "accession_id": "GCST002353",
+      "p_value": 5e-10,
+      "genes": [
+        "HLA-DRA"
+      ]
+    },
+    {
+      "association_id": 41927,
+      "accession_id": "GCST002353",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "HLA-DRA"
+      ]
+    },
+    {
+      "association_id": 41926,
+      "accession_id": "GCST002353",
+      "p_value": 3e-11,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 41925,
+      "accession_id": "GCST002353",
+      "p_value": 1e-09,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 40107,
+      "accession_id": "GCST002353",
+      "p_value": 5e-10,
+      "genes": [
+        "LINC01307",
+        "LINC01709"
+      ]
+    },
+    {
+      "association_id": 34100,
+      "accession_id": "GCST002077",
+      "p_value": 6e-07,
+      "genes": [
+        "COL13A1"
+      ]
+    },
+    {
+      "association_id": 34099,
+      "accession_id": "GCST002077",
+      "p_value": 2e-07,
+      "genes": [
+        "TMC3",
+        "TMC3-AS1"
+      ]
+    },
+    {
+      "association_id": 34098,
+      "accession_id": "GCST002077",
+      "p_value": 2e-07,
+      "genes": [
+        "CCDC82"
+      ]
+    },
+    {
+      "association_id": 21705,
+      "accession_id": "GCST001546",
+      "p_value": 9e-06,
+      "genes": [
+        "CTC1"
+      ]
+    },
+    {
+      "association_id": 21704,
+      "accession_id": "GCST001546",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "LMNB1",
+        "MARCHF3"
+      ]
+    },
+    {
+      "association_id": 21703,
+      "accession_id": "GCST001546",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "ODAPH"
+      ]
+    },
+    {
+      "association_id": 21702,
+      "accession_id": "GCST001546",
+      "p_value": 4e-06,
+      "genes": [
+        "CLRN3"
+      ]
+    },
+    {
+      "association_id": 21701,
+      "accession_id": "GCST001546",
+      "p_value": 2e-06,
+      "genes": [
+        "LINC02866",
+        "SIRLNT"
+      ]
+    },
+    {
+      "association_id": 21339,
+      "accession_id": "GCST001445",
+      "p_value": 2.9999999999999995e-21,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 21271,
+      "accession_id": "GCST001445",
+      "p_value": 4.9999999999999995e-11,
+      "genes": [
+        "MMRN1",
+        "SNCA-AS1"
+      ]
+    },
+    {
+      "association_id": 21270,
+      "accession_id": "GCST001445",
+      "p_value": 5.999999999999999e-65,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 21269,
+      "accession_id": "GCST001445",
+      "p_value": 6.0000000000000005e-15,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 21268,
+      "accession_id": "GCST001445",
+      "p_value": 8e-52,
+      "genes": []
+    },
+    {
+      "association_id": 21267,
+      "accession_id": "GCST001445",
+      "p_value": 3e-12,
+      "genes": [
+        "DGKQ"
+      ]
+    },
+    {
+      "association_id": 21218,
+      "accession_id": "GCST001430",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "PRDM15"
+      ]
+    },
+    {
+      "association_id": 21115,
+      "accession_id": "GCST001430",
+      "p_value": 2e-10,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 21114,
+      "accession_id": "GCST001430",
+      "p_value": 3e-17,
+      "genes": [
+        "WNT3"
+      ]
+    },
+    {
+      "association_id": 21112,
+      "accession_id": "GCST001430",
+      "p_value": 4e-07,
+      "genes": [
+        "PRSS53",
+        "ZNF646"
+      ]
+    },
+    {
+      "association_id": 21111,
+      "accession_id": "GCST001430",
+      "p_value": 1e-06,
+      "genes": [
+        "LINC02349",
+        "RORA"
+      ]
+    },
+    {
+      "association_id": 21110,
+      "accession_id": "GCST001430",
+      "p_value": 1e-06,
+      "genes": [
+        "SLC2A13"
+      ]
+    },
+    {
+      "association_id": 21109,
+      "accession_id": "GCST001430",
+      "p_value": 3e-06,
+      "genes": [
+        "ANO5"
+      ]
+    },
+    {
+      "association_id": 21108,
+      "accession_id": "GCST001430",
+      "p_value": 5e-07,
+      "genes": [
+        "SH3GL2"
+      ]
+    },
+    {
+      "association_id": 21107,
+      "accession_id": "GCST001430",
+      "p_value": 1e-06,
+      "genes": [
+        "CTSB",
+        "FDFT1"
+      ]
+    },
+    {
+      "association_id": 21106,
+      "accession_id": "GCST001430",
+      "p_value": 3e-11,
+      "genes": [
+        "HLA-DRA",
+        "TSBP1-AS1"
+      ]
+    },
+    {
+      "association_id": 21105,
+      "accession_id": "GCST001430",
+      "p_value": 9e-07,
+      "genes": [
+        "CNKSR3"
+      ]
+    },
+    {
+      "association_id": 21104,
+      "accession_id": "GCST001430",
+      "p_value": 8e-35,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 21103,
+      "accession_id": "GCST001430",
+      "p_value": 3e-07,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 21102,
+      "accession_id": "GCST001430",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "DGKQ"
+      ]
+    },
+    {
+      "association_id": 21101,
+      "accession_id": "GCST001430",
+      "p_value": 3e-06,
+      "genes": [
+        "RN7SL813P",
+        "STK39"
+      ]
+    },
+    {
+      "association_id": 21100,
+      "accession_id": "GCST001430",
+      "p_value": 2e-07,
+      "genes": [
+        "CCNT2-AS1"
+      ]
+    },
+    {
+      "association_id": 21099,
+      "accession_id": "GCST001430",
+      "p_value": 5e-08,
+      "genes": [
+        "SLC50A1"
+      ]
+    },
+    {
+      "association_id": 18877,
+      "accession_id": "GCST001189",
+      "p_value": 7e-07,
+      "genes": [
+        "WNT3"
+      ]
+    },
+    {
+      "association_id": 18876,
+      "accession_id": "GCST001189",
+      "p_value": 3e-07,
+      "genes": [
+        "NSF"
+      ]
+    },
+    {
+      "association_id": 18875,
+      "accession_id": "GCST001189",
+      "p_value": 3e-06,
+      "genes": [
+        "UNC13B"
+      ]
+    },
+    {
+      "association_id": 18555,
+      "accession_id": "GCST001126",
+      "p_value": 6e-07,
+      "genes": [
+        "CYCSP42",
+        "RNU6-1326P"
+      ]
+    },
+    {
+      "association_id": 18554,
+      "accession_id": "GCST001126",
+      "p_value": 2e-07,
+      "genes": [
+        "RIT2"
+      ]
+    },
+    {
+      "association_id": 18553,
+      "accession_id": "GCST001126",
+      "p_value": 1e-07,
+      "genes": [
+        "SLC41A1"
+      ]
+    },
+    {
+      "association_id": 18552,
+      "accession_id": "GCST001126",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "SREBF1"
+      ]
+    },
+    {
+      "association_id": 18550,
+      "accession_id": "GCST001126",
+      "p_value": 4e-08,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 18549,
+      "accession_id": "GCST001126",
+      "p_value": 8e-10,
+      "genes": [
+        "FAM47E",
+        "FAM47E-STBD1"
+      ]
+    },
+    {
+      "association_id": 18548,
+      "accession_id": "GCST001126",
+      "p_value": 3e-10,
+      "genes": [
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 18547,
+      "accession_id": "GCST001126",
+      "p_value": 3e-14,
+      "genes": [
+        "MAPT-AS1",
+        "SPPL2C"
+      ]
+    },
+    {
+      "association_id": 18546,
+      "accession_id": "GCST001126",
+      "p_value": 2e-19,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 18545,
+      "accession_id": "GCST001126",
+      "p_value": 5e-21,
+      "genes": []
+    },
+    {
+      "association_id": 18544,
+      "accession_id": "GCST001126",
+      "p_value": 2e-28,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 17279,
+      "accession_id": "GCST000959",
+      "p_value": 1e-28,
+      "genes": [
+        "LINC02210",
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 17278,
+      "accession_id": "GCST000959",
+      "p_value": 3.0000000000000003e-13,
+      "genes": [
+        "CCDC62"
+      ]
+    },
+    {
+      "association_id": 17277,
+      "accession_id": "GCST000959",
+      "p_value": 6e-14,
+      "genes": [
+        "LRRK2"
+      ]
+    },
+    {
+      "association_id": 17276,
+      "accession_id": "GCST000959",
+      "p_value": 2e-14,
+      "genes": []
+    },
+    {
+      "association_id": 17275,
+      "accession_id": "GCST000959",
+      "p_value": 2e-47,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 17274,
+      "accession_id": "GCST000959",
+      "p_value": 1e-16,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 17273,
+      "accession_id": "GCST000959",
+      "p_value": 4e-12,
+      "genes": [
+        "TMEM175"
+      ]
+    },
+    {
+      "association_id": 17272,
+      "accession_id": "GCST000959",
+      "p_value": 8e-12,
+      "genes": [
+        "MCCC1"
+      ]
+    },
+    {
+      "association_id": 17271,
+      "accession_id": "GCST000959",
+      "p_value": 4e-10,
+      "genes": [
+        "RN7SL813P",
+        "STK39"
+      ]
+    },
+    {
+      "association_id": 17270,
+      "accession_id": "GCST000959",
+      "p_value": 7.000000000000001e-09,
+      "genes": [
+        "CCNT2-AS1"
+      ]
+    },
+    {
+      "association_id": 17269,
+      "accession_id": "GCST000959",
+      "p_value": 4e-12,
+      "genes": [
+        "LAMTOR2",
+        "RAB25"
+      ]
+    },
+    {
+      "association_id": 16692,
+      "accession_id": "GCST000874",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 16691,
+      "accession_id": "GCST000874",
+      "p_value": 2e-07,
+      "genes": [
+        "POLR3B",
+        "RFX4"
+      ]
+    },
+    {
+      "association_id": 16690,
+      "accession_id": "GCST000874",
+      "p_value": 2e-06,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 16622,
+      "accession_id": "GCST000855",
+      "p_value": 7e-12,
+      "genes": [
+        "MAPT"
+      ]
+    },
+    {
+      "association_id": 16619,
+      "accession_id": "GCST000855",
+      "p_value": 9e-16,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 16618,
+      "accession_id": "GCST000855",
+      "p_value": 3e-06,
+      "genes": [
+        "RBMS3"
+      ]
+    },
+    {
+      "association_id": 15753,
+      "accession_id": "GCST000772",
+      "p_value": 1e-06,
+      "genes": [
+        "NSF"
+      ]
+    },
+    {
+      "association_id": 15752,
+      "accession_id": "GCST000772",
+      "p_value": 3e-11,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 15751,
+      "accession_id": "GCST000772",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "GAK"
+      ]
+    },
+    {
+      "association_id": 15750,
+      "accession_id": "GCST000772",
+      "p_value": 2e-10,
+      "genes": [
+        "HLA-DRA"
+      ]
+    },
+    {
+      "association_id": 14426,
+      "accession_id": "GCST000567",
+      "p_value": 3e-06,
+      "genes": [
+        "GFPT2",
+        "RNU6-525P"
+      ]
+    },
+    {
+      "association_id": 14424,
+      "accession_id": "GCST000567",
+      "p_value": 2e-06,
+      "genes": [
+        "DGKQ"
+      ]
+    },
+    {
+      "association_id": 14423,
+      "accession_id": "GCST000567",
+      "p_value": 1e-06,
+      "genes": [
+        "BRINP1"
+      ]
+    },
+    {
+      "association_id": 14422,
+      "accession_id": "GCST000567",
+      "p_value": 5e-07,
+      "genes": [
+        "PAX7",
+        "TAS1R2"
+      ]
+    },
+    {
+      "association_id": 14421,
+      "accession_id": "GCST000567",
+      "p_value": 7e-08,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 14419,
+      "accession_id": "GCST000567",
+      "p_value": 6.000000000000001e-08,
+      "genes": [
+        "PLEKHM1"
+      ]
+    },
+    {
+      "association_id": 14212,
+      "accession_id": "GCST000528",
+      "p_value": 4e-07,
+      "genes": [
+        "FAM47E",
+        "FAM47E-STBD1"
+      ]
+    },
+    {
+      "association_id": 14179,
+      "accession_id": "GCST000528",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "ISM1",
+        "TASP1"
+      ]
+    },
+    {
+      "association_id": 14177,
+      "accession_id": "GCST000528",
+      "p_value": 1e-07,
+      "genes": [
+        "MMRN1",
+        "SNCA-AS1"
+      ]
+    },
+    {
+      "association_id": 14176,
+      "accession_id": "GCST000528",
+      "p_value": 4.9999999999999996e-06,
+      "genes": [
+        "ITGA8"
+      ]
+    },
+    {
+      "association_id": 14175,
+      "accession_id": "GCST000528",
+      "p_value": 7e-08,
+      "genes": [
+        "CYP17A1",
+        "WBP1L"
+      ]
+    },
+    {
+      "association_id": 14174,
+      "accession_id": "GCST000528",
+      "p_value": 3e-06,
+      "genes": [
+        "DDHD1-DT",
+        "LINC02331"
+      ]
+    },
+    {
+      "association_id": 14171,
+      "accession_id": "GCST000528",
+      "p_value": 1e-14,
+      "genes": [
+        "NSF"
+      ]
+    },
+    {
+      "association_id": 14170,
+      "accession_id": "GCST000528",
+      "p_value": 7e-08,
+      "genes": [
+        "NUCKS1"
+      ]
+    },
+    {
+      "association_id": 14169,
+      "accession_id": "GCST000528",
+      "p_value": 2e-16,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 14168,
+      "accession_id": "GCST000528",
+      "p_value": 2e-16,
+      "genes": [
+        "LINC02210",
+        "LINC02210-CRHR1"
+      ]
+    },
+    {
+      "association_id": 14142,
+      "accession_id": "GCST000530",
+      "p_value": 3.0000000000000004e-08,
+      "genes": [
+        "SLC2A13"
+      ]
+    },
+    {
+      "association_id": 14141,
+      "accession_id": "GCST000530",
+      "p_value": 7e-17,
+      "genes": [
+        "SNCA"
+      ]
+    },
+    {
+      "association_id": 14140,
+      "accession_id": "GCST000530",
+      "p_value": 3.0000000000000004e-09,
+      "genes": [
+        "BST1"
+      ]
+    },
+    {
+      "association_id": 14139,
+      "accession_id": "GCST000530",
+      "p_value": 2e-12,
+      "genes": [
+        "RAB29",
+        "SLC41A1"
+      ]
+    },
+    {
+      "association_id": 12010,
+      "accession_id": "GCST000261",
+      "p_value": 7e-07,
+      "genes": [
+        "GAK"
+      ]
+    },
+    {
+      "association_id": 6160,
+      "accession_id": "GCST000002",
+      "p_value": 8e-06,
+      "genes": [
+        "SEMA5A"
+      ]
+    },
+    {
+      "association_id": 6158,
+      "accession_id": "GCST000005",
+      "p_value": 2e-06,
+      "genes": [
+        "RPL9P21",
+        "TMEM72-AS1"
+      ]
+    },
+    {
+      "association_id": 6157,
+      "accession_id": "GCST000005",
+      "p_value": 2e-06,
+      "genes": [
+        "STAP1"
+      ]
+    },
+    {
+      "association_id": 6156,
+      "accession_id": "GCST000005",
+      "p_value": 7e-06,
+      "genes": [
+        "DLG2"
+      ]
+    }
+  ],
+  "metadata": {
+    "disease": "Parkinson's disease",
+    "disease_key": "parkinson",
+    "efo_id": "EFO_0002508",
+    "mondo_id": "MONDO_0005180",
+    "show_child_traits": false,
+    "extended_geneset": false,
+    "retrieval_date": "2026-09-19T14:00:11+00:00",
+    "number_associations": 814,
+    "number_unique_genes": 520,
+    "api_base": "https://www.ebi.ac.uk/gwas/rest/api/v2",
+    "catalog_trait_id": "MONDO_0005180",
+    "pages_fetched": 5,
+    "trait_label": "Parkinson disease",
+    "trait_uri": "http://purl.obolibrary.org/obo/MONDO_0005180",
+    "label_source": "EBI OLS"
+  }
+}

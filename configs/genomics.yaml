@@ -1,0 +1,40 @@
+# =====================================================================
+# Genomics configuration (Parts M, N, O, Q) — mirrors the verified
+# retrieval semantics from the existing BrainVuln pipeline.
+# =====================================================================
+
+gwas:
+  source: gwas_catalog_rest_v2        # https://www.ebi.ac.uk/gwas/rest/docs
+  disease: alzheimer
+  disease_label: "Alzheimer disease"
+  trait_id: MONDO_0004975             # OLS-verified; Catalog v2 filters use MONDO ids
+  show_child_traits: false            # explicit child-trait policy
+  extended_geneset: false             # default (non-extended) gene mapping
+  tier_b:
+    source: open_targets_graphql      # higher-confidence genetic-evidence layer
+    endpoint: https://api.platform.opentargets.org/api/v4/graphql
+    min_overall_score: 0.1            # stringent variant in CLI: 0.5
+  retrieval: results/gene_sets/       # provenance JSON per disease (date, counts, policy)
+  note: "mapped genes are statistically associated, not causal"
+
+ahba:
+  tool: abagen                        # https://abagen.readthedocs.io
+  atlas: dk68_tianS1                  # DK cortical + Tian S1 subcortical union, unique labels
+  probe_selection: differential_stability
+  corrected_mni: true
+  missing_parcels: keep_missing       # never fill; unsampled parcels stay NaN
+  return_donors: true                 # donor-level outputs for LOO (Part U)
+  outputs: data/derived/
+
+gene_score:
+  primary: mean_z                     # S_r = mean over genes of parcel-wise gene z
+  sensitivity: [mean_rank, first_pc, p_weighted_mean_z]
+  gene_z_dimension: genes
+
+matched_null:                         # Part Q
+  n_sets: 5000
+  covariates: [mean_expression, expression_variance]
+  # sensitivity extensions (gene length, SNP density, GWAS detectability)
+  # require external annotation and remain documented extensions
+  background: bing_scale
+  seed: 42

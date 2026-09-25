@@ -1,0 +1,12 @@
+Expression: 86 parcels x 15633 genes (dropped unsampled parcels: 1)
+  alzheimer: 1817/3560 gene-set genes measured in AHBA (1743 unmeasured genes excluded)
+  [figures] warning: boolean index did not match indexed array along dimension 0; dimension is 4 but corresponding boolean dimension is 1
+
+Results written to C:\Users\kanishk thakur\Desktop\now pro\results\analysis\run_primary_results.json
+
+== Alzheimer's disease ==
+  genes: 1817 (gwascat)
+  H1 matched-null p (peak / range): 0.0230 / 0.0115
+  H2 rho vs disease map: 0.114
+  H3 spatial p: {'moran': 0.7611940298507462, 'burt2020': 0.5024875621890548} -> robust=False
+  donor LOOCV: median r = 0.093 (IQR 0.079-0.141)

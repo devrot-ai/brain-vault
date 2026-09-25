@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brainvuln"
+version = "0.1.0"
+description = "A reproducible imaging-transcriptomics framework for modeling selective vulnerability in neurodegenerative disease"
+readme = "README.md"
+requires-python = ">=3.9,<3.12"
+license = { text = "MIT" }
+authors = [{ name = "BrainVuln contributors" }]
+keywords = [
+    "imaging-transcriptomics",
+    "allen-human-brain-atlas",
+    "gwas-catalog",
+    "open-targets",
+    "spatial-nulls",
+    "neurodegeneration",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    # pandas is capped: abagen 0.1.3 uses groupby(axis=...)/set_axis(inplace=)
+    # removed in pandas >= 2.1
+    "numpy>=1.22,<2.0",
+    "pandas>=1.4,<2.1",
+    "scipy>=1.8",
+    "statsmodels>=0.13",
+    "pyyaml>=6.0",
+    "requests>=2.28",
+    "gql[requests]>=3.4",
+    "pyarrow>=10.0",
+]
+
+[project.optional-dependencies]
+atlas = [
+    "nibabel>=4.0",
+    "nilearn>=0.9",
+    "matplotlib>=3.5",
+    "seaborn>=0.12",
+    "abagen>=0.1.3",
+    "neuromaps>=0.0.3",
+    "brainspace>=0.1.10",
+    "openpyxl>=3.1",
+]
+ml = [
+    "torch>=2.4,<2.5",
+    "monai>=1.4,<1.5",
+    "scikit-learn>=1.4",
+    "gradio>=4.0",
+    "openpyxl>=3.1",
+]
+dev = [
+    "pytest>=8.0",
+    "pypdf>=4.0",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/brainvuln/brainvuln"
+
+[project.scripts]
+brainvuln-fetch-gene-sets = "brainvuln.scripts_entry:fetch_gene_sets_main"
+brainvuln-build-expression = "brainvuln.scripts_entry:build_expression_main"
+brainvuln-run-pipeline = "brainvuln.scripts_entry:run_pipeline_main"
+brainvuln-make-score-map = "brainvuln.scripts_entry:make_score_map_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::FutureWarning",
+]

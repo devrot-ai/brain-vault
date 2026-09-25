@@ -1,0 +1,17 @@
+{
+  "image": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\raw\\oasis1\\extracted\\disc1\\disc1\\OAS1_0013_MR1\\PROCESSED\\MPRAGE\\T88_111\\OAS1_0013_MR1_mpr_n4_anon_111_t88_masked_gfc.img",
+  "probability": 0.43138858675956726,
+  "label": "Alzheimer's disease",
+  "threshold": 0.06999999999999999,
+  "threshold_source": "frozen validation threshold",
+  "model": "BrainVuln-ResNet18Binary",
+  "checkpoint": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed42\\checkpoints\\best.pt",
+  "checkpoint_identity": {
+    "path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed42\\checkpoints\\best.pt",
+    "filename": "best.pt",
+    "sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+    "size_bytes": 133540267
+  },
+  "checkpoint_sha256": "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9",
+  "disclaimer": "Research use only. Not a clinical diagnostic system. Trained on a small research cohort; no causal or clinical claims."
+}

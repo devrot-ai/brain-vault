@@ -1,0 +1,35 @@
+{
+  "run_name": "primary",
+  "timestamp_utc": "2026-09-19T15:07:04+00:00",
+  "git_commit": null,
+  "python_version": "3.11.9",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "1.5.3",
+    "scipy": "1.14.1",
+    "statsmodels": "0.14.4",
+    "abagen": "0.1.3",
+    "neuromaps": "0.0.7",
+    "nibabel": "5.4.2",
+    "nilearn": "0.14.1",
+    "brainspace": "0.2.1"
+  },
+  "config_hash": "832bcd6c440308b1c5a51f4e587b1fd8182760f81cc08571b9ac90a1749f5aba",
+  "seed": 42,
+  "spatial_null_seed": 42,
+  "analysis_config_source": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\config\\analysis.yaml",
+  "step": "build_expression",
+  "atlas": "dk68_tianS1",
+  "outputs": {
+    "expression": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\derived\\expression_dk68_tianS1.parquet",
+    "donors_long": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\derived\\expression_dk68_tianS1_donors_long.parquet",
+    "coverage": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\derived\\coverage_dk68_tianS1.csv",
+    "sample_counts": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\derived\\sample_counts_dk68_tianS1.csv",
+    "abagen_report": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\derived\\abagen_report_dk68_tianS1.json"
+  },
+  "n_parcels": 87,
+  "n_genes": 15633,
+  "all_missing_parcels": [
+    "temporalpole_R"
+  ]
+}

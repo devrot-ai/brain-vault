@@ -1,0 +1,27 @@
+name: brainvuln
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10,<3.12
+  # pandas capped: abagen 0.1.3 needs the pandas 1.x API (groupby(axis=...))
+  - numpy>=1.22,<2.0
+  - pandas>=1.4,<2.1
+  - scipy>=1.8
+  - statsmodels>=0.13
+  - pyyaml>=6.0
+  - requests>=2.28
+  - pyarrow>=10.0
+  - nibabel>=4.0
+  - nilearn>=0.9
+  - matplotlib>=3.5
+  - seaborn>=0.12
+  - plotly>=5.0
+  - pip
+  - pip:
+      - gql[requests]>=3.4
+      - abagen>=0.1.3
+      - neuromaps>=0.0.3
+      - brainspace>=0.1.10
+      - pytest>=7.0
+      - ruff>=0.4
+      - -e .

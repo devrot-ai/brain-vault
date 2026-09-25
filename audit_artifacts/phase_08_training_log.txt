@@ -1,0 +1,19 @@
+dataset ok: 8 scans
+epoch 0: train loss 0.7946
+epoch 1: train loss 0.4812
+metrics: {'threshold': 0.5, 'roc_auc': 0.1875, 'pr_auc': 0.4125, 'accuracy': 0.5, 'balanced_accuracy': 0.5, 'sensitivity': 0.0, 'specificity': 1.0, 'precision': 0.0, 'f1': 0.0, 'brier': 0.2513}
+checkpoint saved: audit_artifacts\phase_08_smoke_checkpoint.pt 133549482 bytes
+PHASE8_VERDICT: PASS
+0,
+    "brier": 0.2513467897169466,
+    "confusion": {
+      "tn": 4,
+      "fp": 0,
+      "fn": 4,
+      "tp": 0
+    }
+  },
+  "checkpoint_bytes": 133549482,
+  "n_subjects": 8,
+  "data": "real OASIS-1 preprocessed volumes"
+}

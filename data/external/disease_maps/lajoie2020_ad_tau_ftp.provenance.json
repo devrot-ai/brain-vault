@@ -1,0 +1,42 @@
+{
+  "name": "lajoie2020_ad_tau_ftp",
+  "disease": "alzheimer",
+  "modality": "tau PET (flortaucipir SUVR, cerebellar-referenced)",
+  "space": "MNI152",
+  "sign_convention": "higher = greater tau burden",
+  "citation": "La Joie et al. 2020, Science Translational Medicine 12(571):eaba5732",
+  "source_url": "https://neurovault.org/images/64174/",
+  "license_note": "No explicit license set by the source repository; use for research with full citation and contact the authors before redistribution.",
+  "download_date": "2026-09-20",
+  "raw_file": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\external\\disease_maps\\raw\\lajoie2020_ad_tau_ftp_mni152.nii.gz",
+  "n_subjects": 32,
+  "description": "Average flortaucipir tau-PET SUVR map in 32 patients with Alzheimer's disease.",
+  "persistent_id": "https://identifiers.org/neurovault.image:64174",
+  "import": {
+    "format": "nifti",
+    "mask_zero": true,
+    "resampling": "trilinear (order=1) into atlas grid, cval=NaN",
+    "n_voxels_masked_zero": 1,
+    "n_voxels_outside_map_fov": 207235,
+    "map_grid": [
+      121,
+      145,
+      121
+    ],
+    "atlas_grid": [
+      97,
+      115,
+      97
+    ],
+    "map_file": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\data\\external\\disease_maps\\raw\\lajoie2020_ad_tau_ftp_mni152.nii.gz"
+  },
+  "coverage": {
+    "map": "lajoie2020_ad_tau_ftp",
+    "n_parcels_atlas": 87,
+    "n_parcels_with_value": 87,
+    "coverage_fraction": 1.0,
+    "missing_by_structure": {},
+    "n_subcortical_with_value": 19
+  },
+  "imported_at_utc": "2026-09-20T07:17:10Z"
+}

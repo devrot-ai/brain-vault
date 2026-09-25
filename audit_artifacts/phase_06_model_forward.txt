@@ -1,0 +1,52 @@
+[
+  {
+    "model": "ResNet18Binary",
+    "input_shape": [
+      2,
+      1,
+      128,
+      128,
+      128
+    ],
+    "output_shape": [
+      2
+    ],
+    "logits_finite": true,
+    "prob_range_ok": true,
+    "logits_sample": [
+      -0.05152818188071251,
+      -0.002659972757101059
+    ],
+    "n_parameters": 33366609,
+    "device": "cpu"
+  },
+  {
+    "model": "SimpleCNN3D",
+    "input_shape": [
+      2,
+      1,
+      128,
+      128,
+      128
+    ],
+    "output_shape": [
+      2
+    ],
+    "logits_finite": true,
+    "prob_range_ok": true,
+    "logits_sample": [
+      0.044426314532756805,
+      0.04456070810556412
+    ],
+    "n_parameters": 291345,
+    "device": "cpu"
+  },
+  {
+    "model": "AgeSexBaseline",
+    "skipped": "needs covariate input construction"
+  },
+  {
+    "model": "ResNet18Binary-cuda",
+    "skipped": "CUDA not available (CPU-only torch build)"
+  }
+]

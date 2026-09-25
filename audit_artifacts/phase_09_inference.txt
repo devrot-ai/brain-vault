@@ -1,0 +1,4 @@
+  File "C:\Users\kanishk thakur\Desktop\now pro\audit_artifacts\scripts\phase_09_inference.sh", line 3
+    cd "$(dirname "$0")/../.."
+       ^^^^^^^^^^^^
+SyntaxError: invalid syntax
