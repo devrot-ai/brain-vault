@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BrainVuln — Research Results</title>
+<style>
+:root { --bg:#0d1117; --card:#161b22; --line:#21262d; --fg:#e6edf3;
+        --dim:#8b949e; --acc:#58a6ff; --warn:#d29922; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--fg);
+        font:16px/1.55 -apple-system,Segoe UI,Roboto,sans-serif; }
+.wrap { max-width:1060px; margin:0 auto; padding:32px 20px 80px; }
+h1 { font-size:1.9rem; margin-bottom:4px; }
+h2 { margin:38px 0 12px; font-size:1.25rem; color:var(--acc); }
+.sub { color:var(--dim); }
+.banner { background:rgba(210,153,34,.12); border:1px solid var(--warn);
+  color:#f0d47a; padding:10px 14px; border-radius:8px; margin:18px 0 26px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px; }
+.card { background:var(--card); border:1px solid var(--line);
+  border-radius:10px; padding:14px 16px; }
+.k { color:var(--dim); font-size:.8rem; text-transform:uppercase;
+  letter-spacing:.04em; }
+.v { font-size:1.7rem; font-weight:700; margin:2px 0; }
+.s { color:var(--dim); font-size:.8rem; }
+table { border-collapse:collapse; width:100%; margin:10px 0 6px;
+  background:var(--card); border-radius:10px; overflow:hidden; }
+th,td { padding:8px 12px; border-bottom:1px solid var(--line);
+  text-align:right; font-variant-numeric:tabular-nums; }
+th { color:var(--dim); font-weight:600; font-size:.82rem;
+  text-transform:uppercase; letter-spacing:.03em; }
+th:first-child,td:first-child { text-align:left; }
+tr:last-child td { border-bottom:none; }
+.plots { display:grid; grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+  gap:16px; }
+.plots img { width:100%; background:var(--card); border:1px solid var(--line);
+  border-radius:10px; }
+.note { color:var(--dim); font-size:.9rem; margin-top:6px; }
+ul { margin:8px 0 0 20px; }
+li { margin:5px 0; }
+code { background:var(--card); border:1px solid var(--line); padding:1px 6px;
+  border-radius:5px; font-size:.85em; }
+a { color:var(--acc); }
+footer { margin-top:50px; color:var(--dim); font-size:.85rem;
+  border-top:1px solid var(--line); padding-top:16px; }
+</style></head><body><div class="wrap">
+<h1>BrainVuln</h1>
+<p class="sub">3D ResNet-18 MRI classifier (AD vs CN, OASIS-1) + Grad-CAM
+regional relevance — frozen seed-42 model, subject-level evaluation.</p>
+<div class="banner"><b>Research use only.</b> Not a clinical diagnostic
+system. No output here may inform any clinical decision.</div>
+
+<h2>Held-out test performance <span class="sub">(canonical seed 42, n=27 subjects:
+15 AD / 12 CN)</span></h2>
+<div class="cards">
+
+    <div class="card"><div class="k">ROC-AUC</div><div class="v">0.817</div>
+    <div class="s">95% CI [0.618, 0.972]</div></div>
+
+    <div class="card"><div class="k">PR-AUC</div><div class="v">0.814</div>
+    <div class="s">95% CI [0.604, 0.984]</div></div>
+
+    <div class="card"><div class="k">Sensitivity</div><div class="v">0.867</div>
+    <div class="s">95% CI [0.667, 1.000]</div></div>
+
+    <div class="card"><div class="k">Specificity</div><div class="v">0.417</div>
+    <div class="s">95% CI [0.125, 0.700]</div></div>
+
+    <div class="card"><div class="k">Balanced acc.</div><div class="v">0.642</div>
+    <div class="s">95% CI [0.466, 0.810]</div></div>
+
+    <div class="card"><div class="k">Brier</div><div class="v">0.192</div>
+    <div class="s">95% CI [0.080, 0.314]</div></div>
+</div>
+<p class="note">Operating point: threshold 0.06999999999999999 (Youden's J,
+selected on validation subjects only, before any test contact).
+Model <code>resnet_seed42/checkpoints/best.pt</code>,
+SHA256 <code>5930f0ff……</code>,
+preprocessing <code>t88_masked_gfc-2mm-128cube-brainz-v1</code>.</p>
+
+<h2>Multi-seed robustness <span class="sub">(seeds 42, 1, 2, 3, 4 — only the
+seed differs)</span></h2>
+<table><tr><th>Metric</th><th>Mean ± SD</th><th>Median [IQR]</th>
+<th>Min–Max</th></tr>
+<tr><td>ROC-AUC</td><td>0.800 ± 0.022</td><td>0.794</td><td>0.789–0.817</td><td>0.772–0.828</td></tr>
+<tr><td>PR-AUC</td><td>0.850 ± 0.023</td><td>0.855</td><td>0.844–0.859</td><td>0.814–0.875</td></tr>
+<tr><td>Accuracy</td><td>0.689 ± 0.033</td><td>0.667</td><td>0.667–0.704</td><td>0.667–0.741</td></tr>
+<tr><td>Balanced Acc</td><td>0.678 ± 0.032</td><td>0.683</td><td>0.658–0.683</td><td>0.642–0.725</td></tr>
+<tr><td>Sensitivity</td><td>0.773 ± 0.146</td><td>0.867</td><td>0.733–0.867</td><td>0.533–0.867</td></tr>
+<tr><td>Specificity</td><td>0.583 ± 0.156</td><td>0.583</td><td>0.500–0.583</td><td>0.417–0.833</td></tr>
+<tr><td>Precision</td><td>0.709 ± 0.057</td><td>0.688</td><td>0.684–0.722</td><td>0.650–0.800</td></tr>
+<tr><td>Recall</td><td>0.773 ± 0.146</td><td>0.867</td><td>0.733–0.867</td><td>0.533–0.867</td></tr>
+<tr><td>F1</td><td>0.729 ± 0.058</td><td>0.743</td><td>0.710–0.765</td><td>0.640–0.788</td></tr>
+<tr><td>Brier</td><td>0.277 ± 0.094</td><td>0.283</td><td>0.193–0.297</td><td>0.192–0.421</td></tr>
+</table>
+<table><tr><th>Seed</th><th>ROC-AUC</th><th>PR-AUC</th><th>Sens</th>
+<th>Spec</th><th>Brier</th><th>Threshold</th></tr>
+<tr><td>seed 1</td><td>0.828</td><td>0.875</td><td>0.867</td><td>0.583</td><td>0.193</td><td>0.175</td></tr>
+<tr><td>seed 2</td><td>0.794</td><td>0.859</td><td>0.733</td><td>0.583</td><td>0.421</td><td>0.980</td></tr>
+<tr><td>seed 3</td><td>0.772</td><td>0.844</td><td>0.533</td><td>0.833</td><td>0.283</td><td>0.935</td></tr>
+<tr><td>seed 4</td><td>0.789</td><td>0.855</td><td>0.867</td><td>0.500</td><td>0.297</td><td>0.880</td></tr>
+<tr><td>seed 42 (canonical)</td><td>0.817</td><td>0.814</td><td>0.867</td><td>0.417</td><td>0.192</td><td>0.070</td></tr>
+</table>
+<p class="note">Reproducibility (same seed, run twice): Predictions bitwise identical: <b>True</b> (max |Δp| = 0.00e+00); ROC-AUC 0.789 vs 0.789; checkpoint bytes identical: <b>False</b> (serialization only).</p>
+
+<h2>Prediction &amp; error stability</h2>
+<ul>
+<li>17/27 subjects received the same label from all 5 seeds; 23/27 from ≥4 of 5.</li>
+<li>Median across-seed SD of predicted probability: 0.252 (max 0.472).</li>
+<li>False positives (seed 42): <b>7</b> of 12 CN — persistent in all 5
+seeds: OAS1_0013, OAS1_0337.</li>
+<li>False negatives (seed 42): <b>2</b> of 15 AD — persistent in all 5
+seeds: OAS1_0082, OAS1_0142.</li>
+</ul>
+
+<h2>Confounding &amp; calibration checks</h2>
+<ul>
+<li>Age–probability association: Spearman ?
+(p = ?), sign-consistent across all seeds
+(+0.37 … +0.43) — associative, not causal; demographic component not excluded at n=27.</li>
+<li>Age+sex baseline (train-fitted): test ROC-AUC 0.700 vs CNN 0.817.</li>
+<li>Calibration: slope 0.340, intercept
+0.058 — slope &lt; 1 = overconfident,
+measured but not corrected. Reliability bins (pred → obs): ? → ? · ? → ? · ? → ? · ? → ?.</li>
+</ul>
+
+<h2>Explainability (model-derived, not biology)</h2>
+<ul>
+<li>Grad-CAM coverage: 27/27 test
+subjects from the frozen checkpoint.</li>
+<li>Regional maps: 87-parcel DK/Tian atlas; population M_CNN median pairwise
+Spearman across seeds 0.705 (range 0.459–0.924).</li>
+<li>Grad-CAM vs occlusion agreement (seed 42): Spearman 0.294 — weak; regional
+claims stay coarse.</li>
+</ul>
+
+<h2>Curves &amp; calibration plot <span class="sub">(generated from the actual
+test predictions)</span></h2>
+<div class="plots">
+<img src="assets/roc_curve.png" alt="ROC curve">
+<img src="assets/pr_curve.png" alt="Precision-recall curve">
+<img src="assets/confusion_matrix.png" alt="Confusion matrix">
+<img src="assets/calibration.png" alt="Calibration plot">
+</div>
+
+<h2>Limitations</h2>
+<ul>
+<li>n = 27 held-out subjects, single site, single scanner — all CIs are wide.</li>
+<li>CDR-based "probable AD" labels are not biomarker-confirmed AD.</li>
+<li>No external validation (OASIS-3 / ADNI not run); cross-disease controls pending.</li>
+<li>Matched-gene null not passed: CNN–gene spatial association is not
+demonstrated to be AD-genetics-specific (recorded as a negative result).</li>
+<li>Overconfident probabilities; usable for ranking, not as risk estimates.</li>
+</ul>
+
+<footer>Every number on this page is generated from the frozen artifacts by
+<code>scripts/make_site.py</code> — see
+<a href="https://github.com/devrot-ai/brain-vault">github.com/devrot-ai/brain-vault</a>
+for the full audit trail: <code>audit_artifacts/</code>,
+<code>results/ml/evaluation/</code>, <code>results/ml/multiseed/</code>.</footer>
+</div></body></html>
