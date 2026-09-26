@@ -1,6 +1,6 @@
 # BrainVuln results dashboard
 
-*Generated 2026-09-26T15:04:15+00:00 from evaluation artifacts. Every number below is measured;
+*Generated 2026-09-26T15:21:04+00:00 from evaluation artifacts. Every number below is measured;
 nothing is projected. Research use only — not a clinical diagnostic system.*
 
 ## Model performance (canonical seed-42 baseline, held-out test)
@@ -41,7 +41,7 @@ Youden). Confusion matrix:
 | F1 | 0.729 ± 0.058 | 0.743 [0.710, 0.765] | 0.640–0.788 |
 | Brier | 0.277 ± 0.094 | 0.283 [0.193, 0.297] | 0.192–0.421 |
 
-Reproducibility (phase-19 repeat): * Same seed + same config, run twice: predictions bitwise identical = **True** (max |Δp| = 0.00e+00); ROC-AUC 0.789 vs 0.383; checkpoint bytes identical = False.
+Reproducibility (phase-19 repeat): * Same seed + same config, run twice: predictions bitwise identical = **True** (max |Δp| = 0.00e+00); ROC-AUC 0.789 vs 0.789; checkpoint bytes identical = False.
 
 ## Test subjects
 
