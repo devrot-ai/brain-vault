@@ -1,0 +1,80 @@
+{
+  "test": {
+    "n": 27,
+    "threshold": 0.88,
+    "roc_auc": 0.7888888888888889,
+    "pr_auc": 0.855394746865335,
+    "accuracy": 0.7037037037037037,
+    "balanced_accuracy": 0.6833333333333333,
+    "sensitivity": 0.8666666666666667,
+    "specificity": 0.5,
+    "precision": 0.6842105263157895,
+    "f1": 0.7647058823529411,
+    "brier": 0.2968696852645912,
+    "confusion": {
+      "tn": 6,
+      "fp": 6,
+      "fn": 2,
+      "tp": 13
+    },
+    "bootstrap_ci": {
+      "roc_auc": {
+        "point": 0.7888888888888889,
+        "lo": 0.5998611111111112,
+        "hi": 0.9375
+      },
+      "pr_auc": {
+        "point": 0.855394746865335,
+        "lo": 0.6917705349656931,
+        "hi": 0.9610528910660492
+      },
+      "balanced_accuracy": {
+        "point": 0.6833333333333333,
+        "lo": 0.510922619047619,
+        "hi": 0.8516483516483516
+      },
+      "sensitivity": {
+        "point": 0.8666666666666667,
+        "lo": 0.6666666666666666,
+        "hi": 1.0
+      },
+      "specificity": {
+        "point": 0.5,
+        "lo": 0.2,
+        "hi": 0.7857142857142857
+      },
+      "brier": {
+        "point": 0.2968696852645912,
+        "lo": 0.15736741886611727,
+        "hi": 0.4443072488327172
+      }
+    }
+  },
+  "threshold": 0.88,
+  "threshold_method": "youden",
+  "checkpoint_identity": {
+    "path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed4_repeat\\checkpoints\\best.pt",
+    "filename": "best.pt",
+    "sha256": "134287e02ed80e3559bf95209850983eb80b1fa902dfc79c76c701adb3ce7bd6",
+    "size_bytes": 133540267
+  },
+  "val": {
+    "n": 27,
+    "threshold": 0.88,
+    "roc_auc": 0.9166666666666667,
+    "pr_auc": 0.9549999999999998,
+    "accuracy": 0.9259259259259259,
+    "balanced_accuracy": 0.9333333333333333,
+    "sensitivity": 0.8666666666666667,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "f1": 0.9285714285714286,
+    "brier": 0.1956683445123255,
+    "confusion": {
+      "tn": 12,
+      "fp": 0,
+      "fn": 2,
+      "tp": 13
+    }
+  }
+}

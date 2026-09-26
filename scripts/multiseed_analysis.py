@@ -354,7 +354,8 @@ def main() -> int:
             "max_abs_prob_diff": float(np.max(np.abs(p4 - pr))),
             "roc_auc_seed4": float(met.loc[met['Seed'] == 4, 'ROC-AUC'].iloc[0]),
             "roc_auc_seed4_repeat": classification_metrics(
-                repeat["pred"]["label"].to_numpy(int), pr,
+                repeat["pred"].sort_values("subject_id")["label"].to_numpy(int),
+                pr,
                 repeat["threshold"])["roc_auc"],
             "note": ("identical predictions with differing checkpoint bytes = "
                      "serialization-level nondeterminism only (acceptable per "

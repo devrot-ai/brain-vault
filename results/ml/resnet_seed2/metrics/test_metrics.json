@@ -1,0 +1,80 @@
+{
+  "test": {
+    "n": 27,
+    "threshold": 0.98,
+    "roc_auc": 0.7944444444444444,
+    "pr_auc": 0.8590635625074984,
+    "accuracy": 0.6666666666666666,
+    "balanced_accuracy": 0.6583333333333333,
+    "sensitivity": 0.7333333333333333,
+    "specificity": 0.5833333333333334,
+    "precision": 0.6875,
+    "f1": 0.7096774193548387,
+    "brier": 0.4211806801633692,
+    "confusion": {
+      "tn": 7,
+      "fp": 5,
+      "fn": 4,
+      "tp": 11
+    },
+    "bootstrap_ci": {
+      "roc_auc": {
+        "point": 0.7944444444444444,
+        "lo": 0.6055482456140351,
+        "hi": 0.9450549450549451
+      },
+      "pr_auc": {
+        "point": 0.8590635625074984,
+        "lo": 0.6920229829762152,
+        "hi": 0.9702380952380952
+      },
+      "balanced_accuracy": {
+        "point": 0.6583333333333333,
+        "lo": 0.48075284090909093,
+        "hi": 0.8323529411764705
+      },
+      "sensitivity": {
+        "point": 0.7333333333333333,
+        "lo": 0.5,
+        "hi": 0.9333333333333333
+      },
+      "specificity": {
+        "point": 0.5833333333333334,
+        "lo": 0.2998529411764706,
+        "hi": 0.875
+      },
+      "brier": {
+        "point": 0.4211806801633692,
+        "lo": 0.24464882832547688,
+        "hi": 0.5987826878287069
+      }
+    }
+  },
+  "threshold": 0.98,
+  "threshold_method": "youden",
+  "checkpoint_identity": {
+    "path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed2\\checkpoints\\best.pt",
+    "filename": "best.pt",
+    "sha256": "1ac69639777f7bd7957c5fd8fbfa8cdd631fa484970d9f741e67d3bad9c112c5",
+    "size_bytes": 133540267
+  },
+  "val": {
+    "n": 27,
+    "threshold": 0.98,
+    "roc_auc": 0.8444444444444444,
+    "pr_auc": 0.881401269296006,
+    "accuracy": 0.7777777777777778,
+    "balanced_accuracy": 0.7833333333333333,
+    "sensitivity": 0.7333333333333333,
+    "specificity": 0.8333333333333334,
+    "precision": 0.8461538461538461,
+    "f1": 0.7857142857142857,
+    "brier": 0.4148287700560913,
+    "confusion": {
+      "tn": 10,
+      "fp": 2,
+      "fn": 4,
+      "tp": 11
+    }
+  }
+}

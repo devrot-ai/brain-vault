@@ -1,6 +1,6 @@
 # BrainVuln results dashboard
 
-*Generated 2026-09-25T12:59:25+00:00 from evaluation artifacts. Every number below is measured;
+*Generated 2026-09-26T15:04:15+00:00 from evaluation artifacts. Every number below is measured;
 nothing is projected. Research use only — not a clinical diagnostic system.*
 
 ## Model performance (canonical seed-42 baseline, held-out test)
@@ -28,9 +28,20 @@ Youden). Confusion matrix:
 
 ## Model robustness (multi-seed distribution, seeds 42/1/2/3/4)
 
-*Multi-seed campaign **in progress** — see `audit_artifacts/multiseed_status.md` for per-seed state. This section fills automatically when `scripts/multiseed_analysis.py` completes.*
+| Metric | Mean ± SD | Median [IQR] | Min–Max |
+| --- | --- | --- | --- |
+| ROC-AUC | 0.800 ± 0.022 | 0.794 [0.789, 0.817] | 0.772–0.828 |
+| PR-AUC | 0.850 ± 0.023 | 0.855 [0.844, 0.859] | 0.814–0.875 |
+| Accuracy | 0.689 ± 0.033 | 0.667 [0.667, 0.704] | 0.667–0.741 |
+| Balanced Acc | 0.678 ± 0.032 | 0.683 [0.658, 0.683] | 0.642–0.725 |
+| Sensitivity | 0.773 ± 0.146 | 0.867 [0.733, 0.867] | 0.533–0.867 |
+| Specificity | 0.583 ± 0.156 | 0.583 [0.500, 0.583] | 0.417–0.833 |
+| Precision | 0.709 ± 0.057 | 0.688 [0.684, 0.722] | 0.650–0.800 |
+| Recall | 0.773 ± 0.146 | 0.867 [0.733, 0.867] | 0.533–0.867 |
+| F1 | 0.729 ± 0.058 | 0.743 [0.710, 0.765] | 0.640–0.788 |
+| Brier | 0.277 ± 0.094 | 0.283 [0.193, 0.297] | 0.192–0.421 |
 
-Reproducibility (phase-19 repeat): *Campaign in progress — the seed-4 repeat has not finished.*
+Reproducibility (phase-19 repeat): * Same seed + same config, run twice: predictions bitwise identical = **True** (max |Δp| = 0.00e+00); ROC-AUC 0.789 vs 0.383; checkpoint bytes identical = False.
 
 ## Test subjects
 
@@ -48,7 +59,9 @@ Reproducibility (phase-19 repeat): *Campaign in progress — the seed-4 repeat h
 * Population top region (seed 42): `caudalanteriorcingulate_L` (M_CNN 0.631)
 * Grad-CAM vs occlusion agreement (seed 42): Spearman 0.294
 
-*Campaign in progress — regional-stability table fills post-campaign.*
+* Regions in the population top-10 for all seeds: **0**
+* Regions in top-10 for ≥ 4 seeds: 2/87
+* Table: `results/ml/multiseed/regional_stability.csv`
 
 ## Calibration
 

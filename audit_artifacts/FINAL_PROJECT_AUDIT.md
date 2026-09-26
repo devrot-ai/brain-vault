@@ -1,6 +1,6 @@
 # BrainVuln Final Project Audit
 
-*Generated 2026-09-25T13:57:17+00:00. Every claim below is backed by an artifact path; anything without artifact support is marked not-completed.*
+*Generated 2026-09-26T15:04:15+00:00. Every claim below is backed by an artifact path; anything without artifact support is marked not-completed.*
 
 ## Training Completion
 
@@ -10,9 +10,9 @@
 ## Model Reliability
 
 * Threshold integrity: frozen 0.07 (validation Youden), enforced by tests/test_threshold_frozen.py.
-* Reproducibility (same-seed repeat): pending.
-* Prediction stability across seeds: pending.
-* Explainability stability: pending (campaign in progress).
+* Reproducibility (same-seed repeat): predictions bitwise identical = True (max |dp| 0.00e+00).
+* Prediction stability across seeds: 17/27 subjects unanimous; median probability SD 0.252.
+* Explainability stability: median pairwise regional Spearman 0.705.
 
 ## Test Performance (canonical seed-42, n=27 subjects)
 
@@ -31,7 +31,7 @@ Calibration: slope 0.34 (overconfident); age association Spearman 0.368; confoun
 
 ## Multi-Seed Robustness
 
-*Campaign in progress — distribution pending; seed 1 first result: ROC-AUC 0.828 [0.644, 0.963] (frozen val threshold 0.18). No robustness claims are made until `audit_artifacts/multiseed_robustness.md` exists.*
+* ROC-AUC across seeds: mean 0.800 ± 0.022, median 0.794, range [0.772, 0.828].
 
 ## Explainability
 
@@ -63,7 +63,7 @@ Calibration: slope 0.34 (overconfident); age association Spearman 0.368; confoun
 | --- | --- | --- |
 | MRI model | YES | frozen checkpoint + training history + tests |
 | Held-out evaluation | YES | results/ml/evaluation/test_metrics_subject_level.json |
-| Multi-seed robustness | NO (campaign in progress) | results/ml/multiseed/ + audit_artifacts/multiseed_robustness.md |
+| Multi-seed robustness | YES | results/ml/multiseed/ + audit_artifacts/multiseed_robustness.md |
 | Grad-CAM | YES | 27/27 subject CAMs + regional tables |
 | AHBA | YES | results/ahba/expression parquet + phase_13/14 artifacts |
 | GWAS | YES | results/gene_sets/alzheimer_gwascat.json + phase_12 metadata |
@@ -77,4 +77,4 @@ Anything marked NO must not be presented as completed functionality.
 
 ## Final Readiness
 
-**NOT READY FOR PORTFOLIO DEMONSTRATION (yet)** — the multi-seed campaign and its reliability gates must complete first (see audit_artifacts/multiseed_status.md). All other components are complete and artifact-backed; this verdict flips automatically when `scripts/robustness_report.py` and this generator are re-run after the campaign.
+**FULL PROJECT READY FOR PORTFOLIO DEMONSTRATION** — with the documented limitations above (research-only, no external validation, genetic specificity not demonstrated).

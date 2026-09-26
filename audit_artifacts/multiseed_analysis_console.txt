@@ -4,7 +4,6 @@
 [load] seed 2: threshold 0.98, sha 1ac69639777f7bd7…
 [load] seed 3: threshold 0.94, sha f984a433556715f2…
 [load] seed 4: threshold 0.88, sha 5781f47fb6881a3b…
-[!] seed-4 repeat: not complete yet
 [7] metric table + summary written
       metric  mean    sd  median  iqr_lo  iqr_hi   min   max
      ROC-AUC 0.800 0.022   0.794   0.789   0.817 0.772 0.828
@@ -23,4 +22,7 @@ Balanced Acc 0.678 0.032   0.683   0.658   0.683 0.642 0.725
 [14] pairwise M_CNN Spearman: median 0.705, range [0.459, 0.924] over 10 pairs
 [16] regions in top-10 for ALL seeds: 0 ()
 [18] seed-42 vs others probability Spearman: 0.803, 0.726, 0.756, 0.879
+[19] repeat: predictions bitwise identical = True, max|dp| = 0.00e+00
 ANALYSIS_COMPLETE
+wrote C:\Users\kanishk thakur\Desktop\now pro\audit_artifacts\multiseed_robustness.md
+VERDICT: ROBUST ENOUGH FOR GENOMIC INTEGRATION
