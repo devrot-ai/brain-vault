@@ -118,7 +118,9 @@ def main() -> int:
 
     cohort = pd.read_csv(ROOT / "data" / "splits" / "matched_cohort.csv")
     demo = cohort.set_index("subject")[["Age", "Sex", "eTIV", "nWBV", "ASF"]]
-    diag = {r.subject_id: r.diagnosis for r in runs[42]["pred"].itertuples()}
+    # all per-seed prediction tables share the trainer schema (label 1=AD, 0=CN)
+    diag = {s: ("AD" if int(v) == 1 else "CN")
+            for s, v in runs[42]["pred"].set_index("subject_id")["label"].items()}
 
     # ---- phase 7: metric table ------------------------------------------
     rows = []
@@ -140,7 +142,7 @@ def main() -> int:
             "ROC-AUC": m["roc_auc"], "PR-AUC": m["pr_auc"],
             "Accuracy": m["accuracy"], "Balanced Acc": m["balanced_accuracy"],
             "Sensitivity": m["sensitivity"], "Specificity": m["specificity"],
-            "Precision": m["precision"], "Recall": m["recall"], "F1": m["f1"],
+            "Precision": m["precision"], "Recall": m["sensitivity"], "F1": m["f1"],
             "Brier": m["brier"],
             "ROC-AUC_CI_lo": ci["roc_auc"]["lo"], "ROC-AUC_CI_hi": ci["roc_auc"]["hi"],
             "Threshold": r["threshold"],
@@ -251,7 +253,8 @@ def main() -> int:
     from sklearn.linear_model import LogisticRegression as LR
     cal_rows, bins_all = [], {}
     for seed in SEEDS:
-        y = runs[seed]["pred"]["label"].to_numpy(int)
+        # y must align with w's subject-sorted order (not the prediction CSV order)
+        y = np.array([1 if diag[s] == "AD" else 0 for s in w.index])
         p = w[f"prob_seed{seed}"].to_numpy()
         eps = 1e-6
         lg = np.log(np.clip(p, eps, 1 - eps) / (1 - np.clip(p, eps, 1 - eps)))
