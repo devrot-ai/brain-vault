@@ -76,3 +76,8 @@ results/report.html
 # OS junk
 .DS_Store
 Thumbs.db
+
+# transient console logs from detached drivers
+results/multiseed_analysis_console.log
+results/robustness_report_console.log
+audit_artifacts/multiseed_status_refresh.log

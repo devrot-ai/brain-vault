@@ -1,0 +1,80 @@
+{
+  "test": {
+    "n": 27,
+    "threshold": 0.17500000000000002,
+    "roc_auc": 0.8277777777777777,
+    "pr_auc": 0.8754222629222628,
+    "accuracy": 0.7407407407407407,
+    "balanced_accuracy": 0.7250000000000001,
+    "sensitivity": 0.8666666666666667,
+    "specificity": 0.5833333333333334,
+    "precision": 0.7222222222222222,
+    "f1": 0.7878787878787878,
+    "brier": 0.19274487987932987,
+    "confusion": {
+      "tn": 7,
+      "fp": 5,
+      "fn": 2,
+      "tp": 13
+    },
+    "bootstrap_ci": {
+      "roc_auc": {
+        "point": 0.8277777777777777,
+        "lo": 0.6443827160493828,
+        "hi": 0.9629629629629629
+      },
+      "pr_auc": {
+        "point": 0.8754222629222628,
+        "lo": 0.7203447455322456,
+        "hi": 0.9769306830952591
+      },
+      "balanced_accuracy": {
+        "point": 0.7250000000000001,
+        "lo": 0.5460526315789473,
+        "hi": 0.8778591720779221
+      },
+      "sensitivity": {
+        "point": 0.8666666666666667,
+        "lo": 0.6666666666666666,
+        "hi": 1.0
+      },
+      "specificity": {
+        "point": 0.5833333333333334,
+        "lo": 0.2857142857142857,
+        "hi": 0.8571428571428571
+      },
+      "brier": {
+        "point": 0.19274487987932987,
+        "lo": 0.09368102272047238,
+        "hi": 0.3034429810299275
+      }
+    }
+  },
+  "threshold": 0.17500000000000002,
+  "threshold_method": "youden",
+  "checkpoint_identity": {
+    "path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed1\\checkpoints\\best.pt",
+    "filename": "best.pt",
+    "sha256": "69d918d1dc75a6cbae938b770f3c7b70b0544e4056d7f23e26299b4e4d8eb43a",
+    "size_bytes": 133540267
+  },
+  "val": {
+    "n": 27,
+    "threshold": 0.17500000000000002,
+    "roc_auc": 0.9,
+    "pr_auc": 0.9189825098648627,
+    "accuracy": 0.8518518518518519,
+    "balanced_accuracy": 0.8583333333333334,
+    "sensitivity": 0.8,
+    "specificity": 0.9166666666666666,
+    "precision": 0.9230769230769231,
+    "f1": 0.8571428571428571,
+    "brier": 0.2345559180001382,
+    "confusion": {
+      "tn": 11,
+      "fp": 1,
+      "fn": 3,
+      "tp": 12
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "test": {
+    "n": 27,
+    "threshold": 0.935,
+    "roc_auc": 0.7722222222222221,
+    "pr_auc": 0.8439091344186243,
+    "accuracy": 0.6666666666666666,
+    "balanced_accuracy": 0.6833333333333333,
+    "sensitivity": 0.5333333333333333,
+    "specificity": 0.8333333333333334,
+    "precision": 0.8,
+    "f1": 0.64,
+    "brier": 0.283410115316689,
+    "confusion": {
+      "tn": 10,
+      "fp": 2,
+      "fn": 7,
+      "tp": 8
+    },
+    "bootstrap_ci": {
+      "roc_auc": {
+        "point": 0.7722222222222221,
+        "lo": 0.5642410714285714,
+        "hi": 0.934096638655462
+      },
+      "pr_auc": {
+        "point": 0.8439091344186243,
+        "lo": 0.6626835099424385,
+        "hi": 0.9626793366087852
+      },
+      "balanced_accuracy": {
+        "point": 0.6833333333333333,
+        "lo": 0.4970588235294118,
+        "hi": 0.8543956043956045
+      },
+      "sensitivity": {
+        "point": 0.5333333333333333,
+        "lo": 0.2725757575757576,
+        "hi": 0.8
+      },
+      "specificity": {
+        "point": 0.8333333333333334,
+        "lo": 0.5714285714285714,
+        "hi": 1.0
+      },
+      "brier": {
+        "point": 0.283410115316689,
+        "lo": 0.16330347638388676,
+        "hi": 0.40923483009100503
+      }
+    }
+  },
+  "threshold": 0.935,
+  "threshold_method": "youden",
+  "checkpoint_identity": {
+    "path": "C:\\Users\\kanishk thakur\\Desktop\\now pro\\results\\ml\\resnet_seed3\\checkpoints\\best.pt",
+    "filename": "best.pt",
+    "sha256": "f984a433556715f295b7082984e57fad3569765cc15c47bba2bb3371ec9bb058",
+    "size_bytes": 133540267
+  },
+  "val": {
+    "n": 27,
+    "threshold": 0.935,
+    "roc_auc": 0.85,
+    "pr_auc": 0.8956118299771549,
+    "accuracy": 0.7777777777777778,
+    "balanced_accuracy": 0.8,
+    "sensitivity": 0.6,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "f1": 0.75,
+    "brier": 0.25364189004453935,
+    "confusion": {
+      "tn": 12,
+      "fp": 0,
+      "fn": 6,
+      "tp": 9
+    }
+  }
+}

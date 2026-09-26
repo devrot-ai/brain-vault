@@ -1,0 +1,10 @@
+{
+  "checkpoint_sha_seed4": "5781f47fb6881a3b1928ee23c41ef9c8cba689f23519533731a678cc624e3b27",
+  "checkpoint_sha_seed4_repeat": "134287e02ed80e3559bf95209850983eb80b1fa902dfc79c76c701adb3ce7bd6",
+  "checkpoint_sha_identical": false,
+  "predictions_bitwise_identical": true,
+  "max_abs_prob_diff": 0.0,
+  "roc_auc_seed4": 0.7888888888888889,
+  "roc_auc_seed4_repeat": 0.7888888888888889,
+  "note": "identical predictions with differing checkpoint bytes = serialization-level nondeterminism only (acceptable per the reproducibility rule); materially different predictions would indicate real nondeterminism"
+}

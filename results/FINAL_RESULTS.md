@@ -1,6 +1,6 @@
 # BrainVuln — Final Results (measured only)
 
-*Generated 2026-09-25T12:59:25+00:00. This file contains measured results and their limitations.
+*Generated 2026-09-26T15:04:15+00:00. This file contains measured results and their limitations.
 No marketing claims. Research use only — not a clinical diagnostic system.*
 
 ## Primary model
@@ -38,13 +38,26 @@ Full cohort: 182 subjects (100 AD / 82 CN), deterministic 1:1 matching,
 
 ## Multi-seed results (robustness distribution — seeds 42, 1, 2, 3, 4)
 
-*Multi-seed campaign **in progress** — see `audit_artifacts/multiseed_status.md` for per-seed state. This section fills automatically when `scripts/multiseed_analysis.py` completes.*
+| Metric | Mean ± SD | Median [IQR] | Min–Max |
+| --- | --- | --- | --- |
+| ROC-AUC | 0.800 ± 0.022 | 0.794 [0.789, 0.817] | 0.772–0.828 |
+| PR-AUC | 0.850 ± 0.023 | 0.855 [0.844, 0.859] | 0.814–0.875 |
+| Accuracy | 0.689 ± 0.033 | 0.667 [0.667, 0.704] | 0.667–0.741 |
+| Balanced Acc | 0.678 ± 0.032 | 0.683 [0.658, 0.683] | 0.642–0.725 |
+| Sensitivity | 0.773 ± 0.146 | 0.867 [0.733, 0.867] | 0.533–0.867 |
+| Specificity | 0.583 ± 0.156 | 0.583 [0.500, 0.583] | 0.417–0.833 |
+| Precision | 0.709 ± 0.057 | 0.688 [0.684, 0.722] | 0.650–0.800 |
+| Recall | 0.773 ± 0.146 | 0.867 [0.733, 0.867] | 0.533–0.867 |
+| F1 | 0.729 ± 0.058 | 0.743 [0.710, 0.765] | 0.640–0.788 |
+| Brier | 0.277 ± 0.094 | 0.283 [0.193, 0.297] | 0.192–0.421 |
 
-*Campaign in progress — the seed-4 repeat has not finished.*
+* Same seed + same config, run twice: predictions bitwise identical = **True** (max |Δp| = 0.00e+00); ROC-AUC 0.789 vs 0.383; checkpoint bytes identical = False.
 
 ## Prediction stability
 
-*Campaign in progress — prediction-stability table fills post-campaign.*
+* Median across-seed SD of predicted probability: 0.252 (max 0.472)
+* Subjects with the same label from all 5 seeds: **17/27**
+* Per-subject table: `results/ml/multiseed/prediction_stability.csv`
 
 ## Error analysis
 
@@ -59,7 +72,7 @@ probabilities 0.027/0.042. Per-seed persistence:
 
 ## Age confounding
 
-* Spearman(probability, age): 0.368 (p = 0.059)
+* Spearman(probability, age): 0.368 (p = 0.059) (across seeds: 0.368 to 0.425 — sign-consistent)
 * Pearson: 0.396 (p = 0.041)
 * Age+sex baseline (train-fitted): test ROC-AUC 0.700 vs CNN 0.817
 * Reading: association, not causation; the CNN exceeds the demographic baseline but a demographic component cannot be excluded at n=27 (FPs skew old: mean age 80.6)
