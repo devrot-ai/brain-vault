@@ -1,0 +1,26 @@
+[1] baseline OK: seed-42 sha 5930f0fff9600346…, baseline artifacts archived
+[load] seed 42: threshold 0.07, sha 5930f0fff9600346…
+[load] seed 1: threshold 0.18, sha 69d918d1dc75a6cb…
+[load] seed 2: threshold 0.98, sha 1ac69639777f7bd7…
+[load] seed 3: threshold 0.94, sha f984a433556715f2…
+[load] seed 4: threshold 0.88, sha 5781f47fb6881a3b…
+[!] seed-4 repeat: not complete yet
+[7] metric table + summary written
+      metric  mean    sd  median  iqr_lo  iqr_hi   min   max
+     ROC-AUC 0.800 0.022   0.794   0.789   0.817 0.772 0.828
+      PR-AUC 0.850 0.023   0.855   0.844   0.859 0.814 0.875
+    Accuracy 0.689 0.033   0.667   0.667   0.704 0.667 0.741
+Balanced Acc 0.678 0.032   0.683   0.658   0.683 0.642 0.725
+ Sensitivity 0.773 0.146   0.867   0.733   0.867 0.533 0.867
+ Specificity 0.583 0.156   0.583   0.500   0.583 0.417 0.833
+   Precision 0.709 0.057   0.688   0.684   0.722 0.650 0.800
+      Recall 0.773 0.146   0.867   0.733   0.867 0.533 0.867
+          F1 0.729 0.058   0.743   0.710   0.765 0.640 0.788
+       Brier 0.277 0.094   0.283   0.193   0.297 0.192 0.421
+[9-11] unanimous 5/5 classification: 17/27; 4-5/5 majority: 23/27; always-FP CN: 2; never-FP CN: 5; always-FN AD: 2
+[12] age-prob Spearman across seeds: +0.368 … +0.425 (sign-consistent=True); baseline -0.703
+[13] calibration slope across seeds: 0.319 … 1.221; Brier 0.192 … 0.421
+[14] pairwise M_CNN Spearman: median 0.705, range [0.459, 0.924] over 10 pairs
+[16] regions in top-10 for ALL seeds: 0 ()
+[18] seed-42 vs others probability Spearman: 0.803, 0.726, 0.756, 0.879
+ANALYSIS_COMPLETE
