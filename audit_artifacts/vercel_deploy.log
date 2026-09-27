@@ -1,0 +1,24 @@
+Vercel CLI 60.1.3 (Node.js 24.19.0)
+Deploying brain-vault
+Uploading [--------------------] (0.0B/690KB)
+Uploading [=====---------------] (174.0KB/690KB)
+Uploading [==========----------] (350.7KB/690KB)
+Uploading [===============-----] (523.5KB/690KB)
+Uploading [====================] (690.0KB/690KB)
+  Inspect         https://vercel.com/kanishkthakur12006-8796s-projects/brain-vault/CoEUMvzRpKEzJZ3LtgubshYzn34C
+  Production      https://brain-vault-nhkfac8jc-kanishkthakur12006-8796s-projects.vercel.app
+https://brain-vault-nhkfac8jc-kanishkthakur12006-8796s-projects.vercel.appBuilding…
+Building…
+[2K[1A[2K[G  Production      https://brain-vault-nhkfac8jc-kanishkthakur12006-8796s-projects.vercel.app
+Completing…
+▲ Aliased         https://brain-vault-omega.vercel.app
+
+✓ Ready in 9s
+
+Next steps:
+- Check the deployment response:
+  vercel curl https://brain-vault-nhkfac8jc-kanishkthakur12006-8796s-projects.vercel.app
+- View build logs:
+  vercel inspect brain-vault-nhkfac8jc-kanishkthakur12006-8796s-projects.vercel.app --logs
+- Create a new deployment from the same source:
+  vercel redeploy brain-vault-nhkfac8jc-kanishkthakur12006-8796s-projects.vercel.app

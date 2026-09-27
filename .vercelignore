@@ -1,3 +1,19 @@
-/*
-!/site/
-!/vercel.json
+# Upload only the static site + deploy config (CLI-honored deny list).
+data
+results
+audit_artifacts
+node_modules
+.venv
+.git
+service
+tests
+scripts
+docs
+site/_e2e_volume.nii.gz
+*.tar.gz
+*.zip
+*.pt
+*.nii
+*.nii.gz
+*.parquet
+*.xlsx
