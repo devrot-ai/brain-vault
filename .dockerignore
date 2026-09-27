@@ -1,0 +1,18 @@
+# keep the inference image lean: no data, no model artifacts, no dev tooling
+*
+!service/
+service/**
+!service/predict_volume.py
+!service/app.py
+!service/checkpoint_bootstrap.py
+!service/requirements.txt
+!src/
+!config/
+!data/derived/atlas_dk68_tianS1.nii.gz
+!data/derived/atlas_dk68_tianS1_info.csv
+!results/gradcam/OAS1_0013_gradcam.nii.gz
+!results/ml/resnet_seed42/metrics/test_metrics.json
+!results/ml/resnet_seed42/checkpoints/
+!results/ml/resnet_seed42/checkpoints/best.pt
+!pyproject.toml
+!README.md

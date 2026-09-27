@@ -1,0 +1,26 @@
+# Render.com deployment for the BrainVuln inference service.
+# Create the service from this repo and set the env vars below in the
+# Render dashboard (never commit real values):
+#   BRAINVULN_CHECKPOINT_URL   private URL of the frozen best.pt (required)
+#   BRAINVULN_CHECKPOINT_TOKEN optional bearer token for that URL
+#   BRAINVULN_CORS_ORIGINS     e.g. https://brain-vault.vercel.app
+# The Docker build fails unless the checkpoint verifies against the frozen
+# SHA256 (see service/Dockerfile).
+services:
+  - type: web
+    name: brainvuln-api
+    runtime: docker
+    dockerfilePath: ./service/Dockerfile
+    dockerContext: .
+    plan: standard      # needs >= 2 GB RAM for torch + the 128 MB checkpoint
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: BRAINVULN_CORS_ORIGINS
+        sync: false
+      - key: BRAINVULN_CHECKPOINT_URL
+        sync: false
+      - key: BRAINVULN_CHECKPOINT_TOKEN
+        sync: false
+      - key: BRAINVULN_MAX_UPLOAD_MB
+        value: 200

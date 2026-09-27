@@ -14,6 +14,34 @@ h2 { margin:38px 0 12px; font-size:1.25rem; color:var(--acc); }
 .sub { color:var(--dim); }
 .banner { background:rgba(210,153,34,.12); border:1px solid var(--warn);
   color:#f0d47a; padding:10px 14px; border-radius:8px; margin:18px 0 26px; }
+
+.up {{ background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:20px; margin:10px 0; }}
+.up.drop {{ border-color:var(--acc); background:rgba(88,166,255,.06); }}
+.upfile {{ display:none; }}
+.btn {{ background:var(--acc); color:#0d1117; border:none; border-radius:8px;
+  padding:10px 18px; font-weight:600; font-size:.95rem; cursor:pointer; }}
+.btn:disabled {{ background:#30363d; color:var(--dim); cursor:not-allowed; }}
+.btn.ghost {{ background:transparent; color:var(--acc);
+  border:1px solid var(--acc); margin-left:10px; }}
+.fmeta {{ color:var(--dim); font-size:.9rem; margin:10px 0 0; }}
+.state {{ margin:12px 0 0; font-size:.95rem; }}
+.state b {{ color:var(--acc); }}
+.spin {{ display:inline-block; width:14px; height:14px;
+  border:2px solid var(--acc); border-top-color:transparent; border-radius:50%;
+  animation:sp 0.8s linear infinite; vertical-align:-2px; margin-right:7px; }}
+@keyframes sp {{ to {{ transform:rotate(360deg); }} }}
+.err {{ color:#f85149; margin:10px 0 0; white-space:pre-wrap; }}
+.res {{ margin-top:16px; border-top:1px solid var(--line); padding-top:14px; }}
+.resgrid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:10px; margin:10px 0; }}
+.probbar {{ background:#21262d; border-radius:6px; height:14px; overflow:hidden;
+  margin:6px 0 2px; }}
+.probbar > div {{ height:100%; background:var(--acc); }}
+.regtable td, .regtable th {{ padding:5px 10px; font-size:.88rem; }}
+.camwrap img {{ max-width:100%; border:1px solid var(--line); border-radius:8px;
+  background:#000; margin-top:8px; }}
+
 .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:12px; }
 .card { background:var(--card); border:1px solid var(--line);
@@ -142,6 +170,27 @@ test predictions)</span></h2>
 <img src="assets/calibration.png" alt="Calibration plot">
 </div>
 
+
+<h2>Live inference <span class="sub">(real frozen seed-42 model — upload a NIfTI T1)</span></h2>
+<div class="banner"><b>Research use only.</b> Not a medical diagnosis. This model has
+not been externally validated for clinical use. Outputs are model-derived research
+classifications with known limitations (small cohort, imperfect calibration,
+demographic confounding not excluded).</div>
+<div class="up" id="upbox">
+  <input type="file" id="mriFile" class="upfile" accept=".nii,.nii.gz" />
+  <button class="btn" id="pickBtn" type="button">Upload MRI (.nii / .nii.gz)</button>
+  <button class="btn ghost" id="analyzeBtn" type="button" disabled>Analyze MRI</button>
+  <div class="fmeta" id="fileMeta">Supported input: NIfTI T1 volume (.nii / .nii.gz),
+  up to 200 MB. The canonical pipeline expects a brain-extracted (skull-stripped)
+  T1; raw full-head scans will still be processed but with reduced fidelity.</div>
+  <div class="state" id="state"></div>
+  <div class="err" id="err"></div>
+  <div class="res" id="result" style="display:none"></div>
+</div>
+<p class="note">Uploads are processed in temporary storage and deleted immediately
+after inference; nothing is persisted.</p>
+
+
 <h2>Limitations</h2>
 <ul>
 <li>n = 27 held-out subjects, single site, single scanner — all CIs are wide.</li>
@@ -157,4 +206,175 @@ demonstrated to be AD-genetics-specific (recorded as a negative result).</li>
 <a href="https://github.com/devrot-ai/brain-vault">github.com/devrot-ai/brain-vault</a>
 for the full audit trail: <code>audit_artifacts/</code>,
 <code>results/ml/evaluation/</code>, <code>results/ml/multiseed/</code>.</footer>
-</div></body></html>
+</div>
+<script src="config.js"></script>
+<script>
+
+(function () {
+  var API = window.BRAINVULN_API_BASE || "";
+  if (API.slice(-1) === "/") API = API.slice(0, -1);
+  var MAXMB = window.BRAINVULN_MAX_UPLOAD_MB || 200;
+  var box = document.getElementById("upbox");
+  var fileInput = document.getElementById("mriFile");
+  var pickBtn = document.getElementById("pickBtn");
+  var analyzeBtn = document.getElementById("analyzeBtn");
+  var meta = document.getElementById("fileMeta");
+  var stateEl = document.getElementById("state");
+  var errEl = document.getElementById("err");
+  var resEl = document.getElementById("result");
+  var file = null;
+
+  function fmtMB(b) { return (b / 1048576).toFixed(1) + " MB"; }
+  function setState(kind, txt) {
+    stateEl.innerHTML = kind === "busy"
+      ? '<span class="spin"></span>' + txt
+      : (txt ? "<b>" + kind.toUpperCase() + "</b> — " + txt : "");
+  }
+  function pick(f) {
+    if (!f) return;
+    var ok = /\.nii(\.gz)?$/i.test(f.name);
+    if (!ok) {
+      setState("", "");
+      errEl.textContent = "Unsupported file: " + f.name +
+        ". Please select a .nii or .nii.gz NIfTI volume.";
+      analyzeBtn.disabled = true;
+      meta.textContent = "No file selected.";
+      return;
+    }
+    errEl.textContent = "";
+    file = f;
+    analyzeBtn.disabled = false;
+    meta.textContent = f.name + " · " + fmtMB(f.size) + " · NIfTI";
+    setState("", "File selected. Click Analyze MRI to run the frozen model.");
+  }
+  pickBtn.addEventListener("click", function () { fileInput.click(); });
+  fileInput.addEventListener("change", function () { pick(fileInput.files[0]); });
+  ["dragover", "dragenter"].forEach(function (ev) {
+    box.addEventListener(ev, function (e) {
+      e.preventDefault(); box.classList.add("drop");
+    });
+  });
+  ["dragleave", "drop"].forEach(function (ev) {
+    box.addEventListener(ev, function (e) {
+      e.preventDefault(); box.classList.remove("drop");
+    });
+  });
+  box.addEventListener("drop", function (e) {
+    if (e.dataTransfer && e.dataTransfer.files[0]) pick(e.dataTransfer.files[0]);
+  });
+
+  analyzeBtn.addEventListener("click", function () {
+    errEl.textContent = "";
+    resEl.style.display = "none";
+    if (!API) {
+      setState("", "");
+      errEl.textContent = "Inference backend not configured. This static site " +
+        "needs the BrainVuln FastAPI service (service/app.py) deployed and " +
+        "window.BRAINVULN_API_BASE set in config.js — no demo or simulated " +
+        "results are shown by design.";
+      return;
+    }
+    if (!file) return;
+    if (file.size > MAXMB * 1048576) {
+      errEl.textContent = "File too large (" + fmtMB(file.size) +
+        "); the limit is " + MAXMB + " MB.";
+      return;
+    }
+    analyzeBtn.disabled = true;
+    setState("busy", "Uploading MRI…");
+    var fd = new FormData();
+    fd.append("file", file, file.name);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", API + "/api/predict", true);
+    xhr.upload.onprogress = function (e) {
+      if (e.lengthComputable) {
+        var pct = Math.round((e.loaded / e.total) * 100);
+        setState("busy", "Uploading MRI… " + pct + "%");
+      }
+    };
+    xhr.upload.onload = function () {
+      setState("busy", "Processing: canonical preprocessing → frozen model → " +
+        "Grad-CAM → atlas regions (typically 10–60 s on CPU)…");
+    };  
+    xhr.onload = function () {
+      analyzeBtn.disabled = false;
+      try {
+        var data = JSON.parse(xhr.responseText);
+      } catch (e) {
+        setState("", "");
+        errEl.textContent = "Unexpected non-JSON response (HTTP " +
+          xhr.status + ").";
+        return;
+      }
+      if (xhr.status !== 200 || !data.success) {
+        setState("", "");
+        errEl.textContent = (data && (data.detail || data.reason)) ||
+          ("Request failed (HTTP " + xhr.status + ").");
+        return;
+      }
+      setState("", "");
+      render(data);
+    };
+    xhr.onerror = function () {
+      analyzeBtn.disabled = false;
+      setState("", "");
+      errEl.textContent = "Could not reach the inference backend at " + API +
+        " (network or CORS error).";
+    };
+    xhr.send(fd);
+  });
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;")
+      .replace(String.fromCharCode(92), "&#92;");
+  }
+  function render(d) {
+    var p = d.prediction, mo = d.model, ex = d.explainability;
+    var pct = (p.probability * 100).toFixed(1);
+    var thr = Number(p.threshold).toFixed(3);
+    var rows = (ex.regions || []).slice(0, 10).map(function (r, i) {
+      return "<tr><td>" + (i + 1) + "</td><td>" + esc(r.name) + "</td><td>" +
+        esc(r.structure || "") + "</td><td>" + esc(r.hemisphere || "") +
+        "</td><td>" + r.relevance.toFixed(4) + "</td></tr>";
+    }).join("");
+    resEl.innerHTML =
+      '<h3 style="margin:6px 0 10px">Result <span class="sub">' +
+      esc(d.input.filename) + '</span></h3>' +
+      '<div class="resgrid">' +
+      '<div class="card"><div class="k">Prediction</div>' +
+      '<div class="v">' + esc(p.label) + '</div><div class="s">' +
+      esc(p.label_text) + '</div></div>' +
+      '<div class="card"><div class="k">Probability</div>' +
+      '<div class="v">' + p.probability.toFixed(4) + '</div>' +
+      '<div class="probbar"><div style="width:' + pct + '%"></div></div>' +
+      '<div class="s">threshold ' + thr + '</div></div>' +
+      '<div class="card"><div class="k">Model</div>' +
+      '<div class="s" style="margin-top:6px">' + esc(mo.name) + '<br/>' +
+      'seed ' + esc(mo.seed) + '<br/>SHA256 ' +
+      esc(String(mo.checkpoint_sha256).slice(0, 16)) + '…<br/>' +
+      esc(d.pipeline.preprocess_version) + '</div></div>' +
+      '</div>' +
+      '<div class="card" style="margin:10px 0"><div class="k">Top regions by ' +
+      'model-derived Grad-CAM relevance</div>' +
+      '<table class="regtable"><tr><th>#</th><th>Parcel</th><th>Structure</th>' +
+      '<th>Hemi</th><th>Relevance</th></tr>' + rows + '</table>' +
+      '<div class="note">Model-derived relevance, not biology: high-CAM regions ' +
+      'are regions the network used, not proof of pathology.</div></div>' +
+      (ex.gradcam_png_base64
+        ? '<div class="camwrap card"><div class="k">Grad-CAM overlay</div>' +
+          '<img alt="Grad-CAM overlay" src="data:image/png;base64,' +
+          ex.gradcam_png_base64 + '"/></div>'
+        : "") +
+      '<div class="note">' + esc(d.disclaimer) + '</div>';
+    resEl.style.display = "block";
+    resEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  // test/debug hook: lets automated checks drive the real code path
+  window.__brainvulnTest = { pick: pick, render: render,
+    analyze: function () { analyzeBtn.click(); } };
+})();
+
+</script>
+</body></html>
