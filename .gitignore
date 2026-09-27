@@ -83,3 +83,7 @@ results/robustness_report_console.log
 audit_artifacts/multiseed_status_refresh.log
 
 .vercel
+
+# transient local run artifacts
+audit_artifacts/*.pid
+audit_artifacts/vercel_login.log
