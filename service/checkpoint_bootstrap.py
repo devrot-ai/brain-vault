@@ -47,7 +47,7 @@ def download_checkpoint_if_needed() -> Path | None:
 
     import requests
 
-    headers = {}
+    headers = {"Accept": "application/octet-stream"}  # GitHub asset API
     token = os.environ.get("BRAINVULN_CHECKPOINT_TOKEN", "").strip()
     if token:
         headers["Authorization"] = f"Bearer {token}"
