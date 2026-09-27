@@ -87,3 +87,9 @@ audit_artifacts/multiseed_status_refresh.log
 # transient local run artifacts
 audit_artifacts/*.pid
 audit_artifacts/vercel_login.log
+
+# deployment: canonical atlas + CAM reference template (small, required by service/Dockerfile)
+!data/derived/atlas_dk68_tianS1.nii.gz
+!data/derived/atlas_dk68_tianS1_info.csv
+audit_artifacts/*.nii
+audit_artifacts/*.nii.gz

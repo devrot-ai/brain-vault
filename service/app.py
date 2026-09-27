@@ -51,12 +51,32 @@ except Exception as _exc:  # noqa: BLE001 - startup must fail loudly but cleanly
     print(f"[startup] checkpoint bootstrap failed: {_exc}", file=__import__("sys").stderr)
 
 
+_model_loaded = False
+_load_error = None
+
+
 app = FastAPI(
     title="BrainVuln inference API",
     version="1.0.0",
     description="Canonical BrainVuln model inference. Research use only — "
                 "not a clinical diagnostic system.",
 )
+
+
+@app.on_event("startup")
+async def _warm_model():
+    """Load the canonical model at startup so /api/health reports true
+    readiness (never claims healthy while the model cannot be loaded)."""
+    global _model_loaded, _load_error
+    try:
+        import predict_volume
+        predict_volume._load_model()
+        _model_loaded = True
+        print("[startup] canonical model loaded and verified", flush=True)
+    except Exception as exc:  # noqa: BLE001
+        _load_error = str(exc)
+        print(f"[startup] MODEL LOAD FAILED: {exc}", file=__import__("sys").stderr,
+              flush=True)
 
 
 def _cors_origins() -> list[str]:
@@ -86,13 +106,21 @@ async def root():
 
 @app.get("/api/health")
 async def health():
+    # ready is TRUE only when the checkpoint is verified AND the weights are
+    # actually loaded — never a claim of health with a broken model
+    if not _model_loaded:
+        return JSONResponse(status_code=503, content={
+            "status": "degraded", "ready": False, "model_loaded": False,
+            "reason": _load_error or "model still loading",
+            "expected_sha256": CANONICAL_SHA256,
+        })
     try:
         info = model_info()
-        return {"status": "ok", "ready": True, "model": info}
+        return {"status": "ok", "ready": True, "model_loaded": True,
+                "model": info}
     except (CheckpointIdentityError, FileNotFoundError) as exc:
-        # the service is up but refuses to serve a non-canonical checkpoint
         return JSONResponse(status_code=503, content={
-            "status": "degraded", "ready": False,
+            "status": "degraded", "ready": False, "model_loaded": _model_loaded,
             "reason": str(exc),
             "expected_sha256": CANONICAL_SHA256,
         })
