@@ -24,6 +24,9 @@ COPY service/ service/
 # CAM reference template used by save_cam_nifti (kept from the audited artifacts)
 COPY results/gradcam/OAS1_0013_gradcam.nii.gz results/gradcam/OAS1_0013_gradcam.nii.gz
 
+# package metadata so the editable install of the canonical package works
+COPY pyproject.toml README.md ./
+
 # install the canonical package (preprocessing + models + gradcam + regional)
 RUN pip install --no-cache-dir --no-deps -e .
 
@@ -41,16 +44,22 @@ from predict_volume import CANONICAL_SHA256
 print("build ok; runtime will require checkpoint sha256", CANONICAL_SHA256[:12] + "…")
 PY
 
-# non-root runtime user
-RUN useradd -m -u 10001 appuser
+# non-root runtime user; results/ must be writable by appuser so the startup
+# checkpoint bootstrap can place the SHA-verified best.pt at the canonical path
+RUN useradd -m -u 10001 appuser \
+ && mkdir -p /app/results/ml/resnet_seed42/checkpoints \
+ && chown -R appuser:appuser /app/results
 USER appuser
 
 EXPOSE 8000
 ENV PORT=8000
 
 # healthcheck via the checkpoint-identity endpoint
-HEALTHCHECK --interval=30s --timeout=10s --start-period=90s --retries=3 \
+# start-period covers first boot: 128 MB checkpoint download + SHA verify +
+# weight load on a small ARM CPU
+HEALTHCHECK --interval=30s --timeout=10s --start-period=300s --retries=3 \
   CMD python -c "import urllib.request,sys; \
 sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:'+__import__('os').environ.get('PORT','8000')+'/api/health').status==200 else 1)"
 
-CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# app.py lives in /app/service — point uvicorn's app dir there
+CMD ["sh", "-c", "uvicorn app:app --app-dir service --host 0.0.0.0 --port ${PORT:-8000}"]
