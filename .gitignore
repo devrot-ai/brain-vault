@@ -81,3 +81,5 @@ Thumbs.db
 results/multiseed_analysis_console.log
 results/robustness_report_console.log
 audit_artifacts/multiseed_status_refresh.log
+
+.vercel
