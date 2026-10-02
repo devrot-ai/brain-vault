@@ -1,0 +1,3 @@
+# Local tooling only — needed on YOUR machine to run scripts/sync_hf_space.py.
+# Not used by the service image or the Space build.
+huggingface_hub>=0.23
