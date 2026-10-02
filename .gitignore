@@ -96,3 +96,6 @@ audit_artifacts/*.nii.gz
 
 # local secrets — never commit
 .env
+
+# local HF Space publishing scaffold (the Space gets its own generated README)
+hf_space/
