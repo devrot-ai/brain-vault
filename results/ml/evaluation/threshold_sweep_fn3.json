@@ -1,0 +1,29 @@
+{
+  "n": 27,
+  "cost_fp": 1.0,
+  "cost_fn": 3.0,
+  "youden": {
+    "threshold": 0.6629387755102041,
+    "sensitivity": 0.8,
+    "specificity": 0.8333333333333334,
+    "accuracy": 0.8148148148148148,
+    "balanced_accuracy": 0.8166666666666667,
+    "tp": 12,
+    "tn": 10,
+    "fp": 2,
+    "fn": 3
+  },
+  "cost_optimal": {
+    "threshold": 0.024952,
+    "expected_cost_per_subject": 0.2962962962962963,
+    "sensitivity": 1.0,
+    "specificity": 0.3333333333333333,
+    "accuracy": 0.7037037037037037,
+    "balanced_accuracy": 0.6666666666666666,
+    "tp": 15,
+    "tn": 4,
+    "fp": 8,
+    "fn": 0
+  },
+  "note": "cost-optimal trades sensitivity vs specificity per explicit FP/FN costs; frozen validation threshold (0.07) is the reported operating point unless overridden"
+}

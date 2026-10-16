@@ -463,10 +463,25 @@ def resolve_threshold(
 
 
 def resolve_temperature(config_path: str | Path = DEFAULT_ANALYSIS_CONFIG) -> float:
-    """Optional scalar temperature (default 1.0 = identity)."""
+    """Optional scalar temperature (default 1.0 = identity).
+
+    Reads ``inference.temperature.value`` from the analysis config; falls back
+    to a fitted calibration artifact (``results/ml/evaluation/calibration_fit.json``)
+    when no config value is set.
+    """
     cfg = load_analysis_config(config_path)
     t = cfg.inference.temperature_value
-    return 1.0 if t is None else float(t)
+    if t is not None:
+        return float(t)
+    artifact = PROJECT_ROOT / "results" / "ml" / "evaluation" / "calibration_fit.json"
+    if artifact.is_file():
+        try:
+            t = float(json.loads(artifact.read_text(encoding="utf-8"))["temperature"])
+            if t > 0:
+                return t
+        except (KeyError, ValueError, json.JSONDecodeError, OSError):  # noqa: BLE001
+            pass
+    return 1.0
 
 def sha256_file(path: str | Path, chunk_size: int = 1 << 20) -> str:
     '''SHA-256 over the exact file bytes (streamed; deterministic).'''

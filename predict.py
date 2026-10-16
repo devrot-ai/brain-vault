@@ -38,6 +38,8 @@ def main(argv=None) -> int:
     ap.add_argument("--out-dir", default="outputs")
     ap.add_argument("--threshold", type=float, default=None,
                     help="override the frozen validation threshold")
+    ap.add_argument("--temperature", type=float, default=None,
+                    help="temperature scaling for logits (default: fitted calibration artifact)")
     args = ap.parse_args(argv)
 
     from brainvuln.mri.preprocess import PREPROCESS_VERSION, preprocess_session
@@ -49,8 +51,9 @@ def main(argv=None) -> int:
     model = ResNet18Binary()
     model.load_state_dict(ckpt["state_dict"])
     model.eval()
-    from brainvuln.config import checkpoint_identity, resolve_threshold
+    from brainvuln.config import checkpoint_identity, resolve_threshold, resolve_temperature
     identity = checkpoint_identity(str(ckpt_path))
+    temperature = args.temperature if args.temperature is not None else 1.0
 
     image_path = Path(args.image)
     if not image_path.exists():
@@ -61,7 +64,8 @@ def main(argv=None) -> int:
     volume = preprocess_session(image_path)          # [1, D, H, W]
     x = torch.from_numpy(volume[None].astype(np.float32))  # add batch -> [1,1,D,H,W]
     with torch.no_grad():
-        prob = float(torch.sigmoid(model(x)).item())
+        logit = float(model(x).item())
+        prob = float(torch.sigmoid(torch.tensor(logit / temperature)).item())
 
     threshold, threshold_source = resolve_threshold(args.threshold, ckpt_path)
     label = "Alzheimer's disease" if prob >= threshold else "cognitively normal"
@@ -73,6 +77,8 @@ def main(argv=None) -> int:
     print(f"  {prob:.2f}")
     print("Threshold:")
     print(f"  {threshold:.2f} ({threshold_source})")
+    print("Temperature:")
+    print(f"  {temperature:.3f} ({'explicit --temperature override' if args.temperature is not None else 'identity (no calibration applied)'})")
     print("Model:")
     print(f"  {model_name}")
     print("Checkpoint sha256:")
@@ -89,9 +95,12 @@ def main(argv=None) -> int:
     (out_dir / "prediction.json").write_text(json.dumps({
         "image": str(image_path),
         "probability": prob,
+        "logit": logit,
         "label": label,
         "threshold": threshold,
         "threshold_source": threshold_source,
+        "temperature": temperature,
+        "temperature_source": "explicit --temperature override" if args.temperature is not None else "identity (no calibration applied)",
         "model": model_name,
         "checkpoint": str(ckpt_path),
         "checkpoint_identity": identity,
