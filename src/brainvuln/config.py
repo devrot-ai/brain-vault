@@ -152,6 +152,7 @@ class InferenceConfig:
 
     checkpoint_path: str = DEFAULT_CHECKPOINT_RELPATH
     threshold_value: Optional[float] = None
+    temperature_value: Optional[float] = None
 
 
 @dataclass
@@ -336,10 +337,13 @@ def load_analysis_config(path: str | Path = DEFAULT_ANALYSIS_CONFIG) -> Analysis
     inf_raw = raw.get('inference', {}) or {}
     chk_raw = inf_raw.get('checkpoint', {}) or {}
     thr_raw = inf_raw.get('threshold', {}) or {}
+    temperature_raw = inf_raw.get('temperature', {}) or {}
     threshold_value = thr_raw.get('value')
+    temperature_value = temperature_raw.get('value')
     cfg.inference = InferenceConfig(
         checkpoint_path=str(chk_raw.get('path', DEFAULT_CHECKPOINT_RELPATH)),
         threshold_value=None if threshold_value is None else float(threshold_value),
+        temperature_value=None if temperature_value is None else float(temperature_value),
     )
 
     cfg.source_path = path.resolve()
@@ -421,11 +425,11 @@ def resolve_threshold(
     ckpt_path: str | Path | None = None,
     config_path: str | Path = DEFAULT_ANALYSIS_CONFIG,
 ) -> tuple[float, str]:
-    '''Frozen operating threshold for inference — never silently re-tuned.
+    '''Frozen operating threshold for inference â€” never silently re-tuned.
 
     Source precedence (the active source is always reported to the user):
 
-    1. explicit ``override`` (CLI --threshold) — an explicitly requested
+    1. explicit ``override`` (CLI --threshold) â€” an explicitly requested
        operating point, labeled as an override in all outputs;
     2. the run's frozen metrics file (``metrics/test_metrics.json`` next to
        the checkpoint), written once by the tested train/eval path after
@@ -455,6 +459,14 @@ def resolve_threshold(
                 "frozen threshold from config (inference.threshold.value)")
     return 0.5, "default 0.5 (no frozen threshold available)"
 
+
+
+
+def resolve_temperature(config_path: str | Path = DEFAULT_ANALYSIS_CONFIG) -> float:
+    """Optional scalar temperature (default 1.0 = identity)."""
+    cfg = load_analysis_config(config_path)
+    t = cfg.inference.temperature_value
+    return 1.0 if t is None else float(t)
 
 def sha256_file(path: str | Path, chunk_size: int = 1 << 20) -> str:
     '''SHA-256 over the exact file bytes (streamed; deterministic).'''
