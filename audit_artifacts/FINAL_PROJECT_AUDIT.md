@@ -41,7 +41,7 @@ Calibration: slope 0.34 (overconfident); age association Spearman 0.368; confoun
 ## Genetic Integration & Spatial Statistics
 
 * Full-scale bridge executed (5000 matched-gene + 5000 spatial nulls, `results/bridge/`): the **matched-gene null was not passed** (expression-matched random sets correlate at least as high), so the CNN–gene spatial association is not demonstrated to be AD-genetics-specific. Spatial-structure nulls passed. This is recorded as a negative specificity result, not as success.
-* Independent disease maps: imported with provenance (data/external/disease_maps/); cross-disease negative controls: code verified, results pending final CNN-side confirmation.
+* Independent disease maps: imported with provenance (data/external/disease_maps/); cross-disease negative controls: executed in `results/run_production.log` and reported as mixed/negative (Alzheimer's and Parkinson's controls fail, Huntington's passes).
 
 ## Product / Inference
 
@@ -71,7 +71,7 @@ Calibration: slope 0.34 (overconfident); age association Spearman 0.368; confoun
 | Spatial null | YES | results/bridge/ (Moran + Burt-2020 pass) |
 | Independent disease map | YES | data/external/disease_maps/* + provenance |
 | External cohort | NO (not started) | scripts/stage_oasis3.py, stage_adni.py ready |
-| Cross-disease | NO (pending final CNN-side run) | src/brainvuln/cross_disorder.py verified |
+| Cross-disease | YES (executed; mixed/negative controls) | `results/run_production.log`; `src/brainvuln/cross_disorder.py` |
 
 Anything marked NO must not be presented as completed functionality.
 

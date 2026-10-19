@@ -71,6 +71,9 @@ Reproducibility (phase-19 repeat): * Same seed + same config, run twice: predict
 ## Validation status
 
 * External validation (OASIS-3 / ADNI): **NOT YET PERFORMED**.
+* Cross-disease negative controls: **executed with mixed/negative results**;
+  Alzheimer’s and Parkinson’s controls failed the registered specificity
+  expectation, while Huntington’s passed. See `results/run_production.log`.
 * Genomics integration (GWAS/AHBA bridge): code complete and audited; the
-  CNN side of the bridge awaits the multi-seed gate.
+  corrected Alzheimer’s CNN–gene bridge remains a null result.
 * Research use only. Not a clinical diagnostic system.
