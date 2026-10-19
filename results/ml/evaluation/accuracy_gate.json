@@ -1,0 +1,18 @@
+{
+  "split": "data/splits/val_subjects.csv",
+  "n": 27,
+  "n_positives": 15,
+  "min_accuracy_required": 0.85,
+  "accuracy_at_frozen_threshold": 0.7777777777777778,
+  "frozen_threshold": 0.06999999999999999,
+  "frozen_threshold_source": "frozen validation threshold (metrics/test_metrics.json)",
+  "best_validation_accuracy": 0.7777777777777778,
+  "best_validation_threshold": 0.0846705808338288,
+  "best_accuracy_95ci": [
+    0.5924307113336742,
+    0.8939276054763996
+  ],
+  "thresholds_meeting_target": [],
+  "gate_passed": false,
+  "note": "Validation-only evaluation. No threshold from this report is applied to serving or to the test split; the frozen serving threshold is unchanged."
+}

@@ -144,12 +144,43 @@ python predict.py --image patient_T88.nii.gz   # prints Prediction / Probability
 python app.py                                  # Gradio demo (research-use banner)
 ```
 
-Supported input: OASIS-1-style T1 — the `*_t88_masked_gfc` derivative
-(`.img` with its `.hdr` alongside, or `.nii/.nii.gz` conversions) or any
-`.nii/.nii.gz` T1 near T88/MNI space; the same canonical preprocessing runs
-on everything. Outputs: probability, classification, Grad-CAM planes +
-NIfTI, atlas-derived top regions, and `outputs/prediction.json` (checkpoint
-SHA256, preprocessing version, frozen threshold stamped in).
+Supported input: a **3D NIfTI T1 volume** (`.nii` / `.nii.gz`), ideally the
+OASIS-1 `*_t88_masked_gfc` derivative (skull-stripped, T88-registered) or a
+conversion of it. The same canonical preprocessing runs on everything:
+reorient to RAS+, 2 mm trilinear resample, tight brain crop, 128³ centre
+pad/crop, z-normalise inside nonzero voxels. `predict.py` validates the
+format and volume before inference and exits with a clear message (code 2)
+on non-NIfTI input, empty/non-finite volumes, or a missing file — DICOM
+series and ANALYZE `.hdr/.img` pairs must be converted first (e.g.
+`dcm2niix`). Note the model was trained on skull-stripped volumes; a raw
+(unstripped) head scan is out of distribution because nonzero voxels are
+used as the brain mask. Outputs: probability, classification, Grad-CAM
+planes + NIfTI, atlas-derived top regions, and `outputs/prediction.json`
+(checkpoint SHA256, preprocessing version, frozen threshold, input QC
+stamped in).
+
+### Minimum-accuracy gate (≥ 0.85)
+
+`scripts/eval_validation.py` is the acceptance gate for an 85% accuracy
+floor. It evaluates the canonical checkpoint on the **validation** split
+only, sweeps every distinct validation probability as a candidate cut, and
+exits 0 (PASS) or 1 (FAIL) depending on whether any validation-selected
+threshold reaches the target; 2 means it could not evaluate. It writes
+`results/ml/evaluation/accuracy_gate.json` plus validation predictions. It
+never selects a threshold on test and never changes the frozen serving
+threshold — the gate measures the model, it does not tune it.
+
+```bash
+python scripts/eval_validation.py                  # default gate: >= 0.85
+python scripts/eval_validation.py --min-accuracy 0.9
+```
+
+Past experience here says the current checkpoint does **not** clear 0.85:
+the canonical model's frozen-threshold test accuracy is 0.667, and even the
+best possible threshold on the frozen test predictions only reaches 22/27
+(0.815) — so 85% requires a genuinely better model (retraining/ensembling
+with validation-only selection), not a threshold choice.
+
 
 ## Reproducibility
 

@@ -38,8 +38,9 @@ def main(argv=None) -> int:
     ap.add_argument("--out-dir", default="outputs")
     ap.add_argument("--threshold", type=float, default=None,
                     help="override the frozen validation threshold")
-    ap.add_argument("--temperature", type=float, default=None,
-                    help="temperature scaling for logits (default: fitted calibration artifact)")
+    ap.add_argument("--temperature", default="1.0",
+                    help="logit temperature: a number, or 'auto' for the fitted calibration "
+                         "artifact (default: 1.0, which pairs with the frozen threshold)")
     args = ap.parse_args(argv)
 
     from brainvuln.mri.preprocess import PREPROCESS_VERSION, preprocess_session
@@ -53,15 +54,56 @@ def main(argv=None) -> int:
     model.eval()
     from brainvuln.config import checkpoint_identity, resolve_threshold, resolve_temperature
     identity = checkpoint_identity(str(ckpt_path))
-    temperature = args.temperature if args.temperature is not None else 1.0
+
+    # Temperature: the frozen threshold was selected in UNCALIBRATED probability
+    # space, so identity (1.0) is the default and the only mode that is valid
+    # with the frozen threshold alone. 'auto' applies the fitted calibration,
+    # which changes probability space — pairing it with the uncalibrated
+    # operating point silently moves the decision boundary, so require an
+    # explicit --threshold in that mode.
+    if str(args.temperature).lower() == "auto":
+        temperature = resolve_temperature()
+        if args.threshold is None:
+            print("--temperature auto applies a fitted calibration, which changes probability "
+                  "space; the frozen threshold (0.07) was selected in uncalibrated space. "
+                  "Pass --threshold explicitly to choose the operating point in calibrated "
+                  "space, or omit --temperature to use the frozen operating point.",
+                  file=sys.stderr)
+            return 2
+    else:
+        try:
+            temperature = float(args.temperature)
+        except ValueError:
+            print(f"invalid --temperature {args.temperature!r}: use a number or 'auto'",
+                  file=sys.stderr)
+            return 2
+        if not temperature > 0:
+            print("--temperature must be > 0", file=sys.stderr)
+            return 2
 
     image_path = Path(args.image)
     if not image_path.exists():
         print(f"image not found: {image_path}", file=sys.stderr)
         return 2
+    if not (image_path.name.endswith(".nii") or image_path.name.endswith(".nii.gz")):
+        print(f"unsupported input format: {image_path.name}. BrainVuln takes a 3D NIfTI "
+              "volume (.nii / .nii.gz). DICOM series, JPEG/PNG, or ANALYZE .hdr/.img must be "
+              "converted first (e.g. dcm2niix).", file=sys.stderr)
+        return 2
 
     # same deterministic preprocessing as training (128³, 2 mm, brain z)
-    volume = preprocess_session(image_path)          # [1, D, H, W]
+    try:
+        volume = preprocess_session(image_path)       # [1, D, H, W]
+    except (ValueError, IndexError) as exc:
+        print(f"cannot read MRI volume {image_path}: {exc}. Expected a skull-stripped T1 "
+              "volume (OASIS T88-style, single 3D volume, nonzero brain voxels).",
+              file=sys.stderr)
+        return 2
+    if not np.isfinite(volume).all():
+        print(f"preprocessed volume from {image_path} contains non-finite values",
+              file=sys.stderr)
+        return 2
+    brain_fraction = float((volume[0] != 0).mean())
     x = torch.from_numpy(volume[None].astype(np.float32))  # add batch -> [1,1,D,H,W]
     with torch.no_grad():
         logit = float(model(x).item())
@@ -77,8 +119,11 @@ def main(argv=None) -> int:
     print(f"  {prob:.2f}")
     print("Threshold:")
     print(f"  {threshold:.2f} ({threshold_source})")
+    temperature_source = ("fitted calibration artifact (--temperature auto)"
+                          if str(args.temperature).lower() == "auto"
+                          else "identity (no calibration applied)")
     print("Temperature:")
-    print(f"  {temperature:.3f} ({'explicit --temperature override' if args.temperature is not None else 'identity (no calibration applied)'})")
+    print(f"  {temperature:.3f} ({temperature_source})")
     print("Model:")
     print(f"  {model_name}")
     print("Checkpoint sha256:")
@@ -100,7 +145,13 @@ def main(argv=None) -> int:
         "threshold": threshold,
         "threshold_source": threshold_source,
         "temperature": temperature,
-        "temperature_source": "explicit --temperature override" if args.temperature is not None else "identity (no calibration applied)",
+        "temperature_source": temperature_source,
+        "input_qc": {
+            "format": "NIfTI",
+            "preprocessed_shape": list(volume.shape),
+            "brain_fraction": brain_fraction,
+            "finite": True,
+        },
         "model": model_name,
         "checkpoint": str(ckpt_path),
         "checkpoint_identity": identity,
