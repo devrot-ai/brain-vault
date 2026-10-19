@@ -144,15 +144,14 @@ python predict.py --image patient_T88.nii.gz   # prints Prediction / Probability
 python app.py                                  # Gradio demo (research-use banner)
 ```
 
-Supported input: a **3D NIfTI T1 volume** (`.nii` / `.nii.gz`), ideally the
-OASIS-1 `*_t88_masked_gfc` derivative (skull-stripped, T88-registered) or a
-conversion of it. The same canonical preprocessing runs on everything:
+Supported input: a **3D NIfTI T1 volume** (`.nii` / `.nii.gz`) or an
+OASIS-1 ANALYZE `.img/.hdr` pair, ideally the `*_t88_masked_gfc` derivative
+(skull-stripped, T88-registered) or a conversion of it. The same canonical preprocessing runs on everything:
 reorient to RAS+, 2 mm trilinear resample, tight brain crop, 128³ centre
 pad/crop, z-normalise inside nonzero voxels. `predict.py` validates the
 format and volume before inference and exits with a clear message (code 2)
-on non-NIfTI input, empty/non-finite volumes, or a missing file — DICOM
-series and ANALYZE `.hdr/.img` pairs must be converted first (e.g.
-`dcm2niix`). Note the model was trained on skull-stripped volumes; a raw
+on unsupported input, empty/non-finite volumes, or a missing file — DICOM
+series must be converted first (e.g. `dcm2niix`). Note the model was trained on skull-stripped volumes; a raw
 (unstripped) head scan is out of distribution because nonzero voxels are
 used as the brain mask. Outputs: probability, classification, Grad-CAM
 planes + NIfTI, atlas-derived top regions, and `outputs/prediction.json`

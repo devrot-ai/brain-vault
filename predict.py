@@ -85,10 +85,12 @@ def main(argv=None) -> int:
     if not image_path.exists():
         print(f"image not found: {image_path}", file=sys.stderr)
         return 2
-    if not (image_path.name.endswith(".nii") or image_path.name.endswith(".nii.gz")):
+    supported_nifti = image_path.name.endswith(".nii") or image_path.name.endswith(".nii.gz")
+    supported_analyze = image_path.suffix.lower() == ".img" and image_path.with_suffix(".hdr").is_file()
+    if not (supported_nifti or supported_analyze):
         print(f"unsupported input format: {image_path.name}. BrainVuln takes a 3D NIfTI "
-              "volume (.nii / .nii.gz). DICOM series, JPEG/PNG, or ANALYZE .hdr/.img must be "
-              "converted first (e.g. dcm2niix).", file=sys.stderr)
+              "volume (.nii / .nii.gz) or an ANALYZE .img/.hdr pair. DICOM series or "
+              "JPEG/PNG must be converted first (e.g. dcm2niix).", file=sys.stderr)
         return 2
 
     # same deterministic preprocessing as training (128³, 2 mm, brain z)
