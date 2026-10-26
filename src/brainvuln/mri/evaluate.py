@@ -148,7 +148,13 @@ def predict_loader(model, loader, device) -> tuple[np.ndarray, np.ndarray, list,
     model.eval()
     ys, ps, sids, subs = [], [], [], []
     for volumes, labels, _ages, _sexes, meta in loader:
-        logits = model(volumes.to(device))
+        volumes = volumes.to(device)
+        if getattr(model, "needs_demographics", False):
+            ages = _ages.to(device)
+            sexes = _sexes.to(device)
+            logits = model(volumes, ages, sexes)
+        else:
+            logits = model(volumes)
         ps.extend(torch.sigmoid(logits).cpu().numpy().tolist())
         ys.extend(labels.numpy().tolist())
         sids.extend(meta["session_id"])

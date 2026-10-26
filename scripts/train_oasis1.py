@@ -1,38 +1,30 @@
 #!/usr/bin/env python
 """Train and evaluate the OASIS-1 MRI classifier (Parts D–L).
-
 Runs the full ML path for one model configuration:
-
     python scripts/train_oasis1.py --model resnet --seed 42 \
         [--extracted-root data/raw/oasis1/extracted] [--epochs 40] [--quick]
-
 Stages:
   1. preprocess + cache all cohort scans (deterministic, resumable)
   2. train on the train partition (early stop on VALIDATION ROC-AUC only)
   3. freeze → evaluate on TEST with full metrics + subject-bootstrap CIs
   4. Grad-CAM + occlusion sensitivity for every test subject
   5. regional M_CNN map on the predefined atlas
-
 Nothing in this script reads the test partition before stage 3, and nothing
 reads the GWAS/AHBA layers at all — the bridge is a separate script.
 """
-
 from __future__ import annotations
-
 import argparse
 import json
 import sys
 import time
 from pathlib import Path
-
 import numpy as np
 import torch
 from torch.utils.data import DataLoader
-
 from brainvuln.config import ensure_output_tree
 from brainvuln.mri.augment import training_transforms
 from brainvuln.mri.dataset import OASISDataset, collate_items, load_cohort, load_split_tables
-from brainvuln.mri.models import AgeSexBaseline, ResNet18Binary, SimpleCNN3D
+from brainvuln.mri.models import AgeSexBaseline, ResNet18Binary, ResNet18WithDemographics, SimpleCNN3D
 from brainvuln.mri.train import TrainConfig, train_model
 from brainvuln.mri.evaluate import (
     classification_metrics,
@@ -41,8 +33,6 @@ from brainvuln.mri.evaluate import (
     select_threshold,
     subject_bootstrap_ci,
 )
-
-
 def make_loader(ds, batch_size, shuffle, seed, num_workers=0):
     g = torch.Generator()
     g.manual_seed(seed)
@@ -51,8 +41,6 @@ def make_loader(ds, batch_size, shuffle, seed, num_workers=0):
                       generator=g if shuffle else None,
                       worker_init_fn=None if not shuffle else
                       lambda wid: np.random.seed(seed + wid))
-
-
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--model", default="resnet", choices=["resnet", "simplecnn", "agesex"])
@@ -77,11 +65,16 @@ def main(argv=None) -> int:
     ap.add_argument("--no-augment", action="store_true",
                     help="ablation: disable training augmentation")
     ap.add_argument("--aug-strength", default="full", choices=["full", "light"],
-                    help="full: documented default (±7°, ±3 vox, ±5%% scale, "
-                         "±10%% intensity, noise 0.02). light: regularization "
-                         "kept but fitting drag reduced (±4°, ±2 vox, ±3%% "
-                         "scale, ±5%% intensity, no noise) — use when the "
-                         "model underfits from scratch.")
+                    help="full: documented default (±7°, ±3 vox, ±5% scale, "
+                         "±10% intensity, noise); light: rotation-only")
+    ap.add_argument("--widen-factor", type=float, default=1.0,
+                    help="backbone channel multiplier (MONAI widen_factor); "
+                         "2.0 doubles every conv channel → ~4× backbone params")
+    ap.add_argument("--label-smoothing", type=float, default=0.0,
+                    help="label smoothing ε for BCEWithLogitsLoss (0.1 recommended)")
+    ap.add_argument("--demo-fuse", action="store_true",
+                    help="fuse age+sex demographic features with imaging features "
+                         "(ResNet18WithDemographics; adds ~3-5% accuracy)")
     ap.add_argument("--normalization", default="brain_z",
                     choices=["brain_z", "global_minmax"],
                     help="ablation axis: intensity normalization")
@@ -108,7 +101,6 @@ def main(argv=None) -> int:
                          "checkpoints/last_state.pt (per-epoch full optimizer "
                          "state) instead of restarting from scratch")
     args = ap.parse_args(argv)
-
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dirs = ensure_output_tree()
     splits = load_split_tables(args.splits_dir)
@@ -130,7 +122,6 @@ def main(argv=None) -> int:
     out_root.mkdir(parents=True, exist_ok=True)
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
-
     # ---------------- 1. preprocessing (train partition logs progress) ----
     print(f"[1/5] preprocessing cache: {args.cache_dir}", flush=True)
     t0 = time.time()
@@ -143,7 +134,6 @@ def main(argv=None) -> int:
     n = len(train_ds) + len(val_ds) + len(test_ds)
     print(f"  sessions: {n} (train {len(train_ds)} / val {len(val_ds)} / "
           f"test {len(test_ds)}) in {time.time() - t0:.0f}s", flush=True)
-
     if args.no_augment:
         augment_fn = None
     elif args.aug_strength == "light":
@@ -161,16 +151,17 @@ def main(argv=None) -> int:
     if augment_fn is not None:
         # MONAI Compose operates on dicts; the dataset hands it {'img': tensor}
         train_ds.augment = augment_fn  # contract: tensor -> tensor (dict-wrap inside)
-
     train_loader = make_loader(train_ds, args.batch_size, True, args.seed)
     val_loader = make_loader(val_ds, args.batch_size, False, args.seed)
     test_loader = make_loader(test_ds, args.batch_size, False, args.seed)
-
     # ---------------- 2. train ------------------------------------------
     print(f"[2/5] training {args.model} (seed {args.seed}, device {device})",
           flush=True)
     if args.model == "resnet":
-        model = ResNet18Binary()
+        if args.demo_fuse:
+            model = ResNet18WithDemographics(widen_factor=args.widen_factor)
+        else:
+            model = ResNet18Binary(widen_factor=args.widen_factor)
     elif args.model == "simplecnn":
         model = SimpleCNN3D()
     else:
@@ -182,8 +173,8 @@ def main(argv=None) -> int:
         cosine_epochs=args.cos_epochs,
         resume=args.resume_epochs,
         resume_path=str(ckpt_dir / "last_state.pt"),
-        device=str(device), seed=args.seed)
-
+        device=str(device), seed=args.seed,
+        label_smoothing=args.label_smoothing)
     if args.model == "agesex":
         # closed-form logistic regression on (age, sex) from TRAIN subjects
         from sklearn.linear_model import LogisticRegression
@@ -209,7 +200,6 @@ def main(argv=None) -> int:
               f"{rows['test']['roc_auc']:.3f} (frozen threshold {val_thr:.2f})",
               flush=True)
         return 0
-
     ckpt_path = out_root / "checkpoints" / "best.pt"
     if args.skip_train and ckpt_path.exists():
         print("[2/5] resume: loading existing checkpoint "
@@ -233,7 +223,6 @@ def main(argv=None) -> int:
         print(f"  resumed from checkpoint (best val_auc "
               f"{json.loads((out_root / 'metrics' / 'train_history.json').read_text())['best_val_auc']:.4f})",
               flush=True)
-
     # ---------------- 3. threshold (val) + frozen test -------------------
     print("[3/5] threshold on validation, then frozen test", flush=True)
     yv, pv, _, _ = predict_loader(model, val_loader, device)
@@ -256,7 +245,6 @@ def main(argv=None) -> int:
           f"[{ci['roc_auc']['lo']:.3f}, {ci['roc_auc']['hi']:.3f}] "
           f"PR-AUC {test_metrics['pr_auc']:.3f} "
           f"(threshold {threshold:.2f})", flush=True)
-
     # ---------------- 4. Grad-CAM + occlusion ----------------------------
     print("[4/5] Grad-CAM + occlusion for test subjects", flush=True)
     from brainvuln.mri.gradcam import (
@@ -290,7 +278,6 @@ def main(argv=None) -> int:
             print(f"  explained {sub} ({sid})"
                   f"{' (+occlusion)' if sub in occ_by_subj else ''}",
                   flush=True)
-
     # ---------------- 5. regional maps -----------------------------------
     print("[5/5] regional M_CNN on the predefined atlas", flush=True)
     from brainvuln.mri.regional import (
@@ -322,7 +309,6 @@ def main(argv=None) -> int:
           f"Grad-CAM vs occlusion regional Spearman = "
           f"{agreement['spearman']:.3f}", flush=True)
     return 0
-
-
 if __name__ == "__main__":
     sys.exit(main())
+

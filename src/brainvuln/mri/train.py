@@ -36,6 +36,7 @@ class TrainConfig:
     resume: bool = False
     resume_path: str = ""
     pos_weight_auto: bool = True
+    label_smoothing: float = 0.0
     num_workers: int = 0
     device: str = "cpu"
     seed: int = 42
@@ -56,7 +57,13 @@ def evaluate_auc(model, loader, device) -> float:
     ys, ps = [], []
     with torch.no_grad():
         for volumes, labels, ages, sexes, _ in loader:
-            logits = model(volumes.to(device))
+            volumes = volumes.to(device)
+            ages = ages.to(device)
+            sexes = sexes.to(device)
+            if getattr(model, "needs_demographics", False):
+                logits = model(volumes, ages, sexes)
+            else:
+                logits = model(volumes)
             ps.extend(torch.sigmoid(logits).cpu().numpy().tolist())
             ys.extend(labels.numpy().tolist())
     if len(set(ys)) < 2:
@@ -91,6 +98,12 @@ def train_model(
             pos_weight = torch.tensor([n_neg / n_pos], device=device)
     criterion = torch.nn.BCEWithLogitsLoss(
         pos_weight=pos_weight)
+
+    def criterion_with_smoothing(logits, targets):
+        if cfg.label_smoothing > 0:
+            # label smoothing: push targets toward 0.5
+            targets = targets * (1.0 - cfg.label_smoothing) + 0.5 * cfg.label_smoothing
+        return criterion(logits, targets)
     optimizer = torch.optim.AdamW(model.parameters(), lr=cfg.lr,
                                   weight_decay=cfg.weight_decay)
 
@@ -129,10 +142,15 @@ def train_model(
         for i, (volumes, labels, ages, sexes, _meta) in enumerate(train_loader):
             volumes = volumes.to(device)
             labels = labels.to(device)
+            ages = ages.to(device)
+            sexes = sexes.to(device)
             optimizer.zero_grad(set_to_none=True)
             with torch.autocast(device_type=device.type, enabled=amp):
-                logits = model(volumes)
-                loss = criterion(logits, labels)
+                if getattr(model, "needs_demographics", False):
+                    logits = model(volumes, ages, sexes)
+                else:
+                    logits = model(volumes)
+                loss = criterion_with_smoothing(logits, labels)
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0)
             optimizer.step()
