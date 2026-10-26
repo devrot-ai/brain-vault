@@ -43,7 +43,7 @@ if _SRC not in sys.path:
 
 CANONICAL_CHECKPOINT_RELPATH = "results/ml/resnet_seed42/checkpoints/best.pt"
 CANONICAL_SHA256 = (
-    "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9"
+    "9dc4887473ee6ebbc7d7088c5c8dc7fab0ade5bd7d5019cf2fe3d3119c66e560"
 )
 ALLOWED_SUFFIXES = (".nii", ".nii.gz")
 MAX_UPLOAD_MB = int(os.environ.get("BRAINVULN_MAX_UPLOAD_MB", "200"))

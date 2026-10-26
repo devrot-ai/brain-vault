@@ -36,7 +36,7 @@ for p in (str(ROOT / "src"), str(SERVICE)):
     if p not in sys.path:
         sys.path.append(p)
 
-CANONICAL_SHA256 = "5930f0fff96003466a9a2854037ea8758b2b77be49159b7101f4fabbf254a4a9"
+CANONICAL_SHA256 = "9dc4887473ee6ebbc7d7088c5c8dc7fab0ade5bd7d5019cf2fe3d3119c66e560"
 CANONICAL_RELPATH = "results/ml/resnet_seed42/checkpoints/best.pt"
 
 # ---------------------------------------------------------------------------
