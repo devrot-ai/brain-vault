@@ -26,7 +26,7 @@ import os
 import tempfile
 from pathlib import Path
 
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
@@ -135,8 +135,15 @@ async def model_info_endpoint():
 
 
 @app.post("/api/predict")
-async def predict(file: UploadFile = File(...)):
-    """One MRI in, one structured research prediction out."""
+async def predict(
+    file: UploadFile = File(...),
+    tta: bool = Query(False, description="Enable Test-Time Augmentation for more accurate but slower inference"),
+):
+    """One MRI in, one structured research prediction out.
+
+    Query parameters:
+        tta: Enable Test-Time Augmentation (averages 6 augmented views).
+    """
     contents = await file.read()
     try:
         validate_upload(file.filename, len(contents))
@@ -158,7 +165,8 @@ async def predict(file: UploadFile = File(...)):
         # the scientific pipeline and get a precise error instead
         try:
             load_nifti_or_raise(tmp)
-            result = run_inference(tmp, original_name=file.filename)
+            result = run_inference(
+                tmp, original_name=file.filename, use_tta=tta)
         except InvalidVolumeError as exc:
             raise HTTPException(status_code=422, detail=str(exc)) from exc
         except CheckpointIdentityError as exc:

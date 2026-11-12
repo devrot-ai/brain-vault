@@ -1,4 +1,4 @@
-"""Training loop (Part H): AdamW, weighted BCE, early stop on val ROC-AUC."""
+"""Training loop (Part H): AdamW, weighted BCE or Focal Loss, early stop on val ROC-AUC."""
 
 from __future__ import annotations
 
@@ -9,10 +9,58 @@ from pathlib import Path
 
 import numpy as np
 import torch
+import torch.nn as nn
 from sklearn.metrics import roc_auc_score
 from torch.utils.data import DataLoader
 
 from brainvuln.mri.dataset import collate_items
+
+
+class FocalLoss(nn.Module):
+    """Focal Loss for binary classification with pos_weight support.
+
+    Addresses class imbalance by down-weighting easy examples and focusing
+    training on hard-to-classify samples. This directly targets the specificity
+    problem: normal brains that are misclassified as AD are the hard negatives
+    that focal loss emphasizes.
+
+    FL(p_t) = -alpha_t * (1 - p_t)^gamma * log(p_t)
+
+    Args:
+        alpha: balancing factor for positive class (default 0.25).
+        gamma: focusing parameter (default 2.0). Higher = more focus on hard examples.
+        pos_weight: optional positive class weight (combined with alpha).
+    """
+
+    def __init__(self, alpha: float = 0.25, gamma: float = 2.0,
+                 pos_weight: torch.Tensor | None = None) -> None:
+        super().__init__()
+        self.alpha = alpha
+        self.gamma = gamma
+        self.pos_weight = pos_weight
+
+    def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
+        # Sigmoid + BCE with logits
+        bce_loss = nn.functional.binary_cross_entropy_with_logits(
+            logits, targets, reduction='none'
+        )
+
+        probs = torch.sigmoid(logits)
+        p_t = probs * targets + (1 - probs) * (1 - targets)
+
+        # Focal weight: (1 - p_t)^gamma
+        focal_weight = (1 - p_t) ** self.gamma
+
+        # Alpha weighting
+        alpha_t = self.alpha * targets + (1 - self.alpha) * (1 - targets)
+
+        # Apply pos_weight if provided (scales positive class loss)
+        if self.pos_weight is not None:
+            alpha_t = targets * self.pos_weight + (1 - targets) * 1.0
+
+        # Combine: alpha * (1 - p_t)^gamma * BCE
+        loss = alpha_t * focal_weight * bce_loss
+        return loss.mean()
 
 
 @dataclass
@@ -37,6 +85,12 @@ class TrainConfig:
     resume_path: str = ""
     pos_weight_auto: bool = True
     label_smoothing: float = 0.0
+    # Focal loss: focuses training on hard-to-classify examples.
+    # Set loss_type="focal" to enable. Gamma controls focusing strength,
+    # alpha controls class balancing. Default gamma=2.0, alpha=0.25.
+    loss_type: str = "bce"  # "bce" or "focal"
+    focal_gamma: float = 2.0
+    focal_alpha: float = 0.25
     num_workers: int = 0
     device: str = "cpu"
     seed: int = 42
@@ -96,8 +150,18 @@ def train_model(
         n_neg = len(labels) - n_pos
         if n_pos > 0:
             pos_weight = torch.tensor([n_neg / n_pos], device=device)
-    criterion = torch.nn.BCEWithLogitsLoss(
-        pos_weight=pos_weight)
+
+    # Choose loss function: standard BCE or Focal Loss
+    if cfg.loss_type == "focal":
+        criterion = FocalLoss(
+            alpha=cfg.focal_alpha,
+            gamma=cfg.focal_gamma,
+            pos_weight=pos_weight
+        )
+        print(f"  Using Focal Loss (alpha={cfg.focal_alpha}, gamma={cfg.focal_gamma})", flush=True)
+    else:
+        criterion = torch.nn.BCEWithLogitsLoss(pos_weight=pos_weight)
+        print(f"  Using weighted BCE Loss", flush=True)
 
     def criterion_with_smoothing(logits, targets):
         if cfg.label_smoothing > 0:

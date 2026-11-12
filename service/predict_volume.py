@@ -124,7 +124,8 @@ _model_cache: dict = {}
 def _load_model():
     import torch
     from brainvuln.config import resolve_checkpoint
-    from brainvuln.mri.models import ResNet18Binary
+    from brainvuln.mri.models import (
+        ResNet18Binary, ResNet18CBAM, ResNet18WithDemographics)
 
     with _model_lock:
         ckpt_path = resolve_checkpoint(None)  # config-driven, never a search
@@ -133,7 +134,23 @@ def _load_model():
         if cached == str(ckpt_path):
             return _model_cache["model"], ckpt_path, identity
         ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
-        model = ResNet18Binary()
+
+        # Auto-detect model architecture from checkpoint state_dict keys
+        state_keys = list(ckpt.get("state_dict", {}).keys())
+        widen = ckpt.get("widen_factor", 1.0)
+
+        has_cbam = any("att" in k and ("channel_att" in k or "spatial_att" in k)
+                       for k in state_keys)
+        has_demographics = any("demographics" in k or "age_proj" in k
+                               for k in state_keys)
+
+        if has_cbam:
+            model = ResNet18CBAM(widen_factor=widen)
+        elif has_demographics:
+            model = ResNet18WithDemographics(widen_factor=widen)
+        else:
+            model = ResNet18Binary(widen_factor=widen)
+
         model.load_state_dict(ckpt["state_dict"])
         model.eval()
         _model_cache.update(model=model, path=str(ckpt_path),
@@ -159,14 +176,25 @@ def _identity_checked(ckpt_path: Path) -> dict:
 # ---------------------------------------------------------------------------
 
 def run_inference(scan_path: str | Path, *, top_k: int = 10,
-                  original_name: str | None = None) -> dict:
+                  original_name: str | None = None,
+                  use_tta: bool = False,
+                  temperature: float | None = None) -> dict:
     """Upload → canonical preprocessing → frozen model → Grad-CAM → regions.
+
+    Args:
+        scan_path: path to the uploaded NIfTI file.
+        top_k: number of top atlas regions to return.
+        original_name: original filename for the response.
+        use_tta: enable Test-Time Augmentation (averages 6 views).
+        temperature: optional temperature scalar for probability calibration.
+                     If None, uses identity (T=1.0) or auto-loads from
+                     calibration artifact if available.
 
     Returns the structured prediction record used by the web API. Every
     number is produced by the validated BrainVuln code paths.
     """
     import torch
-    from brainvuln.config import resolve_threshold
+    from brainvuln.config import resolve_threshold, resolve_temperature
     from brainvuln.mri.gradcam import gradcam_3d, save_cam_nifti, save_planes_png
     from brainvuln.mri.preprocess import PREPROCESS_VERSION, preprocess_session
     from brainvuln.mri.regional import regionalize_cam
@@ -186,9 +214,23 @@ def run_inference(scan_path: str | Path, *, top_k: int = 10,
     model, ckpt_path, identity = _load_model()
     threshold, threshold_source = resolve_threshold(ckpt_path=ckpt_path)
 
+    # Temperature calibration: auto-load if not explicitly provided
+    if temperature is None:
+        try:
+            temperature = resolve_temperature(ckpt_path=ckpt_path)
+        except (FileNotFoundError, ValueError):
+            temperature = 1.0
+
     x = torch.from_numpy(volume[None].astype(np.float32))  # [1,1,D,H,W]
-    with torch.no_grad():
-        prob = float(torch.sigmoid(model(x)).item())
+
+    # Inference: single pass or Test-Time Augmentation
+    if use_tta:
+        from predict import tta_inference
+        prob = float(tta_inference(model, x, num_views=5).item())
+    else:
+        with torch.no_grad():
+            logit = float(model(x).item())
+            prob = float(torch.sigmoid(torch.tensor(logit / temperature)).item())
     t3 = time.perf_counter()
 
     # real Grad-CAM from the actual model prediction
@@ -214,6 +256,7 @@ def run_inference(scan_path: str | Path, *, top_k: int = 10,
             "seed": seed,
             "checkpoint_path": str(ckpt_path),
             "checkpoint_sha256": identity["sha256"],
+            "architecture": type(model).__name__,
         },
         "prediction": {
             "label": label,
@@ -221,6 +264,8 @@ def run_inference(scan_path: str | Path, *, top_k: int = 10,
             "probability": prob,
             "threshold": float(threshold),
             "threshold_source": threshold_source,
+            "temperature": round(temperature, 4),
+            "tta_enabled": use_tta,
         },
         "explainability": {
             "gradcam_available": True,

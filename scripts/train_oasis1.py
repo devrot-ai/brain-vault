@@ -24,7 +24,7 @@ from torch.utils.data import DataLoader
 from brainvuln.config import ensure_output_tree
 from brainvuln.mri.augment import training_transforms
 from brainvuln.mri.dataset import OASISDataset, collate_items, load_cohort, load_split_tables
-from brainvuln.mri.models import AgeSexBaseline, ResNet18Binary, ResNet18WithDemographics, SimpleCNN3D
+from brainvuln.mri.models import AgeSexBaseline, ResNet18Binary, ResNet18CBAM, ResNet18WithDemographics, SimpleCNN3D
 from brainvuln.mri.train import TrainConfig, train_model
 from brainvuln.mri.evaluate import (
     classification_metrics,
@@ -43,17 +43,17 @@ def make_loader(ds, batch_size, shuffle, seed, num_workers=0):
                       lambda wid: np.random.seed(seed + wid))
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--model", default="resnet", choices=["resnet", "simplecnn", "agesex"])
+    ap.add_argument("--model", default="resnet", choices=["resnet", "resnet-cbam", "simplecnn", "agesex"])
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--epochs", type=int, default=40)
     ap.add_argument("--batch-size", type=int, default=4)
     ap.add_argument("--lr", type=float, default=1e-4)
-    ap.add_argument("--warmup", type=int, default=1,
-                    help="LR warmup epochs before cosine decay")
-    ap.add_argument("--cos-epochs", type=int, default=0,
+    ap.add_argument("--warmup", type=int, default=2,
+                    help="LR warmup epochs before cosine decay (default: 2)")
+    ap.add_argument("--cos-epochs", type=int, default=12,
                     help="cosine horizon in epochs; 0 = full --epochs budget "
-                         "(legacy). Set to the realistic early-stopping window "
-                         "so LR actually anneals in short runs.")
+                         "(legacy). Default: 12 for proper LR annealing with "
+                         "early stopping around epoch 10-15.")
     ap.add_argument("--tag", default="",
                     help="suffix on the output dir (sweeps/ablations); "
                          "empty keeps the canonical <model>_seed<seed> dir")
@@ -70,8 +70,16 @@ def main(argv=None) -> int:
     ap.add_argument("--widen-factor", type=float, default=1.0,
                     help="backbone channel multiplier (MONAI widen_factor); "
                          "2.0 doubles every conv channel → ~4× backbone params")
-    ap.add_argument("--label-smoothing", type=float, default=0.0,
-                    help="label smoothing ε for BCEWithLogitsLoss (0.1 recommended)")
+    ap.add_argument("--label-smoothing", type=float, default=0.1,
+                    help="label smoothing ε for BCEWithLogitsLoss "
+                         "(default: 0.1 for better calibration)")
+    ap.add_argument("--loss-type", default="bce", choices=["bce", "focal"],
+                    help="loss function: 'bce' (weighted BCE) or 'focal' "
+                         "(focal loss, focuses on hard examples; improves specificity)")
+    ap.add_argument("--focal-gamma", type=float, default=2.0,
+                    help="focal loss gamma parameter (default: 2.0)")
+    ap.add_argument("--focal-alpha", type=float, default=0.25,
+                    help="focal loss alpha parameter (default: 0.25)")
     ap.add_argument("--demo-fuse", action="store_true",
                     help="fuse age+sex demographic features with imaging features "
                          "(ResNet18WithDemographics; adds ~3-5% accuracy)")
@@ -100,6 +108,10 @@ def main(argv=None) -> int:
                     help="resume an epoch-crashed training run: continue from "
                          "checkpoints/last_state.pt (per-epoch full optimizer "
                          "state) instead of restarting from scratch")
+    ap.add_argument("--calibrate", action="store_true",
+                    help="fit temperature scaling on validation data after "
+                         "training to improve probability calibration "
+                         "(reduces Brier score, improves reliability)")
     args = ap.parse_args(argv)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dirs = ensure_output_tree()
@@ -162,6 +174,8 @@ def main(argv=None) -> int:
             model = ResNet18WithDemographics(widen_factor=args.widen_factor)
         else:
             model = ResNet18Binary(widen_factor=args.widen_factor)
+    elif args.model == "resnet-cbam":
+        model = ResNet18CBAM(widen_factor=args.widen_factor)
     elif args.model == "simplecnn":
         model = SimpleCNN3D()
     else:
@@ -174,7 +188,10 @@ def main(argv=None) -> int:
         resume=args.resume_epochs,
         resume_path=str(ckpt_dir / "last_state.pt"),
         device=str(device), seed=args.seed,
-        label_smoothing=args.label_smoothing)
+        label_smoothing=args.label_smoothing,
+        loss_type=args.loss_type,
+        focal_gamma=args.focal_gamma,
+        focal_alpha=args.focal_alpha)
     if args.model == "agesex":
         # closed-form logistic regression on (age, sex) from TRAIN subjects
         from sklearn.linear_model import LogisticRegression
@@ -220,9 +237,30 @@ def main(argv=None) -> int:
         print(f"  best val_auc {result.best_val_auc:.4f} "
               f"(epoch {result.best_epoch})", flush=True)
     else:
+        # --skip-train after an interrupted run may have no history file yet:
+        # the checkpoint itself records the validation AUC of its best epoch.
+        hist_path = out_root / "metrics" / "train_history.json"
+        if hist_path.exists():
+            best_val_auc = json.loads(hist_path.read_text())["best_val_auc"]
+        else:
+            best_val_auc = float(state.get("val_auc", float("nan")))
         print(f"  resumed from checkpoint (best val_auc "
-              f"{json.loads((out_root / 'metrics' / 'train_history.json').read_text())['best_val_auc']:.4f})",
-              flush=True)
+              f"{best_val_auc:.4f})", flush=True)
+    # ---------------- 2.5. temperature calibration (optional) -------------
+    if args.calibrate:
+        print("[2.5/5] temperature calibration on validation", flush=True)
+        from brainvuln.mri.calibrate import (
+            fit_temperature, save_calibration_fit)
+        temperature = fit_temperature(model, val_loader, device=str(device))
+        calib_dir = out_root / "calibration"
+        calib_dir.mkdir(parents=True, exist_ok=True)
+        save_calibration_fit(
+            temperature, calib_dir / "calibration_fit.json")
+        print(f"  Temperature T={temperature:.4f} saved to "
+              f"{calib_dir / 'calibration_fit.json'}", flush=True)
+    else:
+        temperature = 1.0
+
     # ---------------- 3. threshold (val) + frozen test -------------------
     print("[3/5] threshold on validation, then frozen test", flush=True)
     yv, pv, _, _ = predict_loader(model, val_loader, device)
@@ -236,6 +274,8 @@ def main(argv=None) -> int:
     (out_root / "metrics" / "test_metrics.json").write_text(json.dumps(
         {"test": test_metrics, "threshold": threshold,
          "threshold_method": args.threshold_method,
+         "temperature": temperature,
+         "calibrated": args.calibrate,
          "checkpoint_identity": checkpoint_identity(str(ckpt_path)),
          "val": classification_metrics(yv, pv, threshold)}, indent=2))
     (out_root / "predictions").mkdir(exist_ok=True)

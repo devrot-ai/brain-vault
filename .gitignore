@@ -99,3 +99,12 @@ audit_artifacts/*.nii.gz
 
 # local HF Space publishing scaffold (the Space gets its own generated README)
 hf_space/
+
+# Local training/retraining console logs (regenerable)
+results/resume_epochs.log
+results/retrain_eval.log
+results/retrain_seed42.log
+results/smooth_epochs.log
+train_v2.log
+train_v2_demo.log
+results/ml/resnet_seed42_retrain/

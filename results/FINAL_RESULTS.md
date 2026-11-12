@@ -3,6 +3,70 @@
 *Generated 2026-09-26T15:21:04+00:00. This file contains measured results and their limitations.
 No marketing claims. Research use only — not a clinical diagnostic system.*
 
+## Addendum 2026-11-04 — full retrain on the extracted OASIS-1 disc + TTA
+
+The canonical seed-42 checkpoint was found unusable as a starting point (BN
+running statistics consistent with an untrained network). A fresh, complete
+retrain on the same curriculum — identical recipe (seed 42, light
+augmentation, warmup 2 + cosine horizon 12, AdamW 1e-4, patience 6), the
+same 182-session cache (`data/derived/oasis1_128`, restored on disk incl.
+the 27 previously missing test volumes), the same git-ignored extracted
+disc (`C:/Users/kanishk thakur/Desktop/BrainVuln_OASIS`) — was run end to end.
+
+* Run: `results/ml/resnet_seed42_retrain/`
+* Checkpoint: `checkpoints/best.pt`, SHA256
+  `a4b553e0bd0eebaded7508033c5ba91633fa4a77bea9893ecabc559a55cfee42`
+* Best epoch **7** (val AUC 0.7944); training was resumed once (per-epoch
+  crash-safe `last_state.pt`) and run through the cosine horizon (epochs
+  11–12, LR ≤ 2.5e-6) — no further val improvement, confirming the
+  checkpoint is terminal for this schedule.
+
+### Retrain test results (27 held-out subjects)
+
+| Metric | Retrain | Canonical record |
+| --- | ---: | ---: |
+| ROC-AUC | 0.800 [0.602, 0.963] | 0.817 [0.618, 0.972] |
+| PR-AUC | 0.857 [0.672, 0.981] | 0.814 [0.604, 0.984] |
+| Accuracy (val threshold) | 0.556 | 0.667 |
+| Sensitivity / Specificity | 0.933 / 0.083 | 0.867 / 0.417 |
+| Brier | 0.438 | 0.192 |
+| Val-chosen threshold | 0.99 | 0.07 |
+
+Val-selected threshold 0.99: TP 14, FN 1, FP 11, TN 1. Prediction ranking
+agrees with the frozen canonical predictions (Spearman 0.855) — the data
+cache and splits are consistent across the two runs.
+
+### Honest failure mode: probability saturation / threshold transfer
+
+The retrain's test probabilities are all ≥ 0.9387 (25/27 > 0.99), while its
+validation probabilities spread below 0.99 for 7 CN subjects. The ranking
+(AUC 0.80) is real, but operating-point transfer fails: the val threshold
+0.99 collapses into predicting AD for 25/27 test subjects. TTA (mean of 8
+probes, rotations ±4° in 3 axes, 2-voxel y-shifts, 1.03 scale) cannot fix it
+— all 8 probes saturate on test (per-variant mean ≈ 0.99). Measured TTA
+effect (`results/ml/resnet_seed42_retrain/tta/`):
+
+* Validation (n=27, Youden threshold on TTA probs): AUC 0.794 → **0.856**,
+  acc/bacc unchanged (0.704 / 0.675).
+* Test (fixed threshold 0.99): AUC 0.800 → **0.822**, bacc 0.508 → 0.517,
+  accuracy unchanged (0.556).
+* Diagnostic only (not a selection): test oracle accuracy 0.815 at
+  threshold 0.9991 — the information exists in the ranking, the probability
+  scale is broken. This is an extreme case of the documented overconfidence
+  (calibration slope 0.34).
+
+### Forward fix in flight: label smoothing
+
+A fresh seed-42 run identical to above except `--label-smoothing 0.1`
+(smoothing is implemented in `src/brainvuln/mri/train.py` but was never
+used) started 2026-11-04 to directly attack the overconfident-logits
+failure: smooth targets (0.05/0.95) bound the optimal logits, keeping
+probabilities interpretable so standard-threshold transfer works.
+Run dir `results/ml/resnet_seed42_smooth/`, log
+`results/smooth_epochs.log`, per-epoch crash-safe checkpoints. Evaluation
+is automatic after training (same stages); TTA re-evaluation afterwards.
+No test-set information entered the threshold choice at any point.
+
 ## Primary model
 
 * Checkpoint: `results/ml/resnet_seed42/checkpoints/best.pt`
