@@ -473,7 +473,7 @@ def predict_upload(file, use_tta):
         return (DISCLAIMER, None, None, None, None)
     from brainvuln.mri.preprocess import (
         PREPROCESS_VERSION, preprocess_session)
-    from brainvuln.mri.gradcam import gradcam_3d, save_cam_nifti, save_planes_png
+    from brainvuln.mri.gradcam import gradcam_auto, save_cam_nifti, save_planes_png
 
     model, ckpt_path, threshold, identity = _get_model()
     sha = identity["sha256"]
@@ -504,7 +504,7 @@ def predict_upload(file, use_tta):
 
     label = ("Alzheimer's disease (model prediction)" if prob >= threshold
              else "cognitively normal (model prediction)")
-    cam = gradcam_3d(model, x)
+    cam = gradcam_auto(model, x)
     out = Path("outputs")
     out.mkdir(parents=True, exist_ok=True)
     stem = path.stem.replace(".nii", "")
@@ -941,7 +941,7 @@ def predict_batch(files, use_tta):
         return "<p>No files uploaded.</p>"
 
     from brainvuln.mri.preprocess import preprocess_session
-    from brainvuln.mri.gradcam import gradcam_3d
+    from brainvuln.mri.gradcam import gradcam_auto
 
     model, ckpt_path, threshold, identity = _get_model()
 

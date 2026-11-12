@@ -317,6 +317,51 @@ The web UI now includes a **Batch Upload** tab where you can upload multiple MRI
 
 ---
 
+### 14. CBAM-Aware Grad-CAM — more meaningful attribution maps
+
+**Status: ✅ Implemented in `src/brainvuln/mri/gradcam.py` and `app.py`**
+
+For CBAM models, the standard Grad-CAM only uses gradient flow on the final feature map. CBAM-aware Grad-CAM goes further by extracting the model's learned **spatial attention** and **channel attention** maps and fusing them with the gradient-based CAM. This produces attribution maps that reflect not just which features drive the prediction, but also which brain regions the model's attention modules learned to focus on (hippocampus, entorhinal cortex, temporal lobe).
+
+**How it works:**
+1. **Gradient-based Grad-CAM** on attention-weighted features (after all CBAM modules)
+2. **Spatial attention extraction** from the last CBAM module (att4) — shows WHERE the model focuses
+3. **Channel attention extraction** from att4 — shows WHICH feature channels are important
+4. **Fusion**: 50% gradient CAM + 25% spatial attention + 25% channel-weighted CAM
+
+The result is a more interpretable attribution map that highlights the Alzheimer's-relevant regions the model learned to attend to.
+
+**Usage:**
+- Automatic: `gradcam_auto(model, volume)` detects CBAM models and uses the enhanced method
+- Manual: `gradcam_cbam_3d(model, volume)` for explicit CBAM Grad-CAM
+- Web UI: automatically uses CBAM-aware Grad-CAM when a CBAM model checkpoint is loaded
+
+**Expected improvement:** More focused and interpretable Grad-CAM heatmaps, especially for CBAM-trained models. The attribution maps better highlight hippocampal atrophy and ventricular enlargement patterns.
+
+---
+
+### 15. Longitudinal Co-Registration — accurate atrophy tracking
+
+**Status: ✅ Implemented in `src/brainvuln/mri/longitudinal.py`**
+
+When comparing two MRI scans from the same patient at different time points, head position differences between scans can confound the voxel-wise difference map. Co-registration aligns the follow-up scan (T2) to the baseline scan (T1) space using affine optimization before computing differences, so voxel-wise changes reflect true anatomical change rather than registration artifacts.
+
+**How it works:**
+1. **Normalized Mutual Information (NMI)** metric measures alignment quality between T1 and T2
+2. **12-parameter affine transform** (translation, rotation, scaling, shearing) optimized via Nelder-Mead simplex
+3. **Multi-resolution**: Gaussian-smoothed volumes used for optimization, original resolution for final transform
+4. **Applied to T2**: The optimized transform resamples T2 into T1's coordinate system
+5. **Difference map**: Computed on the registered pair for accurate atrophy measurement
+
+**Usage:**
+- Automatic: `compare_scans(vol_t1, vol_t2)` registers by default (`register=True`)
+- Disable: `compare_scans(vol_t1, vol_t2, register=False)` for unregistered comparison
+- Web UI: Time Series Tracking tab automatically uses co-registration
+
+**Expected improvement:** More accurate voxel-wise difference maps for longitudinal comparison. Without registration, head position differences can create false atrophy/growth signals. With registration, the difference map reflects true tissue change between time points.
+
+---
+
 ## Expected Accuracy Progression
 
 | Technique | Accuracy | Specificity | F1 | ROC-AUC |

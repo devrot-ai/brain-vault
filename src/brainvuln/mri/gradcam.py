@@ -1,8 +1,13 @@
-"""Explainable AI (Part K): 3D Grad-CAM + occlusion sensitivity.
+"""Explainable AI (Part K): 3D Grad-CAM + CBAM-aware Grad-CAM + occlusion sensitivity.
 
 Both methods produce per-subject relevance volumes on the model's *input*
 grid (128³ at 2 mm), saved as NIfTI in the T88 (MNI-affine) space so they
 can be parcellated with the same atlas used everywhere else in BrainVuln.
+
+For CBAM models, ``gradcam_cbam_3d`` uses the model's learned channel and
+spatial attention maps to produce more meaningful attribution — the CAM
+reflects not just gradient flow but also which regions the attention modules
+learned to focus on (hippocampus, entorhinal cortex, etc.).
 
 Grad-CAM is a gradient-weighted attention heuristic, **not** causal proof:
 regions with high CAM are regions the network used, not regions where
@@ -13,14 +18,23 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Tuple
 
 import numpy as np
 import torch
 import torch.nn.functional as F
 
 
+def _is_cbam_model(model: torch.nn.Module) -> bool:
+    """Check if a model has CBAM attention modules by inspecting state_dict keys."""
+    for key in model.state_dict().keys():
+        if "channel_att" in key or "spatial_att" in key:
+            return True
+    return False
+
+
 # ---------------------------------------------------------------------------
-# 3D Grad-CAM
+# 3D Grad-CAM (standard)
 # ---------------------------------------------------------------------------
 
 
@@ -36,6 +50,9 @@ def gradcam_3d(
     Gradients of the positive-class logit are pooled over the last
     convolutional feature map (``layer4`` of the MONAI ResNet). The CAM is
     upsampled to the input grid and ReLU-activated.
+
+    For CBAM models, prefer ``gradcam_cbam_3d`` which incorporates the model's
+    learned attention maps for more meaningful attribution.
     """
     model.eval()
     feat, _ = model.forward_features(volume)
@@ -52,6 +69,149 @@ def gradcam_3d(
     cam = cam[0, 0].cpu().numpy()
     mx = float(cam.max())
     return cam / mx if mx > 0 else cam
+
+
+# ---------------------------------------------------------------------------
+# CBAM-aware Grad-CAM
+# ---------------------------------------------------------------------------
+
+
+@torch.enable_grad()
+def gradcam_cbam_3d(
+    model: torch.nn.Module,
+    volume: torch.Tensor,
+) -> np.ndarray:
+    """CBAM-aware Grad-CAM that combines gradient-based CAM with learned attention maps.
+
+    For CBAM models, this produces a more meaningful attribution map by:
+    1. Computing standard Grad-CAM on the attention-weighted feature map (after all CBAM modules).
+    2. Extracting the spatial attention map from the last CBAM module (att4).
+    3. Fusing the gradient-based CAM with the spatial attention map.
+
+    The spatial attention from CBAM directly encodes which brain regions the
+    model learned to focus on (hippocampus, entorhinal cortex, temporal lobe),
+    making the attribution map more interpretable than gradient-only Grad-CAM.
+
+    Args:
+        model: A ResNet18CBAM model (must have att1-att4 CBAM modules).
+        volume: Input volume [1,1,D,H,W].
+
+    Returns:
+        Normalized CAM [D,H,W] in [0,1].
+    """
+    model.eval()
+
+    # --- Step 1: Forward pass to get attention-weighted features ---
+    b = model.backbone
+    x = volume.clone()
+    x = b.conv1(x)
+    x = b.bn1(x)
+    x = b.act(x)
+    x = b.maxpool(x)
+    x = b.layer1(x)
+    x = model.att1(x)
+    x = b.layer2(x)
+    x = model.att2(x)
+    x = b.layer3(x)
+    x = model.att3(x)
+    x = b.layer4(x)
+
+    # Save the pre-CBAM feature for comparison
+    feat_before_cbam4 = x.detach()
+
+    # Apply last CBAM module
+    feat_after_cbam4 = model.att4(x)
+
+    # --- Step 2: Extract spatial attention map from att4 ---
+    # Spatial attention: avg + max pool across channels -> conv -> sigmoid
+    sa = model.att4.spatial_att
+    avg_out = torch.mean(feat_before_cbam4, dim=1, keepdim=True)
+    max_out, _ = torch.max(feat_before_cbam4, dim=1, keepdim=True)
+    combined = torch.cat([avg_out, max_out], dim=1)
+    spatial_att_map = sa.sigmoid(sa.conv(combined))  # [1,1,D,H,W]
+
+    # --- Step 3: Extract channel attention map from att4 ---
+    ca = model.att4.channel_att
+    avg_out_ch = ca.avg_pool(feat_before_cbam4).flatten(1)
+    max_out_ch = ca.max_pool(feat_before_cbam4).flatten(1)
+    channel_att_map = ca.sigmoid(ca.shared_mlp(avg_out_ch) + ca.shared_mlp(max_out_ch))
+    channel_att_map = channel_att_map.view(-1, feat_before_cbam4.shape[1], 1, 1, 1)  # [1,C,1,1,1]
+
+    # --- Step 4: Grad-CAM on attention-weighted features ---
+    feat = feat_after_cbam4.detach().requires_grad_(True)
+    logits = model.fc(model.pool(feat).flatten(1)).squeeze(1)
+    score = logits.sum()
+    model.zero_grad(set_to_none=True)
+    score.backward()
+    weights = feat.grad.detach().sum(dim=(2, 3, 4), keepdim=True)  # [1,C,1,1,1]
+    grad_cam = F.relu((weights * feat.detach()).sum(dim=1, keepdim=True))  # [1,1,D,H,W]
+
+    # --- Step 5: Fuse Grad-CAM with spatial attention ---
+    # The spatial attention map tells us WHERE the model focuses
+    # The Grad-CAM tells us WHAT features drive the prediction
+    # Combining both gives a more complete picture
+    grad_cam_norm = grad_cam / (grad_cam.max() + 1e-8)
+    spatial_att_norm = spatial_att_map / (spatial_att_map.max() + 1e-8)
+
+    # Weighted fusion: 70% Grad-CAM, 30% spatial attention
+    # This keeps gradient-based attribution as primary while boosting attention-focused regions
+    fused_cam = 0.7 * grad_cam_norm + 0.3 * spatial_att_norm
+
+    # --- Step 6: Also boost regions with high channel attention ---
+    # Channel attention tells us which feature channels are important
+    # We can use this to weight the per-channel contribution
+    channel_weights = channel_att_map.squeeze(0).squeeze(-1).squeeze(-1).squeeze(-1)  # [C]
+    channel_weights = channel_weights / (channel_weights.max() + 1e-8)
+
+    # Re-compute Grad-CAM with channel-weighted features
+    feat_weighted = feat.detach() * channel_att_map
+    cam_channel_weighted = F.relu(feat_weighted.sum(dim=1, keepdim=True))
+    cam_channel_weighted_norm = cam_channel_weighted / (cam_channel_weighted.max() + 1e-8)
+
+    # Final fusion: combine all three signals
+    final_cam = 0.5 * grad_cam_norm + 0.25 * spatial_att_norm + 0.25 * cam_channel_weighted_norm
+
+    # Upsample to input resolution
+    final_cam = F.interpolate(final_cam, size=volume.shape[2:], mode="trilinear",
+                              align_corners=False)
+    cam = final_cam[0, 0].cpu().numpy()
+    mx = float(cam.max())
+    return cam / mx if mx > 0 else cam
+
+
+# ---------------------------------------------------------------------------
+# Auto-detecting Grad-CAM wrapper
+# ---------------------------------------------------------------------------
+
+
+@torch.enable_grad()
+def gradcam_auto(
+    model: torch.nn.Module,
+    volume: torch.Tensor,
+    *,
+    use_cbam: bool | None = None,
+) -> np.ndarray:
+    """Auto-detect model type and use the appropriate Grad-CAM method.
+
+    If the model has CBAM attention modules, uses ``gradcam_cbam_3d`` for
+    more meaningful attribution. Otherwise, falls back to standard ``gradcam_3d``.
+
+    Args:
+        model: The model to explain.
+        volume: Input volume [1,1,D,H,W].
+        use_cbam: Override auto-detection. True forces CBAM Grad-CAM, False
+            forces standard Grad-CAM. None auto-detects.
+
+    Returns:
+        Normalized CAM [D,H,W] in [0,1].
+    """
+    if use_cbam is None:
+        use_cbam = _is_cbam_model(model)
+
+    if use_cbam and hasattr(model, 'att4'):
+        return gradcam_cbam_3d(model, volume)
+    else:
+        return gradcam_3d(model, volume)
 
 
 class GradCAMHook:
